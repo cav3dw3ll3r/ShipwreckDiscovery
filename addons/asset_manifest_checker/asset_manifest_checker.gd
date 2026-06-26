@@ -73,10 +73,15 @@ func _exit_tree() -> void:
 
 func _run_startup_check() -> void:
 	var report := _build_quick_report()
+	call_deferred("_show_startup_report", report)
+
+
+func _show_startup_report(report: Dictionary) -> void:
 	if _has_report_issues(report):
 		push_warning("Asset Manifest Checker: quick check found issues: %s" % report.get("summary", {}))
 	else:
 		print("Asset Manifest Checker: quick check passed.")
+	_show_report(report, "Asset Manifest Startup Check")
 
 
 func _check_assets_now() -> void:
@@ -87,7 +92,7 @@ func _check_assets_now() -> void:
 func _refresh_manifest_from_local_assets() -> void:
 	var manifest := _build_manifest_from_local_assets()
 	if _write_json(MANIFEST_PATH, manifest):
-		var report := _build_report(false)
+		var report := _build_quick_report()
 		_show_report(report, "Asset Manifest Refreshed")
 		get_editor_interface().get_resource_filesystem().scan()
 	else:
@@ -158,87 +163,6 @@ func _build_quick_report() -> Dictionary:
 		else:
 			report["ok"].append(path)
 			report["summary"]["ok"] += 1
-
-	return report
-
-
-func _build_report(include_hashes_for_extras: bool) -> Dictionary:
-	var manifest := _read_manifest()
-	var manifest_entries := _manifest_entries_by_path(manifest)
-	var local_assets := _discover_local_assets(include_hashes_for_extras)
-	var report := {
-		"schema_version": 1,
-		"checked_at": Time.get_datetime_string_from_system(true, true),
-		"manifest_path": _project_path(MANIFEST_PATH),
-		"summary": {
-			"ok": 0,
-			"missing": 0,
-			"changed": 0,
-			"extra": 0,
-		},
-		"missing": [],
-		"changed": [],
-		"extra": [],
-		"ok": [],
-	}
-
-	if not FileAccess.file_exists(MANIFEST_PATH):
-		report["changed"].append({
-			"path": _project_path(MANIFEST_PATH),
-			"reason": "Manifest file is missing. Use '%s' to create it." % MENU_REFRESH,
-		})
-		report["summary"]["changed"] += 1
-		return report
-
-	for path in manifest_entries.keys():
-		var expected: Dictionary = manifest_entries[path]
-		if not local_assets.has(path):
-			report["missing"].append({
-				"path": path,
-				"package": expected.get("package", ""),
-				"reason": "Listed in manifest but not found locally.",
-			})
-			report["summary"]["missing"] += 1
-			continue
-
-		var actual: Dictionary = local_assets[path]
-		var expected_size := int(expected.get("size", -1))
-		var expected_hash := str(expected.get("sha256", ""))
-		var changed_reasons := []
-
-		if expected_size >= 0 and int(actual.get("size", -1)) != expected_size:
-			changed_reasons.append("size %s != %s" % [actual.get("size", -1), expected_size])
-
-		if changed_reasons.is_empty() and not expected_hash.is_empty():
-			var actual_hash := _sha256_for_project_path(path)
-			if actual_hash != expected_hash:
-				changed_reasons.append("sha256 mismatch")
-			actual["sha256"] = actual_hash
-
-		if changed_reasons.is_empty():
-			report["ok"].append(path)
-			report["summary"]["ok"] += 1
-		else:
-			report["changed"].append({
-				"path": path,
-				"package": expected.get("package", actual.get("package", "")),
-				"reason": ", ".join(changed_reasons),
-				"expected_size": expected_size,
-				"actual_size": actual.get("size", -1),
-			})
-			report["summary"]["changed"] += 1
-
-	for path in local_assets.keys():
-		if manifest_entries.has(path):
-			continue
-		var actual_extra: Dictionary = local_assets[path]
-		report["extra"].append({
-			"path": path,
-			"package": actual_extra.get("package", ""),
-			"size": actual_extra.get("size", -1),
-			"reason": "Local ignored asset is not listed in the manifest.",
-		})
-		report["summary"]["extra"] += 1
 
 	return report
 
