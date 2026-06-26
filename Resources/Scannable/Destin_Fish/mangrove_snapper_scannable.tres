@@ -7,11 +7,6 @@
 script = ExtResource("2_vm2t6")
 dataPath = null
 iconDir = null
-videoDir = "res://Resources/Scannable/Creatures/videos/"
-scannable_type = 0
-scannable_ID = ""
-scan_thresholds = Dictionary[int, int]({})
-required_scan_time = 1.0
 scan_audio = ExtResource("1_2crst")
 subtitle_dir = null
 metadata/_custom_type_script = "uid://dne2dbsbrcl4p"

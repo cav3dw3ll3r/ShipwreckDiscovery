@@ -12,4 +12,4 @@ shader_parameter/normal_tex = ExtResource("3_2dnja")
 shader_parameter/wave_amplitude = 0.25
 shader_parameter/wave_frequency = 3.939
 shader_parameter/wave_speed = 5.00000023424012
-shader_parameter/tail_start = -0.24499996413750003
+shader_parameter/tail_start = -0.24499996413750005

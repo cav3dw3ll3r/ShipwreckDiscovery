@@ -72,21 +72,15 @@ func _exit_tree() -> void:
 
 
 func _run_startup_check() -> void:
-	var report := _build_report(false)
+	var report := _build_quick_report()
 	if _has_report_issues(report):
-		_show_report(report, "Asset Manifest Check")
-		return
-
-	var previous_report := _load_report(REPORT_PATH)
-	if _has_report_issues(previous_report):
-		_show_report(previous_report, "Previous Asset Manifest Check")
-		return
-
-	print("Asset Manifest Checker: assets are up to date.")
+		push_warning("Asset Manifest Checker: quick check found issues: %s" % report.get("summary", {}))
+	else:
+		print("Asset Manifest Checker: quick check passed.")
 
 
 func _check_assets_now() -> void:
-	var report := _build_report(false)
+	var report := _build_quick_report()
 	_show_report(report, "Asset Manifest Check")
 
 
@@ -106,9 +100,66 @@ func _open_manifest() -> void:
 
 
 func _save_shutdown_report() -> void:
-	var report := _build_report(false)
+	var report := _build_quick_report()
 	_ensure_report_dir()
 	_write_json(REPORT_PATH, report)
+
+
+func _build_quick_report() -> Dictionary:
+	var manifest := _read_manifest()
+	var manifest_entries := _manifest_entries_by_path(manifest)
+	var report := {
+		"schema_version": 1,
+		"checked_at": Time.get_datetime_string_from_system(true, true),
+		"manifest_path": _project_path(MANIFEST_PATH),
+		"summary": {
+			"ok": 0,
+			"missing": 0,
+			"changed": 0,
+			"extra": 0,
+		},
+		"missing": [],
+		"changed": [],
+		"extra": [],
+		"ok": [],
+	}
+
+	if not FileAccess.file_exists(MANIFEST_PATH):
+		report["changed"].append({
+			"path": _project_path(MANIFEST_PATH),
+			"reason": "Manifest file is missing. Use '%s' to create it." % MENU_REFRESH,
+		})
+		report["summary"]["changed"] += 1
+		return report
+
+	for path in manifest_entries.keys():
+		var expected: Dictionary = manifest_entries[path]
+		var res_path := "res://%s" % path
+		if not FileAccess.file_exists(res_path):
+			report["missing"].append({
+				"path": path,
+				"package": expected.get("package", ""),
+				"reason": "Listed in manifest but not found locally.",
+			})
+			report["summary"]["missing"] += 1
+			continue
+
+		var actual_size := _file_size_for_project_path(path)
+		var expected_size := int(expected.get("size", -1))
+		if expected_size >= 0 and actual_size != expected_size:
+			report["changed"].append({
+				"path": path,
+				"package": expected.get("package", ""),
+				"reason": "size %s != %s" % [actual_size, expected_size],
+				"expected_size": expected_size,
+				"actual_size": actual_size,
+			})
+			report["summary"]["changed"] += 1
+		else:
+			report["ok"].append(path)
+			report["summary"]["ok"] += 1
+
+	return report
 
 
 func _build_report(include_hashes_for_extras: bool) -> Dictionary:

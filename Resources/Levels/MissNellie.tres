@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="LevelData" load_steps=2 format=3 uid="uid://d0wmh5y3eqsx5"]
+[gd_resource type="Resource" script_class="LevelData" load_steps=3 format=3 uid="uid://d0wmh5y3eqsx5"]
 
+[ext_resource type="Script" uid="uid://ch2b5lo3gpgif" path="res://Scripts/Environment/CoralSim/coral_data.gd" id="1_eb6cx"]
 [ext_resource type="Script" uid="uid://bv3ae25s64aui" path="res://Scripts/LevelData.gd" id="1_hi86y"]
 
 [resource]
@@ -9,5 +10,3 @@ nameID = "MissNellieName"
 groupID = "DestinGroup"
 descriptionID = "MissNellyDescription"
 stringTable = "res://Resources/StringTables/CoreLevelStrings.tsv"
-iconTexture = "uid://c4t7mac3spgm"
-videoFile = "res://Resources/LevelVideos/1 Intro Brannon-Dylan History.mp4"
