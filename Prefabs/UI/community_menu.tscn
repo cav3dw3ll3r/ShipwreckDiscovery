@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://no32gtjp1ow"]
+
+[ext_resource type="Theme" uid="uid://dyls1fq20ga2d" path="res://Resources/Stylesheets/ShipwreckDiscovery.theme" id="1_61jgn"]
+[ext_resource type="Script" uid="uid://n1jp8uhwubwa" path="res://Scripts/UI/CommunityMenu.gd" id="1_ansf1"]
+
+[node name="CommunityMenu" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_61jgn")
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+script = ExtResource("1_ansf1")
+thisLocaleCommunityDataPath = "res://Resources/CommunityListings"
+fileName = "Destin_Supporters.tsv"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+custom_minimum_size = Vector2(550, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3

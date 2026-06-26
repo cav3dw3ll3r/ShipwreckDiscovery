@@ -1,0 +1,77 @@
+[gd_scene load_steps=9 format=3 uid="uid://dvhi1kmux76to"]
+
+[ext_resource type="Script" uid="uid://c1xxd0if0nlka" path="res://Scripts/PlayerFollowXZ.gd" id="1_7trrx"]
+[ext_resource type="Shader" uid="uid://cr801bkwmfpgb" path="res://Materials/Shaders/infinite_ocean.gdshader" id="2_v5gbr"]
+[ext_resource type="Shader" uid="uid://3bhgkgsw07on" path="res://Materials/Shaders/beneath_ocean.gdshader" id="3_7044g"]
+[ext_resource type="Texture2D" uid="uid://vfbupm78hy7t" path="res://Images/NormalMaps/Water_Normal_1.jpg" id="3_rqup7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gqb34"]
+render_priority = 0
+shader = ExtResource("2_v5gbr")
+shader_parameter/deep_color = Color(0.05, 0.15, 0.35, 1)
+shader_parameter/horizon_color = Color(0.27475986, 0.51896185, 0.7511936, 1)
+shader_parameter/normal_map = ExtResource("3_rqup7")
+shader_parameter/normal_scale = 3.0
+shader_parameter/normal_churn_speed = 1.0
+shader_parameter/fade_distance = 0.1
+shader_parameter/fade_softness = 0.05
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_0ghdq"]
+material = SubResource("ShaderMaterial_gqb34")
+size = Vector2(75, 75)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ia4q7"]
+render_priority = 0
+shader = ExtResource("3_7044g")
+shader_parameter/deep_color = Color(0, 0.73379874, 0.839581, 1)
+shader_parameter/horizon_color = Color(0.103237025, 0.24632964, 0.3819451, 1)
+shader_parameter/normal_map = ExtResource("3_rqup7")
+shader_parameter/normal_scale = 3.0
+shader_parameter/normal_churn_speed = 1.0
+shader_parameter/fade_distance = 0.1
+shader_parameter/fade_softness = 0.05
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_711wa"]
+material = SubResource("ShaderMaterial_ia4q7")
+size = Vector2(75, 75)
+
+[node name="Ocean" type="Node3D"]
+script = ExtResource("1_7trrx")
+
+[node name="OceanTop_Center" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_0ghdq")
+
+[node name="OceanBottom" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_711wa")
+
+[node name="OceanTop_Center2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75, 0, 0)
+mesh = SubResource("PlaneMesh_0ghdq")
+
+[node name="OceanTop_Center3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75, 0, 0)
+mesh = SubResource("PlaneMesh_0ghdq")
+
+[node name="OceanTop_Center4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 75)
+mesh = SubResource("PlaneMesh_0ghdq")
+
+[node name="OceanTop_Center5" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75, 0, 75)
+mesh = SubResource("PlaneMesh_0ghdq")
+
+[node name="OceanTop_Center6" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75, 0, 75)
+mesh = SubResource("PlaneMesh_0ghdq")
+
+[node name="OceanTop_Center7" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -75)
+mesh = SubResource("PlaneMesh_0ghdq")
+
+[node name="OceanTop_Center8" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75, 0, -75)
+mesh = SubResource("PlaneMesh_0ghdq")
+
+[node name="OceanTop_Center9" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75, 0, -75)
+mesh = SubResource("PlaneMesh_0ghdq")

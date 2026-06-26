@@ -1,0 +1,35 @@
+[gd_scene load_steps=8 format=3 uid="uid://ccfn24ccr2p14"]
+
+[ext_resource type="Script" uid="uid://e3dw0tnq2dci" path="res://Scripts/Environment/Aquarium/MultiFishLODController.gd" id="1_0jnnd"]
+[ext_resource type="Resource" uid="uid://b52lle5obqfba" path="res://Resources/Scannable/Spotlight_Targets/barracuda_spotlight_target.tres" id="2_b2cid"]
+[ext_resource type="ArrayMesh" uid="uid://da1ltne7bcxxt" path="res://Meshes/Fish/Destin_Optimized/Barracuda/barracuda_flat.res" id="4_0jnnd"]
+[ext_resource type="ArrayMesh" uid="uid://7hhsq5ktntd2" path="res://Meshes/Fish/Destin/Barracuda/barracude.res" id="4_b2cid"]
+[ext_resource type="Material" uid="uid://d3qm38hrsfcwu" path="res://Materials/AnimatedFish/Destin/barracude_animated.tres" id="5_0jnnd"]
+
+[sub_resource type="MultiMesh" id="MultiMesh_b2cid"]
+transform_format = 1
+mesh = ExtResource("4_b2cid")
+
+[sub_resource type="MultiMesh" id="MultiMesh_0oq2q"]
+transform_format = 1
+mesh = ExtResource("4_0jnnd")
+
+[node name="MultiBarracudaLod" type="Node3D" node_paths=PackedStringArray("near_multimesh_node", "far_multimesh_node")]
+script = ExtResource("1_0jnnd")
+near_multimesh_node = NodePath("Near")
+far_multimesh_node = NodePath("Far")
+near_mesh_material = ExtResource("5_0jnnd")
+spotlight_target = ExtResource("2_b2cid")
+fish_count = 64
+swim_radius = 25.0
+yaw_offset = 0.0
+bottom = 1.0
+ceiling = 15.0
+scale_min = 0.2
+scale_max = 0.4
+
+[node name="Near" type="MultiMeshInstance3D" parent="."]
+multimesh = SubResource("MultiMesh_b2cid")
+
+[node name="Far" type="MultiMeshInstance3D" parent="."]
+multimesh = SubResource("MultiMesh_0oq2q")

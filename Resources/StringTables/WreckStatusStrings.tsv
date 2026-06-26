@@ -1,0 +1,14 @@
+ID	EN	SP	FR	GE	RU
+WreckStatus_SterilePlantCoral	Barren - Plant Coral	Estéril - Plantar coral	Stérile - Planter du corail	Öde - Koralle pflanzen	Бесплодный - Посадить коралл
+WreckStatus_FishDecliningPlantCoral	Fish Declining - Plant Coral	Peces en declive - Plantar coral	Poissons en déclin - Planter du corail	Fischbestand schrumpft - Koralle pflanzen	Рыбы сокращаются - Посадить коралл
+WreckStatus_CoralGrowing	Reef Healing	Arrecife sanando	Récif en guérison	Riff erholt sich	Риф исцеляется
+WreckStatus_FishReturning	Fish Returning	Peces regresando	Poissons revenant	Fische kehren zurück	Рыбы возвращаются
+WreckStatus_Healthy	Healthy Ecosystem	Ecosistema saludable	Écosystème sain	Gesundes Ökosystem	Здоровая экосистема
+WreckStatus_Pristine	Pristine	Prístino	Immaculé	Unberührt	Нетронутый
+WreckStatus_PollutedClearTrash	Polluted - Clear Trash	Contaminado - Limpiar basura	Pollué - Enlever les déchets	Verschmutzt - Müll entfernen	Загрязнено - Убрать мусор
+WreckStatus_TrashedCleanUp	Trashed - Clean Up	Lleno de basura - Limpieza	Jonché de déchets - Nettoyage	Vermüllt - Säuberung	Завален мусором - Уборка
+WreckStatus_InfestedCullLionfish	Infested - Cull Lionfish	Infestado - Eliminar peces león	Infesté - Éliminer les poissons-lions	Befallen - Rotfeuerfische dezimieren	Заражено - Уничтожить рыб-львов
+WreckStatus_NeglectedPlantCoral	Neglected - Plant Coral	Descuidado - Plantar coral	Négligé - Planter du corail	Vernachlässigt - Korallen pflanzen	Запущено - Посадить коралл
+WreckStatus_NeglectedCullLionfish	Neglected - Cull Lionfish	Descuidado - Eliminar peces león	Négligé - Éliminer les poissons-lions	Vernachlässigt - Rotfeuerfische dezimieren	Запущено - Уничтожить рыб-львов
+WreckStatus_NeglectedCleanUp	Neglected - Clean Up	Descuidado - Limpiar	Négligé - Nettoyer	Vernachlässigt - Säubern	Запущено - Убирать
+WreckStatus_CriticalEcosystemDying	Critical - Ecosystem Dying	Crítico - Ecosistema muriendo	Critique - Écosystème mourant	Kritisch - Ökosystem stirbt	Критично - Экосистема умирает				

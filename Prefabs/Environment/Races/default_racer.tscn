@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4w3411jiwyvv"]
+
+[ext_resource type="ArrayMesh" uid="uid://do82jcuf32mkb" path="res://Meshes/Fish/Destin_Optimized/Trunkfish/trunkfish.res" id="1_o55h4"]
+[ext_resource type="Material" uid="uid://y3kfwoiuyrwu" path="res://Materials/AnimatedFish/Destin/trunkfish_animated.tres" id="2_6kvty"]
+
+[node name="DefaultRacer" type="Node3D" groups=["racer"]]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+mesh = ExtResource("1_o55h4")
+surface_material_override/0 = ExtResource("2_6kvty")

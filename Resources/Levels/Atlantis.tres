@@ -1,0 +1,91 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=16 format=3 uid="uid://v8jie18leara"]
+
+[ext_resource type="Script" uid="uid://bv3ae25s64aui" path="res://Scripts/LevelData.gd" id="1_drrea"]
+[ext_resource type="Script" uid="uid://ch2b5lo3gpgif" path="res://Scripts/Environment/CoralSim/coral_data.gd" id="1_o5jwg"]
+[ext_resource type="Script" uid="uid://cdid0n7vhhcq" path="res://Scripts/Environment/CoralSim/coral_stage_data.gd" id="2_it2o6"]
+
+[sub_resource type="Resource" id="Resource_8erwu"]
+script = ExtResource("2_it2o6")
+local_position = Vector3(0.019011408, 0.15740573, -0.05356759)
+scale_seed = 0.2
+
+[sub_resource type="Resource" id="Resource_hrhnv"]
+script = ExtResource("2_it2o6")
+local_position = Vector3(0, 0.3815822, 0.026563717)
+scale_seed = 0.5
+
+[sub_resource type="Resource" id="Resource_p1xqj"]
+script = ExtResource("2_it2o6")
+local_position = Vector3(0, 0.65479434, 0)
+scale_seed = 0.8
+
+[sub_resource type="Resource" id="Resource_cnv0u"]
+script = ExtResource("1_o5jwg")
+global_position = Vector3(0, -20.747383, -14.211759)
+baby_stage = SubResource("Resource_8erwu")
+growing_stage = SubResource("Resource_hrhnv")
+pristine_stage = SubResource("Resource_p1xqj")
+biomass = 5.593
+resilience = 1.0
+type = 1
+
+[sub_resource type="Resource" id="Resource_8087w"]
+script = ExtResource("2_it2o6")
+local_position = Vector3(0.019011408, 0.15740573, -0.05356759)
+scale_seed = 0.2
+
+[sub_resource type="Resource" id="Resource_1n18e"]
+script = ExtResource("2_it2o6")
+local_position = Vector3(0, 0.3815822, 0.026563717)
+scale_seed = 0.5
+
+[sub_resource type="Resource" id="Resource_eqv4i"]
+script = ExtResource("2_it2o6")
+local_position = Vector3(0, 0.65479434, 0)
+scale_seed = 0.8
+
+[sub_resource type="Resource" id="Resource_v1kaa"]
+script = ExtResource("1_o5jwg")
+global_position = Vector3(-1.2800779, -20.747383, -15.470105)
+baby_stage = SubResource("Resource_8087w")
+growing_stage = SubResource("Resource_1n18e")
+pristine_stage = SubResource("Resource_eqv4i")
+biomass = 35.654
+resilience = 1.0
+type = 1
+
+[sub_resource type="Resource" id="Resource_y5t1e"]
+script = ExtResource("2_it2o6")
+local_position = Vector3(0.019011408, 0.15740573, -0.05356759)
+scale_seed = 0.2
+
+[sub_resource type="Resource" id="Resource_1n8t0"]
+script = ExtResource("2_it2o6")
+local_position = Vector3(0, 0.3815822, 0.026563717)
+scale_seed = 0.5
+
+[sub_resource type="Resource" id="Resource_oudoj"]
+script = ExtResource("2_it2o6")
+local_position = Vector3(0, 0.65479434, 0)
+scale_seed = 0.8
+
+[sub_resource type="Resource" id="Resource_0fbwb"]
+script = ExtResource("1_o5jwg")
+global_position = Vector3(-1.2144979, -20.747383, -13.875853)
+baby_stage = SubResource("Resource_y5t1e")
+growing_stage = SubResource("Resource_1n8t0")
+pristine_stage = SubResource("Resource_oudoj")
+resilience = 1.0
+type = 1
+
+[resource]
+script = ExtResource("1_drrea")
+scene_path = "res://Scenes/Optimized_Levels/atlantis.tscn"
+nameID = "AtlantisName"
+groupID = "DestinGroup"
+descriptionID = "AtlantisDescription"
+stringTable = "res://Resources/StringTables/CoreLevelStrings.tsv"
+initial_lionfish = 67
+initial_pollution = 0.67
+initial_fish_biomass = 25.0
+initial_corals = Array[ExtResource("1_o5jwg")]([SubResource("Resource_cnv0u"), SubResource("Resource_v1kaa"), SubResource("Resource_0fbwb")])

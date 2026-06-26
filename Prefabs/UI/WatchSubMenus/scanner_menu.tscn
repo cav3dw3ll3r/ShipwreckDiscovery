@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://b5fnq7m72ec6l"]
+
+[ext_resource type="Theme" uid="uid://dyls1fq20ga2d" path="res://Resources/Stylesheets/ShipwreckDiscovery.theme" id="1_q2ihq"]
+[ext_resource type="Script" uid="uid://c1eaajtw02w7i" path="res://Scripts/UI/Watch/Watch_Scanner_2.gd" id="2_yrwhb"]
+[ext_resource type="PackedScene" uid="uid://d4f8n2k6m9p3s" path="res://Prefabs/UI/Scanner/scanner_display.tscn" id="3_display"]
+[ext_resource type="AudioStream" uid="uid://5pdb6vxoxhx7" path="res://Audio/digital-noises-glitch-56288.mp3" id="7_5r72m"]
+
+[node name="ScannerMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_q2ihq")
+script = ExtResource("2_yrwhb")
+
+[node name="ScannerDisplay" parent="." instance=ExtResource("3_display")]
+layout_mode = 1
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -41.0
+offset_top = 66.5
+offset_right = 41.0
+offset_bottom = 121.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 20
+text = "Back
+"
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("7_5r72m")
+bus = &"SFX"
+
+[node name="Success_Sound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("7_5r72m")
+bus = &"SFX"
+
+[connection signal="pressed" from="Back" to="." method="back"]

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Scannable" load_steps=3 format=3 uid="uid://5h7ei12ina4c"]
+
+[ext_resource type="AudioStream" uid="uid://cftajysm4lydh" path="res://Audio/Fish_Scan_Audio/SWD Trunkfish.wav" id="1_n813m"]
+[ext_resource type="Script" uid="uid://dne2dbsbrcl4p" path="res://Resources/Scannable/Scannable.gd" id="2_kkeay"]
+
+[resource]
+script = ExtResource("2_kkeay")
+dataPath = null
+iconDir = null
+videoDir = "res://Resources/Scannable/Creatures/videos/"
+scannable_type = 0
+scannable_ID = ""
+scan_thresholds = Dictionary[int, int]({})
+required_scan_time = 1.0
+scan_audio = ExtResource("1_n813m")
+subtitle_dir = null
+metadata/_custom_type_script = "uid://dne2dbsbrcl4p"

@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://dau64oi1ki8co"]
+
+[ext_resource type="Theme" uid="uid://dyls1fq20ga2d" path="res://Resources/Stylesheets/ShipwreckDiscovery.theme" id="1_jvuou"]
+[ext_resource type="Script" uid="uid://d2k1iwploq6k7" path="res://Scripts/UI/SandboxMenu.gd" id="2_fti7r"]
+[ext_resource type="Texture2D" uid="uid://dctoe3r5h6447" path="res://Resources/Stylesheets/UI_Components/Window/Window002_Cyan_Opaque.png" id="2_iy842"]
+[ext_resource type="Resource" path="res://Resources/SandboxOptions/DoublePartyTime.tres" id="4_iy842"]
+[ext_resource type="Resource" path="res://Resources/SandboxOptions/PartyTime.tres" id="5_nqjxy"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6s5kj"]
+texture = ExtResource("2_iy842")
+
+[node name="Sandbox" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_jvuou")
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+script = ExtResource("2_fti7r")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ProducedBy" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Container" type="PanelContainer" parent="ScrollContainer/ProducedBy"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_6s5kj")
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/ProducedBy/Container"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="GridContainer" parent="ScrollContainer/ProducedBy/Container/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+columns = 4
+
+[node name="OptionPreloader" type="ResourcePreloader" parent="."]
+resources = [PackedStringArray("DoublePartyTime", "PartyTime"), [ExtResource("4_iy842"), ExtResource("5_nqjxy")]]

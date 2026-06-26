@@ -1,0 +1,47 @@
+[gd_scene load_steps=15 format=3 uid="uid://dqa85qukoffdk"]
+
+[ext_resource type="Script" uid="uid://bhtl3fsoxkt6i" path="res://addons/zylann.hterrain/hterrain.gd" id="1_4tyc8"]
+[ext_resource type="Resource" uid="uid://b6mhbx3rn5qdp" path="res://Data/data.hterrain" id="2_xfbpj"]
+[ext_resource type="Script" uid="uid://dhbqdkeqi4js5" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="3_arfyg"]
+[ext_resource type="Texture2D" uid="uid://d3eev8ee5js34" path="res://Images/MeshTextures/SampleLevel_slot0_albedo_bump.png" id="4_jmeil"]
+[ext_resource type="Texture2D" uid="uid://dhsosa2w6bj37" path="res://Images/MeshTextures/SampleLevel_slot1_albedo_bump.png" id="5_m46ns"]
+[ext_resource type="Texture2D" uid="uid://bji88yn5efr5u" path="res://Images/MeshTextures/SampleLevel_slot2_albedo_bump.png" id="6_o16xv"]
+[ext_resource type="Texture2D" uid="uid://cwrnjugec7eft" path="res://Images/MeshTextures/SampleLevel_slot3_albedo_bump.png" id="7_qg640"]
+[ext_resource type="Texture2D" uid="uid://dfvxkia3rbmjb" path="res://Images/MeshTextures/SampleLevel_slot0_normal_roughness.png" id="8_a1frm"]
+[ext_resource type="Texture2D" uid="uid://di36dydi7ct2y" path="res://Images/MeshTextures/SampleLevel_slot1_normal_roughness.png" id="9_l6vn5"]
+[ext_resource type="Texture2D" uid="uid://b1o6sjmgopbd6" path="res://Images/MeshTextures/SampleLevel_slot2_normal_roughness.png" id="10_aemhb"]
+[ext_resource type="Texture2D" uid="uid://cdmbbfrqr22bg" path="res://Images/MeshTextures/SampleLevel_slot3_normal_roughness.png" id="11_jhuqm"]
+[ext_resource type="Script" uid="uid://de8goyndwaxmw" path="res://addons/zylann.hterrain/hterrain_detail_layer.gd" id="12_uc8yo"]
+[ext_resource type="Texture2D" uid="uid://6jmdwj3vn6m0" path="res://addons/zylann.hterrain/tools/icons/icon_detail_layer_node.svg" id="13_sakvk"]
+
+[sub_resource type="Resource" id="Resource_gqws7"]
+script = ExtResource("3_arfyg")
+mode = 0
+textures = [[ExtResource("4_jmeil"), ExtResource("5_m46ns"), ExtResource("6_o16xv"), ExtResource("7_qg640")], [ExtResource("8_a1frm"), ExtResource("9_l6vn5"), ExtResource("10_aemhb"), ExtResource("11_jhuqm")]]
+
+[node name="HTerrain" type="Node3D"]
+script = ExtResource("1_4tyc8")
+_terrain_data = ExtResource("2_xfbpj")
+chunk_size = 32
+collision_enabled = true
+collision_layer = 1
+collision_mask = 1
+shader_type = "Classic4Lite"
+custom_shader = null
+custom_globalmap_shader = null
+texture_set = SubResource("Resource_gqws7")
+render_layers = 1
+cast_shadow = 1
+shader_params/u_ground_uv_scale = 18.0
+shader_params/u_depth_blending = true
+shader_params/u_triplanar = true
+shader_params/u_tile_reduction = Vector4(1, 1, 1, 1)
+
+[node name="HTerrainDetailLayer" type="Node3D" parent="."]
+script = ExtResource("12_uc8yo")
+shader_params/u_globalmap_tint_bottom = null
+shader_params/u_globalmap_tint_top = null
+shader_params/u_bottom_ao = null
+shader_params/u_instance_scale = null
+shader_params/u_roughness = null
+metadata/_editor_icon = ExtResource("13_sakvk")

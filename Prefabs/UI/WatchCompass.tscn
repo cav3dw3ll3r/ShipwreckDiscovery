@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8rjt58nlylkg"]
+
+[ext_resource type="Texture2D" uid="uid://bcukb1pjflmjl" path="res://Images/CustomUI/Letters.png" id="1_atlks"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rqeqi"]
+
+[node name="MainMenu" type="CanvasLayer"]
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(512, 512)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -256.0
+offset_right = 256.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxEmpty_rqeqi")
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer"]
+layout_mode = 2
+texture = ExtResource("1_atlks")
+expand_mode = 2
+flip_h = true
+flip_v = true

@@ -1,0 +1,197 @@
+[gd_scene load_steps=5 format=3 uid="uid://djfrsdm6yhrdb"]
+
+[ext_resource type="Theme" uid="uid://dyls1fq20ga2d" path="res://Resources/Stylesheets/ShipwreckDiscovery.theme" id="1_engje"]
+[ext_resource type="Script" uid="uid://pjexb337qp1n" path="res://Scripts/UI/MainMenuTabs.gd" id="1_mp1j6"]
+[ext_resource type="Script" uid="uid://bih8icx0fn3lh" path="res://Scripts/UI/Localization/LocalizedButtonText.gd" id="3_1tugh"]
+[ext_resource type="Texture2D" uid="uid://cotf0sfhm7fqa" path="res://Resources/Stylesheets/UI_Components/Button/Icon_DividingLine01.png" id="3_7ljhc"]
+
+[node name="MainMenu" type="CanvasLayer"]
+
+[node name="MenuPanel" type="PanelContainer" parent="." node_paths=PackedStringArray("TravelButton", "CreditShopButton", "PlayerMenuButton", "DiveLogButton", "SettingsButton", "CreditsButton", "ExitButton", "TutorialButton", "ContextMenuContainer", "LoginOverrideContainer", "LoginOverrideContentContainer", "LoginOverrideBackButton") groups=["MainMenu"]]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_engje")
+script = ExtResource("1_mp1j6")
+TravelButton = NodePath("HBoxContainer/LeftSidebar/MainTabs/Travel")
+CreditShopButton = NodePath("HBoxContainer/LeftSidebar/MainTabs/CreditShop")
+PlayerMenuButton = NodePath("HBoxContainer/LeftSidebar/MainTabs/Player")
+DiveLogButton = NodePath("HBoxContainer/LeftSidebar/MainTabs/DiveLog")
+SettingsButton = NodePath("HBoxContainer/LeftSidebar/MainTabs/Settings")
+CreditsButton = NodePath("HBoxContainer/LeftSidebar/MainTabs/Credits")
+ExitButton = NodePath("HBoxContainer/LeftSidebar/MainTabs/Exit")
+TutorialButton = NodePath("HBoxContainer/LeftSidebar/MainTabs/Tutorial")
+ContextMenuContainer = NodePath("HBoxContainer/ContextMargin")
+LoginOverrideContainer = NodePath("LoginOverride")
+LoginOverrideContentContainer = NodePath("LoginOverride/ContentHost")
+LoginOverrideBackButton = NodePath("LoginOverride/BackButton")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MenuPanel"]
+layout_mode = 2
+
+[node name="LeftSidebar" type="MarginContainer" parent="MenuPanel/HBoxContainer"]
+custom_minimum_size = Vector2(125, 0)
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 12
+
+[node name="MainTabs" type="VBoxContainer" parent="MenuPanel/HBoxContainer/LeftSidebar"]
+custom_minimum_size = Vector2(60, 300)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_constants/separation = 6
+alignment = 1
+
+[node name="Travel" type="Button" parent="MenuPanel/HBoxContainer/LeftSidebar/MainTabs"]
+custom_minimum_size = Vector2(50, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Wrecks"
+script = ExtResource("3_1tugh")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "wrecks"
+metadata/_custom_type_script = "uid://bih8icx0fn3lh"
+
+[node name="Tutorial" type="Button" parent="MenuPanel/HBoxContainer/LeftSidebar/MainTabs"]
+custom_minimum_size = Vector2(50, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Tutorial
+"
+script = ExtResource("3_1tugh")
+stringTablePath = "res://Resources/StringTables/Tutorial.tsv"
+stringID = "guide"
+metadata/_custom_type_script = "uid://bih8icx0fn3lh"
+
+[node name="Settings" type="Button" parent="MenuPanel/HBoxContainer/LeftSidebar/MainTabs"]
+custom_minimum_size = Vector2(50, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Settings"
+script = ExtResource("3_1tugh")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "settings"
+metadata/_custom_type_script = "uid://bih8icx0fn3lh"
+
+[node name="Player" type="Button" parent="MenuPanel/HBoxContainer/LeftSidebar/MainTabs"]
+visible = false
+custom_minimum_size = Vector2(50, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Customize"
+script = ExtResource("3_1tugh")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "customize"
+metadata/_custom_type_script = "uid://bih8icx0fn3lh"
+
+[node name="CreditShop" type="Button" parent="MenuPanel/HBoxContainer/LeftSidebar/MainTabs"]
+visible = false
+custom_minimum_size = Vector2(50, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Discovery Store"
+script = ExtResource("3_1tugh")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "discoveryStore"
+metadata/_custom_type_script = "uid://bih8icx0fn3lh"
+
+[node name="DiveLog" type="Button" parent="MenuPanel/HBoxContainer/LeftSidebar/MainTabs"]
+visible = false
+custom_minimum_size = Vector2(50, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Dive Log"
+script = ExtResource("3_1tugh")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "dive_log"
+metadata/_custom_type_script = "uid://bih8icx0fn3lh"
+
+[node name="Credits" type="Button" parent="MenuPanel/HBoxContainer/LeftSidebar/MainTabs"]
+custom_minimum_size = Vector2(50, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Kudos"
+script = ExtResource("3_1tugh")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "kudos"
+metadata/_custom_type_script = "uid://bih8icx0fn3lh"
+
+[node name="Community" type="Button" parent="MenuPanel/HBoxContainer/LeftSidebar/MainTabs"]
+visible = false
+custom_minimum_size = Vector2(50, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Community"
+
+[node name="Exit" type="Button" parent="MenuPanel/HBoxContainer/LeftSidebar/MainTabs"]
+custom_minimum_size = Vector2(50, 40)
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Exit Game"
+script = ExtResource("3_1tugh")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "exit"
+metadata/_custom_type_script = "uid://bih8icx0fn3lh"
+
+[node name="HSeparator" type="HSeparator" parent="MenuPanel/HBoxContainer/LeftSidebar/MainTabs"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MenuPanel/HBoxContainer/LeftSidebar/MainTabs"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(1, 1, 1, 0.39215687)
+text = "EARLY
+ACCESS"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MenuPanel/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="TextureRect" type="TextureRect" parent="MenuPanel/HBoxContainer/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("3_7ljhc")
+
+[node name="ContextMargin" type="MarginContainer" parent="MenuPanel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="LoginOverride" type="VBoxContainer" parent="MenuPanel"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+
+[node name="ContentHost" type="MarginContainer" parent="MenuPanel/LoginOverride"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 8
+
+[node name="BackButton" type="Button" parent="MenuPanel/LoginOverride"]
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 12
+text = "Back"
+script = ExtResource("3_1tugh")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "backBtn"
+metadata/_custom_type_script = "uid://bih8icx0fn3lh"

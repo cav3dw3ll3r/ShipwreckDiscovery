@@ -1,0 +1,180 @@
+[gd_scene load_steps=5 format=3 uid="uid://fwj3wxf7ccvl"]
+
+[ext_resource type="Theme" uid="uid://dyls1fq20ga2d" path="res://Resources/Stylesheets/ShipwreckDiscovery.theme" id="1_5sh5j"]
+[ext_resource type="Script" uid="uid://cvalnx44pwigw" path="res://Scripts/UI/Localization/LocalizedLabel.gd" id="2_yvljw"]
+[ext_resource type="Texture2D" uid="uid://cvl6lf65mghai" path="res://Resources/Stylesheets/UI_Components/Window/Window001_WhiteTitleLine1.png" id="3_1616f"]
+[ext_resource type="Texture2D" uid="uid://bx6dgun8cca8q" path="res://Resources/Stylesheets/UI_Components/Window/Window001_WhiteTitleLine2.png" id="4_fwnql"]
+
+[node name="HoloSpadefishDisplay" type="Control"]
+layout_mode = 3
+anchor_right = 0.702
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = -2.0
+offset_right = 6.29596
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.716011, 0.716011)
+theme = ExtResource("1_5sh5j")
+
+[node name="Namebox" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 391.055
+offset_top = 47.4853
+offset_right = 845.055
+offset_bottom = 109.485
+
+[node name="Name" type="Label" parent="Namebox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+text = "Mangrove Snapper"
+horizontal_alignment = 1
+script = ExtResource("2_yvljw")
+stringTablePath = "res://Resources/StringTables/Fish_Scan_Strings.tsv"
+stringID = "mangrove_snapper_name"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="ColorRect" type="ColorRect" parent="Namebox"]
+custom_minimum_size = Vector2(0, 3)
+layout_mode = 2
+
+[node name="Scale" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 722.056
+offset_top = 511.165
+offset_right = 876.056
+offset_bottom = 541.165
+texture = ExtResource("3_1616f")
+
+[node name="TextureRect2" type="TextureRect" parent="Scale"]
+layout_mode = 0
+offset_left = 386.866
+offset_right = 540.866
+offset_bottom = 30.0
+texture = ExtResource("4_fwnql")
+
+[node name="Length" type="HBoxContainer" parent="Scale"]
+layout_mode = 0
+offset_left = 164.80183
+offset_top = 11.173346
+offset_right = 382.80182
+offset_bottom = 51.173355
+
+[node name="Min" type="Label" parent="Scale/Length"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "10"
+
+[node name="Dash" type="Label" parent="Scale/Length"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = " - "
+
+[node name="Max" type="Label" parent="Scale/Length"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "24"
+
+[node name="Units" type="Label" parent="Scale/Length"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "inches"
+script = ExtResource("2_yvljw")
+stringTablePath = "res://Resources/StringTables/Fish_Scan_Strings.tsv"
+stringID = "units_inches"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="SizeLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 923.17017
+offset_top = 497.19907
+offset_right = 1065.1702
+offset_bottom = 531.1991
+theme_override_font_sizes/font_size = 24
+text = "Size Range"
+horizontal_alignment = 1
+script = ExtResource("2_yvljw")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "Size"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="Factoid" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 55.8651
+offset_top = 191.338
+offset_right = 596.865
+offset_bottom = 401.338
+
+[node name="Vertical_Line" type="ColorRect" parent="Factoid"]
+custom_minimum_size = Vector2(3, 0)
+layout_mode = 2
+
+[node name="Found" type="VBoxContainer" parent="Factoid"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="LocalizedLabel" type="Label" parent="Factoid/Found"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Found"
+script = ExtResource("2_yvljw")
+stringTablePath = "res://Resources/StringTables/Fish_Scan_Strings.tsv"
+stringID = "found_label"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="ColorRect" type="ColorRect" parent="Factoid/Found"]
+custom_minimum_size = Vector2(0, 3)
+layout_mode = 2
+
+[node name="LocalizedLabel2" type="Label" parent="Factoid/Found"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Florida, Gulf of Mexico, Bahamas, Caribbean, Central & South America"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+script = ExtResource("2_yvljw")
+stringTablePath = "res://Resources/StringTables/Fish_Scan_Strings.tsv"
+stringID = "mangrove_snapper_found"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="Factoid2" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 153.629
+offset_top = 465.077
+offset_right = 612.629
+offset_bottom = 666.077
+
+[node name="Vertical_Line" type="ColorRect" parent="Factoid2"]
+custom_minimum_size = Vector2(3, 0)
+layout_mode = 2
+
+[node name="Found" type="VBoxContainer" parent="Factoid2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="LocalizedLabel" type="Label" parent="Factoid2/Found"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Cool Fact"
+script = ExtResource("2_yvljw")
+stringTablePath = "res://Resources/StringTables/Fish_Scan_Strings.tsv"
+stringID = "cool_fact"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="ColorRect" type="ColorRect" parent="Factoid2/Found"]
+custom_minimum_size = Vector2(0, 3)
+layout_mode = 2
+
+[node name="LocalizedLabel2" type="Label" parent="Factoid2/Found"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Mangrove Snappers are ambush predators that hunt at night"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+script = ExtResource("2_yvljw")
+stringTablePath = "res://Resources/StringTables/Fish_Scan_Strings.tsv"
+stringID = "mangrove_snapper_fact"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"

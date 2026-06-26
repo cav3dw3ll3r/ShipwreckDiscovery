@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://dpyek33ruvm2"]
+
+[ext_resource type="ArrayMesh" uid="uid://do82jcuf32mkb" path="res://Meshes/Fish/Destin_Optimized/Trunkfish/trunkfish.res" id="1_jd3yc"]
+[ext_resource type="Script" uid="uid://cqe14y6osewhi" path="res://Scripts/Environment/Aquarium/multi_fish_controller.gd" id="2_21sfy"]
+[ext_resource type="ArrayMesh" uid="uid://farxtettoinq" path="res://Meshes/Fish/Destin_Optimized/Trunkfish/trunkfish_meta.res" id="3_21sfy"]
+[ext_resource type="Resource" uid="uid://b4516m8ip3uw6" path="res://Resources/Scannable/Spotlight_Targets/trunkfish_spotlight_target.tres" id="3_jd3yc"]
+[ext_resource type="Material" uid="uid://y3kfwoiuyrwu" path="res://Materials/AnimatedFish/Destin/trunkfish_animated.tres" id="4_6jm0e"]
+
+[sub_resource type="MultiMesh" id="MultiMesh_21sfy"]
+transform_format = 1
+instance_count = 50
+mesh = ExtResource("1_jd3yc")
+buffer = PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="Trunkfish" type="MultiMeshInstance3D"]
+multimesh = SubResource("MultiMesh_21sfy")
+script = ExtResource("2_21sfy")
+android_mesh = ExtResource("3_21sfy")
+shared_material = ExtResource("4_6jm0e")
+spotlight_target = ExtResource("3_jd3yc")
+fish_count = 8
+swim_radius = 10.0
+swim_speed = 0.8
+turn_speed = 0.4
+yaw_offset = 0.0
+obstacle_avoid_weight = 5.0
+avoid_object_distance = 1.5
+bottom = 2.0
+ceiling = 2.5
+is_schooling = false
+flee_distance = 1.5
+scale_min = 0.5
+scale_max = 0.8

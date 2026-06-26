@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://dxryur1ybidur"]
+
+[ext_resource type="Shader" uid="uid://bi4bjck2c6fe4" path="res://Materials/Shaders/dust_particles.gdshader" id="1_h5td3"]
+
+[resource]
+render_priority = 1
+shader = ExtResource("1_h5td3")

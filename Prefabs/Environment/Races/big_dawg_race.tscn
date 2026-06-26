@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://ua04kktu7xax"]
+
+[ext_resource type="Script" uid="uid://rrjjpdb81rvw" path="res://Scripts/Environment/fishraces/race_controller.gd" id="1_0li5r"]
+[ext_resource type="PackedScene" uid="uid://b4w3411jiwyvv" path="res://Prefabs/Environment/Races/default_racer.tscn" id="2_1qidc"]
+[ext_resource type="AudioStream" uid="uid://cftajysm4lydh" path="res://Audio/Fish_Scan_Audio/SWD Trunkfish.wav" id="3_1yx4e"]
+[ext_resource type="PackedScene" uid="uid://daysg7lddyp0k" path="res://Prefabs/Environment/hoop.tscn" id="4_p3n0g"]
+
+[sub_resource type="Curve3D" id="Curve3D_0li5r"]
+bake_interval = 10.0
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 20.838238, -7.1123962, -70.90587, 0, 0, 0, 0, 0, 0, 15.249489, -6.404955, -63.85739, 0, 0, 0, 0, 0, 0, 5.9918747, -2.5047932, -27.605188, 0, 0, 0, 0, 0, 0, 5.1882496, -2.5768871, -20.744144, 0, 0, 0, 0, 0, 0, 4.6952033, -3.1861286, -18.772799, 0, 0, 0, 0, 0, 0, 4.627601, -5.2301865, -18.502504, 0, 0, 0, 0, 0, 0, 8.01058, -5.3727875, -17.604849, 0, 0, 0, 0, 0, 0, 12.611534, -5.5701847, -17.903036, 0, 0, 0, 0, 0, 0, 16.415913, -6.199112, -20.497368, 0, 0, 0, 0, 0, 0, 16.42648, -7.6532803, -25.1571, 0, 0, 0, 0, 0, 0, 16.394218, -8.11397, -30.629894, 0, 0, 0, 0, 0, 0, 12.452373, -9.803011, -42.9205, 0, 0, 0, 0, 0, 0, 7.7505317, -9.801685, -40.90896, 0, 0, 0, 0, 0, 0, 4.1884594, -9.2679405, -33.018147, 0, 0, 0, 0, 0, 0, 2.306138, -9.70697, -20.3746, 0, 0, 0, 0, 0, 0, 1.6221361, -8.833458, -15.470614, 0, 0, 0, 0, 0, 0, 3.728075, -6.8215885, -14.905939, 0, 0, 0, 0, 0, 0, 5.434414, -7.5556507, -13.965328, 0, 0, 0, 0, 0, 0, 7.989398, -8.790157, -13.639557, 0, 0, 0, 0, 0, 0, 11.188943, -8.762367, -11.390682, 0, 0, 0, 0, 0, 0, 14.5781765, -8.548096, -10.150694, 0, 0, 0, 0, 0, 0, 13.343235, -11.688713, 3.3372307, 0, 0, 0, 0, 0, 0, 11.590225, -11.954092, 7.7415447, 0, 0, 0, 0, 0, 0, 7.7430415, -12.370726, 8.8024025, 0, 0, 0, 0, 0, 0, 0.84323215, -12.049475, 7.6737766),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 25
+up_vector_enabled = false
+
+[node name="FishRace" type="Path3D"]
+transform = Transform3D(0.9701181, 0, 0.24263309, 0, 1, 0, -0.24263309, 0, 0.9701181, 0, 0, 0)
+curve = SubResource("Curve3D_0li5r")
+script = ExtResource("1_0li5r")
+racer_visual = ExtResource("2_1qidc")
+racer_audio = ExtResource("3_1yx4e")
+race_id = "big_dawg_fish_race"
+checkpoint_count = 20
+
+[node name="Hoop" parent="." instance=ExtResource("4_p3n0g")]
+transform = Transform3D(-0.18764839, 0.0008826583, 0.06919037, 9.313226e-11, 0.19998373, -0.0025511829, -0.069196, -0.0023936266, -0.18763311, 11.190391, -4.0635567, -44.742466)

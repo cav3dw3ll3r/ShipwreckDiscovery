@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" load_steps=6 format=3 uid="uid://cf0qwnqu45vya"]
+
+[ext_resource type="Texture2D" uid="uid://c2i0bnhsf5hjq" path="res://Meshes/HomeBase/Texture/Diving_fins/Divingfins_Color.png" id="1_snmsw"]
+[ext_resource type="Texture2D" uid="uid://dmnhk57nqy5b" path="res://Meshes/HomeBase/Texture/Diving_fins/Divingfins_AO.png" id="2_sa0dl"]
+[ext_resource type="Texture2D" uid="uid://d1an3h7wbvda2" path="res://Meshes/HomeBase/Texture/Diving_fins/Divingfins_Normals.png" id="3_74lh4"]
+[ext_resource type="Texture2D" uid="uid://6lxin7sxx0su" path="res://Meshes/HomeBase/Texture/Diving_fins/Divingfins_Roughness.png" id="4_yqfch"]
+[ext_resource type="Texture2D" uid="uid://e02110jnuajj" path="res://Meshes/HomeBase/Texture/Diving_Equipment/DIVING_EQUIPMENT_Specular.png" id="5_30v60"]
+
+[resource]
+albedo_texture = ExtResource("1_snmsw")
+roughness_texture = ExtResource("4_yqfch")
+normal_enabled = true
+normal_texture = ExtResource("3_74lh4")
+ao_enabled = true
+ao_texture = ExtResource("2_sa0dl")
+subsurf_scatter_enabled = true
+subsurf_scatter_texture = ExtResource("5_30v60")

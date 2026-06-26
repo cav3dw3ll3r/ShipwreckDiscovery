@@ -1,0 +1,21 @@
+[gd_resource type="ShaderMaterial" load_steps=5 format=3 uid="uid://dqp3n8yf1vkh2"]
+
+[ext_resource type="Shader" uid="uid://git4jdl6je1w" path="res://Materials/Shaders/normal_flash_away.gdshader" id="1_fg6sk"]
+[ext_resource type="Texture2D" uid="uid://dum2gsmv0647e" path="res://Images/MeshTextures/Zookeeper/Plastic012A_1K-JPG_Color.jpg" id="2_1bplr"]
+[ext_resource type="Texture2D" uid="uid://cuqh2v8ak3afe" path="res://Images/Cloudz.png" id="3_xdtr4"]
+[ext_resource type="Texture2D" uid="uid://ulc88iycjaae" path="res://Images/MeshTextures/Zookeeper/Plastic012A_1K-JPG_NormalDX.jpg" id="4_0a0bd"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_fg6sk")
+shader_parameter/albedo_texture = ExtResource("2_1bplr")
+shader_parameter/alpha = 1.0
+shader_parameter/normal_texture = ExtResource("4_0a0bd")
+shader_parameter/noise_texture = ExtResource("3_xdtr4")
+shader_parameter/roughness = 0.5
+shader_parameter/metallic = 1.0
+shader_parameter/albedo_tint = Color(1.035, 1.035, 1.06, 1)
+shader_parameter/progress = 0.0
+shader_parameter/explosion_intensity = 0.1
+shader_parameter/glow_color = Color(0.6, 0.78, 0.88, 1)
+shader_parameter/glow_thickness = 0.047

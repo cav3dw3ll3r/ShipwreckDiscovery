@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcp7ova1j33p2"]
+
+[ext_resource type="Script" uid="uid://nwplxi2a4cn4" path="res://Scripts/UI/reward_tracking.gd" id="1_8g2c3"]
+[ext_resource type="Script" uid="uid://cvalnx44pwigw" path="res://Scripts/UI/Localization/LocalizedLabel.gd" id="1_s1xun"]
+
+[node name="RewardSection" type="HBoxContainer"]
+offset_right = 1231.0
+offset_bottom = 42.0
+size_flags_vertical = 4
+alignment = 1
+script = ExtResource("1_8g2c3")
+
+[node name="NumScannedLabel" type="Label" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "Number Scanned: "
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("1_s1xun")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "num_scanned"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="NumScannedValue" type="Label" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "12"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RewardTiers" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 20
+alignment = 2

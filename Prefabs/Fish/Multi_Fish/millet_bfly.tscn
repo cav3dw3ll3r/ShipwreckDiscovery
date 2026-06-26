@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cthc2cc6h1wv3"]
+
+[ext_resource type="ArrayMesh" uid="uid://msiujfhgfj0e" path="res://Meshes/Fish/Sandbox/Millet/Millet_full.tres" id="1_unsxm"]
+[ext_resource type="Script" uid="uid://cqe14y6osewhi" path="res://Scripts/Environment/Aquarium/multi_fish_controller.gd" id="2_x4ihj"]
+
+[sub_resource type="MultiMesh" id="MultiMesh_g5byo"]
+transform_format = 1
+mesh = ExtResource("1_unsxm")
+
+[node name="Millet_Bfly" type="MultiMeshInstance3D"]
+multimesh = SubResource("MultiMesh_g5byo")
+script = ExtResource("2_x4ihj")
+fish_count = 128
+swim_speed = 2.5
+min_scale = 0.15
+max_scale = 0.4

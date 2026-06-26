@@ -1,0 +1,70 @@
+[gd_scene load_steps=12 format=3 uid="uid://rha0yxegac3c"]
+
+[ext_resource type="Script" uid="uid://don77cyfmfvft" path="res://Scripts/Fish/Holo_Creature_Display.gd" id="1_oybk7"]
+[ext_resource type="Script" uid="uid://ckpn5w5yn8eiy" path="res://Scripts/Fish/grabbable_hologram.gd" id="2_8nwns"]
+[ext_resource type="ArrayMesh" uid="uid://ynes0niamj7b" path="res://Meshes/Fish/Destin/Goliath_Grouper/goliath_grouper.res" id="3_oybk7"]
+[ext_resource type="Material" uid="uid://ko5iv1hjxv0d" path="res://Materials/Fish_Holograms/goliath_grouper_hologram_material.tres" id="4_8nwns"]
+[ext_resource type="Shader" uid="uid://ckxspdi5kndhr" path="res://Materials/Shaders/hologram_backing.gdshader" id="5_ueay4"]
+[ext_resource type="Material" uid="uid://cpkalenfmjpln" path="res://Materials/Holo_UI.tres" id="6_8nwns"]
+[ext_resource type="PackedScene" uid="uid://djfc5ktuj4f1b" path="res://Scripts/UI/holoUI/holo_goliath_grouper_display.tscn" id="6_jj4m7"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_h1x45"]
+radius = 2.06832
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ihs4s"]
+render_priority = 0
+shader = ExtResource("5_ueay4")
+shader_parameter/beam_color = Color(0.2, 0.8, 1, 1)
+shader_parameter/intensity = 2.0
+shader_parameter/edge_softness = 2.5
+shader_parameter/aperture_radius = 0.45
+shader_parameter/aperture_softness = 0.03
+shader_parameter/scan_density = 120.0
+shader_parameter/scan_strength = 0.4
+shader_parameter/flicker_strength = 0.2
+shader_parameter/time_speed = 1.5
+shader_parameter/progress = 1.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_dno3b"]
+material = SubResource("ShaderMaterial_ihs4s")
+size = Vector2(0.55, 0.55)
+
+[sub_resource type="QuadMesh" id="QuadMesh_d76fh"]
+resource_local_to_scene = true
+material = ExtResource("6_8nwns")
+size = Vector2(0.5, 0.5)
+
+[node name="Hologram" type="Node3D"]
+script = ExtResource("1_oybk7")
+min_distance = 4.0
+max_distance = 8.0
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0809624, 2.18027)
+collision_layer = 262148
+collision_mask = 262148
+script = ExtResource("2_8nwns")
+horizontal_swipe_only = false
+
+[node name="Body" type="MeshInstance3D" parent="Area3D"]
+transform = Transform3D(-0.0454328, 0, 0.998967, 0, 1, 0, -0.998967, 0, -0.0454328, 0.00715065, -1.2452, -0.0135343)
+mesh = ExtResource("3_oybk7")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("4_8nwns")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_h1x45")
+
+[node name="Holo_Backboard" type="MeshInstance3D" parent="."]
+transform = Transform3D(13.3482, 0, 0, 0, 10.8712, 0, 0, 0, 1, 0.00866851, -0.915399, -0.128644)
+mesh = SubResource("QuadMesh_dno3b")
+
+[node name="Holo_UI" type="MeshInstance3D" parent="."]
+transform = Transform3D(14.9558, 0, 0, 0, 14.9558, 0, 0, 0, 1, 0.900374, -2.4039, 0.878961)
+mesh = SubResource("QuadMesh_d76fh")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+transparent_bg = true
+size = Vector2i(1024, 1024)
+
+[node name="HoloSpadefishDisplay" parent="SubViewport" instance=ExtResource("6_jj4m7")]

@@ -1,0 +1,29 @@
+[gd_resource type="ShaderMaterial" load_steps=6 format=3 uid="uid://csbog2d7vgdj0"]
+
+[ext_resource type="Shader" uid="uid://da67cnuuwitr6" path="res://Materials/Shaders/wreck_chunk.gdshader" id="1_2vrxa"]
+[ext_resource type="Texture2D" uid="uid://dtsuo0d6t5y0i" path="res://Meshes/wrecks/FinalMeta/MissJoann/Joann_Baked_Color.png" id="2_35eft"]
+[ext_resource type="Texture2D" uid="uid://fm77clwsjwn2" path="res://Meshes/wrecks/FinalMeta/MissJoann/Joann_Baked_Normal.png" id="3_c6hms"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_6c4oh"]
+noise_type = 2
+cellular_distance_function = 1
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_6nhxr"]
+noise = SubResource("FastNoiseLite_6c4oh")
+seamless = true
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_2vrxa")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = ExtResource("2_35eft")
+shader_parameter/texture_normal = ExtResource("3_c6hms")
+shader_parameter/caustic_texture = SubResource("NoiseTexture2D_6nhxr")
+shader_parameter/caustic_scale = 0.1
+shader_parameter/caustic_speed = Vector2(0.02, 0.01)
+shader_parameter/caustic_strength = 0.75
+shader_parameter/caustic_tint = Color(1, 1, 1, 1)
+shader_parameter/shadow_strength = 0.6
+shader_parameter/shadow_color = Color(0.05, 0.05, 0.1, 1)
+shader_parameter/caustic_glow_strength = 0.54800002603
+shader_parameter/caustic_glow_softness = 0.69200002961012

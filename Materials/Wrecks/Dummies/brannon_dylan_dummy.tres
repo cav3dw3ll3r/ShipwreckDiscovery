@@ -1,0 +1,27 @@
+[gd_resource type="ShaderMaterial" load_steps=5 format=3 uid="uid://p05c3dhhe0lj"]
+
+[ext_resource type="Shader" uid="uid://da67cnuuwitr6" path="res://Materials/Shaders/wreck_chunk.gdshader" id="1_ekah8"]
+[ext_resource type="Texture2D" uid="uid://d3eu5edmbnuxn" path="res://Meshes/wrecks/Optimized/BrannonDylan/BrannonDylan_Dummy.png" id="2_ekah8"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_xqqfb"]
+noise_type = 2
+fractal_type = 2
+fractal_octaves = 3
+fractal_weighted_strength = 0.26
+cellular_return_type = 5
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_xqqfb"]
+noise = SubResource("FastNoiseLite_xqqfb")
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_ekah8")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = ExtResource("2_ekah8")
+shader_parameter/caustic_texture = SubResource("NoiseTexture2D_xqqfb")
+shader_parameter/caustic_scale = 0.14
+shader_parameter/caustic_speed = Vector2(0.02, 0.02)
+shader_parameter/caustic_strength = 0.62
+shader_parameter/caustic_tint = Color(0.8, 0.9, 1, 1)
+shader_parameter/caustic_glow_strength = 0.15
+shader_parameter/caustic_glow_softness = 0.8

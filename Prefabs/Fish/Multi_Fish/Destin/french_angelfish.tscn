@@ -1,0 +1,34 @@
+[gd_scene load_steps=7 format=3 uid="uid://cq2gjgu0bv1l2"]
+
+[ext_resource type="ArrayMesh" uid="uid://c73xk7ub4t6ci" path="res://Meshes/Fish/Destin/French_angel/french_angel.res" id="1_f26lk"]
+[ext_resource type="Script" uid="uid://cqe14y6osewhi" path="res://Scripts/Environment/Aquarium/multi_fish_controller.gd" id="2_7x1cf"]
+[ext_resource type="Resource" uid="uid://cajf0unrnu4ci" path="res://Resources/Scannable/Spotlight_Targets/french_angel_spotlight_target.tres" id="3_f26lk"]
+[ext_resource type="ArrayMesh" uid="uid://b1udmisqhg2px" path="res://Meshes/Fish/Destin/French_angel/french_angel_meta.res" id="3_fcnh0"]
+[ext_resource type="Material" uid="uid://do28m36u8w18y" path="res://Materials/AnimatedFish/Destin/french_angelfish_animated.tres" id="4_0e5ak"]
+
+[sub_resource type="MultiMesh" id="MultiMesh_7x1cf"]
+transform_format = 1
+instance_count = 50
+mesh = ExtResource("1_f26lk")
+buffer = PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="French_Angelfish" type="MultiMeshInstance3D"]
+multimesh = SubResource("MultiMesh_7x1cf")
+script = ExtResource("2_7x1cf")
+android_mesh = ExtResource("3_fcnh0")
+shared_material = ExtResource("4_0e5ak")
+spotlight_target = ExtResource("3_f26lk")
+fish_count = 8
+swim_radius = 15.0
+swim_speed = 0.5
+turn_speed = 0.4
+yaw_offset = 0.0
+bottom = 2.0
+ceiling = 1.0
+neighbor_radius = 3.0
+separation_radius = 1.5
+alignment_weight = 0.7
+cohesion_weight = 0.7
+separation_weight = 0.8
+scale_min = 0.7
+scale_max = 1.0

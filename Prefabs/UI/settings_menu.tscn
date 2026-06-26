@@ -1,0 +1,248 @@
+[gd_scene load_steps=5 format=3 uid="uid://cfvc0dkwjh5ul"]
+
+[ext_resource type="Theme" uid="uid://dyls1fq20ga2d" path="res://Resources/Stylesheets/ShipwreckDiscovery.theme" id="1_jckgb"]
+[ext_resource type="Script" uid="uid://cvxerq5l8gxqp" path="res://Scripts/UI/SettingsMenu.gd" id="2_5r63d"]
+[ext_resource type="Script" uid="uid://cvalnx44pwigw" path="res://Scripts/UI/Localization/LocalizedLabel.gd" id="3_ed06r"]
+[ext_resource type="Script" uid="uid://bih8icx0fn3lh" path="res://Scripts/UI/Localization/LocalizedButtonText.gd" id="4_ugdtt"]
+
+[node name="GameSettingsMenu" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -752.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_jckgb")
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+script = ExtResource("2_5r63d")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LocalizedLabel" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Game Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_ed06r")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "SettingsHeader"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="HSeparator1" type="HSeparator" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="LocalizedLabel" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Text Language"
+script = ExtResource("3_ed06r")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "LanguageLabel"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="OptionButton" type="OptionButton" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="LocalizedLabel2" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Mute Voice"
+script = ExtResource("3_ed06r")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "mute"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="CheckButton" type="CheckBox" parent="ScrollContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="LocalizedLabel" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Ambience"
+horizontal_alignment = 1
+script = ExtResource("3_ed06r")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "ambience"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="Ambience" type="HSlider" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+min_value = -10.0
+max_value = 20.0
+value = 5.0
+
+[node name="VSeparator" type="VSeparator" parent="ScrollContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="LocalizedLabel2" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Ambience"
+horizontal_alignment = 1
+script = ExtResource("3_ed06r")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "SFXVolumeLabel"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="SFX" type="HSlider" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer2"]
+layout_mode = 2
+focus_mode = 0
+min_value = -10.0
+max_value = 20.0
+value = 5.0
+
+[node name="VSeparator2" type="VSeparator" parent="ScrollContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="LocalizedLabel" type="Label" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Voice"
+horizontal_alignment = 1
+script = ExtResource("3_ed06r")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "voice_volume"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="Voice" type="HSlider" parent="ScrollContainer/VBoxContainer/HBoxContainer2/VBoxContainer3"]
+layout_mode = 2
+focus_mode = 0
+min_value = -10.0
+max_value = 20.0
+value = 5.0
+
+[node name="HSeparator2" type="HSeparator" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Comfort" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 6
+alignment = 1
+
+[node name="LocalizedLabel" type="Label" parent="ScrollContainer/VBoxContainer/Comfort"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 12
+text = "Use Snap Turn "
+script = ExtResource("3_ed06r")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "snap_turn"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="SnapTurn" type="CheckBox" parent="ScrollContainer/VBoxContainer/Comfort"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="VSeparator" type="VSeparator" parent="ScrollContainer/VBoxContainer/Comfort"]
+layout_mode = 2
+
+[node name="LocalizedLabel2" type="Label" parent="ScrollContainer/VBoxContainer/Comfort"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Vignette "
+script = ExtResource("3_ed06r")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "vignette"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="Vignette" type="HSlider" parent="ScrollContainer/VBoxContainer/Comfort"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+focus_mode = 0
+min_value = 0.05
+max_value = 1.0
+step = 0.1
+value = 0.25
+
+[node name="HSeparator3" type="HSeparator" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Controls" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="LocalizedLabel" type="Label" parent="ScrollContainer/VBoxContainer/Controls"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 12
+text = "Amateur Mode"
+script = ExtResource("3_ed06r")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "amateur_mode"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="AmateurMode" type="CheckBox" parent="ScrollContainer/VBoxContainer/Controls"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="LocalizedLabel2" type="Label" parent="ScrollContainer/VBoxContainer/Controls"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 12
+text = "Switch Hands"
+script = ExtResource("3_ed06r")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "switch_hands"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="SwitchHands" type="CheckBox" parent="ScrollContainer/VBoxContainer/Controls"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 64
+alignment = 1
+
+[node name="Apply" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+text = "Apply"
+script = ExtResource("4_ugdtt")
+metadata/_custom_type_script = "uid://bih8icx0fn3lh"
+
+[node name="Cancel" type="Button" parent="ScrollContainer/VBoxContainer/HBoxContainer6"]
+layout_mode = 2
+text = "Cancel"
+script = ExtResource("4_ugdtt")
+metadata/_custom_type_script = "uid://bih8icx0fn3lh"

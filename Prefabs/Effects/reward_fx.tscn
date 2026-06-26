@@ -1,0 +1,99 @@
+[gd_scene load_steps=18 format=3 uid="uid://bl8ewljuajvxi"]
+
+[ext_resource type="Script" uid="uid://mc2lu60eb5ln" path="res://Scripts/Player/explosion_fx_control.gd" id="1_dd0g3"]
+[ext_resource type="PackedScene" uid="uid://d3rmetx7oyh3v" path="res://Prefabs/UI/Callouts/reward_callout.tscn" id="2_vtj40"]
+[ext_resource type="AudioStream" uid="uid://3fyaa7v44yun" path="res://Audio/material-gold-394476.mp3" id="2_y6xvg"]
+[ext_resource type="Texture2D" uid="uid://b1mh7gilyc1cg" path="res://Images/GoldGlitter.png" id="3_bdxwj"]
+[ext_resource type="Shader" uid="uid://dgfufo14m7gwn" path="res://Prefabs/Effects/alpha_mask.gdshader" id="3_q3416"]
+[ext_resource type="Texture2D" uid="uid://dowkubw0k2out" path="res://Images/RadialMask.png" id="4_q3416"]
+[ext_resource type="Shader" uid="uid://cgcbp2jiqofxe" path="res://Materials/Shaders/ExplosionGlobe.gdshader" id="5_bdxwj"]
+
+[sub_resource type="Gradient" id="Gradient_bdxwj"]
+offsets = PackedFloat32Array(0.82866, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_bdxwj"]
+noise_type = 2
+cellular_distance_function = 1
+cellular_jitter = 1.065
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_y6xvg"]
+seamless = true
+color_ramp = SubResource("Gradient_bdxwj")
+noise = SubResource("FastNoiseLite_bdxwj")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nbmsu"]
+render_priority = 0
+shader = ExtResource("3_q3416")
+shader_parameter/coin_texture = ExtResource("3_bdxwj")
+shader_parameter/mask_texture = ExtResource("4_q3416")
+shader_parameter/glimmer_texture = SubResource("NoiseTexture2D_y6xvg")
+shader_parameter/time_speed = 0.1
+shader_parameter/sparkle_intensity = 3.578
+
+[sub_resource type="QuadMesh" id="QuadMesh_0tcin"]
+material = SubResource("ShaderMaterial_nbmsu")
+size = Vector2(0.1, 0.1)
+
+[sub_resource type="Curve" id="Curve_y6xvg"]
+_limits = [-360.0, 360.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.21671, 360), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_y6xvg"]
+noise_type = 0
+frequency = 0.0105
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_vtj40"]
+seamless = true
+noise = SubResource("FastNoiseLite_y6xvg")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_y6xvg"]
+render_priority = 0
+shader = ExtResource("5_bdxwj")
+shader_parameter/globe_displacement_texture = SubResource("NoiseTexture2D_vtj40")
+shader_parameter/globe_displacement_amount = 0.1
+shader_parameter/min_radius = 0.0
+shader_parameter/max_radius = 2.5
+shader_parameter/progress = 1.1
+shader_parameter/lifetime = 1.0
+shader_parameter/sparkle_intensity = 1.58
+shader_parameter/gold_color = Color(1, 0.84, 0, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_q3416"]
+material = SubResource("ShaderMaterial_y6xvg")
+radius = 0.1
+height = 0.2
+
+[node name="RewardFX" type="Node3D" node_paths=PackedStringArray("particles", "audio_stream_player", "expanding_globe")]
+transform = Transform3D(1, 9.96607e-22, 0, 9.96606e-22, 1, 0, 0, 0, 1, 0, 0, 0)
+script = ExtResource("1_dd0g3")
+particles = NodePath("GoldGlitter")
+audio_stream_player = NodePath("AudioStreamPlayer3D")
+expanding_globe = NodePath("Explosion")
+number_callout = ExtResource("2_vtj40")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_y6xvg")
+
+[node name="GoldGlitter" type="CPUParticles3D" parent="."]
+emitting = false
+amount = 50
+lifetime = 0.5
+one_shot = true
+explosiveness = 0.7
+randomness = 1.0
+mesh = SubResource("QuadMesh_0tcin")
+particle_flag_rotate_y = true
+direction = Vector3(1, 0, 1)
+spread = 180.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 1.0
+initial_velocity_max = 2.0
+angular_velocity_max = 0.2
+damping_min = 1.2
+damping_max = 1.8
+angle_max = 360.0
+angle_curve = SubResource("Curve_y6xvg")
+
+[node name="Explosion" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_q3416")

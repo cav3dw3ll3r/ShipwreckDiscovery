@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Scannable" load_steps=4 format=3 uid="uid://bfgtimgkofr2f"]
+
+[ext_resource type="AudioStream" uid="uid://cmsb1p7r64j6j" path="res://Audio/Fish_Scan_Audio/Lionfish1.wav" id="1_1pedq"]
+[ext_resource type="PackedScene" uid="uid://5i03mm6sqc3u" path="res://Prefabs/UI/ScanPanels/dynamic_scan_panel.tscn" id="1_hx5pc"]
+[ext_resource type="Script" uid="uid://dne2dbsbrcl4p" path="res://Resources/Scannable/Scannable.gd" id="2_1pedq"]
+
+[resource]
+script = ExtResource("2_1pedq")
+dataPath = "res://Resources/Scannable/Creatures/Fish_Scan_Data.tsv"
+iconDir = "res://Resources/Scannable/Creatures/icons"
+scannable_ID = "lionfish"
+scan_thresholds = Dictionary[int, int]({
+1: 25,
+5: 100,
+10: 250
+})
+required_scan_time = 2.5
+scan_prefab = ExtResource("1_hx5pc")
+scan_audio = ExtResource("1_1pedq")
+subtitle_dir = null
+metadata/_custom_type_script = "uid://dne2dbsbrcl4p"

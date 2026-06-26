@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcw43dwnxg2go"]
+
+[ext_resource type="ArrayMesh" uid="uid://hmpxyma4afsw" path="res://Meshes/Fish/Destin/Lionfish/lionfish_body.res" id="1_r0b3w"]
+[ext_resource type="Shape3D" uid="uid://7jgc0cpbovbl" path="res://Meshes/Fish/Destin/Lionfish/lionfish_proxy.tres" id="2_aqu84"]
+
+[node name="FleeingLionfish" type="CharacterBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_r0b3w")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.04, 0, 0, 0, -3.2783543e-09, -0.07, 0, 0.075, -3.059797e-09, 0, 0.22517154, 0.10408574)
+shape = ExtResource("2_aqu84")

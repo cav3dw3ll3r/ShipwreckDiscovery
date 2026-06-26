@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://ceii2wy55bkdu"]
+
+[node name="SampleContextMenu" type="ColorRect"]
+color = Color(0.567831, 0.612853, 0.309788, 1)

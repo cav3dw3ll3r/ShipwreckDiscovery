@@ -1,0 +1,48 @@
+[gd_resource type="AudioBusLayout" load_steps=6 format=3 uid="uid://b5mv0sms6wy4r"]
+
+[sub_resource type="AudioEffectLowPassFilter" id="AudioEffectLowPassFilter_j3pel"]
+resource_name = "LowPassFilter"
+
+[sub_resource type="AudioEffectHighPassFilter" id="AudioEffectHighPassFilter_j3pel"]
+resource_name = "HighPassFilter"
+
+[sub_resource type="AudioEffectEQ" id="AudioEffectEQ_j3pel"]
+resource_name = "EQ"
+band_db/3200_hz = -3.0
+band_db/10000_hz = -3.0
+
+[sub_resource type="AudioEffectCompressor" id="AudioEffectCompressor_j3pel"]
+resource_name = "Compressor"
+
+[sub_resource type="AudioEffectLimiter" id="AudioEffectLimiter_j3pel"]
+resource_name = "Limiter"
+
+[resource]
+bus/1/name = &"SFX"
+bus/1/solo = false
+bus/1/mute = false
+bus/1/bypass_fx = false
+bus/1/volume_db = 0.0672607
+bus/1/send = &"Master"
+bus/2/name = &"Ambience"
+bus/2/solo = false
+bus/2/mute = false
+bus/2/bypass_fx = false
+bus/2/volume_db = 0.0
+bus/2/send = &"Master"
+bus/3/name = &"Voice"
+bus/3/solo = false
+bus/3/mute = false
+bus/3/bypass_fx = false
+bus/3/volume_db = 6.02
+bus/3/send = &"Master"
+bus/3/effect/0/effect = SubResource("AudioEffectLowPassFilter_j3pel")
+bus/3/effect/0/enabled = false
+bus/3/effect/1/effect = SubResource("AudioEffectHighPassFilter_j3pel")
+bus/3/effect/1/enabled = false
+bus/3/effect/2/effect = SubResource("AudioEffectEQ_j3pel")
+bus/3/effect/2/enabled = true
+bus/3/effect/3/effect = SubResource("AudioEffectCompressor_j3pel")
+bus/3/effect/3/enabled = false
+bus/3/effect/4/effect = SubResource("AudioEffectLimiter_j3pel")
+bus/3/effect/4/enabled = false

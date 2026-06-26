@@ -1,0 +1,20 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://obwsdlt37x7i"]
+
+[ext_resource type="Shader" uid="uid://boadg612bkipq" path="res://Materials/Shaders/fish_display.gdshader" id="1_qx0pm"]
+[ext_resource type="Texture2D" uid="uid://couescxfv1lyo" path="res://Meshes/Fish/Destin/French_angel/French_Angelfish_Image_0.jpg" id="2_mm2wu"]
+[ext_resource type="Texture2D" uid="uid://c2mifbd41ohyv" path="res://Meshes/Fish/Destin/French_angel/French_Angelfish_Image_2.jpg" id="3_4gndr"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_qx0pm")
+shader_parameter/albedo_tex = ExtResource("2_mm2wu")
+shader_parameter/normal_tex = ExtResource("3_4gndr")
+shader_parameter/hologram_color = Color(0.59, 0.8975, 1, 1)
+shader_parameter/alpha = 0.8
+shader_parameter/scanline_density = 800.0
+shader_parameter/scanline_strength = 0.2
+shader_parameter/flicker_strength = 0.1
+shader_parameter/distortion_strength = 0.001
+shader_parameter/fresnel_power = 2.5
+shader_parameter/fresnel_strength = 2.0
+shader_parameter/time_speed = 0.5

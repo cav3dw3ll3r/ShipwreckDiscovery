@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="Scannable" load_steps=3 format=3 uid="uid://d2ste7w3hgh1u"]
+
+[ext_resource type="Script" uid="uid://dne2dbsbrcl4p" path="res://Resources/Scannable/Scannable.gd" id="1_rh3fe"]
+[ext_resource type="AudioStream" uid="uid://dkt1v61owinta" path="res://Audio/Fish_Scan_Audio/SWD Spadefish.wav" id="1_t2tna"]
+
+[resource]
+script = ExtResource("1_rh3fe")
+dataPath = null
+iconDir = null
+videoDir = "res://Resources/Scannable/Creatures/videos/"
+scannable_type = 0
+scannable_ID = ""
+scan_thresholds = Dictionary[int, int]({})
+required_scan_time = 1.0
+scan_audio = ExtResource("1_t2tna")
+subtitle_dir = null
+metadata/_custom_type_script = "uid://dne2dbsbrcl4p"

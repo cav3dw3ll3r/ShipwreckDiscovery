@@ -1,0 +1,206 @@
+[gd_scene load_steps=17 format=3 uid="uid://c8k2m5n7qaqwr"]
+
+[ext_resource type="Theme" uid="uid://dt25yqu1yt544" path="res://Resources/Stylesheets/wreck_panel.theme" id="1_ohhxh"]
+[ext_resource type="Script" uid="uid://ca11jeglarj2u" path="res://Scripts/UI/TravelWreckPanel.gd" id="2_script"]
+[ext_resource type="Script" uid="uid://cvalnx44pwigw" path="res://Scripts/UI/Localization/LocalizedLabel.gd" id="3_label"]
+[ext_resource type="Texture2D" uid="uid://dkwt5ub4db01j" path="res://Images/PowerIcons/flag_32.png" id="4_eww4f"]
+[ext_resource type="Texture2D" uid="uid://bnr0s4j2gfo0p" path="res://Images/PowerIcons/Dive_In.png" id="4_l2emo"]
+[ext_resource type="Texture2D" uid="uid://0qkxhb58lpq8" path="res://Images/PowerIcons/LFbad.png" id="5_7roj1"]
+[ext_resource type="Texture2D" uid="uid://dh7uq743qtnok" path="res://Images/PowerIcons/Trash.png" id="7_ohhxh"]
+[ext_resource type="Texture2D" uid="uid://dggjugdj6ovql" path="res://Images/PowerIcons/CoralIcon_Copper.png" id="8_da1lt"]
+[ext_resource type="Texture2D" uid="uid://cjigaqw5o30md" path="res://Images/PowerIcons/CoralIcon_Silver.png" id="9_4wssm"]
+[ext_resource type="Texture2D" uid="uid://bd46t23qvsdde" path="res://Images/PowerIcons/CoralIcon_Gold.png" id="10_rojm3"]
+[ext_resource type="FontFile" uid="uid://be3ieb608t8ax" path="res://Resources/Stylesheets/good timing bd.otf" id="12_rojm3"]
+[ext_resource type="Script" uid="uid://bih8icx0fn3lh" path="res://Scripts/UI/Localization/LocalizedButtonText.gd" id="13_4wssm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_da1lt"]
+bg_color = Color(0, 0, 0, 0.40392157)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4wssm"]
+bg_color = Color(0.47397572, 0.47397578, 0.4739756, 0.1764706)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_da1lt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4wssm"]
+
+[node name="TravelWreckPanel" type="PanelContainer"]
+offset_right = 371.0
+offset_bottom = 136.0
+size_flags_horizontal = 3
+theme = ExtResource("1_ohhxh")
+theme_override_styles/panel = SubResource("StyleBoxFlat_da1lt")
+script = ExtResource("2_script")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Here" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+visible = false
+layout_mode = 2
+texture = ExtResource("4_eww4f")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Name" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Atlantis"
+script = ExtResource("3_label")
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="Name2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.95459753, 0.37162954, 0.37798268, 1)
+theme_override_fonts/font = ExtResource("12_rojm3")
+theme_override_font_sizes/font_size = 12
+text = "Infested - Cull Lionfish"
+horizontal_alignment = 2
+script = ExtResource("3_label")
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+texture = ExtResource("5_7roj1")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "45"
+
+[node name="TextureRect2" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+texture = ExtResource("7_ohhxh")
+expand_mode = 3
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+value = 28.82
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4wssm")
+
+[node name="TextureRect3" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer3/PanelContainer"]
+layout_mode = 2
+texture = ExtResource("8_da1lt")
+expand_mode = 3
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "6"
+
+[node name="PanelContainer2" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4wssm")
+
+[node name="TextureRect4" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer3/PanelContainer2"]
+layout_mode = 2
+texture = ExtResource("9_4wssm")
+expand_mode = 3
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "1"
+
+[node name="PanelContainer3" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4wssm")
+
+[node name="TextureRect5" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer3/PanelContainer3"]
+layout_mode = 2
+texture = ExtResource("10_rojm3")
+expand_mode = 3
+
+[node name="Label4" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+text = "0"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Actions" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="TravelButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/Actions"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("12_rojm3")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/focus = SubResource("StyleBoxEmpty_da1lt")
+text = "Dive now!"
+icon = ExtResource("4_l2emo")
+autowrap_mode = 3
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+script = ExtResource("13_4wssm")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "instant_dive"
+metadata/_custom_type_script = "uid://bih8icx0fn3lh"
+
+[node name="InstantDiveButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer/Actions"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("12_rojm3")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4wssm")
+text = "Dive now!"
+icon = ExtResource("4_l2emo")
+autowrap_mode = 3
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+script = ExtResource("13_4wssm")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "instant_dive"
+metadata/_custom_type_script = "uid://bih8icx0fn3lh"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/Actions/TravelButton" to="." method="_on_travel_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/Actions/InstantDiveButton" to="." method="_on_instant_dive_button_pressed"]

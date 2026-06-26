@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://b78qg80c85nd5"]
+
+[node name="Spanchor" type="Node3D" groups=["Anchor"]]
+transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 0, 0, 0)

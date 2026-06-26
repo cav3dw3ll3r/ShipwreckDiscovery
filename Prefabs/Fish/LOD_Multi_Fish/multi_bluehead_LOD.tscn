@@ -1,0 +1,35 @@
+[gd_scene load_steps=8 format=3 uid="uid://bec4s165rd2cb"]
+
+[ext_resource type="Script" uid="uid://e3dw0tnq2dci" path="res://Scripts/Environment/Aquarium/MultiFishLODController.gd" id="1_lb4lo"]
+[ext_resource type="Resource" uid="uid://c5nt27y2bcxky" path="res://Resources/Scannable/Spotlight_Targets/bluehead_wrasse_spotlight_target.tres" id="2_s00ba"]
+[ext_resource type="ArrayMesh" uid="uid://bvf0ngbkpykrf" path="res://Meshes/Fish/Destin/Bluehead_Wrasse/bluehead_wrasse_meta.res" id="3_lb4lo"]
+[ext_resource type="ArrayMesh" uid="uid://cma66fm2pp1cb" path="res://Meshes/Fish/Destin_Optimized/Bluehead/bluehead_flat.res" id="4_lb4lo"]
+[ext_resource type="Material" uid="uid://dxmlyoieprgt6" path="res://Materials/AnimatedFish/Destin/bluehead_wrasse_animated.tres" id="5_lb4lo"]
+
+[sub_resource type="MultiMesh" id="MultiMesh_s00ba"]
+transform_format = 1
+mesh = ExtResource("3_lb4lo")
+
+[sub_resource type="MultiMesh" id="MultiMesh_tyk4l"]
+transform_format = 1
+mesh = ExtResource("4_lb4lo")
+
+[node name="MultiBlueheadLod" type="Node3D" node_paths=PackedStringArray("near_multimesh_node", "far_multimesh_node")]
+script = ExtResource("1_lb4lo")
+near_multimesh_node = NodePath("Near")
+far_multimesh_node = NodePath("Far")
+near_mesh_material = ExtResource("5_lb4lo")
+spotlight_target = ExtResource("2_s00ba")
+fish_count = 64
+swim_radius = 25.0
+yaw_offset = 0.0
+bottom = 1.0
+ceiling = 15.0
+scale_min = 0.7
+scale_max = 1.3
+
+[node name="Near" type="MultiMeshInstance3D" parent="."]
+multimesh = SubResource("MultiMesh_s00ba")
+
+[node name="Far" type="MultiMeshInstance3D" parent="."]
+multimesh = SubResource("MultiMesh_tyk4l")

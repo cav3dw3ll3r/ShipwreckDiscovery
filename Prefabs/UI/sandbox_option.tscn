@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://dd7madgpqw6au"]
+
+[ext_resource type="Script" uid="uid://c055phqjps3d6" path="res://Scripts/UI/SandboxOptionToggle.gd" id="1_ve8qb"]
+[ext_resource type="Texture2D" path="res://Images/CustomUI/BaskingShark.png" id="3_x2u4n"]
+[ext_resource type="Script" uid="uid://cvalnx44pwigw" path="res://Scripts/UI/Localization/LocalizedLabel.gd" id="4_q4hy8"]
+[ext_resource type="Texture2D" uid="uid://dckayqpg4qdj" path="res://Resources/Stylesheets/UI_Components/Component01/CheckboxCyan_Off.png" id="5_un3w8"]
+
+[node name="SandboxOption" type="Panel"]
+custom_minimum_size = Vector2(200, 300)
+script = ExtResource("1_ve8qb")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 201.0
+offset_bottom = 301.0
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_x2u4n")
+expand_mode = 5
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Basking Shark"
+script = ExtResource("4_q4hy8")
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture_normal = ExtResource("5_un3w8")
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/TextureButton" to="." method="on_toggle"]

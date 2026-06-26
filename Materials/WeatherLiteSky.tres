@@ -1,0 +1,23 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://b4sv6oiixi1bf"]
+
+[ext_resource type="Shader" uid="uid://toslb0uwcw41" path="res://Materials/weather_lite_sky.gdshader" id="1_f5sl8"]
+[ext_resource type="Texture2D" uid="uid://cuqh2v8ak3afe" path="res://Images/Cloudz.png" id="2_6iqgb"]
+
+[resource]
+shader = ExtResource("1_f5sl8")
+shader_parameter/zenith_color = Color(0.18, 0.4, 0.7, 1)
+shader_parameter/horizon_color = Color(0.6, 0.8, 1, 1)
+shader_parameter/depths_color = Color(0.11372549, 0.36078432, 0.3882353, 1)
+shader_parameter/cloud_texture = ExtResource("2_6iqgb")
+shader_parameter/cloud_amount = 0.4010000190475
+shader_parameter/cloud_scale = 0.7150000274427301
+shader_parameter/cloud_speed = Vector2(0.001, 0.005)
+shader_parameter/cloud_softness = 0.35400001611648
+shader_parameter/cloud_brightness = 0.50000002375
+shader_parameter/horizon_softness = 0.7090000336775
+shader_parameter/horizon_offset = -0.43199999677
+shader_parameter/sun_color = Color(1, 0.92, 0.78, 1)
+shader_parameter/sun_intensity = 0.5010000237975
+shader_parameter/sun_size = 0.0010000000475
+shader_parameter/sun_softness = 0.05400000256499999
+shader_parameter/sun_height = 1.0

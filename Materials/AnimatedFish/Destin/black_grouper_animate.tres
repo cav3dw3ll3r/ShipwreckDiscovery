@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://cxuw878uj2cyr"]
+
+[ext_resource type="Shader" uid="uid://bfgg4tdv0hgt4" path="res://Materials/AnimatedFish/z_wave.gdshader" id="1_xsthl"]
+[ext_resource type="Texture2D" uid="uid://d3osbc5pr1iqj" path="res://Meshes/Fish/Destin/Black_Grouper/Black_Grouper_1121005049_texture_Image_0.jpg" id="2_xsthl"]
+[ext_resource type="Texture2D" uid="uid://2qgl0tgbay3m" path="res://Meshes/Fish/Destin/Black_Grouper/Black_Grouper_1121005049_texture_Image_2.jpg" id="3_ja20o"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_xsthl")
+shader_parameter/albedo_tex = ExtResource("2_xsthl")
+shader_parameter/normal_tex = ExtResource("3_ja20o")
+shader_parameter/wave_amplitude = 0.5
+shader_parameter/wave_frequency = 0.931
+shader_parameter/wave_speed = 2.0
+shader_parameter/tail_start = -0.657

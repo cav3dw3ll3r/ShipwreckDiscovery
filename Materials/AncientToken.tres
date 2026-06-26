@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" load_steps=5 format=3 uid="uid://bpfn18ejxrg56"]
+
+[ext_resource type="Shader" uid="uid://dl1h3wcc4p4qw" path="res://Materials/Shaders/AncientToken.gdshader" id="1_lvppo"]
+[ext_resource type="Texture2D" uid="uid://cofcpoyh77nsu" path="res://Materials/MaterialResources/Onyx011_2K-JPG_Color.jpg" id="2_y5ycd"]
+[ext_resource type="Texture2D" uid="uid://dvgtpu7hxyd4" path="res://Materials/MaterialResources/Onyx011_2K-JPG_NormalGL.jpg" id="4_s0v6s"]
+[ext_resource type="Texture2D" uid="uid://cr02mps0hqbsy" path="res://Materials/MaterialResources/Onyx011_2K-JPG_Roughness.jpg" id="5_lyk5u"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_lvppo")
+shader_parameter/albedo_map = ExtResource("2_y5ycd")
+shader_parameter/normal_map = ExtResource("4_s0v6s")
+shader_parameter/roughness_map = ExtResource("5_lyk5u")
+shader_parameter/displacement_strength = 0.15
+shader_parameter/scroll_speed = 0.01

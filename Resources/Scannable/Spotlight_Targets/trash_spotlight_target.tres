@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Spotlight_Target" load_steps=3 format=3 uid="uid://1rtj50jbuk4o"]
+
+[ext_resource type="Script" uid="uid://chqco8e3en53v" path="res://Scripts/Environment/spotlight_target.gd" id="1_script"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_trash"]
+radius = 0.16
+
+[resource]
+script = ExtResource("1_script")
+shape = SubResource("SphereShape3D_trash")
+metadata/_custom_type_script = "res://Scripts/Environment/spotlight_target.gd"

@@ -1,0 +1,27 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://1lmpfv18uqee"]
+
+[ext_resource type="Shader" uid="uid://bqf4f8qjple65" path="res://Materials/Shaders/dead_lionfish.gdshader" id="1_23nac"]
+[ext_resource type="Texture2D" uid="uid://kushh42xosdh" path="res://Meshes/Fish/Destin/Lionfish/Lionfish_Skin.jpg" id="2_pm0ba"]
+
+[resource]
+render_priority = -1
+shader = ExtResource("1_23nac")
+shader_parameter/progress = 0.0
+shader_parameter/pin_position = Vector3(0, 0, 0)
+shader_parameter/movement_vector = Vector3(0, 0, 0)
+shader_parameter/flexibility = 0.4
+shader_parameter/max_radius = 1.425
+shader_parameter/local_gravity_dir = Vector3(0, -1, 0)
+shader_parameter/gravity_strength = 0.3
+shader_parameter/albedo_texture = ExtResource("2_pm0ba")
+shader_parameter/normal_depth = 1.0
+shader_parameter/is_in_tube = -0.37
+shader_parameter/local_tube_origin = Vector3(0, 0.185, 0)
+shader_parameter/local_tube_axis = Vector3(0, 1, 0)
+shader_parameter/mesh_z_min = -0.2
+shader_parameter/mesh_z_max = 0.215
+shader_parameter/insertion_progress = 0.0
+shader_parameter/tube_radius = 0.08
+shader_parameter/funnel_color = Color(0.57059777, 0, 0.07044376, 1)
+shader_parameter/funnel_width = 0.01
+shader_parameter/funnel_energy = 1.0

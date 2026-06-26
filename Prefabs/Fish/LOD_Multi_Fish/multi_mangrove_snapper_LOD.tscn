@@ -1,0 +1,35 @@
+[gd_scene load_steps=8 format=3 uid="uid://c38fte4qrk3i4"]
+
+[ext_resource type="Script" uid="uid://e3dw0tnq2dci" path="res://Scripts/Environment/Aquarium/MultiFishLODController.gd" id="1_61uja"]
+[ext_resource type="Resource" uid="uid://bpb2wklqgidn4" path="res://Resources/Scannable/Spotlight_Targets/mangrove_snapper_spotlight_target.tres" id="2_v0vle"]
+[ext_resource type="ArrayMesh" uid="uid://d2am8bpkj4i03" path="res://Meshes/Fish/Destin/Mangrove_snapper/mangrove_snapper_meta.res" id="3_61uja"]
+[ext_resource type="ArrayMesh" uid="uid://ccfdjcc8er8" path="res://Meshes/Fish/Destin_Optimized/Mangrove_Snapper/mangrove_snapper_flat.res" id="4_61uja"]
+[ext_resource type="Material" uid="uid://csxfuuvrn8wgk" path="res://Materials/AnimatedFish/Destin/mangrove_snapper_animated.tres" id="5_61uja"]
+
+[sub_resource type="MultiMesh" id="MultiMesh_v0vle"]
+transform_format = 1
+mesh = ExtResource("3_61uja")
+
+[sub_resource type="MultiMesh" id="MultiMesh_bewdi"]
+transform_format = 1
+mesh = ExtResource("4_61uja")
+
+[node name="MultiMangSnapperLod" type="Node3D" node_paths=PackedStringArray("near_multimesh_node", "far_multimesh_node")]
+script = ExtResource("1_61uja")
+near_multimesh_node = NodePath("Near")
+far_multimesh_node = NodePath("Far")
+near_mesh_material = ExtResource("5_61uja")
+spotlight_target = ExtResource("2_v0vle")
+fish_count = 32
+swim_radius = 35.0
+yaw_offset = 0.0
+bottom = 1.0
+ceiling = 15.0
+scale_min = 0.7
+scale_max = 1.2
+
+[node name="Near" type="MultiMeshInstance3D" parent="."]
+multimesh = SubResource("MultiMesh_v0vle")
+
+[node name="Far" type="MultiMeshInstance3D" parent="."]
+multimesh = SubResource("MultiMesh_bewdi")

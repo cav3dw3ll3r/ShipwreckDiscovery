@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://mwk2q4qy3t2o"]
+
+[ext_resource type="Shader" uid="uid://bfgg4tdv0hgt4" path="res://Materials/AnimatedFish/z_wave.gdshader" id="1_eeb0t"]
+[ext_resource type="Texture2D" uid="uid://ra4mo5b2asqc" path="res://Meshes/Fish/Destin/Goliath_Grouper/Goliath_Grouper_1120233718_texture_Image_0.jpg" id="2_7facg"]
+[ext_resource type="Texture2D" uid="uid://drxmhciwt0nti" path="res://Meshes/Fish/Destin/Goliath_Grouper/Goliath_Grouper_1120233718_texture_Image_2.jpg" id="3_brtae"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_eeb0t")
+shader_parameter/albedo_tex = ExtResource("2_7facg")
+shader_parameter/normal_tex = ExtResource("3_brtae")
+shader_parameter/wave_amplitude = 0.2
+shader_parameter/wave_frequency = 0.931
+shader_parameter/wave_speed = 0.8
+shader_parameter/tail_start = -0.657

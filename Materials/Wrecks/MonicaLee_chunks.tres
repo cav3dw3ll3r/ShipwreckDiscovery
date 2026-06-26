@@ -1,0 +1,29 @@
+[gd_resource type="ShaderMaterial" load_steps=6 format=3 uid="uid://b2hhif50b3uv1"]
+
+[ext_resource type="Shader" uid="uid://da67cnuuwitr6" path="res://Materials/Shaders/wreck_chunk.gdshader" id="1_2vrxa"]
+[ext_resource type="Texture2D" uid="uid://d382joc3h5p22" path="res://Meshes/wrecks/Blender_Dump/Monica Lee Low Poly_NEAR_ML_Color.png" id="2_34u1t"]
+[ext_resource type="Texture2D" uid="uid://bq53w8y1pvcoy" path="res://Meshes/wrecks/Blender_Dump/Monica Lee Low Poly_NEAR_ML_Normal.png" id="3_l6lrx"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_6c4oh"]
+noise_type = 2
+cellular_distance_function = 1
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_6nhxr"]
+noise = SubResource("FastNoiseLite_6c4oh")
+seamless = true
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_2vrxa")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = ExtResource("2_34u1t")
+shader_parameter/texture_normal = ExtResource("3_l6lrx")
+shader_parameter/caustic_texture = SubResource("NoiseTexture2D_6nhxr")
+shader_parameter/caustic_scale = 0.1
+shader_parameter/caustic_speed = Vector2(0.02, 0.01)
+shader_parameter/caustic_strength = 0.8
+shader_parameter/caustic_tint = Color(4.813075e-06, 0.85982674, 0.9082178, 1)
+shader_parameter/shadow_strength = 0.6
+shader_parameter/shadow_color = Color(0.05, 0.05, 0.1, 1)
+shader_parameter/caustic_glow_strength = 0.266000012635
+shader_parameter/caustic_glow_softness = 0.69200002961012

@@ -1,0 +1,12 @@
+ID	EN	SP	FR	GE	RU	NL	AR
+to_boat	Return to Dive Boat	Regresar a la embarcación de buceo	Retourner au bateau de plongée	Zurück zum Tauchboot	Вернуться к дайв-лодке	Terug naar de duikboot	العودة إلى قارب الغطس
+fish_id	Fish Identification	Identificación de peces	Identification des poissons	Fischidentifikation	Идентификация рыб	Visidentificatie	تعريف السمك
+dive_info	Dive Information	Información del buceo	Informations sur la plongée	Tauchinformationen	Информация о дайве	Duikinformatie	معلومات الغوص
+objectives	Objectives	Objetivos	Objectifs	Ziele	Цели	Doelen	الأهداف
+exit	Exit Game	Salir del juego	Quitter le jeu	Spiel beenden	Выйти из игры	Spel verlaten	خروج من اللعبة
+to_boat_confirmation	End the dive and return to the surface?	¿Terminar la inmersión y regresar a la superficie?	Terminer la plongée et revenir à la surface ?	Beenden Sie den Tauchgang und kehren Sie an die Oberfläche zurück?	Закончить погружение и вернуться на поверхность?	De duik beëindigen en terugkeren naar het oppervlak?	إنهاء الغوص والعودة إلى السطح؟
+exit_confirmation	Save and exit the game entirely?	Guardar y salir del juego por completo?	Enregistrer et quitter le jeu entièrement ?	Das Spiel komplett speichern und beenden?	Сохранить и полностью выйти из игры?	Het spel volledig opslaan en afsluiten?	حفظ والخروج من اللعبة تمامًا؟
+yes	Yes	Sí	Oui	Ja	Да	Ja	نعم
+no	No	No	Non	Nein	Нет	Nee	لا
+return	Back	Regresar	Retour	Zurück	Terug	عودة
+fish_id_scan	Fish ID Scan	Escaneo de identificación de peces	Scan d'identification des poissons	Fisch-ID-Scan	Сканирование идентификации рыб	Vis-ID-scan	مسح تعريف السمك

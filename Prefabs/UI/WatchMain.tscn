@@ -1,0 +1,84 @@
+[gd_scene load_steps=7 format=3 uid="uid://4qfk4fndfxun"]
+
+[ext_resource type="Texture2D" uid="uid://4cs2abk455l0" path="res://Images/CustomUI/WatchBack.png" id="1_868g8"]
+[ext_resource type="Script" uid="uid://clcxsf3y87akl" path="res://Scripts/UI/Watch/WatchMenuController.gd" id="1_r4eyb"]
+[ext_resource type="Texture2D" uid="uid://dvmc35e6x7b31" path="res://Images/CustomUI/HPBar.png" id="2_gra5b"]
+[ext_resource type="Texture2D" uid="uid://b5uqov3enveko" path="res://Images/CustomUI/AirBar.png" id="3_r4eyb"]
+[ext_resource type="PackedScene" uid="uid://byl8j4fh3nv5n" path="res://Prefabs/UI/WatchSubMenus/top_level_menu.tscn" id="5_iaqux"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wdsfp"]
+texture = ExtResource("1_868g8")
+
+[node name="MainMenu" type="CanvasLayer"]
+script = ExtResource("1_r4eyb")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(512, 512)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -256.0
+offset_right = 256.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_wdsfp")
+
+[node name="HPBar" type="TextureProgressBar" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -256.0
+offset_right = 256.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+max_value = 1.0
+step = 0.01
+value = 0.74
+fill_mode = 4
+radial_initial_angle = 270.0
+radial_fill_degrees = 180.0
+texture_progress = ExtResource("2_gra5b")
+
+[node name="AirBar" type="TextureProgressBar" parent="."]
+custom_minimum_size = Vector2(512, 512)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -256.0
+offset_right = 256.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+max_value = 1.0
+step = 0.01
+value = 1.0
+fill_mode = 5
+radial_initial_angle = 270.0
+radial_fill_degrees = 180.0
+texture_progress = ExtResource("3_r4eyb")
+
+[node name="Menus" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopLevelMenu" parent="Menus" instance=ExtResource("5_iaqux")]
+layout_mode = 1

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddo8yo5rqs1qb"]
+
+[ext_resource type="Material" uid="uid://p05c3dhhe0lj" path="res://Materials/Wrecks/Dummies/brannon_dylan_dummy.tres" id="1_k036y"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_swjb4"]
+material = ExtResource("1_k036y")
+size = Vector2(100, 74)
+
+[node name="BrannonDylanDummy" type="MeshInstance3D"]
+transform = Transform3D(0.5446976, 0, 0.8386325, 0, 1, 0, -0.8386325, 0, 0.5446976, 8.020662, 24.967377, -14.666447)
+mesh = SubResource("PlaneMesh_swjb4")

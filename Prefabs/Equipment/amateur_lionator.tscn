@@ -1,0 +1,70 @@
+[gd_scene load_steps=11 format=3 uid="uid://ejg2bas414dp"]
+
+[ext_resource type="Script" path="res://Scripts/Core/Amateur_Spear_Pickable.gd" id="1_amateur"]
+[ext_resource type="Script" uid="uid://r3eyjsvss2px" path="res://addons/godot-xr-tools/objects/grab_points/grab_point.gd" id="2_grab"]
+[ext_resource type="ArrayMesh" uid="uid://catxfxfrjawau" path="res://Meshes/Player/baked_grasp_L.res" id="3_grasp"]
+[ext_resource type="PackedScene" uid="uid://b037xaaerbqgb" path="res://Prefabs/spear_visual.tscn" id="4_visual"]
+[ext_resource type="Material" uid="uid://bush37lre50q" path="res://Images/MeshTextures/GloveFull/Blue_Glove.tres" id="5_glove"]
+[ext_resource type="PackedScene" uid="uid://cra6peffoccgd" path="res://Prefabs/Fish/Hero_Fish/dead_lionfish.tscn" id="6_deadfish"]
+[ext_resource type="AudioStream" uid="uid://ct1aqxw8lym5v" path="res://Audio/Above_Water_Twang.mp3" id="7_twang"]
+[ext_resource type="AudioStream" uid="uid://ctbdgl0angstx" path="res://Audio/floraphonic-stretch-rubber-rope-foley-3-209716.mp3" id="8_windup"]
+[ext_resource type="Script" path="res://Scripts/Core/amateur_spear_tip.gd" id="9_tip"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_body"]
+height = 1.0922499
+radius = 0.017578125
+
+[node name="Lionator" type="RigidBody3D" node_paths=PackedStringArray("left_hand_main_grab_point_mesh", "right_hand_main_grab_point_mesh")]
+collision_layer = 262144
+script = ExtResource("1_amateur")
+left_hand_main_grab_point_mesh = NodePath("MainGrabPoint/LeftLiteGrabHand")
+right_hand_main_grab_point_mesh = NodePath("MainGrabPoint/RightLiteGrabHand")
+holster_spawn_on_left_hand = false
+picked_up_layer = 327680
+second_hand_grab = 0
+
+[node name="MainGrabPoint" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.92718387, -0.3746066, 0, 0.37460658, 0.927184, 0.0022957884, -0.607669, 0.004519865)
+script = ExtResource("2_grab")
+
+[node name="LeftLiteGrabHand" type="MeshInstance3D" parent="MainGrabPoint"]
+transform = Transform3D(-0.07939787, -0.49365592, 4.051047e-08, -0.49365583, 0.07939787, 1.641913e-08, -2.2643688e-08, -3.7389178e-08, -0.50000006, -0.012974724, -0.009356201, 0.0353919)
+visible = false
+mesh = ExtResource("3_grasp")
+surface_material_override/0 = ExtResource("5_glove")
+
+[node name="RightLiteGrabHand" type="MeshInstance3D" parent="MainGrabPoint"]
+transform = Transform3D(0.04596879, 0.4953535, 0.050117563, -0.49702623, 0.048607033, -0.02454193, 0.029185966, 0.047563158, -0.4968762, 0.005007133, -0.00935626, 0.035391897)
+visible = false
+mesh = ExtResource("3_grasp")
+surface_material_override/0 = ExtResource("5_glove")
+
+[node name="ReleaseTwangPlayer" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("7_twang")
+unit_size = 4.0
+max_db = 10.0
+bus = &"SFX"
+attenuation_filter_cutoff_hz = 15000.0
+
+[node name="WindUpPlayer" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("8_windup")
+unit_size = 4.0
+max_db = 10.0
+bus = &"SFX"
+attenuation_filter_cutoff_hz = 15000.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.9999998, 0, 0, 0, 0.9999998, 0, 0, 0, 0.9999998, 0.0017494559, -0.1921995, 0.0050500035)
+shape = SubResource("CylinderShape3D_body")
+
+[node name="Tip" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0026979446, 0.351872, 0.0062457323)
+script = ExtResource("9_tip")
+kill_prefab = ExtResource("6_deadfish")
+exclude_ancestor_rigidbodies = false
+
+[node name="ShaftRearStop" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.001929, -0.69573045, 0.0045089945)
+
+[node name="Metal_Spear" parent="." instance=ExtResource("4_visual")]
+transform = Transform3D(0.23048048, 0, 0, 0, 0.52874094, 0, 0, 0, 0.23048048, 0.0019431424, -0.20729072, 0.0051041623)

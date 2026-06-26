@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://bwmkocr8ptwu3"]
+
+[ext_resource type="Script" uid="uid://x4qq4f6ao46b" path="res://Scripts/Environment/Entity_Spotlight.gd" id="1_yoj1c"]
+[ext_resource type="PackedScene" uid="uid://bugis0xkl4fc5" path="res://Prefabs/Fish/LOD_Multi_Fish/multi_spadefish_LOD.tscn" id="4_68n8m"]
+[ext_resource type="PackedScene" uid="uid://dr42wwb3aq4cn" path="res://Prefabs/Fish/LOD_Multi_Fish/multi_trunkfish_LOD.tscn" id="5_s11jp"]
+[ext_resource type="PackedScene" uid="uid://cuya43gy77v3h" path="res://Prefabs/Fish/LOD_Multi_Fish/multi_squirrelfish_LOD.tscn" id="6_8py73"]
+[ext_resource type="PackedScene" uid="uid://dj45bvgwa2h6a" path="res://Prefabs/Fish/LOD_Multi_Fish/multi_french_angel_LOD.tscn" id="7_ygluy"]
+
+[node name="Aquarium" type="Node3D" groups=["Spotlight"]]
+script = ExtResource("1_yoj1c")
+
+[node name="MultiSpadefishLod" parent="." instance=ExtResource("4_68n8m")]
+fish_count = 256
+
+[node name="MultiTrunkfishLod" parent="." instance=ExtResource("5_s11jp")]
+fish_count = 32
+
+[node name="MultiSquirrelfishLod" parent="." instance=ExtResource("6_8py73")]
+swim_radius = 5.0
+anchor_group = "Interior"
+
+[node name="MultiFRAngelLod" parent="." instance=ExtResource("7_ygluy")]

@@ -1,0 +1,20 @@
+[gd_resource type="Environment" load_steps=3 format=3 uid="uid://cp2pursqrpqwf"]
+
+[ext_resource type="Material" uid="uid://ftnpgq6g8ox2" path="res://Resources/cyclable_skybox.tres" id="1_eqenr"]
+
+[sub_resource type="Sky" id="Sky_mx07h"]
+sky_material = ExtResource("1_eqenr")
+
+[resource]
+background_mode = 2
+background_color = Color(0.55100775, 0.7587268, 0.96614856, 1)
+sky = SubResource("Sky_mx07h")
+ambient_light_color = Color(0.821789, 0.821789, 0.821789, 1)
+ambient_light_sky_contribution = 0.6
+ambient_light_energy = 0.8
+tonemap_exposure = 1.5
+tonemap_white = 1.5
+fog_mode = 1
+fog_light_color = Color(0.133826, 0.343787, 0.470076, 1)
+fog_density = 1.0
+fog_depth_end = 138.3

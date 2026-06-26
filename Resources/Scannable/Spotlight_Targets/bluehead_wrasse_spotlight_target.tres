@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Spotlight_Target" load_steps=4 format=3 uid="uid://c5nt27y2bcxky"]
+
+[ext_resource type="Resource" uid="uid://c7v7owp6sryly" path="res://Resources/Scannable/Destin_Fish/bluehead_wrasse_scannable.tres" id="1_4d082"]
+[ext_resource type="PackedScene" uid="uid://c4t134f3eufb" path="res://Prefabs/Fish/Holograms/Bluehead_Wrasse_Hologram.tscn" id="2_uatwp"]
+[ext_resource type="Script" uid="uid://chqco8e3en53v" path="res://Scripts/Environment/spotlight_target.gd" id="3_dbcod"]
+
+[resource]
+script = ExtResource("3_dbcod")
+scanner_hologram = ExtResource("2_uatwp")
+scannable = ExtResource("1_4d082")
+metadata/_custom_type_script = "uid://chqco8e3en53v"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Spotlight_Target" load_steps=4 format=3 uid="uid://cajf0unrnu4ci"]
+
+[ext_resource type="PackedScene" uid="uid://b85kae6bnki08" path="res://Prefabs/Fish/Holograms/French_Angel_Hologram.tscn" id="1_11p7o"]
+[ext_resource type="Resource" uid="uid://cgi4vl6yayc8b" path="res://Resources/Scannable/Destin_Fish/french_angel_scannable.tres" id="1_fa7ig"]
+[ext_resource type="Script" uid="uid://chqco8e3en53v" path="res://Scripts/Environment/spotlight_target.gd" id="3_0rrfp"]
+
+[resource]
+script = ExtResource("3_0rrfp")
+scanner_hologram = ExtResource("1_11p7o")
+scannable = ExtResource("1_fa7ig")
+metadata/_custom_type_script = "uid://chqco8e3en53v"

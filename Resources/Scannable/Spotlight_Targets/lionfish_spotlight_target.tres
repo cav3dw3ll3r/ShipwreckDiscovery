@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="Spotlight_Target" load_steps=5 format=3 uid="uid://c351esriu25es"]
+
+[ext_resource type="PackedScene" uid="uid://o7gc3o4lj06y" path="res://Prefabs/Fish/Holograms/Lionfish_Hologram.tscn" id="1_ritwd"]
+[ext_resource type="Resource" uid="uid://bfgtimgkofr2f" path="res://Resources/Scannable/lionfish.tres" id="1_uxri3"]
+[ext_resource type="Script" uid="uid://chqco8e3en53v" path="res://Scripts/Environment/spotlight_target.gd" id="3_au4i1"]
+[ext_resource type="Shape3D" uid="uid://7jgc0cpbovbl" path="res://Meshes/Fish/Destin/Lionfish/lionfish_proxy.tres" id="4_ne07l"]
+
+[resource]
+script = ExtResource("3_au4i1")
+scanner_hologram = ExtResource("1_ritwd")
+shape = ExtResource("4_ne07l")
+shape_offset = Vector3(0, 0.22360556, 0.10287817)
+shape_scale = Vector3(0.047998983, 0.0742557, 0.0742557)
+shape_rotation = Vector3(1.5707964, 0, 0)
+scannable = ExtResource("1_uxri3")
+metadata/_custom_type_script = "uid://chqco8e3en53v"

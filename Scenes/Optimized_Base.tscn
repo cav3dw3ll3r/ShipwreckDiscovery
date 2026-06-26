@@ -1,0 +1,157 @@
+[gd_scene load_steps=31 format=3 uid="uid://0046advqdcjk"]
+
+[ext_resource type="Script" uid="uid://pw1crp1du2ro" path="res://addons/godot-xr-tools/staging/scene_base.gd" id="1_5qgr7"]
+[ext_resource type="PackedScene" uid="uid://ds4b6dnt2xjim" path="res://Prefabs/Core/diver_rig.tscn" id="1_eliw0"]
+[ext_resource type="PackedScene" uid="uid://dwfsrrn1va0ef" path="res://Prefabs/Environment/world_env.tscn" id="1_elobx"]
+[ext_resource type="PackedScene" uid="uid://njws7y17jxqt" path="res://Prefabs/Core/game_settings.tscn" id="2_einhf"]
+[ext_resource type="Script" uid="uid://cvhklgclqgiwq" path="res://Scripts/Core/Depth_Visibility.gd" id="4_1k71r"]
+[ext_resource type="PackedScene" uid="uid://dv6fdrvi4omcj" path="res://Prefabs/Environment/home_base_near.tscn" id="4_li3od"]
+[ext_resource type="PackedScene" uid="uid://bh1uqyu2e12a" path="res://Prefabs/Environment/Aquariums/Atlantis_Aquarium.tscn" id="8_slqru"]
+[ext_resource type="PackedScene" uid="uid://cajawh3n2sghw" path="res://Prefabs/spear_holder.tscn" id="11_np2xb"]
+[ext_resource type="Script" uid="uid://cowu2t2y2xuam" path="res://Scripts/Equipment/Equipment_Holder.gd" id="12_8s8if"]
+[ext_resource type="PackedScene" uid="uid://puyukkoirens" path="res://Prefabs/Equipment/pro_sea_scooter.tscn" id="13_pro_scooter"]
+[ext_resource type="Script" uid="uid://b4a0pg4vkm47g" path="res://Scripts/Environment/MagicSpotlights/Solid_Spotlight.gd" id="13_tehas"]
+[ext_resource type="PackedScene" uid="uid://d1qahldgll7nh" path="res://Prefabs/Equipment/amateur_sea_scooter.tscn" id="13_tlat5"]
+[ext_resource type="Material" uid="uid://c6q46m23t7qs8" path="res://Materials/Fish_Holograms/lionfish_hologram_material.tres" id="14_3t7it"]
+[ext_resource type="Script" uid="uid://gdb2wayahmsh" path="res://Scripts/Core/Waves.gd" id="14_3w2dh"]
+[ext_resource type="PackedScene" uid="uid://ck6ixtjm36jfg" path="res://Prefabs/Fish/Multi_Fish/Destin/lionfish.tscn" id="15_lionfish"]
+[ext_resource type="PackedScene" uid="uid://cdympe0vyggb5" path="res://Prefabs/Environment/trash_stub.tscn" id="15_trash"]
+[ext_resource type="Shader" uid="uid://pty2gk5u7kk6" path="res://Materials/Shaders/lite_metal.gdshader" id="16_3t7it"]
+[ext_resource type="ArrayMesh" uid="uid://bm4ptgwwtcfjy" path="res://Meshes/equipment/amateur_sea_scooter.tres" id="16_tlat5"]
+[ext_resource type="Texture2D" uid="uid://iifcpfwro51y" path="res://Meshes/textures/metal03_diffuse.jpg" id="17_1k71r"]
+[ext_resource type="Script" uid="uid://ckbimu3s4v7kf" path="res://Scripts/Environment/MagicSpotlights/Damage_Area_Spotlight.gd" id="22_1k71r"]
+[ext_resource type="Material" uid="uid://b4sv6oiixi1bf" path="res://Materials/WeatherLiteSky.tres" id="24_m3f4q"]
+[ext_resource type="PackedScene" uid="uid://dvhi1kmux76to" path="res://Prefabs/Environment/ocean_above.tscn" id="29_kggwd"]
+[ext_resource type="PackedScene" uid="uid://rfts6kqdyh1k" path="res://Prefabs/Environment/home_base_far.tscn" id="36_1c7ah"]
+[ext_resource type="Script" uid="uid://blegt3rqi1lep" path="res://Scripts/Core/Depth_Switcher.gd" id="52_whqp6"]
+[ext_resource type="Script" uid="uid://duob6cvdlmln4" path="res://Scripts/Environment/CoralSim/wreck_session_manager.gd" id="53_wsmgr"]
+[ext_resource type="Script" uid="uid://do2k3cl5ilmpe" path="res://Scripts/Environment/wreck_dynamic_placer.gd" id="54_placer"]
+
+[sub_resource type="Sky" id="Sky_cnap7"]
+sky_material = ExtResource("24_m3f4q")
+
+[sub_resource type="Environment" id="Environment_8pyto"]
+resource_local_to_scene = true
+background_mode = 2
+background_color = Color(0.10766078, 0.69426095, 0.8591009, 1)
+sky = SubResource("Sky_cnap7")
+ambient_light_source = 2
+ambient_light_color = Color(0.556953, 0.556953, 0.556953, 1)
+reflected_light_source = 1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_tlat5"]
+material = ExtResource("14_3t7it")
+top_radius = 0.02
+bottom_radius = 0.02
+height = 0.1
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8eeos"]
+render_priority = 0
+shader = ExtResource("16_3t7it")
+shader_parameter/albedo_tint = Color(0.8, 0.8, 0.8, 1)
+shader_parameter/texture_albedo = ExtResource("17_1k71r")
+shader_parameter/specular_intensity = 1.0
+shader_parameter/shininess = 25.0
+shader_parameter/fresnel_power = 3.0
+shader_parameter/rim_color = Color(1, 1, 1, 1)
+
+[node name="OptimizedBase" type="Node3D"]
+script = ExtResource("1_5qgr7")
+
+[node name="GameSettings" parent="." instance=ExtResource("2_einhf")]
+
+[node name="XROrigin3D" parent="." instance=ExtResource("1_eliw0")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 3.623, 1.6)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.89606065, 0.0039621964, -0.44391382, -0.3725167, 0.5371967, 0.75673693, 0.24146742, 0.84344757, -0.47988486, -0.94498336, 9.623685, 0.8254266)
+directional_shadow_mode = 0
+sky_mode = 1
+
+[node name="Environment" type="Node3D" parent="."]
+script = ExtResource("4_1k71r")
+below_visible = Array[NodePath]([NodePath(""), NodePath("SeaFloor")])
+
+[node name="WorldEnvironment" parent="Environment" instance=ExtResource("1_elobx")]
+environment = SubResource("Environment_8pyto")
+
+[node name="SeaFloor" type="Node3D" parent="Environment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -61, 0)
+
+[node name="Ocean" parent="Environment" instance=ExtResource("29_kggwd")]
+
+[node name="HomeBasePlaceholder" type="Node3D" parent="."]
+
+[node name="FrontMarker" type="Marker3D" parent="HomeBasePlaceholder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8.928705)
+
+[node name="RearMarker" type="Marker3D" parent="HomeBasePlaceholder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10.458059)
+
+[node name="Depth_Switcher" type="Node3D" parent="HomeBasePlaceholder"]
+script = ExtResource("52_whqp6")
+above_prefab = ExtResource("4_li3od")
+below_prefab = ExtResource("36_1c7ah")
+
+[node name="Respawn" type="Node3D" parent="HomeBasePlaceholder" groups=["Respawn"]]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -8.296591e-08, 3.5062106, -2.4389021)
+
+[node name="SpearHolder" parent="HomeBasePlaceholder" instance=ExtResource("11_np2xb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.737, 0.77, 3.32)
+
+[node name="BlackTipTechHolder" type="Node3D" parent="HomeBasePlaceholder" node_paths=PackedStringArray("invisible_while_equipped")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.7009245, 0.77, 3.32)
+script = ExtResource("12_8s8if")
+amateur_equipment_scene = ExtResource("13_tlat5")
+professional_equipment_scene = ExtResource("13_pro_scooter")
+off_hand = false
+binding_off_hand = false
+invisible_while_equipped = [NodePath("Base"), NodePath("SeaScooter"), null]
+
+[node name="Base" type="MeshInstance3D" parent="HomeBasePlaceholder/BlackTipTechHolder"]
+transform = Transform3D(1, 0, 0, 0, -0.23004968, 0.97317886, 0, -0.97317886, -0.23004968, 0.22600019, 1.2768502, -0.058574677)
+mesh = SubResource("CylinderMesh_tlat5")
+
+[node name="SeaScooter" type="MeshInstance3D" parent="HomeBasePlaceholder/BlackTipTechHolder"]
+transform = Transform3D(0.9517231, 0, 0.30695796, 0, 1, 0, -0.30695796, 0, 0.9517231, 0.19782674, 1.2395573, 0)
+mesh = ExtResource("16_tlat5")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("ShaderMaterial_8eeos")
+
+[node name="SeaScooter2" type="MeshInstance3D" parent="HomeBasePlaceholder/BlackTipTechHolder"]
+transform = Transform3D(0.9517231, 0, 0.30695796, 0, 1, 0, -0.30695796, 0, 0.9517231, 0.19782662, 0.68827844, 0)
+mesh = ExtResource("16_tlat5")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("ShaderMaterial_8eeos")
+
+[node name="HazardSpotlight" type="Area3D" parent="."]
+script = ExtResource("22_1k71r")
+
+[node name="Aquarium_LOD" type="Node3D" parent="."]
+script = ExtResource("52_whqp6")
+below_prefab = ExtResource("8_slqru")
+
+[node name="DynamicWreckContent" type="Node3D" parent="."]
+script = ExtResource("4_1k71r")
+below_visible = Array[NodePath]([NodePath("")])
+toggle_point_below = 2
+
+[node name="WreckDynamicPlacer" type="Node" parent="DynamicWreckContent"]
+script = ExtResource("54_placer")
+
+[node name="Lionfish" parent="DynamicWreckContent" instance=ExtResource("15_lionfish")]
+scale_min = 0.1
+scale_max = 0.5
+use_dynamic_placement = true
+
+[node name="Trash" parent="DynamicWreckContent" instance=ExtResource("15_trash")]
+
+[node name="SolidSpotlight" type="StaticBody3D" parent="."]
+collision_layer = 5
+script = ExtResource("13_tehas")
+
+[node name="Waves" type="Node" parent="." groups=["Waves"]]
+script = ExtResource("14_3w2dh")
+
+[node name="WreckSessionManager" type="Node" parent="."]
+script = ExtResource("53_wsmgr")

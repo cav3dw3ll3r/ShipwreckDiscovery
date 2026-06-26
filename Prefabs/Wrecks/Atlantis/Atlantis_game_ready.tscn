@@ -1,0 +1,185 @@
+[gd_scene load_steps=30 format=3 uid="uid://cbiothfko5iv4"]
+
+[ext_resource type="PackedScene" uid="uid://cxuie4ymaab7s" path="res://Prefabs/Wrecks/WreckParts/instant_dive.tscn" id="1_1cupr"]
+[ext_resource type="PackedScene" uid="uid://7kqmfcqwy6cp" path="res://Prefabs/Wrecks/WreckParts/interior.tscn" id="2_fi44v"]
+[ext_resource type="PackedScene" uid="uid://b78qg80c85nd5" path="res://Prefabs/Wrecks/WreckParts/spanchor.tscn" id="3_ydrkj"]
+[ext_resource type="PackedScene" uid="uid://croqd4ckj6u72" path="res://Prefabs/Wrecks/WreckParts/atlantis_static.tscn" id="4_dfg2r"]
+[ext_resource type="PackedScene" uid="uid://4aim2phv8d6e" path="res://Meshes/wrecks/Blender_Dump/Atlantis_Baked.glb" id="6_uab2s"]
+[ext_resource type="PackedScene" uid="uid://vimdnxpr2d74" path="res://Prefabs/Wrecks/Atlantis/Atlantis_chunks.tscn" id="7_h2r1b"]
+[ext_resource type="Script" uid="uid://b2ftslgg1friq" path="res://Scripts/Environment/WreckChunkClimbable.gd" id="8_fnai3"]
+[ext_resource type="Resource" uid="uid://0b1h8ptf6p74" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/Atlantis/Atlantis_0_0_0.tres" id="9_v4su2"]
+[ext_resource type="Resource" uid="uid://hjttcws1ckut" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/Atlantis/Atlantis_1_0_0.tres" id="10_2rkr0"]
+[ext_resource type="Resource" uid="uid://cnmmljee7og1j" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/Atlantis/Atlantis_0_1_0.tres" id="10_3t7p8"]
+[ext_resource type="Resource" uid="uid://ch30tfbpyrd8q" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/Atlantis/Atlantis_2_0_0.tres" id="11_3k8wc"]
+[ext_resource type="Resource" uid="uid://7t4bbq37owkv" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/Atlantis/Atlantis_1_0_1.tres" id="12_gcoyh"]
+[ext_resource type="Resource" uid="uid://ds50kynuj7iqv" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/Atlantis/Atlantis_1_1_0.tres" id="13_67bg4"]
+[ext_resource type="Resource" uid="uid://bwvxug0uq1gdn" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/Atlantis/Atlantis_1_1_1.tres" id="14_uab2s"]
+[ext_resource type="Resource" uid="uid://0slkrawq14du" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/Atlantis/Atlantis_2_1_0.tres" id="16_krt4y"]
+[ext_resource type="Resource" uid="uid://05m82cpo6iek" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/Atlantis/Atlantis_3_0_0.tres" id="17_o55q2"]
+[ext_resource type="Resource" uid="uid://difboxvj73sxi" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/Atlantis/Atlantis_3_1_0.tres" id="18_dq05b"]
+[ext_resource type="Resource" uid="uid://vp8hy1c5bbxd" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/Atlantis/Atlantis_4_0_0.tres" id="19_g7f8n"]
+[ext_resource type="Resource" uid="uid://c2ia5cip7medr" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/Atlantis/Atlantis_4_1_0.tres" id="20_v4xfv"]
+[ext_resource type="Resource" uid="uid://88d5qrtcfqx0" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/Atlantis/Atlantis_5_0_0.tres" id="21_08jgm"]
+[ext_resource type="Resource" uid="uid://cehe5a425tmji" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/Atlantis/Atlantis_5_1_0.tres" id="22_gybbu"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rd6uj"]
+size = Vector3(31.400307, 4.8001556, 8.480438)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7y1aj"]
+size = Vector3(8.402333, 4.8001556, 5.9896774)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_slnf0"]
+size = Vector3(19.302835, 2.7177544, 8.480438)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m0ilj"]
+size = Vector3(6.6023684, 2.2271347, 5.947384)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_v2sld"]
+size = Vector3(8.595233, 1.0070295, 6.8401027)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_47qsk"]
+size = Vector3(4.901468, 3.279705, 3.6069632)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qbedw"]
+size = Vector3(6.352849, 1.0070295, 5.6670246)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c4jgj"]
+size = Vector3(10.673352, 2.0792751, 1.0331879)
+
+[node name="AtlantisAssembled" type="Node3D"]
+
+[node name="InstantDive" parent="." instance=ExtResource("1_1cupr")]
+transform = Transform3D(-0.017400026, 0, -0.9998486, 0, 1, 0, 0.9998486, 0, -0.017400026, 7.287613, 3.2914255, 0)
+
+[node name="Interior" parent="." instance=ExtResource("2_fi44v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.371683, -2.2880692, 0)
+
+[node name="Spanchor" parent="." instance=ExtResource("3_ydrkj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.7504516, 1.4988208, 0)
+
+[node name="Static" parent="." instance=ExtResource("4_dfg2r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.35, 0)
+
+[node name="Atlantis_Baked3" parent="Static" instance=ExtResource("6_uab2s")]
+
+[node name="AIBlocking" type="StaticBody3D" parent="Static/Atlantis_Baked3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.8578079, 0)
+collision_layer = 128
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Static/Atlantis_Baked3/AIBlocking"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3814964, -2.1835766, 0.07319614)
+shape = SubResource("BoxShape3D_rd6uj")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="Static/Atlantis_Baked3/AIBlocking"]
+transform = Transform3D(0.5887027, 0.8083496, 0, -0.8083496, 0.5887027, 0, 0, 0, 1, -15.218785, -0.75002193, 0.0987432)
+shape = SubResource("BoxShape3D_7y1aj")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Static/Atlantis_Baked3/AIBlocking"]
+transform = Transform3D(0.99893385, 0.046164997, 0, -0.046164997, 0.99893385, 0, 0, 0, 1, -9.6409235, 0.20911098, 0.07319614)
+shape = SubResource("BoxShape3D_slnf0")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Static/Atlantis_Baked3/AIBlocking"]
+transform = Transform3D(0.99893385, 0.046164997, 0, -0.046164997, 0.99893385, 0, 0, 0, 1, -6.04567, 2.144683, 0.22218871)
+shape = SubResource("BoxShape3D_m0ilj")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="Static/Atlantis_Baked3/AIBlocking"]
+transform = Transform3D(0.99955213, 0.02992793, 0, -0.02992793, 0.99955213, 0, 0, 0, 1, -5.047836, 3.5166674, 0.29479837)
+shape = SubResource("BoxShape3D_v2sld")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="Static/Atlantis_Baked3/AIBlocking"]
+transform = Transform3D(0.99893385, 0.046164997, 0, -0.046164997, 0.99893385, 0, 0, 0, 1, -10.838615, 2.661932, 0.34110007)
+shape = SubResource("BoxShape3D_47qsk")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="Static/Atlantis_Baked3/AIBlocking"]
+transform = Transform3D(0.99955213, 0.02992793, 0, -0.02992793, 0.99955213, 0, 0, 0, 1, -10.892621, 4.729947, 0.19276354)
+shape = SubResource("BoxShape3D_qbedw")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Static/Atlantis_Baked3/AIBlocking"]
+transform = Transform3D(0.9433467, 0.043596074, 0.32893267, -0.046164997, 0.9989339, 0, -0.3285819, -0.015185172, 0.9443534, -15.188202, 1.7921066, -1.7383134)
+shape = SubResource("BoxShape3D_c4jgj")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Static/Atlantis_Baked3/AIBlocking"]
+transform = Transform3D(0.9520162, 0.043996725, -0.30286878, -0.046164997, 0.99893385, -2.4194677e-09, 0.30254602, 0.013981945, 0.95303214, -15.265025, 1.7958317, 2.0540693)
+shape = SubResource("BoxShape3D_c4jgj")
+debug_color = Color(1, 1, 1, 1)
+
+[node name="AtlantisAssembled" parent="." instance=ExtResource("7_h2r1b")]
+
+[node name="Chunk_0_0_1" type="Node3D" parent="AtlantisAssembled"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.827705, 2.464296, 4.2175293)
+script = ExtResource("8_fnai3")
+spotlight_target = ExtResource("9_v4su2")
+
+[node name="Chunk_0_1_1" type="Node3D" parent="AtlantisAssembled"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.827705, 2.464296, -3.7824707)
+script = ExtResource("8_fnai3")
+spotlight_target = ExtResource("10_3t7p8")
+
+[node name="Chunk_1_0_2" type="Node3D" parent="AtlantisAssembled"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.827705, 2.464296, 4.2175293)
+script = ExtResource("8_fnai3")
+spotlight_target = ExtResource("10_2rkr0")
+
+[node name="Chunk_1_0_3" type="Node3D" parent="AtlantisAssembled"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.827705, 10.464296, 4.2175293)
+script = ExtResource("8_fnai3")
+spotlight_target = ExtResource("12_gcoyh")
+
+[node name="Chunk_1_1_2" type="Node3D" parent="AtlantisAssembled"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.827705, 2.464296, -3.7824707)
+script = ExtResource("8_fnai3")
+spotlight_target = ExtResource("13_67bg4")
+
+[node name="Chunk_1_1_3" type="Node3D" parent="AtlantisAssembled"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.827705, 10.464296, -3.7824707)
+script = ExtResource("8_fnai3")
+spotlight_target = ExtResource("14_uab2s")
+
+[node name="Chunk_2_0_1" type="Node3D" parent="AtlantisAssembled"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8277054, 2.464296, 4.2175293)
+script = ExtResource("8_fnai3")
+spotlight_target = ExtResource("11_3k8wc")
+
+[node name="Chunk_2_1_1" type="Node3D" parent="AtlantisAssembled"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8277054, 2.464296, -3.7824707)
+script = ExtResource("8_fnai3")
+spotlight_target = ExtResource("16_krt4y")
+
+[node name="Chunk_3_0_1" type="Node3D" parent="AtlantisAssembled"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.1722946, 2.464296, 4.2175293)
+script = ExtResource("8_fnai3")
+spotlight_target = ExtResource("17_o55q2")
+
+[node name="Chunk_3_1_1" type="Node3D" parent="AtlantisAssembled"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.1722946, 2.464296, -3.7824707)
+script = ExtResource("8_fnai3")
+spotlight_target = ExtResource("18_dq05b")
+
+[node name="Chunk_4_0_1" type="Node3D" parent="AtlantisAssembled"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.172295, 2.464296, 4.2175293)
+script = ExtResource("8_fnai3")
+spotlight_target = ExtResource("19_g7f8n")
+
+[node name="Chunk_4_1_1" type="Node3D" parent="AtlantisAssembled"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.172295, 2.464296, -3.7824707)
+script = ExtResource("8_fnai3")
+spotlight_target = ExtResource("20_v4xfv")
+
+[node name="Chunk_5_0_1" type="Node3D" parent="AtlantisAssembled"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.172295, 2.464296, 4.2175293)
+script = ExtResource("8_fnai3")
+spotlight_target = ExtResource("21_08jgm")
+
+[node name="Chunk_5_1_1" type="Node3D" parent="AtlantisAssembled"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.172295, 2.464296, -3.7824707)
+script = ExtResource("8_fnai3")
+spotlight_target = ExtResource("22_gybbu")

@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://g0ebehl0ijwj"]
+
+[ext_resource type="Theme" uid="uid://dyls1fq20ga2d" path="res://Resources/Stylesheets/ShipwreckDiscovery.theme" id="1_n4haw"]
+[ext_resource type="Script" uid="uid://cf8evkeq7450e" path="res://Scripts/UI/popup_host.gd" id="1_vm1m0"]
+
+[node name="MainMenu" type="CanvasLayer"]
+script = ExtResource("1_vm1m0")
+
+[node name="MenuPanel" type="PanelContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_n4haw")
+
+[node name="HBoxContainer" type="VBoxContainer" parent="MenuPanel"]
+layout_mode = 2
+alignment = 1
+
+[node name="ContentArea" type="MarginContainer" parent="MenuPanel/HBoxContainer"]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 80
+theme_override_constants/margin_top = 80
+theme_override_constants/margin_right = 80
+theme_override_constants/margin_bottom = 12
+
+[node name="ButtonHolder" type="MarginContainer" parent="MenuPanel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 50
+
+[node name="CloseButton" type="Button" parent="MenuPanel/HBoxContainer/ButtonHolder"]
+z_index = 55
+custom_minimum_size = Vector2(400, 60)
+layout_mode = 2
+text = "Close"
+
+[node name="Maze" type="Node3D" parent="."]

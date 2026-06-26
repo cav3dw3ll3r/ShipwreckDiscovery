@@ -1,0 +1,29 @@
+[gd_scene load_steps=7 format=3 uid="uid://k27tpjt2mele"]
+
+[ext_resource type="Script" uid="uid://dwftoelo3mdvo" path="res://Scripts/UI/DiveComputer/Atoms/PhysicalPressButton.gd" id="1_ruosm"]
+[ext_resource type="Material" uid="uid://br3evn1u7ujc" path="res://Materials/DC/phys_button_disabled.tres" id="2_namox"]
+[ext_resource type="Material" uid="uid://cbwjlfjsbphds" path="res://Materials/DC/phys_button_enabled.tres" id="3_kac0m"]
+[ext_resource type="Material" uid="uid://bmq7v6ajy6rww" path="res://Materials/DC/phys_button_pressed.tres" id="4_tvsi5"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_tru74"]
+top_radius = 0.01
+bottom_radius = 0.01
+height = 0.003
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_namox"]
+radius = 0.010562226
+
+[node name="PhysicalPressButton" type="Node3D" node_paths=PackedStringArray("lit_mesh")]
+script = ExtResource("1_ruosm")
+lit_mesh = NodePath("MeshInstance3D")
+disabled_mat = ExtResource("2_namox")
+enabled_mat = ExtResource("3_kac0m")
+pressed_mat = ExtResource("4_tvsi5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CylinderMesh_tru74")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("SphereShape3D_namox")

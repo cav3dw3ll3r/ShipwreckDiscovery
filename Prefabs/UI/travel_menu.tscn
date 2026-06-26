@@ -1,0 +1,37 @@
+[gd_scene load_steps=8 format=3 uid="uid://b0exnr41483hc"]
+
+[ext_resource type="Theme" uid="uid://dyls1fq20ga2d" path="res://Resources/Stylesheets/ShipwreckDiscovery.theme" id="1_c4kx1"]
+[ext_resource type="Script" uid="uid://7q57mqswml0o" path="res://Scripts/UI/TravelMenu.gd" id="1_tpxct"]
+[ext_resource type="Resource" uid="uid://v8jie18leara" path="res://Resources/Levels/Atlantis.tres" id="3_kjhfi"]
+[ext_resource type="Resource" uid="uid://cyjdxw0tlo164" path="res://Resources/Levels/Big_Dawg.tres" id="4_e4ahb"]
+[ext_resource type="Resource" uid="uid://dtd5wos00tbq4" path="res://Resources/Levels/MissJoanne.tres" id="5_fnvkk"]
+[ext_resource type="Resource" uid="uid://d0wmh5y3eqsx5" path="res://Resources/Levels/MissNellie.tres" id="6_r8ekp"]
+[ext_resource type="Resource" uid="uid://dh3hu6mep6lc3" path="res://Resources/Levels/MonicaLee.tres" id="7_r8ekp"]
+
+[node name="TravelMenu" type="VBoxContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -198.47253
+offset_right = 320.0
+offset_bottom = 209.52747
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_c4kx1")
+script = ExtResource("1_tpxct")
+
+[node name="LevelPreloader" type="ResourcePreloader" parent="."]
+resources = [PackedStringArray("Atlantis", "Big_Dawg", "MissJoanne", "MissNellie", "MonicaLee"), [ExtResource("3_kjhfi"), ExtResource("4_e4ahb"), ExtResource("5_fnvkk"), ExtResource("6_r8ekp"), ExtResource("7_r8ekp")]]
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LevelList" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0

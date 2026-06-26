@@ -1,0 +1,505 @@
+[gd_scene load_steps=116 format=3 uid="uid://bf0rhq5nd3eeh"]
+
+[ext_resource type="Texture2D" uid="uid://b1v6gr6wfhrws" path="res://Resources/CommunityListings/icons/D-NiuhiDiveCharters.png" id="1_f6whk"]
+[ext_resource type="PackedScene" uid="uid://b6orqg3y4iovc" path="res://Prefabs/scan_target.tscn" id="2_0dulx"]
+[ext_resource type="Resource" uid="uid://bwrt4xl1rckwm" path="res://Resources/Scannable/Community/niuhi.tres" id="3_qx8jx"]
+[ext_resource type="Texture2D" uid="uid://c334bgsuq4w0e" path="res://Resources/CommunityListings/icons/D-Benthic.png" id="4_atao5"]
+[ext_resource type="Resource" path="res://Resources/Scannable/Community/benthic.tres" id="5_d5i4n"]
+[ext_resource type="Texture2D" uid="uid://wteyq3om50gv" path="res://Resources/CommunityListings/icons/D-Discovery World.png" id="6_xxf6h"]
+[ext_resource type="Resource" path="res://Resources/Scannable/Community/discovery_dive_world.tres" id="7_fh7ej"]
+[ext_resource type="Texture2D" uid="uid://bjlv00unh6jds" path="res://Resources/CommunityListings/icons/D-ScubaTech.png" id="8_80w0j"]
+[ext_resource type="Resource" uid="uid://bfuwkhg47sgus" path="res://Resources/Scannable/Community/scuba_tech.tres" id="9_laiob"]
+[ext_resource type="Texture2D" uid="uid://cwdabgmtr4v32" path="res://Resources/CommunityListings/icons/D-SQuest.png" id="10_pirnf"]
+[ext_resource type="Resource" uid="uid://cc23pc08avybq" path="res://Resources/Scannable/Community/shark_quest.tres" id="11_s5x08"]
+[ext_resource type="Texture2D" uid="uid://duefmf1h2lhu" path="res://Resources/CommunityListings/icons/D-Dive Pros.png" id="12_fsv58"]
+[ext_resource type="Resource" path="res://Resources/Scannable/Community/dive_pros.tres" id="13_scbxo"]
+[ext_resource type="Texture2D" uid="uid://dnxn4h3brr0bx" path="res://Resources/CommunityListings/icons/D-SCUBARadio.png" id="14_up8qn"]
+[ext_resource type="Resource" uid="uid://clu4rfemgqeif" path="res://Resources/Scannable/Community/scuba_radio.tres" id="15_m0yjk"]
+[ext_resource type="Texture2D" uid="uid://dq5lv12ggcjv2" path="res://Resources/CommunityListings/icons/D-Naui.png" id="16_pap23"]
+[ext_resource type="Resource" path="res://Resources/Scannable/Community/naui.tres" id="17_l3vbd"]
+[ext_resource type="Texture2D" uid="uid://ddrfx1vqeljpn" path="res://Images/Stickers/L-Zookeeper.png" id="18_h15xa"]
+[ext_resource type="Texture2D" uid="uid://dtwegro7l8eee" path="res://Resources/CommunityListings/icons/LFC-LionfishPatrol.png" id="19_8jko0"]
+[ext_resource type="Resource" uid="uid://vob2ew4dx3ps" path="res://Resources/Scannable/Community/LionfishPatrol.tres" id="20_ue74w"]
+[ext_resource type="Texture2D" uid="uid://co2uihhurry75" path="res://Resources/CommunityListings/icons/LFC-LionfishSnackAruba.png" id="21_s70gf"]
+[ext_resource type="Resource" uid="uid://bgnu3kpmhpxjf" path="res://Resources/Scannable/Community/LFCSnack.tres" id="22_f366b"]
+[ext_resource type="Texture2D" uid="uid://3evupao7p5kg" path="res://Resources/CommunityListings/icons/LFC-Lionfish_Caribbean.png" id="23_ts7ca"]
+[ext_resource type="Resource" uid="uid://ctx6cn5vmkns3" path="res://Resources/Scannable/Community/LFCCaribbean.tres" id="24_hwfjl"]
+[ext_resource type="Texture2D" uid="uid://bs5cd6mxa2dr" path="res://Resources/CommunityListings/icons/LFC-Sexy_Reef_Ambassadors.png" id="25_2s2jf"]
+[ext_resource type="Resource" path="res://Resources/Scannable/Community/LFCSexy.tres" id="26_7xhpn"]
+[ext_resource type="Texture2D" uid="uid://btjafaabwj4n3" path="res://Resources/CommunityListings/icons/LFC-LFC.png" id="27_abp8s"]
+[ext_resource type="Resource" uid="uid://25w7s6r3klf8" path="res://Resources/Scannable/Community/lionfish_central.tres" id="28_4bhpn"]
+[ext_resource type="Texture2D" uid="uid://r6mue8i1bwte" path="res://Resources/CommunityListings/icons/LFC-Lionfish-Huntress.png" id="29_lotpe"]
+[ext_resource type="Resource" uid="uid://b844rwxyjobaw" path="res://Resources/Scannable/Community/LFCHuntress.tres" id="30_04mve"]
+[ext_resource type="Texture2D" uid="uid://brmueg8bjy4r5" path="res://Resources/CommunityListings/icons/LFC-Lionfish Reef Patrol.png" id="31_4d2f7"]
+[ext_resource type="Resource" path="res://Resources/Scannable/Community/LFCReef.tres" id="32_ufte3"]
+[ext_resource type="Texture2D" uid="uid://cgwti2t5gs3iv" path="res://Resources/CommunityListings/icons/LFC-Lionfish Podcast.png" id="33_xv6g3"]
+[ext_resource type="Resource" path="res://Resources/Scannable/Community/LFCPod.tres" id="34_kaiwf"]
+[ext_resource type="Texture2D" uid="uid://bqtcinvnt6ujw" path="res://Resources/CommunityListings/icons/LFC-Lionfish Invitational.png" id="35_yjias"]
+[ext_resource type="Resource" path="res://Resources/Scannable/Community/LFCInv.tres" id="36_1d0ya"]
+[ext_resource type="Texture2D" uid="uid://cd7uroy0lyddo" path="res://Images/extinguish_them.png" id="37_eq46m"]
+[ext_resource type="Texture2D" uid="uid://bxlkrgk1702pw" path="res://Resources/CommunityListings/icons/LFC-SaltyLocs.png" id="38_mp2r3"]
+[ext_resource type="Resource" uid="uid://bctkxo6t2vt0a" path="res://Resources/Scannable/Community/LFCLocks.tres" id="39_hy5iv"]
+[ext_resource type="Texture2D" uid="uid://bl4rjk3ao1fyi" path="res://Resources/CommunityListings/icons/LFC-Castaway.png" id="40_cfrvv"]
+[ext_resource type="Resource" path="res://Resources/Scannable/Community/LFCCastaway.tres" id="41_fo3cf"]
+[ext_resource type="Texture2D" uid="uid://3mgym5ja8ooh" path="res://Resources/CommunityListings/icons/LFC-ECO2.png" id="42_0bgxp"]
+[ext_resource type="Resource" uid="uid://i2n3pydefi63" path="res://Resources/Scannable/Community/ECO.tres" id="43_v7d8j"]
+[ext_resource type="Texture2D" uid="uid://b6ma7filn7i4i" path="res://Resources/CommunityListings/icons/LFC-LionfishDivers.png" id="44_u8md3"]
+[ext_resource type="Resource" path="res://Resources/Scannable/Community/LFCDivers.tres" id="45_by4u0"]
+[ext_resource type="Texture2D" uid="uid://cwf30vf3gdqy2" path="res://Resources/CommunityListings/icons/LFC-AquaticHunt.png" id="46_054p3"]
+[ext_resource type="Resource" path="res://Resources/Scannable/Community/LFCHunt.tres" id="47_4vhtq"]
+[ext_resource type="Texture2D" uid="uid://t20glod2y1u6" path="res://Resources/CommunityListings/icons/LFC-fins.png" id="48_1kkfa"]
+[ext_resource type="Resource" path="res://Resources/Scannable/Community/LFCFins.tres" id="49_pqivf"]
+[ext_resource type="Texture2D" uid="uid://bql5aa58xft" path="res://Resources/CommunityListings/icons/LFC-Lionator.png" id="50_xs584"]
+[ext_resource type="Resource" uid="uid://b7qelioaiu3vj" path="res://Resources/Scannable/Community/LionatorSticker.tres" id="51_cproy"]
+[ext_resource type="Texture2D" uid="uid://u22kklmqfuqh" path="res://Resources/CommunityListings/icons/LFC-LionfishExtermination.png" id="52_pxumj"]
+[ext_resource type="Resource" uid="uid://db34sxoljqjkd" path="res://Resources/Scannable/Community/lionfishExtCorp.tres" id="53_tg2qm"]
+[ext_resource type="Texture2D" uid="uid://cpwygnuiq2xmj" path="res://Resources/CommunityListings/icons/LFC-LionfishUniversity.png" id="54_db06e"]
+[ext_resource type="Resource" uid="uid://c0krgw1ktbfi2" path="res://Resources/Scannable/Community/lionfishU.tres" id="55_8iuy8"]
+[ext_resource type="Texture2D" uid="uid://dv1qmi8cogy8x" path="res://Resources/CommunityListings/icons/LFC_reef_rangers.png" id="56_0ej2x"]
+[ext_resource type="Resource" path="res://Resources/Scannable/Community/LFCRR.tres" id="57_84wqb"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_wbqn1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k11tj"]
+transparency = 1
+albedo_texture = ExtResource("1_f6whk")
+
+[sub_resource type="QuadMesh" id="QuadMesh_naenw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mmb3h"]
+transparency = 1
+albedo_texture = ExtResource("4_atao5")
+
+[sub_resource type="QuadMesh" id="QuadMesh_2i2lt"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_di6j8"]
+transparency = 1
+albedo_texture = ExtResource("6_xxf6h")
+
+[sub_resource type="QuadMesh" id="QuadMesh_nt620"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c8hxr"]
+transparency = 1
+albedo_texture = ExtResource("8_80w0j")
+
+[sub_resource type="QuadMesh" id="QuadMesh_h0c8v"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kx0s0"]
+transparency = 1
+albedo_texture = ExtResource("10_pirnf")
+
+[sub_resource type="QuadMesh" id="QuadMesh_ugobf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0nor5"]
+transparency = 1
+albedo_texture = ExtResource("12_fsv58")
+
+[sub_resource type="QuadMesh" id="QuadMesh_7tlob"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2lp7r"]
+transparency = 1
+albedo_texture = ExtResource("14_up8qn")
+
+[sub_resource type="QuadMesh" id="QuadMesh_7lgl8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xn23n"]
+transparency = 1
+albedo_texture = ExtResource("16_pap23")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dvdsw"]
+transparency = 1
+albedo_texture = ExtResource("18_h15xa")
+
+[sub_resource type="QuadMesh" id="QuadMesh_oilqq"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_5enkv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l70re"]
+transparency = 1
+albedo_texture = ExtResource("19_8jko0")
+
+[sub_resource type="QuadMesh" id="QuadMesh_1qs7m"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ivyeq"]
+transparency = 1
+albedo_texture = ExtResource("21_s70gf")
+
+[sub_resource type="QuadMesh" id="QuadMesh_vofj6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yly8d"]
+transparency = 1
+albedo_texture = ExtResource("23_ts7ca")
+
+[sub_resource type="QuadMesh" id="QuadMesh_ujgql"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qu8hu"]
+transparency = 1
+albedo_texture = ExtResource("25_2s2jf")
+
+[sub_resource type="QuadMesh" id="QuadMesh_xn23n"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5enkv"]
+transparency = 1
+albedo_texture = ExtResource("27_abp8s")
+
+[sub_resource type="QuadMesh" id="QuadMesh_l70re"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1qs7m"]
+transparency = 1
+albedo_texture = ExtResource("29_lotpe")
+
+[sub_resource type="QuadMesh" id="QuadMesh_ivyeq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vofj6"]
+transparency = 1
+albedo_texture = ExtResource("31_4d2f7")
+
+[sub_resource type="QuadMesh" id="QuadMesh_yly8d"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ujgql"]
+transparency = 1
+albedo_texture = ExtResource("33_xv6g3")
+
+[sub_resource type="QuadMesh" id="QuadMesh_qu8hu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o78fe"]
+transparency = 1
+albedo_texture = ExtResource("35_yjias")
+
+[sub_resource type="QuadMesh" id="QuadMesh_aabor"]
+size = Vector2(1.435, 0.7)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3of0a"]
+transparency = 1
+albedo_texture = ExtResource("37_eq46m")
+
+[sub_resource type="QuadMesh" id="QuadMesh_ffgor"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_27loa"]
+transparency = 1
+albedo_texture = ExtResource("38_mp2r3")
+
+[sub_resource type="QuadMesh" id="QuadMesh_o78fe"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aabor"]
+transparency = 1
+albedo_texture = ExtResource("40_cfrvv")
+
+[sub_resource type="QuadMesh" id="QuadMesh_583jt"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cqlcx"]
+transparency = 1
+albedo_texture = ExtResource("42_0bgxp")
+
+[sub_resource type="QuadMesh" id="QuadMesh_4jdmq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_winxl"]
+transparency = 1
+albedo_texture = ExtResource("44_u8md3")
+
+[sub_resource type="QuadMesh" id="QuadMesh_mpaxa"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kjima"]
+transparency = 1
+albedo_texture = ExtResource("46_054p3")
+
+[sub_resource type="QuadMesh" id="QuadMesh_lo2qd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jnw5e"]
+transparency = 1
+albedo_texture = ExtResource("48_1kkfa")
+
+[sub_resource type="QuadMesh" id="QuadMesh_o74ta"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wsmkr"]
+transparency = 1
+albedo_texture = ExtResource("50_xs584")
+
+[sub_resource type="QuadMesh" id="QuadMesh_eq8tq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x3f3y"]
+transparency = 1
+albedo_texture = ExtResource("52_pxumj")
+
+[sub_resource type="QuadMesh" id="QuadMesh_xk733"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x1jvo"]
+transparency = 1
+albedo_texture = ExtResource("54_db06e")
+
+[sub_resource type="QuadMesh" id="QuadMesh_yp8pb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p01rr"]
+transparency = 1
+albedo_texture = ExtResource("56_0ej2x")
+
+[node name="Stickers" type="Node3D"]
+
+[node name="Outside" type="Node3D" parent="."]
+
+[node name="Niuhi" type="MeshInstance3D" parent="Outside"]
+transform = Transform3D(-0.73, 0, -1.50996e-07, 0, 0.38, 0, 1.10227e-07, 0, -1, -1.37972, 3.2311, -0.771059)
+mesh = SubResource("QuadMesh_wbqn1")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_k11tj")
+
+[node name="ScanTarget2" parent="Outside/Niuhi" instance=ExtResource("2_0dulx")]
+transform = Transform3D(-0.787671, 0, 4.13688e-08, 0, 1.51316, 0, -8.68226e-08, 0, -0.2, 0.000886321, -0.0530634, 0.0262724)
+scannable = ExtResource("3_qx8jx")
+
+[node name="Benthic" type="MeshInstance3D" parent="Outside"]
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 0.255, 0, 1.50996e-07, 0, -1, -1.48013, 4.28047, -0.779508)
+mesh = SubResource("QuadMesh_naenw")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_mmb3h")
+
+[node name="ScanTarget3" parent="Outside/Benthic" instance=ExtResource("2_0dulx")]
+transform = Transform3D(-0.575, 0, 3.01991e-08, 0, 2.2549, 0, -8.68225e-08, 0, -0.2, -0.0352546, 0.0674248, 0.0178232)
+scannable = ExtResource("5_d5i4n")
+
+[node name="DDWorld" type="MeshInstance3D" parent="Outside"]
+transform = Transform3D(-0.65, 0, -1.50996e-07, 0, 0.48, 0, 9.81473e-08, 0, -1, -2.15859, 2.94633, -0.770867)
+mesh = SubResource("QuadMesh_2i2lt")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_di6j8")
+
+[node name="ScanTarget4" parent="Outside/DDWorld" instance=ExtResource("2_0dulx")]
+transform = Transform3D(-0.884615, 0, 4.64601e-08, 0, 1.19792, 0, -8.68224e-08, 0, -0.2, 0.0319269, -0.0017252, 0.0264646)
+scannable = ExtResource("7_fh7ej")
+
+[node name="ScubaTech" type="MeshInstance3D" parent="Outside"]
+transform = Transform3D(-0.795, 0, -1.50996e-07, 0, 0.405, 0, 1.20042e-07, 0, -1, -1.35231, 3.74865, -0.789242)
+mesh = SubResource("QuadMesh_nt620")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_c8hxr")
+
+[node name="ScanTarget5" parent="Outside/ScubaTech" instance=ExtResource("2_0dulx")]
+transform = Transform3D(-0.72327, 0, 3.79862e-08, 0, 1.41975, 0, -8.68224e-08, 0, -0.2, 0.056914, 0.012166, 0.0080893)
+scannable = ExtResource("9_laiob")
+
+[node name="SharkQuest" type="MeshInstance3D" parent="Outside"]
+transform = Transform3D(-0.655, 0, -1.50996e-07, 0, 0.865, 0, 9.89022e-08, 0, -1, -1.29203, 2.31712, -0.768342)
+mesh = SubResource("QuadMesh_h0c8v")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_kx0s0")
+
+[node name="ScanTarget6" parent="Outside/SharkQuest" instance=ExtResource("2_0dulx")]
+transform = Transform3D(-0.877862, 0, 4.61054e-08, 0, 0.664739, 0, -8.68224e-08, 0, -0.2, 0.0259446, 0.0204215, 0.0289891)
+scannable = ExtResource("11_s5x08")
+
+[node name="DivePros" type="MeshInstance3D" parent="Outside"]
+transform = Transform3D(-0.52, 0, -1.50996e-07, 0, 0.64, 0, 7.85178e-08, 0, -1, -2.18791, 3.78344, -0.762852)
+mesh = SubResource("QuadMesh_ugobf")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_0nor5")
+
+[node name="ScanTarget7" parent="Outside/DivePros" instance=ExtResource("2_0dulx")]
+transform = Transform3D(-1.10577, 0, 5.80751e-08, 0, 0.898437, 0, -8.68224e-08, 0, -0.2, -0.0164781, -0.0870724, 0.0344799)
+scannable = ExtResource("13_scbxo")
+
+[node name="ScubaRadio" type="MeshInstance3D" parent="Outside"]
+transform = Transform3D(-1.25626e-08, 0.0198611, 0.994221, 1.35977e-09, 0.183931, -0.107357, -0.29, 2.05486e-12, -4.35724e-08, -2.65365, 3.19345, -0.966555)
+mesh = SubResource("QuadMesh_7tlob")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_2lp7r")
+
+[node name="ScanTarget8" parent="Outside/ScubaRadio" instance=ExtResource("2_0dulx")]
+transform = Transform3D(0.000781718, 0.599549, -0.0686276, 0.000299949, -0.0410793, -1.00264, -0.0619943, 0.00736128, -0.00571642, -0.0220304, -0.102599, 0.00527453)
+scannable = ExtResource("15_m0yjk")
+
+[node name="Naui" type="MeshInstance3D" parent="Outside"]
+transform = Transform3D(0.00354209, 0.0203939, 0.996498, 1.6374e-09, 0.24415, -0.083243, -0.449986, 0.000160533, 0.00784399, -2.68236, 2.86061, -1.05601)
+mesh = SubResource("QuadMesh_7lgl8")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_xn23n")
+
+[node name="ScanTarget9" parent="Outside/Naui" instance=ExtResource("2_0dulx")]
+transform = Transform3D(-0.00132667, 0.934996, -0.116587, 0.000687466, -0.074455, -1.46335, -0.141992, -0.00909637, -0.00599562, -0.0160429, 0.014492, -0.000501394)
+scannable = ExtResource("17_l3vbd")
+
+[node name="Inside" type="Node3D" parent="."]
+
+[node name="Zookeeper" type="MeshInstance3D" parent="Inside"]
+transform = Transform3D(-0.0463955, 0.00731916, -0.570871, 0.0182953, 0.249666, 0.0138606, 0.396879, -0.0106535, -0.0673744, 2.54029, 2.96826, 3.87366)
+material_override = SubResource("StandardMaterial3D_dvdsw")
+mesh = SubResource("QuadMesh_oilqq")
+skeleton = NodePath("")
+
+[node name="ScanTarget" parent="Inside/Zookeeper" instance=ExtResource("2_0dulx")]
+transform = Transform3D(-1.16162, 8.14549e-05, -0.000157259, 0.000113579, 1.61972, -2.2148e-08, 0.000676923, -8.36444e-08, -0.2, -0.00624275, 0.0242891, -0.024107)
+
+[node name="LFCPatrol" type="MeshInstance3D" parent="Inside"]
+transform = Transform3D(-0.00628901, 0.0172238, -0.995788, -3.98441e-05, 0.199256, 0.0861676, 0.199901, 0.000581587, -0.0313109, 2.58282, 2.42447, 0.75065)
+mesh = SubResource("QuadMesh_5enkv")
+surface_material_override/0 = SubResource("StandardMaterial3D_l70re")
+
+[node name="ScanTarget2" parent="Inside/LFCPatrol" instance=ExtResource("2_0dulx")]
+transform = Transform3D(-1.57018, -0.0131311, 0.0253573, -0.00986303, 1.59661, 0.0086422, -0.0463889, 0.0152192, -0.114585, -0.0043211, -0.00927067, 0.00776935)
+scannable = ExtResource("20_ue74w")
+
+[node name="LFCSnack" type="MeshInstance3D" parent="Inside"]
+transform = Transform3D(-0.0958762, 0.00710506, -0.972189, 0.0259675, 0.184582, 0.0245457, 0.402937, -0.0102049, -0.232908, 2.41952, 3.00975, 4.73707)
+mesh = SubResource("QuadMesh_1qs7m")
+surface_material_override/0 = SubResource("StandardMaterial3D_ivyeq")
+
+[node name="ScanTarget3" parent="Inside/LFCSnack" instance=ExtResource("2_0dulx")]
+transform = Transform3D(-0.773626, -0.0283149, 0.00288235, -0.0144896, 1.51773, -0.000289555, -0.0191928, -0.00449335, -0.115964, 0.0602617, -0.0206127, -0.0153363)
+scannable = ExtResource("22_f366b")
+
+[node name="LFCCaribbean" type="MeshInstance3D" parent="Inside"]
+transform = Transform3D(-0.00469094, -0.0182761, -0.997399, 0.00651233, 0.259287, -0.0706342, 0.294891, -0.00601679, -0.0143061, 2.63706, 3.05538, 2.41357)
+mesh = SubResource("QuadMesh_vofj6")
+surface_material_override/0 = SubResource("StandardMaterial3D_yly8d")
+
+[node name="ScanTarget4" parent="Inside/LFCCaribbean" instance=ExtResource("2_0dulx")]
+transform = Transform3D(-1.94284, -0.00197141, 0.0313725, -0.00737452, 2.21144, -0.0037243, -0.0466007, -0.00498173, -0.114617, -0.0351837, -0.0806551, -0.00747275)
+scannable = ExtResource("24_hwfjl")
+
+[node name="LFCSexy ;3" type="MeshInstance3D" parent="Inside"]
+transform = Transform3D(-0.00875115, -0.0271893, -0.995106, -0.000128434, 0.283699, -0.095423, 0.339887, -0.000592847, -0.0256573, 2.65415, 2.90478, 2.11685)
+mesh = SubResource("QuadMesh_ujgql")
+surface_material_override/0 = SubResource("StandardMaterial3D_qu8hu")
+
+[node name="ScanTarget5" parent="Inside/LFCSexy ;3" instance=ExtResource("2_0dulx")]
+transform = Transform3D(-0.943837, -0.0110723, 0.00193964, -0.00760961, 1.36895, 0.000193928, -0.0157969, 0.00210378, -0.115984, 0.0147467, -0.0874128, -0.00367546)
+scannable = ExtResource("26_7xhpn")
+
+[node name="LFCCentral" type="MeshInstance3D" parent="Inside"]
+transform = Transform3D(-0.0374514, -0.0108089, -0.995511, -7.50152e-10, 0.274786, -0.0394517, 0.433385, -0.000934064, -0.0860281, 2.61553, 3.09343, 2.79531)
+mesh = SubResource("QuadMesh_xn23n")
+surface_material_override/0 = SubResource("StandardMaterial3D_5enkv")
+
+[node name="ScanTarget6" parent="Inside/LFCCentral" instance=ExtResource("2_0dulx")]
+transform = Transform3D(-0.738577, -0.00283971, -0.0145135, -0.0014263, 1.41609, 0.0238753, 0.00350574, 0.0241256, -0.115628, 0.0812573, 0.0111551, 0.003335)
+scannable = ExtResource("28_4bhpn")
+
+[node name="LFCHuntress" type="MeshInstance3D" parent="Inside"]
+transform = Transform3D(0.000748072, -0.0187899, -0.99557, -5.41862e-05, 0.199115, -0.093951, 0.199999, 0.000124228, 0.00369836, 2.6661, 3.41551, 0.239409)
+mesh = SubResource("QuadMesh_l70re")
+surface_material_override/0 = SubResource("StandardMaterial3D_1qs7m")
+
+[node name="ScanTarget7" parent="Inside/LFCHuntress" instance=ExtResource("2_0dulx")]
+transform = Transform3D(-1.60173, -0.0145088, 0.00185593, -0.0149982, 1.54593, 0.000177906, -0.0252181, 0.00210283, -0.117985, 0.0102266, -0.0288887, -0.00437737)
+scannable = ExtResource("30_04mve")
+
+[node name="LFCReef" type="MeshInstance3D" parent="Inside"]
+transform = Transform3D(-0.0169789, 0.0012131, -0.99354, 0.000965552, 0.149993, 0.00740619, 0.149033, -0.000833566, -0.113239, 2.47894, 3.19461, 4.4689)
+mesh = SubResource("QuadMesh_ivyeq")
+surface_material_override/0 = SubResource("StandardMaterial3D_vofj6")
+
+[node name="ScanTarget8" parent="Inside/LFCReef" instance=ExtResource("2_0dulx")]
+transform = Transform3D(-1.60996, 0.00745068, -0.000869624, 0.00725, 1.62077, 0.0025279, 0.00921186, 0.0265667, -0.153977, -0.0126286, -0.0113678, -0.0133011)
+scannable = ExtResource("32_ufte3")
+
+[node name="LFCPod" type="MeshInstance3D" parent="Inside"]
+transform = Transform3D(-0.0321693, 0.00791728, -0.993884, 0.00176703, 0.299894, 0.0259085, 0.298265, -0.000922766, -0.107349, 2.50118, 3.06606, 4.25193)
+mesh = SubResource("QuadMesh_yly8d")
+surface_material_override/0 = SubResource("StandardMaterial3D_ujgql")
+
+[node name="ScanTarget9" parent="Inside/LFCPod" instance=ExtResource("2_0dulx")]
+transform = Transform3D(-1.07044, 0.00629854, -0.0289812, 0.00364575, 1.29005, 0.0471753, 0.0103413, 0.0495314, -0.11479, 0.00928211, -0.0317965, 0.000810623)
+scannable = ExtResource("34_kaiwf")
+
+[node name="LFCInv" type="MeshInstance3D" parent="Inside"]
+transform = Transform3D(-1.7435e-08, -0.0300959, -0.997165, -1.31553e-09, 0.398866, -0.0752398, 0.4, 5.59898e-17, -4.37114e-08, 2.70661, 2.91664, 0.254711)
+mesh = SubResource("QuadMesh_qu8hu")
+surface_material_override/0 = SubResource("StandardMaterial3D_o78fe")
+
+[node name="ScanTarget10" parent="Inside/LFCInv" instance=ExtResource("2_0dulx")]
+transform = Transform3D(-0.800971, -0.0115722, 0.00908742, -0.00587123, 0.975054, 0.00602139, -0.0240777, 0.00990033, -0.115904, 0.00982344, -0.0127316, 0.00300884)
+scannable = ExtResource("36_1d0ya")
+
+[node name="Extinguish_Lionfish" type="MeshInstance3D" parent="Inside"]
+transform = Transform3D(-1.7435e-08, -0.0300959, -0.997165, -1.31553e-09, 0.398866, -0.0752398, 0.4, 5.59898e-17, -4.37114e-08, 2.70661, 2.96428, -0.278179)
+mesh = SubResource("QuadMesh_aabor")
+surface_material_override/0 = SubResource("StandardMaterial3D_3of0a")
+
+[node name="LFCSLocks" type="MeshInstance3D" parent="Inside"]
+transform = Transform3D(-2.41411e-08, 0.0253088, -0.999346, 8.65149e-10, 0.699543, 0.0361554, 0.555, 1.04044e-11, -4.35254e-08, 2.55556, 2.265, 1.37458)
+mesh = SubResource("QuadMesh_ffgor")
+surface_material_override/0 = SubResource("StandardMaterial3D_27loa")
+
+[node name="ScanTarget11" parent="Inside/LFCSLocks" instance=ExtResource("2_0dulx")]
+transform = Transform3D(-0.577276, -0.00834034, 0.00654949, -0.0039386, 0.557333, 0.000628603, -0.0240343, 0.00327588, -0.115928, -0.0598263, 0.00780272, 0.00131106)
+scannable = ExtResource("39_hy5iv")
+
+[node name="LFCCastaway" type="MeshInstance3D" parent="Inside"]
+transform = Transform3D(-3.90436e-08, -0.0250127, -0.999002, -1.74713e-09, 0.559441, -0.0446656, 0.895, 9.28111e-13, -4.36678e-08, 2.59314, 4.11181, -0.115995)
+mesh = SubResource("QuadMesh_o78fe")
+surface_material_override/0 = SubResource("StandardMaterial3D_aabor")
+
+[node name="ScanTarget12" parent="Inside/LFCCastaway" instance=ExtResource("2_0dulx")]
+transform = Transform3D(-0.357976, -0.00517194, 0.00406142, -0.00287499, 0.695599, 0.0106376, -0.0241383, 0.0218404, -0.115776, -0.00612608, -0.112617, -0.010793)
+scannable = ExtResource("41_fo3cf")
+
+[node name="LFCECO2" type="MeshInstance3D" parent="Inside"]
+transform = Transform3D(-0.00427896, -0.0209258, -0.995679, -9.14855e-10, 0.229046, -0.0909976, 0.22996, -0.000389374, -0.018527, 2.65893, 3.00843, 1.01961)
+mesh = SubResource("QuadMesh_583jt")
+surface_material_override/0 = SubResource("StandardMaterial3D_cqlcx")
+
+[node name="ScanTarget13" parent="Inside/LFCECO2" instance=ExtResource("2_0dulx")]
+transform = Transform3D(-1.39485, -0.0101367, 0.00150319, -0.0095059, 1.48096, 0.000275631, -0.0180993, 0.00338787, -0.11599, -0.00717258, 0.00838566, -0.00401711)
+scannable = ExtResource("43_v7d8j")
+
+[node name="LFCDivers" type="MeshInstance3D" parent="Inside"]
+transform = Transform3D(-0.00864572, -0.0108432, -0.998401, 0.0130733, 0.199643, -0.0545943, 0.539772, -0.00500903, -0.0146694, 2.64114, 2.82655, 1.43434)
+mesh = SubResource("QuadMesh_4jdmq")
+surface_material_override/0 = SubResource("StandardMaterial3D_winxl")
+
+[node name="ScanTarget14" parent="Inside/LFCDivers" instance=ExtResource("2_0dulx")]
+transform = Transform3D(-0.593878, 0.0854167, 0.00391232, 0.0309218, 1.6517, 0.00107117, -0.019421, 0.017836, -0.11793, -0.301691, -0.0194025, -0.0161169)
+scannable = ExtResource("45_by4u0")
+
+[node name="LFCHunt" type="MeshInstance3D" parent="Inside"]
+transform = Transform3D(-0.0416199, -0.00859142, -0.997964, 0.0351738, 0.2296, -0.0396287, 0.803154, -0.0105004, -0.0499795, 2.62497, 2.87885, 2.91583)
+mesh = SubResource("QuadMesh_mpaxa")
+surface_material_override/0 = SubResource("StandardMaterial3D_kjima")
+
+[node name="ScanTarget15" parent="Inside/LFCHunt" instance=ExtResource("2_0dulx")]
+transform = Transform3D(-0.398667, 0.0178511, -0.00230243, 0.0573664, 1.69205, 0.0288111, -0.00810302, 0.0239862, -0.115782, 0.102421, -0.0127039, -0.02004)
+scannable = ExtResource("47_4vhtq")
+
+[node name="LFCFins" type="MeshInstance3D" parent="Inside"]
+transform = Transform3D(-0.0088732, -0.0282758, -0.993994, -1.70288e-09, 0.263486, -0.106733, 0.364892, -0.00068759, -0.0241713, 2.68041, 2.85363, 0.689962)
+mesh = SubResource("QuadMesh_lo2qd")
+surface_material_override/0 = SubResource("StandardMaterial3D_jnw5e")
+
+[node name="ScanTarget16" parent="Inside/LFCFins" instance=ExtResource("2_0dulx")]
+transform = Transform3D(-0.879128, -0.0100661, 0.00227029, -0.0085909, 1.47227, -0.00476729, -0.0162401, -0.00233678, -0.115976, -0.00468028, -0.0626154, -0.0195878)
+scannable = ExtResource("49_pqivf")
+
+[node name="LFCLionater" type="MeshInstance3D" parent="Inside"]
+transform = Transform3D(-0.00656667, 0.00696835, -0.999551, 0.00016645, 0.274912, 0.0253362, 0.409947, -4.45169e-10, -0.0160214, 2.56418, 2.12795, 0.8675)
+mesh = SubResource("QuadMesh_o74ta")
+surface_material_override/0 = SubResource("StandardMaterial3D_wsmkr")
+
+[node name="ScanTarget17" parent="Inside/LFCLionater" instance=ExtResource("2_0dulx")]
+transform = Transform3D(-0.78228, -0.00937218, 0.0043679, 0.00030109, 1.40746, 0.0510646, -0.0190556, 0.0491087, -0.115119, -0.0217085, -0.0163107, 0.000364065)
+scannable = ExtResource("51_cproy")
+
+[node name="LFCExt" type="MeshInstance3D" parent="Inside"]
+transform = Transform3D(-0.00569612, -0.0147661, -0.998523, 0.00415186, 0.279596, -0.0528629, 0.434943, -0.00286234, -0.0125723, 2.64721, 3.05433, 1.74753)
+mesh = SubResource("QuadMesh_eq8tq")
+surface_material_override/0 = SubResource("StandardMaterial3D_x3f3y")
+
+[node name="ScanTarget18" parent="Inside/LFCExt" instance=ExtResource("2_0dulx")]
+transform = Transform3D(-0.737169, -0.000942182, 0.00512558, 0.00525094, 1.39188, 0.0177988, -0.0200944, 0.0186978, -0.115857, 0.10474, -0.00709152, -0.0102565)
+scannable = ExtResource("53_tg2qm")
+
+[node name="LFCUni" type="MeshInstance3D" parent="Inside"]
+transform = Transform3D(-0.0302504, 0.0346563, -0.996434, 0.000793789, 0.438632, 0.0787765, 0.999542, 0.000700508, -0.0302189, 2.57812, 2.21649, 0.0732801)
+mesh = SubResource("QuadMesh_xk733")
+surface_material_override/0 = SubResource("StandardMaterial3D_x1jvo")
+
+[node name="ScanTarget19" parent="Inside/LFCUni" instance=ExtResource("2_0dulx")]
+transform = Transform3D(-0.320976, -0.0052397, 5.84978e-05, 3.92628e-05, 0.875206, 0.0366358, -0.0145578, 0.000154869, -0.117504, 0.0360478, -0.021225, -0.0093255)
+scannable = ExtResource("55_8iuy8")
+
+[node name="LFCRR" type="MeshInstance3D" parent="Inside"]
+transform = Transform3D(-0.0254507, -0.003485, -0.996327, 0.000357789, 0.299979, -0.0117603, 0.298918, -0.00065578, -0.0848158, 2.57657, 3.0495, 3.50474)
+mesh = SubResource("QuadMesh_yp8pb")
+surface_material_override/0 = SubResource("StandardMaterial3D_p01rr")
+
+[node name="ScanTarget20" parent="Inside/LFCRR" instance=ExtResource("2_0dulx")]
+transform = Transform3D(-1.26099, -0.000346369, -0.000352193, -0.000434916, 1.29553, 0.00328509, 0.00362989, 0.0348985, -0.121955, 0.00196171, -0.00352859, 0.0081234)
+scannable = ExtResource("57_84wqb")

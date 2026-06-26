@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="LateralAvoidanceBehavior" load_steps=2 format=3 uid="uid://d0aa4pkw8gevw"]
+
+[ext_resource type="Script" uid="uid://deoi7ixa0gono" path="res://Scripts/Fish/Behaviors/lateral_avoidance.gd" id="1_dtp6w"]
+
+[resource]
+script = ExtResource("1_dtp6w")
+detection_distance = 2.0
+avoidance_speed = 60.0
+blend_factor = 1.0
+metadata/_custom_type_script = "uid://deoi7ixa0gono"

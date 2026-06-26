@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwgnt174nklf0"]
+
+[ext_resource type="Theme" uid="uid://dyls1fq20ga2d" path="res://Resources/Stylesheets/ShipwreckDiscovery.theme" id="1_jleqq"]
+[ext_resource type="Texture2D" uid="uid://b4n7lo6oif2k3" path="res://Images/SAMPLE.png" id="2_psvl2"]
+
+[node name="MainMenu" type="CanvasLayer"]
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(1440, 720)
+offset_right = 1153.0
+offset_bottom = 649.0
+theme = ExtResource("1_jleqq")
+
+[node name="MenuPanel" type="MarginContainer" parent="PanelContainer" groups=["MainMenu"]]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_jleqq")
+theme_override_constants/margin_left = 60
+theme_override_constants/margin_top = 60
+theme_override_constants/margin_right = 60
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MenuPanel"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MenuPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Coming Soon: Web Content from the Dive World"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MenuPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("2_psvl2")

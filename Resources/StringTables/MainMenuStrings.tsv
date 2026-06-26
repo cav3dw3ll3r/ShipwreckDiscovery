@@ -1,0 +1,82 @@
+ID	EN	SP	FR	GE	RU		
+ExitGameHeader	Exit Game?	¿Salir del juego?	Quitter le jeu ?	Spiel beenden?	Выйти из игры?		
+TravelButton	Travel	Viajar	Voyager	Reisen	Путешествовать		
+SandboxButton	Sandbox	Caja de arena	Bac à sable	Sandkasten	Песочница		
+DiveLogButton	Dive Log	Registro de inmersiones	Journal de plongée	Tauchprotokoll	Журнал погружений		
+SettingsButton	Settings	Configuración	Paramètres	Einstellungen	Настройки		
+CreditsButton	Credits	Créditos	Crédits	Credits	Авторы		
+ExitGameButton	Quit to Desktop	Salir al escritorio	Quitter vers le bureau	Zum Desktop beenden	Выйти на рабочий стол		
+CommunityButton	Community	Comunidad	Communauté	Gemeinschaft	Сообщество		
+SettingsHeader	Game Settings	Configuración	Paramètres	Einstellungen	Настройки		
+LanguageLabel	Language:	Idioma	Langue	Sprache	Язык		
+GameModeSettingLabel	Game Mode: 	Modo de juego	Mode de jeu	Spielmodus	Режим игры		
+VisibilitySettingLabel	Visibility	Visibilidad	Visibilité	Sichtbarkeit	Видимость		
+CurrentSettingLabel	Currents	Corrientes	Courants	Strömungen	Течения		
+WaveIntensityLabel	Wave Intensity: 	Intensidad de olas	Intensité des vagues	Wellenintensität	Интенсивность волн		
+SpawnFishSettingLabel	Spawn Fish?: 	¿Generar peces?	Générer des poissons ?	Fische erzeugen?	Создавать рыбу?		
+SFXVolumeLabel	Sound Effects 	Volumen de efectos	Volume des effets	Effektlautstärke	Громкость эффектов		
+AmbienceVolumeLabel	Ambience Volume	Volumen ambiental	Volume d'ambiance	Umgebungslautstärke	Громкость окружения		
+PurchaseButton	Purchase	Comprar	Acheter	Kaufen	Купить		
+NoPurchaseButton	Insufficient Credits	Créditos insuficientes	Crédits insuffisants	Nicht genügend Guthaben	Недостаточно кредитов		
+CostLabel	Cost	Costo	Coût	Kosten	Стоимость		
+CostUnits	Credits	Créditos	Crédits	Guthaben	Кредиты		
+CreditStoreHeader	Discovery Shop	Tienda de descubrimientos	Boutique Découverte	Entdeckungsladen	Магазин открытий		
+PlayerMenuHeader	Player Menu	Menú del jugador	Menu du joueur	Spielermenü	Меню игрока		
+Gloves	Gloves	Guantes	Gants	Handschuhe	Перчатки		
+Powers	Powers	Poderes	Pouvoirs	Kräfte	Способности		
+Equip	Equip	Equipar	Équiper	Ausrüsten	Экипировать		
+CantEquip	Equipped	Equipado	Équipé	Ausgerüstet	Экипировано		
+Active	Active	Activo	Actif	Aktiv	Активно		
+Inactive	Inactive	Inactivo	Inactif	Inaktiv	Неактивно		
+SandboxMenu	Sandbox	Modo Sandbox	Menu Sandbox	Sandbox-Menü	Меню песочницы		
+num_scanned	Number Scanned:	Número escaneado:	Nombre scanné:	Anzahl gescannt:	Количество отсканировано:		
+rewards	Scan Rewards:	Recompensas de escaneo:	Récompenses de scan:	Scan-Belohnungen:	Награды за сканирование:		
+depth	Depth	Profundidad	Profondeur	Tiefe	Глубина		
+backBtn	Back	Atrás	Retour	Zurück	Назад		
+temp	Temperature	Temperatura	Température	Temperatur	Температура		
+imperial	Imperial	Imperial	Imperial	Imperial	Имперская		
+metric	Metric	Métrico	Métrique	Metrisch	Метрическая		
+wrecks	The Wrecks	Los Naufragios	Les Épaves	Die Wracks	Кораблекрушения		
+customize	Customize	Personalizar	Personnaliser	Anpassen	Настроить		
+discoveryStore	Store	Tienda	Tienda	Shop	Магазин		
+settings	Settings	Configuración	Paramètres	Einstellungen	Настройки		
+dive_log	Dive Log	Registro de inmersiones	Journal de plongée	Tauchprotokoll	Журнал погружений		
+kudos	Kudos	Felicitaciones	Félicitations	Anerkennung	Похвала		
+exit	Exit Game	Salir del juego	Quitter le jeu	Spiel beenden	Выйти из игры		
+voiceover	Voiceover	Locución	Voix off	Sprachkommentar	Озвучка		
+steve	Dr. Steve Gittings	Dr. Steve Gittings	Dr Steve Gittings	Dr. Steve Gittings	Д-р Стив Гиттингс		
+apply	Apply	Aplicar	Appliquer	Anwenden	Применить		
+revert	Revert	Revertir	Rétablir	Zurücksetzen	Отменить		
+go	Let's Dive!	¡Vamos a bucear!	Plongeons !	Los geht's tauchen!	Давайте нырять!		
+max_fish	Max Fish:	Máx. peces :	Poissons max :	Max. Fische:	Макс. рыб:		
+voice_volume	Voice	Voz	Voix	Stimme	Голос		
+mute	Mute Voice: 	Silenciar:	Muet:	Mute:	Отключить звук:		
+launch_game	Launch Game	Iniciar juego	Lancer le jeu	Spiel starten	Запустить игру		
+dive_log_coming_soon	Dive Log - Coming Soon	Registro de inmersiones - Próximamente	Journal de plongée - Bientôt disponible	Tauchprotokoll - Bald verfügbar	Журнал погружений - Скоро		
+dive_log_description	The Dive Log tracks your game progress. Within the Dive Log you can learn more about fish you've scanned, re-watch wreck videos, and learn about local dive shops that can take you on a tour of the real wreck. Dive Log is coming soon!	El registro de inmersiones realiza un seguimiento de tu progreso en el juego. Dentro del registro de inmersiones puedes obtener más información sobre los peces que has escaneado, volver a ver los vídeos de los naufragios y conocer las tiendas de buceo locales que pueden llevarte a visitar el naufragio real. ¡El registro de inmersiones llegará pronto!	Le journal de plongée suit votre progression dans le jeu. Dans le journal de plongée, vous pouvez en apprendre davantage sur les poissons que vous avez scannés, revoir les vidéos des épaves et découvrir les magasins de plongée locaux qui peuvent vous emmener faire un tour de l'épave réelle. Le journal de plongée arrive bientôt !	Das Tauchprotokoll verfolgt Ihren Spielfortschritt. Im Tauchprotokoll können Sie mehr über die Fische erfahren, die Sie gescannt haben, Wrack-Videos erneut ansehen und lokale Tauchshops kennenlernen, die Sie auf eine Tour zum echten Wrack mitnehmen können. Das Tauchprotokoll kommt bald!	Журнал погружений отслеживает ваш прогресс в игре. В журнале погружений вы можете узнать больше о рыбах, которые вы отсканировали, пересмотреть видео о крушениях и узнать о местных дайвинг-магазинах, которые могут взять вас на экскурсию к настоящему кораблекрушению. Журнал погружений скоро появится!		
+settings_applied	Settings Applied	Configuración aplicada	Paramètres appliqués	Einstellungen angewendet	Настройки применены		
+settings_reverted	Settings Reverted	Configuración revertida	Paramètres rétablis	Einstellungen zurückgesetzt	Настройки отменены		
+travel_to_wreck	Dive Now!	Viajar al naufragio	Voyager vers l'épave	Zum Wrack reisen	Путешествовать к кораблекрушению		
+instant_dive	Dive Now!	Buceo instantáneo	Plongée instantanée	Instant-Tauchgang	Мгновенное погружение2		
+snap_turn	Use Snap Turn	Giro por pasos	Rotation par paliers	Schrittweise Drehung	Пошаговый поворот		
+amateur_mode	Amateur Mode	Modo amateur	Mode amateur	Amateurmodus	Любительский режим		
+skip_cinematic_intro	Skip Cinematic Intro	Omitir intro cinematográfica	Ignorer l'intro cinématique	Filmische Intro überspringen	Пропустить кинематографическое вступление		
+switch_hands	Switch Hands	Cambiar manos	Changer de mains	Hände wechseln	Поменять руки		
+vignette	Dive Mask	Viñeteado	Vignettage	Vignettierung	Виньетирование		
+lang_sound	Language/Sound	Idioma/Sonido	Langue/Son	Sprache/Ton	Язык/Звук		
+ambience	Ambience	Ambiente	Ambiance	Umgebung	Атмосфера		
+comfort	Comfort	Comodidad	Confort	Komfort	Комфорт		
+dive_conditions	Dive Conditions	Condiciones de buceo	Conditions de plongée	Tauchbedingungen	Условия погружения		
+visibility	Visibility	Visibilidad	Visibilité	Sichtbarkeit	Видимость		
+Size	Size Range	Tamaño	Taille	Größe	Размер		
+fish_count	Fish Count	Cantidad de peces	Nombre de poissons	Fischanzahl	Количество рыб		
+horizontal_movement	Horizontal Movement	Movimiento horizontal	Mouvement horizontal	Horizontalbewegung	Горизонтальное движение
+turning	Turning	Giro	Tournant	Drehung	Поворот
+vertical_movement	Vertical Movement	Movimiento vertical	Mouvement vertical	Vertikalbewegung	Вертикальное движение
+frog_kick	Frog Kick	Patada de rana	Coup de pied de grenouille	Froschtritt	Лягушачий удар
+pole_spear	Pole Spear	Lanza de pértiga	Lance à perche	Stangenlanze	Палочная гарпунная пика
+sea_scooter	Sea Scooter	Propulsor submarino	Scooter de mer	Unterwasserscooter	Подводный скутер
+grip	Grip	Agarrar	Prise	Griff	Захват
+button_press	Button Press	Pulsación de botón	Appui sur le bouton	Knopfdruck	Нажатие кнопки
+speed_swim	Speed Swim	Nado rápido	Nage rapide	Schnellschwimmen	Быстрое плавание
+exit_game_android	Quit Application	Salir de la aplicación	Quitter l'application	Anwendung beenden	Выйти из приложения

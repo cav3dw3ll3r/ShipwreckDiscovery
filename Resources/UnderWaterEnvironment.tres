@@ -1,0 +1,20 @@
+[gd_resource type="Environment" load_steps=2 format=3 uid="uid://dknuall8tdnj4"]
+
+[sub_resource type="Sky" id="Sky_m7ys4"]
+
+[resource]
+background_mode = 1
+background_color = Color(0.5194665, 0.84616244, 0.92551714, 1)
+sky = SubResource("Sky_m7ys4")
+ambient_light_source = 2
+ambient_light_color = Color(0.7162962, 0.7162962, 0.7162962, 1)
+ambient_light_energy = 1.2
+reflected_light_source = 1
+tonemap_exposure = 1.2
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0.114716, 0.361123, 0.388067, 1)
+fog_density = 1.0
+fog_depth_curve = 0.31864157
+fog_depth_begin = 0.0
+fog_depth_end = 50.0

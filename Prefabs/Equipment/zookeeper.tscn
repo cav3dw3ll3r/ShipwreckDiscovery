@@ -1,0 +1,78 @@
+[gd_scene load_steps=10 format=3 uid="uid://5y1udgqu0heu"]
+
+[ext_resource type="Script" uid="uid://dkneu0cf8m7u4" path="res://Scripts/Core/Zookeeper_Pickable.gd" id="1_frqfu"]
+[ext_resource type="PackedScene" uid="uid://pucfbhaptgsp" path="res://Prefabs/Equipment/zk_visual.tscn" id="2_ynv4t"]
+[ext_resource type="Script" uid="uid://r3eyjsvss2px" path="res://addons/godot-xr-tools/objects/grab_points/grab_point.gd" id="6_72rd2"]
+[ext_resource type="ArrayMesh" uid="uid://catxfxfrjawau" path="res://Meshes/Player/baked_grasp_L.res" id="7_jv4ck"]
+[ext_resource type="Material" uid="uid://bush37lre50q" path="res://Images/MeshTextures/GloveFull/Blue_Glove.tres" id="8_7pyk0"]
+[ext_resource type="Material" uid="uid://blor6hyd8luht" path="res://Materials/WhiteGlove.tres" id="9_wjc01"]
+[ext_resource type="AudioStream" uid="uid://clnelpeolop1t" path="res://Audio/wolff-sfx-wet-squelch-425547.mp3" id="14_wh0my"]
+[ext_resource type="AudioStream" uid="uid://whthgp7mcx4i" path="res://Audio/koiroylers-shine-02-355934.mp3" id="15_6g2o7"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_zk_capture"]
+radius = 0.2
+
+[node name="Zookeeper" type="RigidBody3D" node_paths=PackedStringArray("left_hand_grab_point_mesh", "right_hand_grab_point_mesh")]
+script = ExtResource("1_frqfu")
+left_hand_grab_point_mesh = NodePath("XRToolsGrabPoint/LeftLiteGrabHand")
+right_hand_grab_point_mesh = NodePath("XRToolsGrabPoint/RightLiteGrabHand")
+metadata/_custom_type_script = "uid://dkneu0cf8m7u4"
+
+[node name="zk_visual" parent="." instance=ExtResource("2_ynv4t")]
+transform = Transform3D(-1, 0, -1.509958e-07, 0, 1, 0, 1.509958e-07, 0, -1, 0, 0, 0)
+
+[node name="CaptureTrigger" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 256
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CaptureTrigger"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.34124485, 0)
+shape = SubResource("SphereShape3D_zk_capture")
+
+[node name="CaptureBottomTarget" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.05610785, -0.09020148)
+
+[node name="CaptureMouthTarget" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5205743, 0.13807076)
+
+[node name="CaptureAxisEndTarget" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.07968123, 0.001357764)
+
+[node name="CaptureSnagTarget" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2412942, 0.01)
+
+[node name="CapturedFishAnchor" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.12, 0.01)
+
+[node name="XRToolsGrabPoint" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.14418915, 0.13807076)
+script = ExtResource("6_72rd2")
+metadata/_custom_type_script = "uid://r3eyjsvss2px"
+
+[node name="LeftLiteGrabHand" type="MeshInstance3D" parent="XRToolsGrabPoint"]
+transform = Transform3D(-0.12001961, -0.48404607, 0.035981715, -0.46182925, 0.12528743, 0.14497195, -0.14936234, 0.0015641385, -0.47716713, -0.016303122, -0.00010293722, 0.025498122)
+mesh = ExtResource("7_jv4ck")
+surface_material_override/0 = ExtResource("8_7pyk0")
+surface_material_override/1 = ExtResource("9_wjc01")
+
+[node name="RightLiteGrabHand" type="MeshInstance3D" parent="XRToolsGrabPoint"]
+transform = Transform3D(0.12001961, 0.48404607, -0.035981715, -0.46182925, 0.12528743, 0.14497195, -0.14936234, 0.0015641385, -0.47716713, 0.016303122, -0.00010293722, 0.025498122)
+visible = false
+mesh = ExtResource("7_jv4ck")
+surface_material_override/0 = ExtResource("8_7pyk0")
+surface_material_override/1 = ExtResource("9_wjc01")
+
+[node name="SquishPlayer" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("14_wh0my")
+unit_size = 4.0
+max_db = 10.0
+bus = &"SFX"
+attenuation_filter_cutoff_hz = 15000.0
+
+[node name="DissolvePlayer" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("15_6g2o7")
+volume_db = -20.0
+unit_size = 4.0
+max_db = 10.0
+bus = &"SFX"
+attenuation_filter_cutoff_hz = 15000.0

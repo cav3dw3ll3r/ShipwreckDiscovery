@@ -1,0 +1,37 @@
+* text=auto eol=lf
+
+# Godot text assets
+*.gd text eol=lf
+*.tscn text eol=lf
+*.tres text eol=lf
+*.godot text eol=lf
+*.cfg text eol=lf
+*.import text eol=lf
+*.uid text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+
+# Keep large art/media/export payloads out of normal diffs.
+*.glb binary
+*.gltf text eol=lf
+*.fbx binary
+*.blend binary
+*.obj text eol=lf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.wav binary
+*.mp3 binary
+*.ogg binary
+*.ogv binary
+*.webm binary
+*.mp4 binary
+*.m4v binary
+*.mkv binary
+*.mov binary
+*.avi binary
+*.apk binary
+*.aab binary
+*.zip binary
+*.pck binary

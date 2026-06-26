@@ -1,0 +1,210 @@
+[gd_scene load_steps=19 format=3 uid="uid://8dfs3hk4kjoa"]
+
+[ext_resource type="Script" uid="uid://bsy1ji7wd7h2k" path="res://addons/godot-xr-tools/objects/climbable.gd" id="1_n2f4u"]
+[ext_resource type="FontFile" uid="uid://dfslybkgpev81" path="res://Resources/Stylesheets/Mayonice.otf" id="2_a4q48"]
+[ext_resource type="Material" uid="uid://mwus2kinomgy" path="res://Materials/lettering.tres" id="3_k2smg"]
+[ext_resource type="Script" uid="uid://b5f3ybmrj452p" path="res://Scripts/Environment/ResourceTextDisplay.gd" id="4_8jb74"]
+[ext_resource type="AudioStream" uid="uid://bfxkf8oa6357o" path="res://Audio/Boat_sound1.mp3" id="8_mswoh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8y5cp"]
+size = Vector3(0.0519428, 0.19162, 0.0321628)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ilklb"]
+size = Vector3(0.0112457, 0.0932574, 0.0475965)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qqc3p"]
+size = Vector3(0.0171396, 0.004675, 0.0461371)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vio6e"]
+size = Vector3(0.0154916, 0.00314912, 0.0461371)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ogro5"]
+size = Vector3(0.00464489, 0.0621571, 0.0445529)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5yd3d"]
+size = Vector3(0.0490971, 0.0237238, 0.0461371)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ifmbg"]
+size = Vector3(2.3494873, 0.8569336, 0.06802368)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7bnma"]
+size = Vector3(0.5795288, 0.8569336, 0.1184845)
+
+[sub_resource type="TextMesh" id="TextMesh_27loa"]
+material = ExtResource("3_k2smg")
+uv2_padding = 2.29
+text = "MV Monica Lee"
+font = ExtResource("2_a4q48")
+horizontal_alignment = 0
+vertical_alignment = 0
+autowrap_mode = 2
+depth = 0.01
+width = 177.515
+
+[sub_resource type="TextMesh" id="TextMesh_ivyeq"]
+material = ExtResource("3_k2smg")
+uv2_padding = 2.29
+text = "Wreck Site"
+font = ExtResource("2_a4q48")
+horizontal_alignment = 0
+vertical_alignment = 0
+autowrap_mode = 2
+depth = 0.01
+width = 177.515
+
+[sub_resource type="TextMesh" id="TextMesh_o78fe"]
+material = ExtResource("3_k2smg")
+uv2_padding = 2.3
+text = "Destin, Fort"
+font = ExtResource("2_a4q48")
+horizontal_alignment = 2
+vertical_alignment = 0
+curve_step = 2.5
+depth = 0.01
+
+[sub_resource type="TextMesh" id="TextMesh_1qs7m"]
+material = ExtResource("3_k2smg")
+uv2_padding = 2.3
+text = "Walton Beach"
+font = ExtResource("2_a4q48")
+horizontal_alignment = 2
+vertical_alignment = 0
+curve_step = 2.5
+depth = 0.01
+
+[sub_resource type="SphereMesh" id="SphereMesh_y5fwf"]
+
+[node name="HomeBase" type="Node3D"]
+
+[node name="Colliders" type="Node3D" parent="."]
+transform = Transform3D(120, 0, 0, 0, -2.38419e-05, 100, 0, -100, -2.38419e-05, 0.0188125, 0, -0.484746)
+
+[node name="Floor" type="StaticBody3D" parent="Colliders"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Colliders/Floor"]
+transform = Transform3D(1, 0, 0, 0, 1, -5.68434e-14, 0, 5.68434e-14, 1, 0.000208857, 0.000841439, 0.00183256)
+shape = SubResource("BoxShape3D_8y5cp")
+debug_color = Color(0.732747, 0.989181, 0.814911, 0.42)
+
+[node name="LeftWall" type="StaticBody3D" parent="Colliders"]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Colliders/LeftWall"]
+transform = Transform3D(1, 0, 0, 0, 1, -5.68434e-14, 0, 5.68434e-14, 1, 0.0198898, 0.0499289, 0.0223723)
+shape = SubResource("BoxShape3D_ilklb")
+debug_color = Color(0.732747, 0.989181, 0.814911, 0.42)
+
+[node name="RightWall" type="StaticBody3D" parent="Colliders"]
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Colliders/RightWall"]
+transform = Transform3D(1, 0, 0, 0, 1, -5.68434e-14, 0, 5.68434e-14, 1, -0.0197989, 0.0499289, 0.0223723)
+shape = SubResource("BoxShape3D_ilklb")
+debug_color = Color(0.732747, 0.989181, 0.814911, 0.42)
+
+[node name="RightInnerWall" type="StaticBody3D" parent="Colliders"]
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Colliders/RightInnerWall"]
+transform = Transform3D(1, 0, 0, 0, 1, -5.68434e-14, 0, 5.68434e-14, 1, -0.015311, 0.00227201, 0.0223722)
+shape = SubResource("BoxShape3D_qqc3p")
+debug_color = Color(0.732747, 0.989181, 0.814911, 0.42)
+
+[node name="LeftInnerWall" type="StaticBody3D" parent="Colliders"]
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Colliders/LeftInnerWall"]
+transform = Transform3D(1, 0, 0, 0, 1, -5.68434e-14, 0, 5.68434e-14, 1, 0.014293, 0.00266874, 0.0223722)
+shape = SubResource("BoxShape3D_vio6e")
+debug_color = Color(0.732747, 0.989181, 0.814911, 0.42)
+
+[node name="RightCabWall" type="StaticBody3D" parent="Colliders"]
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Colliders/RightCabWall"]
+transform = Transform3D(1, 0, 0, 0, 1, -5.68434e-14, 0, 5.68434e-14, 1, -0.0232514, -0.027181, 0.0208505)
+shape = SubResource("BoxShape3D_ogro5")
+debug_color = Color(0.732747, 0.989181, 0.814911, 0.42)
+
+[node name="LeftCabWall" type="StaticBody3D" parent="Colliders"]
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Colliders/LeftCabWall"]
+transform = Transform3D(1, 0, 0, 0, 1, -5.68434e-14, 0, 5.68434e-14, 1, 0.023049, -0.0270955, 0.0216426)
+shape = SubResource("BoxShape3D_ogro5")
+debug_color = Color(0.732747, 0.989181, 0.814911, 0.42)
+
+[node name="CabFront" type="StaticBody3D" parent="Colliders"]
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Colliders/CabFront"]
+transform = Transform3D(1, 0, 0, 0, 1, -5.68434e-14, 0, 5.68434e-14, 1, 0.00033075, -0.0478858, 0.0216426)
+shape = SubResource("BoxShape3D_5yd3d")
+debug_color = Color(0.732747, 0.989181, 0.814911, 0.42)
+
+[node name="Climbables" type="Node3D" parent="."]
+
+[node name="Rung" type="StaticBody3D" parent="Climbables"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5399802, -10.3365)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("1_n2f4u")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Climbables/Rung"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -0.003928609, 1.68091, -0.12905502)
+shape = SubResource("BoxShape3D_ifmbg")
+debug_color = Color(0.732747, 0.989181, 0.814911, 0.42)
+
+[node name="Rung2" type="StaticBody3D" parent="Climbables"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5703769, -10.3365)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("1_n2f4u")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Climbables/Rung2"]
+transform = Transform3D(-3.7900495e-08, -1, 2.1777028e-08, 0.86706203, -4.37114e-08, -0.4982002, 0.4982002, 0, 0.86706203, -0.0039285463, 0.0149924755, -0.031106949)
+shape = SubResource("BoxShape3D_7bnma")
+debug_color = Color(0.732747, 0.989181, 0.814911, 0.42)
+
+[node name="Rung3" type="StaticBody3D" parent="Climbables"]
+transform = Transform3D(1, 0, 0, 0, 0.511608, -0.85921896, 0, 0.85921896, 0.511608, 0, 2.7785318, -9.895212)
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("1_n2f4u")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Climbables/Rung3"]
+transform = Transform3D(-3.7900495e-08, -1, 2.1777028e-08, 0.86706203, -4.37114e-08, -0.4982002, 0.4982002, 0, 0.86706203, -0.0039285463, 0.0149924755, -0.031106949)
+shape = SubResource("BoxShape3D_7bnma")
+debug_color = Color(0.732747, 0.989181, 0.814911, 0.42)
+
+[node name="RearMarker" type="Marker3D" parent="."]
+transform = Transform3D(120, 0, 0, 0, -2.38419e-05, 100, 0, -100, -2.38419e-05, 0, 0, -9.95801)
+
+[node name="FrontMarker" type="Marker3D" parent="."]
+transform = Transform3D(120, 0, 0, 0, -2.38419e-05, 100, 0, -100, -2.38419e-05, 0, 0, 6.51605)
+
+[node name="Props" type="Node3D" parent="."]
+
+[node name="Decals" type="Node3D" parent="Props"]
+
+[node name="WreckName" type="MeshInstance3D" parent="Props/Decals"]
+transform = Transform3D(-0.999894, 0, -0.0145556, 0, 1, 0, 0.0145556, 0, -0.999894, -0.715122, 1.61119, -10.290892)
+mesh = SubResource("TextMesh_27loa")
+script = ExtResource("4_8jb74")
+resource_property_name = "nameID"
+
+[node name="WreckSiteLabel" type="MeshInstance3D" parent="Props/Decals"]
+transform = Transform3D(-0.999894, 0, -0.0145556, 0, 1, 0, 0.0145556, 0, -0.999894, -0.715, 1.8, -10.290692)
+mesh = SubResource("TextMesh_ivyeq")
+
+[node name="WreckLocation" type="MeshInstance3D" parent="Props/Decals"]
+transform = Transform3D(-0.999743, 0, 0.0226698, 0, 1, 0, -0.0226698, 0, -0.999743, 0.8019799, 1.83798, -10.306218)
+mesh = SubResource("TextMesh_o78fe")
+
+[node name="WreckLocation22" type="MeshInstance3D" parent="Props/Decals"]
+transform = Transform3D(-0.99998224, 0, 0.0059514474, 0, 1, 0, -0.0059514474, 0, -0.99998224, 0.75262296, 1.64615, -10.270295)
+mesh = SubResource("TextMesh_1qs7m")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." groups=["Above Water Sounds"]]
+stream = ExtResource("8_mswoh")
+autoplay = true
+max_distance = 5.0
+bus = &"SFX"
+parameters/looping = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.2370949, 1.7208459)
+mesh = SubResource("SphereMesh_y5fwf")

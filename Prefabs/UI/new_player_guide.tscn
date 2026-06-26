@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dy7fatmsj6yq8"]
+
+[node name="NewPlayerGuide" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 25
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(524.315, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+text = "Welcome, reef-tender. Since this is your first time playing, here's a quick guide on the basics:
+- Earn Reefcoin by collecting trash, culling lionfish, and maintaining healthy corals
+- [COMING SOON] Use Reefcoin to plant corals and grow each wreck into an artificial reef
+- As the reef on each wreck grows, new sea life will appear. 
+- [COMING SOON] Complete your Aquapedia by scanning every creature. 
+- Check out the Guide for more detailed instructions. "
+autowrap_mode = 2

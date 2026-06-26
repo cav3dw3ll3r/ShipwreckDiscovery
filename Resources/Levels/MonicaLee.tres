@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=3 format=3 uid="uid://dh3hu6mep6lc3"]
+
+[ext_resource type="Script" uid="uid://ch2b5lo3gpgif" path="res://Scripts/Environment/CoralSim/coral_data.gd" id="1_3qg5g"]
+[ext_resource type="Script" uid="uid://bv3ae25s64aui" path="res://Scripts/LevelData.gd" id="1_44v1a"]
+
+[resource]
+script = ExtResource("1_44v1a")
+scene_path = "res://Scenes/Optimized_Levels/monica_lee.tscn"
+nameID = "MonicaLeeName"
+groupID = "DestinGroup"
+descriptionID = "MonicaLeeDescription"
+stringTable = "res://Resources/StringTables/CoreLevelStrings.tsv"
+initial_pollution = 0.95
+initial_fish_biomass = 1000.0

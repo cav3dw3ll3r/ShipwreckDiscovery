@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://dw7ksakyygeps"]
+
+[ext_resource type="Shader" path="res://Materials/Shaders/WaveHeightMapGenerator.gdshader" id="1_513wy"]
+
+[resource]
+shader = ExtResource("1_513wy")
+shader_parameter/wave_amplitude = 1.0
+shader_parameter/wave_length = 0.1
+shader_parameter/wave_speed = 2.0
+shader_parameter/wave_count = 5

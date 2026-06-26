@@ -1,0 +1,43 @@
+[gd_scene load_steps=9 format=3 uid="uid://bse5u2lhvd246"]
+
+[ext_resource type="Script" uid="uid://dxytauji5gqb0" path="res://Scripts/Environment/ScanTarget.gd" id="1_1lbdm"]
+[ext_resource type="Resource" uid="uid://dhbac2566xi01" path="res://Resources/Scannable/Wrecks/Nellie/UFRC.tres" id="2_w65m6"]
+[ext_resource type="Material" uid="uid://rns08q618kci" path="res://Materials/UIShaders/scannable_fresh.tres" id="3_o1qsq"]
+[ext_resource type="Material" uid="uid://chcfmxbjxtrdv" path="res://Materials/UIShaders/scannable_stale.tres" id="4_pbgrb"]
+[ext_resource type="Material" uid="uid://c3ewnjeihcket" path="res://Materials/UIShaders/scannable_complete.tres" id="5_ucf4m"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pmpri"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_r6avu"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f8s8r"]
+transparency = 1
+blend_mode = 1
+albedo_color = Color(1, 1, 1, 0.109804)
+emission_enabled = true
+emission = Color(0.748994, 0.993901, 0.893347, 1)
+emission_energy_multiplier = 2.01
+
+[node name="ScanTarget" type="Area3D"]
+visible = false
+collision_layer = 64
+collision_mask = 0
+script = ExtResource("1_1lbdm")
+scannable = ExtResource("2_w65m6")
+fresh_material = ExtResource("3_o1qsq")
+stale_material = ExtResource("4_pbgrb")
+complete_material = ExtResource("5_ucf4m")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_pmpri")
+debug_color = Color(0, 0, 0, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+layers = 2
+mesh = SubResource("BoxMesh_r6avu")
+surface_material_override/0 = ExtResource("5_ucf4m")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+layers = 2
+mesh = SubResource("BoxMesh_r6avu")
+surface_material_override/0 = SubResource("StandardMaterial3D_f8s8r")

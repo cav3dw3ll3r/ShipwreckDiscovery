@@ -1,0 +1,67 @@
+[gd_scene load_steps=10 format=3 uid="uid://ldiyh4uy1f4k"]
+
+[ext_resource type="Script" uid="uid://bwtvsdifm661w" path="res://Scripts/UI/popup_menu_control.gd" id="1_5k3lu"]
+[ext_resource type="Script" uid="uid://6bx54caol1uv" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.gd" id="2_fbnx1"]
+[ext_resource type="PackedScene" uid="uid://g0ebehl0ijwj" path="res://Prefabs/UI/popup_menu.tscn" id="3_jof1v"]
+[ext_resource type="Script" uid="uid://bnwdnq4lw8gv3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d_body.gd" id="4_bih5v"]
+[ext_resource type="PackedScene" uid="uid://otw20khbl1g2" path="res://Prefabs/UI/menu_cursor.tscn" id="5_fbnx1"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_wl7pq"]
+resource_local_to_scene = true
+size = Vector2(0.03, 0.02)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_fbnx1"]
+viewport_path = NodePath("PopupMenu/Viewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jof1v"]
+transparency = 1
+cull_mode = 2
+shading_mode = 0
+albedo_texture = SubResource("ViewportTexture_fbnx1")
+texture_filter = 1
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2jmqx"]
+resource_local_to_scene = true
+size = Vector3(0.03, 0.02, 0.02)
+
+[node name="PopupController" type="Node3D" groups=["PopupMenu"]]
+script = ExtResource("1_5k3lu")
+
+[node name="PopupMenu" type="Node3D" parent="."]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, -0.0173781, 0.769953)
+script = ExtResource("2_fbnx1")
+screen_size = Vector2(0.03, 0.02)
+collision_layer = 5242880
+scene = ExtResource("3_jof1v")
+viewport_size = Vector2(1920, 1080)
+alpha_scissor_threshold = 0.25
+unshaded = true
+filter = true
+scene_properties_keys = PackedStringArray("popup_host.gd")
+
+[node name="Viewport" type="SubViewport" parent="PopupMenu"]
+disable_3d = true
+transparent_bg = true
+gui_embed_subwindows = true
+size = Vector2i(1920, 1080)
+render_target_update_mode = 1
+
+[node name="Screen" type="MeshInstance3D" parent="PopupMenu"]
+mesh = SubResource("QuadMesh_wl7pq")
+surface_material_override/0 = SubResource("StandardMaterial3D_jof1v")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="PopupMenu"]
+collision_layer = 5242880
+collision_mask = 0
+script = ExtResource("4_bih5v")
+screen_size = Vector2(0.03, 0.02)
+viewport_size = Vector2(1920, 1080)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PopupMenu/StaticBody3D"]
+transform = Transform3D(1, -1.73776e-29, 0, 1.73776e-29, 1, 0, 0, 0, 0.1, -4.1505e-05, 2.13645e-05, -0.000155292)
+shape = SubResource("BoxShape3D_2jmqx")
+
+[node name="MenuCursor" parent="PopupMenu" instance=ExtResource("5_fbnx1")]
+transform = Transform3D(0.2, 0, 0, 0, 0.3, 0, 0, 0, 0.1, 0, 0, 0)
+
+[connection signal="pointer_event" from="PopupMenu" to="PopupMenu/MenuCursor" method="on_pointer_event"]

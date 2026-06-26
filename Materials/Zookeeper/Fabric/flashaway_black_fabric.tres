@@ -1,0 +1,21 @@
+[gd_resource type="ShaderMaterial" load_steps=5 format=3 uid="uid://cfs8nq3fabrc1"]
+
+[ext_resource type="Shader" uid="uid://x1xrqtbyaqvf" path="res://Materials/Shaders/normal_flash_away_both_faces.gdshader" id="1_l3vwl"]
+[ext_resource type="Texture2D" uid="uid://bbjie7ce0ecn3" path="res://Meshes/equipment/Zookeeper_fabric02_basecolor_diffuse.jpg" id="2_fc"]
+[ext_resource type="Texture2D" uid="uid://cuqh2v8ak3afe" path="res://Images/Cloudz.png" id="3_xdtr4"]
+[ext_resource type="Texture2D" uid="uid://shxl7j2ibq14" path="res://Meshes/equipment/Zookeeper_fabric02_normal_opengl.jpg" id="4_nm"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_l3vwl")
+shader_parameter/albedo_texture = ExtResource("2_fc")
+shader_parameter/alpha = 1.0
+shader_parameter/normal_texture = ExtResource("4_nm")
+shader_parameter/noise_texture = ExtResource("3_xdtr4")
+shader_parameter/roughness = 0.72
+shader_parameter/metallic = 0.12
+shader_parameter/albedo_tint = Color(0.93, 0.93, 0.93, 1)
+shader_parameter/progress = 0.0
+shader_parameter/explosion_intensity = 0.085
+shader_parameter/glow_color = Color(0.45, 0.68, 0.78, 1)
+shader_parameter/glow_thickness = 0.055

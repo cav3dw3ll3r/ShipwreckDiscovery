@@ -1,0 +1,62 @@
+[gd_scene load_steps=8 format=3 uid="uid://bog8xfs4cjj85"]
+
+[ext_resource type="Theme" uid="uid://c3usqgyghssbh" path="res://Resources/Stylesheets/DiveComputer.tres" id="1_ovbu1"]
+[ext_resource type="Script" uid="uid://btw6haw2bc74l" path="res://Scripts/UI/DiveComputer/molecules/scan_details_pane.gd" id="2_scan"]
+[ext_resource type="Script" uid="uid://b7siksgrb0cj3" path="res://Scripts/UI/DiveComputer/Atoms/single_option.gd" id="4_1gn2h"]
+[ext_resource type="StyleBox" uid="uid://dmooatxe02kvn" path="res://Images/DiveComputer/selectedLine.tres" id="5_p5jhb"]
+[ext_resource type="Texture2D" uid="uid://dj7djrlx2novp" path="res://Images/DiveComputer/selection_indicator_right.png" id="6_2bop3"]
+[ext_resource type="Script" uid="uid://cvalnx44pwigw" path="res://Scripts/UI/Localization/LocalizedLabel.gd" id="7_g1eyp"]
+[ext_resource type="AudioStream" uid="uid://1wq52spiud5v" path="res://Audio/happy-message-ping-351298.mp3" id="8_ping"]
+
+[node name="DisplayPane" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_ovbu1")
+alignment = 1
+script = ExtResource("2_scan")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+text = "Scan In Progress"
+script = ExtResource("7_g1eyp")
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="ReturnPanel" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 0
+script = ExtResource("4_1gn2h")
+selected_line = ExtResource("5_p5jhb")
+return_to_previous = true
+
+[node name="VSeparator" type="VSeparator" parent="ReturnPanel"]
+layout_mode = 2
+theme_override_styles/separator = ExtResource("5_p5jhb")
+
+[node name="Selector" type="TextureRect" parent="ReturnPanel"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+texture = ExtResource("6_2bop3")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="ReturnPanel"]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Back"
+autowrap_mode = 3
+script = ExtResource("7_g1eyp")
+stringTablePath = "res://Resources/StringTables/DC.tsv"
+stringID = "return"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="VoicePlayer" type="AudioStreamPlayer3D" parent="."]
+volume_db = 10.0
+bus = &"Voice"
+
+[node name="Ping" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("8_ping")
+bus = &"SFX"

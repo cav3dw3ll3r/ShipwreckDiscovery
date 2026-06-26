@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://rns08q618kci"]
+
+[ext_resource type="Shader" uid="uid://cawnemgsujhj5" path="res://Materials/UIShaders/hologram_shader.gdshader" id="1_2iufq"]
+
+[resource]
+render_priority = 1
+shader = ExtResource("1_2iufq")
+shader_parameter/tint_color = Vector4(0.08, 0.8, 0.34, 0)
+shader_parameter/line_speed = 0.5
+shader_parameter/line_frequency = 30.0
+shader_parameter/glow_strength = 0.9
+shader_parameter/fresnel_strength = 1.5
+shader_parameter/fresnel_power = 3.0

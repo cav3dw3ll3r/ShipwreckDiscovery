@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://byxl6e8xqghlc"]
+
+[ext_resource type="Texture2D" uid="uid://cppww2kss5ynw" path="res://Resources/Stylesheets/UI_Components/Window/Window004_Cyan.png" id="1_w8fsm"]
+[ext_resource type="Texture2D" uid="uid://bdgklk4gedxcc" path="res://Resources/Stylesheets/UI_Components/Window/Windows014_Cyan.png" id="2_c5mcr"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0uedq"]
+texture = ExtResource("1_w8fsm")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o73lx"]
+texture = ExtResource("2_c5mcr")
+
+[node name="CreatureDataMenu" type="HBoxContainer"]
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="CreatureList" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_0uedq")
+
+[node name="CreatureInfo" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_o73lx")

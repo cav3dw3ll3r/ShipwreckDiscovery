@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dtge1soglm60g"]
+
+[ext_resource type="Texture2D" uid="uid://cf3mpkavcygeu" path="res://Meshes/Fish/Destin/Bluehead_Wrasse/bluehead_flat_Bluehead_Flat.png" id="1_nsews"]
+
+[resource]
+resource_name = "Bluehead_Baked"
+transparency = 2
+alpha_scissor_threshold = 0.5
+alpha_antialiasing_mode = 0
+cull_mode = 2
+albedo_texture = ExtResource("1_nsews")
+roughness = 0.5

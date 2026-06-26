@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://dobrqsmny8p0t"]
+
+[ext_resource type="Shader" uid="uid://cjxv7hvpc6e6f" path="res://Materials/AnimatedFish/x_wave.gdshader" id="1_ntvob"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_ntvob")
+shader_parameter/wave_amplitude = 0.12
+shader_parameter/wave_frequency = 3.0
+shader_parameter/wave_speed = 3.5
+shader_parameter/tail_start = -0.224

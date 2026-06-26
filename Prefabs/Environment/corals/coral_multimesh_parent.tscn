@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://t24w4p3crab5"]
+
+[ext_resource type="Script" path="res://Scripts/Environment/CoralSim/coral_multimesh_controller.gd" id="1_coral"]
+[ext_resource type="ArrayMesh" uid="uid://c53ccn3r0s3y" path="res://Meshes/Coral/baby_staghorn.res" id="2_baby"]
+[ext_resource type="ArrayMesh" uid="uid://vis1hj4x3kvd" path="res://Meshes/Coral/growing_staghorn.res" id="3_growing"]
+[ext_resource type="ArrayMesh" uid="uid://bhq1tehmvmy0g" path="res://Meshes/Coral/pristine_staghorn.res" id="4_pristine"]
+
+[sub_resource type="MultiMesh" id="MultiMesh_baby"]
+transform_format = 1
+instance_count = 0
+mesh = ExtResource("2_baby")
+
+[sub_resource type="MultiMesh" id="MultiMesh_growing"]
+transform_format = 1
+instance_count = 0
+mesh = ExtResource("3_growing")
+
+[sub_resource type="MultiMesh" id="MultiMesh_pristine"]
+transform_format = 1
+instance_count = 0
+mesh = ExtResource("4_pristine")
+
+[node name="CoralMultiMeshParent" type="Node3D" groups=["coral_multimesh"]]
+script = ExtResource("1_coral")
+
+[node name="StaghornBaby" type="MultiMeshInstance3D" parent="."]
+multimesh = SubResource("MultiMesh_baby")
+
+[node name="StaghornGrowing" type="MultiMeshInstance3D" parent="."]
+multimesh = SubResource("MultiMesh_growing")
+
+[node name="StaghornPristine" type="MultiMeshInstance3D" parent="."]
+multimesh = SubResource("MultiMesh_pristine")

@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://d20acclceayfm"]
+
+[ext_resource type="Script" uid="uid://cvalnx44pwigw" path="res://Scripts/UI/Localization/LocalizedLabel.gd" id="9_tkcjv"]
+
+[node name="Placeholder" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LocalizedLabel" type="Label" parent="."]
+custom_minimum_size = Vector2(0, 220.52)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 50
+text = "Dive Log Coming Soon"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("9_tkcjv")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "dive_log_coming_soon"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="LocalizedLabel2" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 35
+text = "The Dive Log tracks your game progress. Within the Dive Log you can learn more about fish you've scanned, re-watch wreck videos, and learn about local dive shops that can take you on a tour of the real wreck. "
+horizontal_alignment = 1
+autowrap_mode = 2
+script = ExtResource("9_tkcjv")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "dive_log_description"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"

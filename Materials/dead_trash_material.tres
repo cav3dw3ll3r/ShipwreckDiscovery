@@ -1,0 +1,39 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://dypxndtcewp80"]
+
+[ext_resource type="Shader" uid="uid://i8kb66qtbw4u" path="res://Materials/Shaders/dead_trash.gdshader" id="1_shader"]
+[ext_resource type="Texture2D" uid="uid://18thurhkf7em" path="res://Meshes/trash/SODACAN_baked_can.png" id="2_albedo"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_dead_trash"]
+width = 256
+height = 256
+
+[resource]
+render_priority = -1
+shader = ExtResource("1_shader")
+shader_parameter/progress = 0.0
+shader_parameter/albedo_texture = ExtResource("2_albedo")
+shader_parameter/albedo_tint = Color(1, 1, 1, 1)
+shader_parameter/dent_shadow = Color(0, 0, 0, 1)
+shader_parameter/dissolve_color = Color(0.95, 0.85, 0.35, 1)
+shader_parameter/emission_strength = 0.8
+shader_parameter/metallic = 0.55
+shader_parameter/roughness_multiplier = 1.0
+shader_parameter/normal_strength = 0.354000016815
+shader_parameter/color_strength = 0.558000026505
+shader_parameter/color_brightness = 1.45
+shader_parameter/crumple_strength = 0.0390000018525
+shader_parameter/dent_frequency = 14.0
+shader_parameter/crumple_noise_tex = SubResource("NoiseTexture2D_dead_trash")
+shader_parameter/appearance_seed = 1.0
+shader_parameter/movement_vector = Vector3(0, 0, 0)
+shader_parameter/flexibility = 0.2
+shader_parameter/max_radius = 0.25
+shader_parameter/local_gravity_dir = Vector3(0, -1, 0)
+shader_parameter/gravity_strength = 0.04
+shader_parameter/local_tube_origin = Vector3(0, 0, 0)
+shader_parameter/local_tube_axis = Vector3(0, 1, 0)
+shader_parameter/mesh_z_min = -0.1
+shader_parameter/mesh_z_max = 0.1
+shader_parameter/insertion_progress = 0.35
+shader_parameter/tube_radius = 0.055
+shader_parameter/funnel_width = 0.03

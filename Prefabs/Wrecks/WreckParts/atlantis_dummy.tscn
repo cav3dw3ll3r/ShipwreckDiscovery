@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://ohwhntaokesy"]
+
+[ext_resource type="Material" uid="uid://bi1alarfnf5q7" path="res://Materials/Wrecks/Dummies/atlantis_dummy.tres" id="1_71cox"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_7ran2"]
+material = ExtResource("1_71cox")
+size = Vector2(40, 20)
+
+[node name="AtlantisDummy" type="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.5, 0)
+mesh = SubResource("PlaneMesh_7ran2")

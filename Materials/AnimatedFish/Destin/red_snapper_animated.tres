@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://ccw2htmks8lfd"]
+
+[ext_resource type="Shader" uid="uid://bfgg4tdv0hgt4" path="res://Materials/AnimatedFish/z_wave.gdshader" id="1_vj5io"]
+[ext_resource type="Texture2D" uid="uid://bxmwau2v4hoj" path="res://Meshes/Fish/Destin/red_snapper/Red_Snapper_Image_0.jpg" id="2_vj5io"]
+[ext_resource type="Texture2D" uid="uid://baxl4gav624jt" path="res://Meshes/Fish/Destin/red_snapper/Red_Snapper_Image_2.jpg" id="3_3lj4q"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_vj5io")
+shader_parameter/albedo_tex = ExtResource("2_vj5io")
+shader_parameter/normal_tex = ExtResource("3_3lj4q")
+shader_parameter/wave_amplitude = 0.2
+shader_parameter/wave_frequency = 0.931
+shader_parameter/wave_speed = 7.083
+shader_parameter/tail_start = -0.368

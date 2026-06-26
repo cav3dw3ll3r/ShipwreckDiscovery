@@ -1,0 +1,109 @@
+[gd_scene load_steps=8 format=3 uid="uid://eky4oe47lcen"]
+
+[ext_resource type="Script" uid="uid://bfi335tqmuqfv" path="res://Scripts/UI/credit_shop.gd" id="1_hf04s"]
+[ext_resource type="Script" uid="uid://cvalnx44pwigw" path="res://Scripts/UI/Localization/LocalizedLabel.gd" id="1_jlejx"]
+[ext_resource type="Texture2D" uid="uid://bag2uayfne7de" path="res://Images/CustomUI/CreditsIcon.png" id="3_a24jc"]
+[ext_resource type="Texture2D" uid="uid://b4i1d8ybv7rvy" path="res://Resources/Stylesheets/UI_Components/Button/Icon_DividingLine03.png" id="3_ff5dd"]
+[ext_resource type="Script" uid="uid://bg67uljaykta1" path="res://Scripts/UI/wide_scroll_bar.gd" id="5_ff5dd"]
+[ext_resource type="Script" uid="uid://bih8icx0fn3lh" path="res://Scripts/UI/Localization/LocalizedButtonText.gd" id="5_jikqj"]
+[ext_resource type="AudioStream" uid="uid://bqf3ji8rk0fpk" path="res://Audio/cashier-quotka-chingquot-sound-effect-129698.mp3" id="9_q81hc"]
+
+[node name="CreditShop" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+script = ExtResource("1_hf04s")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_a24jc")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Value" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "100"
+horizontal_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_ff5dd")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 60
+text = "Discovery Bucks Store"
+script = ExtResource("1_jlejx")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "CreditStoreHeader"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="LocalizedButton3" type="Button" parent="HBoxContainer2"]
+layout_mode = 2
+text = "Sandbox"
+script = ExtResource("5_jikqj")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "SandboxMenu"
+metadata/_custom_type_script = "uid://bih8icx0fn3lh"
+
+[node name="LocalizedButton" type="Button" parent="HBoxContainer2"]
+layout_mode = 2
+text = "Gloves"
+script = ExtResource("5_jikqj")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "Gloves"
+metadata/_custom_type_script = "uid://bih8icx0fn3lh"
+
+[node name="LocalizedButton2" type="Button" parent="HBoxContainer2"]
+visible = false
+layout_mode = 2
+text = "Powers"
+script = ExtResource("5_jikqj")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "Powers"
+metadata/_custom_type_script = "uid://bih8icx0fn3lh"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+script = ExtResource("5_ff5dd")
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+
+[node name="ForSale" type="VBoxContainer" parent="ScrollContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("9_q81hc")
+attenuation_model = 3
+bus = &"SFX"
+
+[connection signal="pressed" from="HBoxContainer2/LocalizedButton3" to="." method="filter_sandbox"]
+[connection signal="pressed" from="HBoxContainer2/LocalizedButton" to="." method="filter_gloves"]
+[connection signal="pressed" from="HBoxContainer2/LocalizedButton2" to="." method="filter_powers"]

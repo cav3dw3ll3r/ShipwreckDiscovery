@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://dmgj5cgwhuxfb"]
+
+[ext_resource type="Shader" uid="uid://bfgg4tdv0hgt4" path="res://Materials/AnimatedFish/z_wave.gdshader" id="1_ochpf"]
+[ext_resource type="Texture2D" uid="uid://vdey5gdtdaxl" path="res://Meshes/Fish/Destin/queen_angel/Queen Angelfish Adult_Image_0.jpg" id="2_ochpf"]
+[ext_resource type="Texture2D" uid="uid://bdov65ns1t8hw" path="res://Meshes/Fish/Destin/queen_angel/Queen Angelfish Adult_Image_2.jpg" id="3_28oh0"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_ochpf")
+shader_parameter/albedo_tex = ExtResource("2_ochpf")
+shader_parameter/normal_tex = ExtResource("3_28oh0")
+shader_parameter/wave_amplitude = 0.206
+shader_parameter/wave_frequency = 3.87
+shader_parameter/wave_speed = 3.652
+shader_parameter/tail_start = -0.177

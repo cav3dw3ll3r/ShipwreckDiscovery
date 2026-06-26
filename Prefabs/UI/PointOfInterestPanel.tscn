@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://cys637en0pqnr"]
+
+[ext_resource type="Theme" uid="uid://dyls1fq20ga2d" path="res://Resources/Stylesheets/ShipwreckDiscovery.theme" id="1_75ch6"]
+[ext_resource type="Script" uid="uid://diowf2iqoji6s" path="res://Scripts/UI/point_of_interest.gd" id="2_8g1d2"]
+
+[node name="PointOfInterestPanel" type="Control"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_75ch6")
+script = ExtResource("2_8g1d2")
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.43
+anchor_top = 0.413
+anchor_right = 0.582
+anchor_bottom = 0.645
+offset_left = 3.63998
+offset_top = 7.37598
+offset_right = -0.463989
+offset_bottom = -2.96002
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 60
+text = "!"
+
+[connection signal="pressed" from="Button" to="." method="open_popup_menu"]

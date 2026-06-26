@@ -1,0 +1,59 @@
+[gd_scene load_steps=13 format=3 uid="uid://bqumugyvkct4r"]
+
+[ext_resource type="Script" uid="uid://dt61tifwetshf" path="res://addons/godot-xr-tools/staging/loading_screen.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://12ehbue7ndke" path="res://Images/SDSplashScreen.png" id="2_2lren"]
+[ext_resource type="Shader" uid="uid://4i0pwdtfmtsv" path="res://addons/godot-xr-tools/staging/loading_screen/loading_screen_shader.tres" id="3"]
+[ext_resource type="Texture2D" uid="uid://bpm5g67xurms2" path="res://Images/NewLoading.png" id="3_6boet"]
+[ext_resource type="FontFile" uid="uid://be3ieb608t8ax" path="res://Resources/Stylesheets/good timing bd.otf" id="5_6boet"]
+
+[sub_resource type="Curve" id="21"]
+_limits = [0.0, 3.14, 0.0, 1.0]
+_data = [Vector2(0.00207039, 0), 0.0, 1.00884, 0, 0, Vector2(1, 3.14), 0.313348, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="PlaneMesh" id="2"]
+size = Vector2(80, 60)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1o2lp"]
+transparency = 1
+shading_mode = 0
+albedo_texture = ExtResource("2_2lren")
+
+[sub_resource type="ShaderMaterial" id="18"]
+render_priority = 0
+shader = ExtResource("3")
+shader_parameter/bar_color = Color(1, 1, 1, 1)
+shader_parameter/bar_texture = ExtResource("3_6boet")
+shader_parameter/cutout = Vector3(4.135, 0, 0)
+shader_parameter/progress = 0.5
+
+[sub_resource type="PlaneMesh" id="3"]
+material = SubResource("18")
+size = Vector2(5, 3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2lren"]
+shading_mode = 0
+
+[sub_resource type="TextMesh" id="TextMesh_tmxo3"]
+material = SubResource("StandardMaterial3D_2lren")
+text = "PREPARE TO DIVE"
+font = ExtResource("5_6boet")
+font_size = 36
+
+[node name="LoadingScreen" type="Node3D"]
+script = ExtResource("2")
+follow_speed = SubResource("21")
+splash_screen = ExtResource("2_2lren")
+
+[node name="SplashScreen" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 15, -50)
+mesh = SubResource("2")
+surface_material_override/0 = SubResource("StandardMaterial3D_1o2lp")
+
+[node name="ProgressBar" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.0201339, 0, 0, 0, -4.37114e-08, -0.6102715, 0, 1, -2.6675822e-08, 0.3750794, 0, -10)
+mesh = SubResource("3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.976415)
+mesh = SubResource("TextMesh_tmxo3")

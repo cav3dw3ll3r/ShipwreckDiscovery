@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Spotlight_Target" load_steps=5 format=3 uid="uid://bh60mw06s5wu8"]
+
+[ext_resource type="Resource" uid="uid://sr50s36jsp2n" path="res://Resources/Scannable/Destin_Fish/goliath_grouper_scannable.tres" id="1_46tsg"]
+[ext_resource type="PackedScene" uid="uid://rha0yxegac3c" path="res://Prefabs/Fish/Holograms/Goliath_Grouper_Hologram.tscn" id="2_iwtjv"]
+[ext_resource type="Script" uid="uid://chqco8e3en53v" path="res://Scripts/Environment/spotlight_target.gd" id="3_57kta"]
+[ext_resource type="Shape3D" uid="uid://buj8sc54pfkv" path="res://Meshes/Fish/Destin/Goliath_Grouper/goliath_grouper_shape.tres" id="4_iwtjv"]
+
+[resource]
+script = ExtResource("3_57kta")
+scanner_hologram = ExtResource("2_iwtjv")
+shape = ExtResource("4_iwtjv")
+scannable = ExtResource("1_46tsg")
+metadata/_custom_type_script = "uid://chqco8e3en53v"

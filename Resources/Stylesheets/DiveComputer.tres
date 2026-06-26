@@ -1,0 +1,42 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://c3usqgyghssbh"]
+
+[ext_resource type="FontFile" uid="uid://be3ieb608t8ax" path="res://Resources/Stylesheets/good timing bd.otf" id="1_pqwfi"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_pqwfi"]
+color = Color(1, 1, 1, 0.5882353)
+thickness = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p1d3e"]
+bg_color = Color(0.009445293, 0.10336953, 0.15097749, 1)
+border_width_left = 5
+border_color = Color(0.01799367, 0.16696453, 0.23351943, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pqwfi"]
+bg_color = Color(0.19076231, 0.19076234, 0.19076231, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.45452452, 0.45452416, 0.45452422, 0.52156866)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ajqf3"]
+bg_color = Color(0.907069, 0.41565728, 0.3731875, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.6852732, 0.2322847, 0.20506364, 1)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_p1d3e"]
+color = Color(1, 1, 1, 0.5882353)
+thickness = 3
+vertical = true
+
+[resource]
+HSeparator/styles/separator = SubResource("StyleBoxLine_pqwfi")
+Label/font_sizes/font_size = 35
+Label/fonts/font = ExtResource("1_pqwfi")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_p1d3e")
+ProgressBar/styles/background = SubResource("StyleBoxFlat_pqwfi")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_ajqf3")
+VSeparator/styles/separator = SubResource("StyleBoxLine_p1d3e")

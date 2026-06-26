@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=3 format=3 uid="uid://cyjdxw0tlo164"]
+
+[ext_resource type="Script" uid="uid://ch2b5lo3gpgif" path="res://Scripts/Environment/CoralSim/coral_data.gd" id="1_hh853"]
+[ext_resource type="Script" uid="uid://bv3ae25s64aui" path="res://Scripts/LevelData.gd" id="1_l2ntm"]
+
+[resource]
+script = ExtResource("1_l2ntm")
+scene_path = "res://Scenes/Optimized_Levels/big_dawg.tscn"
+nameID = "BigDawgName"
+groupID = "DestinGroup"
+descriptionID = "BigDawgDescription"
+stringTable = "res://Resources/StringTables/CoreLevelStrings.tsv"
+initial_lionfish = 54
+initial_pollution = 0.75
+initial_fish_biomass = 10.0

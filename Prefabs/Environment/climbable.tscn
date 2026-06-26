@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://d4nkjsvebahfn"]
+
+[ext_resource type="Script" uid="uid://bsy1ji7wd7h2k" path="res://addons/godot-xr-tools/objects/climbable.gd" id="1_c06pb"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_t8pj5"]
+height = 0.767621
+radius = 0.0906932
+
+[node name="Rung" type="StaticBody3D"]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("1_c06pb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0.0263502, 0, -0.0276995)
+shape = SubResource("CylinderShape3D_t8pj5")
+debug_color = Color(0.732747, 0.989181, 0.814911, 0.42)

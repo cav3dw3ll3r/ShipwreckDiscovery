@@ -1,0 +1,573 @@
+[gd_scene load_steps=14 format=3 uid="uid://b7opxi4wqdnsv"]
+
+[ext_resource type="Texture2D" uid="uid://0cijx2ctyjdm" path="res://Images/Prev.png" id="1_bclua"]
+[ext_resource type="Texture2D" uid="uid://cvb7odx8b1x5o" path="res://Images/CustomUI/Ctrls.png" id="1_iyc7g"]
+[ext_resource type="Script" uid="uid://cka5h8tn1wa27" path="res://Scripts/UI/TutorialMenu.gd" id="1_wa30r"]
+[ext_resource type="Texture2D" uid="uid://gnm0tm8kq4ky" path="res://Images/Tutorials/LF_hunting_1.png" id="2_dtkja"]
+[ext_resource type="Theme" uid="uid://dyls1fq20ga2d" path="res://Resources/Stylesheets/ShipwreckDiscovery.theme" id="2_j5iqp"]
+[ext_resource type="Script" uid="uid://cvalnx44pwigw" path="res://Scripts/UI/Localization/LocalizedLabel.gd" id="3_2y4me"]
+[ext_resource type="Texture2D" uid="uid://ccnmtgo5bx4nl" path="res://Images/Next.png" id="3_iyc7g"]
+[ext_resource type="Script" uid="uid://bih8icx0fn3lh" path="res://Scripts/UI/Localization/LocalizedButtonText.gd" id="3_sr2cl"]
+[ext_resource type="Texture2D" uid="uid://caegemk784hsx" path="res://Images/Tutorials/LF_hunting_2.png" id="3_wa30r"]
+[ext_resource type="Texture2D" uid="uid://benxxsv0c8t6v" path="res://Images/Tutorials/LF_hunting_3.png" id="4_2y4me"]
+[ext_resource type="Texture2D" uid="uid://dthdtn8fveqld" path="res://Images/Tutorials/LF_hunting_4.png" id="5_j5iqp"]
+[ext_resource type="Texture2D" uid="uid://sgj71ott616a" path="res://Images/Tutorials/LF_hunting_5.png" id="6_4beym"]
+[ext_resource type="Texture2D" uid="uid://wh1rtuck0kca" path="res://Images/Tutorials/LF_hunting_6.png" id="7_pdtod"]
+
+[node name="TutorialMenu" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -640.0
+offset_bottom = -188.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_wa30r")
+slide_title_Ids = Array[String](["basic_controls", "lionfish_hunting_1", "lionfish_hunting_2", "lionfish_hunting_3"])
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Title" type="Label" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_j5iqp")
+text = "Basic Controls"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_2y4me")
+stringTablePath = "res://Resources/StringTables/Tutorial.tsv"
+stringID = "basic_controls"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="TextureRect8" type="TextureRect" parent="VBoxContainer/VBoxContainer/MarginContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_iyc7g")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ControlLayout" type="Label" parent="VBoxContainer/VBoxContainer/MarginContainer/TextureRect8"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.17300001
+anchor_top = 0.082
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.808006
+offset_top = -1.9800014
+offset_right = -96.0
+offset_bottom = -86.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.7529412, 1, 0.4392157, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 12
+text = "Horizontal Movement"
+horizontal_alignment = 2
+autowrap_mode = 2
+script = ExtResource("3_2y4me")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "horizontal_movement"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="ControlLayout2" type="Label" parent="VBoxContainer/VBoxContainer/MarginContainer/TextureRect8"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.46600002
+anchor_top = 0.12200001
+anchor_right = 0.52000004
+anchor_bottom = 0.37100002
+offset_left = -14.136017
+offset_top = -0.58000183
+offset_right = 18.455994
+offset_bottom = -41.22001
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.7529412, 1, 0.4392157, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 12
+text = "Button Press"
+horizontal_alignment = 1
+autowrap_mode = 2
+script = ExtResource("3_2y4me")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "button_press"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="ControlLayout3" type="Label" parent="VBoxContainer/VBoxContainer/MarginContainer/TextureRect8"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.128
+anchor_right = 0.88900006
+anchor_bottom = 0.555
+offset_left = 112.0
+offset_top = -0.920002
+offset_right = -32.140045
+offset_bottom = -103.39
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.7529412, 1, 0.4392157, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 12
+text = "Pole Spear"
+autowrap_mode = 2
+script = ExtResource("3_2y4me")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "pole_spear"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="ControlLayout4" type="Label" parent="VBoxContainer/VBoxContainer/MarginContainer/TextureRect8"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.256
+anchor_right = 0.915
+anchor_bottom = 0.5
+offset_left = 132.0
+offset_top = 13.159996
+offset_right = -13.879974
+offset_bottom = -51.679993
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.7529412, 1, 0.4392157, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 12
+text = "Turning"
+autowrap_mode = 2
+script = ExtResource("3_2y4me")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "turning"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="ControlLayout5" type="Label" parent="VBoxContainer/VBoxContainer/MarginContainer/TextureRect8"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.476
+anchor_top = 0.33800003
+anchor_right = 0.98200005
+anchor_bottom = 0.47500002
+offset_left = 132.90399
+offset_top = 0.17999268
+offset_right = -39.236023
+offset_bottom = -0.08003235
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.7529412, 1, 0.4392157, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 12
+text = "Vertical Movement"
+autowrap_mode = 2
+script = ExtResource("3_2y4me")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "vertical_movement"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="ControlLayout8" type="Label" parent="VBoxContainer/VBoxContainer/MarginContainer/TextureRect8"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.46800002
+anchor_right = 1.0
+anchor_bottom = 0.544
+offset_left = 137.0
+offset_top = 8.479996
+offset_right = -18.584015
+offset_bottom = 8.739975
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.7529412, 1, 0.4392157, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 12
+text = "Speed Swim"
+autowrap_mode = 2
+script = ExtResource("3_2y4me")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "speed_swim"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="ControlLayout6" type="Label" parent="VBoxContainer/VBoxContainer/MarginContainer/TextureRect8"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.453
+anchor_top = 0.36400002
+anchor_right = 0.52900004
+anchor_bottom = 0.536
+offset_left = 4.3119965
+offset_top = 45.039993
+offset_right = 4.3999634
+offset_bottom = 6.119995
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.7529412, 1, 0.4392157, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 12
+text = "Grip"
+horizontal_alignment = 1
+autowrap_mode = 2
+script = ExtResource("3_2y4me")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "grip"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="ControlLayout7" type="Label" parent="VBoxContainer/VBoxContainer/MarginContainer/TextureRect8"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.18
+anchor_top = 0.46400002
+anchor_right = 0.5
+anchor_bottom = 0.47700003
+offset_left = -18.280006
+offset_top = 7.0399933
+offset_right = -93.999985
+offset_bottom = 50.969986
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.7529412, 1, 0.4392157, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 12
+text = "Sea Scooter"
+horizontal_alignment = 2
+autowrap_mode = 2
+script = ExtResource("3_2y4me")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "sea_scooter"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/VBoxContainer/MarginContainer"]
+visible = false
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+
+[node name="TextureRect1" type="TextureRect" parent="VBoxContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_dtkja")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Instructions" type="Label" parent="VBoxContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7529412, 1, 0.4392157, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 12
+text = "Press B to equip spear"
+horizontal_alignment = 1
+autowrap_mode = 2
+script = ExtResource("3_2y4me")
+stringTablePath = "res://Resources/StringTables/Tutorial.tsv"
+stringID = "lf_inst_1"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="HSeparator3" type="HSeparator" parent="VBoxContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Instructions2" type="Label" parent="VBoxContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7529412, 1, 0.4392157, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 12
+text = "Grip top of spear with off hand"
+horizontal_alignment = 1
+autowrap_mode = 2
+script = ExtResource("3_2y4me")
+stringTablePath = "res://Resources/StringTables/Tutorial.tsv"
+stringID = "lf_inst_2"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="VSeparator" type="VSeparator" parent="VBoxContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+
+[node name="TextureRect2" type="TextureRect" parent="VBoxContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("3_wa30r")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Instructions" type="Label" parent="VBoxContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7529412, 1, 0.4392157, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 12
+text = "Release main hand grip"
+horizontal_alignment = 1
+autowrap_mode = 2
+script = ExtResource("3_2y4me")
+stringTablePath = "res://Resources/StringTables/Tutorial.tsv"
+stringID = "lf_inst_3"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="HSeparator3" type="HSeparator" parent="VBoxContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Instructions2" type="Label" parent="VBoxContainer/VBoxContainer/MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7529412, 1, 0.4392157, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 12
+text = "Bring hands together"
+horizontal_alignment = 1
+autowrap_mode = 2
+script = ExtResource("3_2y4me")
+stringTablePath = "res://Resources/StringTables/Tutorial.tsv"
+stringID = "lf_inst_4"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/VBoxContainer/MarginContainer"]
+visible = false
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/VBoxContainer/MarginContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+alignment = 1
+
+[node name="TextureRect1" type="TextureRect" parent="VBoxContainer/VBoxContainer/MarginContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("4_2y4me")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/VBoxContainer/MarginContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="Instructions" type="Label" parent="VBoxContainer/VBoxContainer/MarginContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7529412, 1, 0.4392157, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 12
+text = "Release off-hand grip"
+horizontal_alignment = 1
+autowrap_mode = 2
+script = ExtResource("3_2y4me")
+stringTablePath = "res://Resources/StringTables/Tutorial.tsv"
+stringID = "lf_inst_5"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer/VBoxContainer/MarginContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+
+[node name="Instructions2" type="Label" parent="VBoxContainer/VBoxContainer/MarginContainer/HBoxContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7529412, 1, 0.4392157, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 12
+text = "Maintain main hand grip"
+horizontal_alignment = 1
+autowrap_mode = 2
+script = ExtResource("3_2y4me")
+stringTablePath = "res://Resources/StringTables/Tutorial.tsv"
+stringID = "lf_inst_6"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="VSeparator" type="VSeparator" parent="VBoxContainer/VBoxContainer/MarginContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/VBoxContainer/MarginContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="VBoxContainer/VBoxContainer/MarginContainer/HBoxContainer2/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("5_j5iqp")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer/VBoxContainer/MarginContainer/HBoxContainer2/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Instructions" type="Label" parent="VBoxContainer/VBoxContainer/MarginContainer/HBoxContainer2/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7529412, 1, 0.4392157, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 12
+text = "The spear is now ready to fire"
+horizontal_alignment = 1
+autowrap_mode = 2
+script = ExtResource("3_2y4me")
+stringTablePath = "res://Resources/StringTables/Tutorial.tsv"
+stringID = "lf_inst_7"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="VBoxContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/VBoxContainer/MarginContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+alignment = 1
+
+[node name="TextureRect1" type="TextureRect" parent="VBoxContainer/VBoxContainer/MarginContainer/HBoxContainer3/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("6_4beym")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer/VBoxContainer/MarginContainer/HBoxContainer3/VBoxContainer"]
+layout_mode = 2
+
+[node name="Instructions" type="Label" parent="VBoxContainer/VBoxContainer/MarginContainer/HBoxContainer3/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7529412, 1, 0.4392157, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 12
+text = "Take aim and release grip"
+horizontal_alignment = 1
+autowrap_mode = 2
+script = ExtResource("3_2y4me")
+stringTablePath = "res://Resources/StringTables/Tutorial.tsv"
+stringID = "lf_inst_8"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer/VBoxContainer/MarginContainer/HBoxContainer3/VBoxContainer"]
+layout_mode = 2
+
+[node name="Instructions2" type="Label" parent="VBoxContainer/VBoxContainer/MarginContainer/HBoxContainer3/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7529412, 1, 0.4392157, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 12
+text = "A zookeeper will appear in your off hand"
+horizontal_alignment = 1
+autowrap_mode = 2
+script = ExtResource("3_2y4me")
+stringTablePath = "res://Resources/StringTables/Tutorial.tsv"
+stringID = "lf_inst_9"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="VSeparator" type="VSeparator" parent="VBoxContainer/VBoxContainer/MarginContainer/HBoxContainer3"]
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VBoxContainer/VBoxContainer/MarginContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="VBoxContainer/VBoxContainer/MarginContainer/HBoxContainer3/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("7_pdtod")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="HSeparator3" type="HSeparator" parent="VBoxContainer/VBoxContainer/MarginContainer/HBoxContainer3/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Instructions" type="Label" parent="VBoxContainer/VBoxContainer/MarginContainer/HBoxContainer3/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7529412, 1, 0.4392157, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 12
+text = "Slide the lionfish in"
+horizontal_alignment = 1
+autowrap_mode = 2
+script = ExtResource("3_2y4me")
+stringTablePath = "res://Resources/StringTables/Tutorial.tsv"
+stringID = "lf_inst_10"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="HSeparator4" type="HSeparator" parent="VBoxContainer/VBoxContainer/MarginContainer/HBoxContainer3/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Instructions2" type="Label" parent="VBoxContainer/VBoxContainer/MarginContainer/HBoxContainer3/VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7529412, 1, 0.4392157, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 12
+text = "Pull the spear out"
+horizontal_alignment = 1
+autowrap_mode = 2
+script = ExtResource("3_2y4me")
+stringTablePath = "res://Resources/StringTables/Tutorial.tsv"
+stringID = "lf_inst_11"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 15
+
+[node name="Prev" type="Button" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+icon = ExtResource("1_bclua")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("3_sr2cl")
+
+[node name="Current" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "6/7"
+
+[node name="Next" type="Button" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+icon = ExtResource("3_iyc7g")
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("3_sr2cl")

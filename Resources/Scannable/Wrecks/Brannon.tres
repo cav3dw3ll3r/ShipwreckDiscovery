@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Scannable" load_steps=3 format=3 uid="uid://mp1tp78rgd8j"]
+
+[ext_resource type="PackedScene" uid="uid://5i03mm6sqc3u" path="res://Prefabs/UI/ScanPanels/dynamic_scan_panel.tscn" id="1_gh6pu"]
+[ext_resource type="Script" uid="uid://dne2dbsbrcl4p" path="res://Resources/Scannable/Scannable.gd" id="2_kt84q"]
+
+[resource]
+script = ExtResource("2_kt84q")
+dataPath = "res://Resources/Scannable/Wrecks/Wreck_Scan_Data.tsv"
+iconDir = "res://Resources/Scannable/Creatures/icons"
+videoDir = "res://Resources/Scannable/Creatures/videos/"
+scannable_type = 2
+scannable_ID = "brannon"
+scan_thresholds = Dictionary[int, int]({
+1: 200
+})
+required_scan_time = 2.5
+scan_prefab = ExtResource("1_gh6pu")
+metadata/_custom_type_script = "uid://dne2dbsbrcl4p"

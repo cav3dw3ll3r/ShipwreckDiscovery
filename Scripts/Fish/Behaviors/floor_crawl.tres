@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="FloorTrackingBehavior" load_steps=2 format=3 uid="uid://ckmulvpkteagb"]
+
+[ext_resource type="Script" uid="uid://chwms11l2ocrw" path="res://Scripts/Fish/Behaviors/floor_tracking_behavior.gd" id="1_injg7"]
+
+[resource]
+script = ExtResource("1_injg7")
+target_height_min = 0.01
+target_height_max = 0.01
+blend_factor = 1.0
+metadata/_custom_type_script = "uid://chwms11l2ocrw"

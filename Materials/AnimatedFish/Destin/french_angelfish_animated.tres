@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://do28m36u8w18y"]
+
+[ext_resource type="Shader" uid="uid://bfgg4tdv0hgt4" path="res://Materials/AnimatedFish/z_wave.gdshader" id="1_wa7y1"]
+[ext_resource type="Texture2D" uid="uid://couescxfv1lyo" path="res://Meshes/Fish/Destin/French_angel/French_Angelfish_Image_0.jpg" id="2_wa7y1"]
+[ext_resource type="Texture2D" uid="uid://c2mifbd41ohyv" path="res://Meshes/Fish/Destin/French_angel/French_Angelfish_Image_2.jpg" id="3_fb031"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_wa7y1")
+shader_parameter/albedo_tex = ExtResource("2_wa7y1")
+shader_parameter/normal_tex = ExtResource("3_fb031")
+shader_parameter/wave_amplitude = 0.2000000095
+shader_parameter/wave_frequency = 6.000000281740119
+shader_parameter/wave_speed = 2.133
+shader_parameter/tail_start = -0.049999954874999974

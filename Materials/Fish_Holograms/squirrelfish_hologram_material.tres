@@ -1,0 +1,21 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://4w7dxrmbchib"]
+
+[ext_resource type="Shader" uid="uid://boadg612bkipq" path="res://Materials/Shaders/fish_display.gdshader" id="1_5us1n"]
+[ext_resource type="Texture2D" uid="uid://cxrk778nyrfya" path="res://Meshes/Fish/Destin/squirrelfish/Squirrelfish2_Image_0.jpg" id="2_h32ty"]
+[ext_resource type="Texture2D" uid="uid://cw608v8w6wjji" path="res://Meshes/Fish/Destin/squirrelfish/Squirrelfish2_Image_2.jpg" id="3_r0t28"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_5us1n")
+shader_parameter/albedo_tex = ExtResource("2_h32ty")
+shader_parameter/normal_tex = ExtResource("3_r0t28")
+shader_parameter/hologram_color = Color(0.59, 0.8975, 1, 1)
+shader_parameter/alpha = 0.8
+shader_parameter/scanline_density = 800.0
+shader_parameter/scanline_strength = 0.2
+shader_parameter/flicker_strength = 0.1
+shader_parameter/distortion_strength = 0.001
+shader_parameter/fresnel_power = 2.5
+shader_parameter/fresnel_strength = 2.0
+shader_parameter/time_speed = 0.5
+shader_parameter/progress = 1.0

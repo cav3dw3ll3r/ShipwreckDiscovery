@@ -1,0 +1,92 @@
+[gd_scene load_steps=8 format=3 uid="uid://cqxsiwhw0tp2o"]
+
+[ext_resource type="Theme" uid="uid://c3usqgyghssbh" path="res://Resources/Stylesheets/DiveComputer.tres" id="1_lm7d5"]
+[ext_resource type="Script" uid="uid://dgpimb23j11r" path="res://Scripts/UI/DiveComputer/molecules/option_list.gd" id="2_u54nc"]
+[ext_resource type="Script" uid="uid://b7siksgrb0cj3" path="res://Scripts/UI/DiveComputer/Atoms/single_option.gd" id="3_5ey0l"]
+[ext_resource type="StyleBox" uid="uid://dmooatxe02kvn" path="res://Images/DiveComputer/selectedLine.tres" id="4_rmprp"]
+[ext_resource type="Texture2D" uid="uid://dj7djrlx2novp" path="res://Images/DiveComputer/selection_indicator_right.png" id="5_5fatt"]
+[ext_resource type="Script" uid="uid://cvalnx44pwigw" path="res://Scripts/UI/Localization/LocalizedLabel.gd" id="6_2o5rs"]
+[ext_resource type="Script" uid="uid://d2e7t57lq4gtf" path="res://Scripts/Utility/SimpleActions/to_surface.gd" id="7_u54nc"]
+
+[node name="MainOptionList" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_lm7d5")
+script = ExtResource("2_u54nc")
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 2
+size_flags_vertical = 0
+text = "End dive and return to the surface?"
+autowrap_mode = 3
+script = ExtResource("6_2o5rs")
+stringTablePath = "res://Resources/StringTables/DC.tsv"
+stringID = "to_boat_confirmation"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="SingleOptionPanel2" type="HBoxContainer" parent="." node_paths=PackedStringArray("option_action")]
+layout_mode = 2
+theme_override_constants/separation = 0
+script = ExtResource("3_5ey0l")
+selected_line = ExtResource("4_rmprp")
+return_to_previous = true
+option_action = NodePath("SimpleAction")
+
+[node name="VSeparator" type="VSeparator" parent="SingleOptionPanel2"]
+layout_mode = 2
+theme_override_styles/separator = ExtResource("4_rmprp")
+
+[node name="Selector" type="TextureRect" parent="SingleOptionPanel2"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+texture = ExtResource("5_5fatt")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="SingleOptionPanel2"]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Yes"
+autowrap_mode = 3
+script = ExtResource("6_2o5rs")
+stringTablePath = "res://Resources/StringTables/DC.tsv"
+stringID = "yes"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="SimpleAction" type="Node" parent="SingleOptionPanel2"]
+script = ExtResource("7_u54nc")
+metadata/_custom_type_script = "uid://de6nnaixwxd3v"
+
+[node name="SingleOptionPanel" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 0
+script = ExtResource("3_5ey0l")
+selected_line = ExtResource("4_rmprp")
+return_to_previous = true
+
+[node name="VSeparator" type="VSeparator" parent="SingleOptionPanel"]
+layout_mode = 2
+theme_override_styles/separator = ExtResource("4_rmprp")
+
+[node name="Selector" type="TextureRect" parent="SingleOptionPanel"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+texture = ExtResource("5_5fatt")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="SingleOptionPanel"]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "No"
+autowrap_mode = 3
+script = ExtResource("6_2o5rs")
+stringTablePath = "res://Resources/StringTables/DC.tsv"
+stringID = "no"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"

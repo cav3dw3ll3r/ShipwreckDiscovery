@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://rwm7nupa0vmn"]
+
+[ext_resource type="Script" uid="uid://bd8bk2srmj17m" path="res://addons/godot-xr-tools/staging/staging.gd" id="1_pbw6q"]
+[ext_resource type="PackedScene" uid="uid://wtpox7m5vu2b" path="res://addons/godot-xr-tools/effects/fade.tscn" id="2_v1gob"]
+[ext_resource type="Environment" uid="uid://ckiwtcdsam7ed" path="res://addons/godot-xr-tools/staging/staging_env.tres" id="3_jw32o"]
+[ext_resource type="PackedScene" uid="uid://cym7belw3rbxc" path="res://addons/godot-xr-tools/misc/vr_common_shader_cache.tscn" id="4_50glp"]
+[ext_resource type="PackedScene" uid="uid://bqumugyvkct4r" path="res://addons/godot-xr-tools/staging/loading_screen.tscn" id="5_vy5pj"]
+[ext_resource type="Script" uid="uid://cfcpoi5odc6x7" path="res://addons/godot-xr-tools/xr/start_xr.gd" id="6_v1gob"]
+
+[node name="Staging" type="Node3D"]
+script = ExtResource("1_pbw6q")
+main_scene = "uid://ciea80pylxiy8"
+prompt_for_continue = false
+
+[node name="Fade" parent="." instance=ExtResource("2_v1gob")]
+
+[node name="XROrigin3D" type="XROrigin3D" parent="."]
+
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
+environment = ExtResource("3_jw32o")
+
+[node name="VRCommonShaderCache" parent="XROrigin3D/XRCamera3D" instance=ExtResource("4_50glp")]
+
+[node name="LeftHandController" type="XRController3D" parent="XROrigin3D"]
+tracker = &"left_hand"
+pose = &"aim"
+
+[node name="RightHandController" type="XRController3D" parent="XROrigin3D"]
+tracker = &"right_hand"
+pose = &"aim"
+
+[node name="LoadingScreen" parent="." instance=ExtResource("5_vy5pj")]
+progress = 0.0
+
+[node name="Scene" type="Node3D" parent="."]
+
+[node name="XRToolsStartXR" type="Node" parent="."]
+script = ExtResource("6_v1gob")
+metadata/_custom_type_script = "uid://cfcpoi5odc6x7"

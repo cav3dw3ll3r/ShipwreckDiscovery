@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7fjlirv3ikh"]
+
+[ext_resource type="AudioStream" uid="uid://cfexl74g2ie75" path="res://Audio/click-buttons-ui-menu-sounds-effects-button-2-203594.wav" id="1_j7x50"]
+[ext_resource type="Script" uid="uid://dhw07o1hqysjl" path="res://Scripts/QuickSound.gd" id="1_kh8xg"]
+
+[node name="ClickSoundPlayer" type="AudioStreamPlayer3D"]
+stream = ExtResource("1_j7x50")
+bus = &"SFX"
+script = ExtResource("1_kh8xg")

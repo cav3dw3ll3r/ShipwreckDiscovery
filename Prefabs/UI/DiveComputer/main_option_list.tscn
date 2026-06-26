@@ -1,0 +1,77 @@
+[gd_scene load_steps=9 format=3 uid="uid://rbhnpufkbdln"]
+
+[ext_resource type="Theme" uid="uid://c3usqgyghssbh" path="res://Resources/Stylesheets/DiveComputer.tres" id="1_auxdu"]
+[ext_resource type="Script" uid="uid://dgpimb23j11r" path="res://Scripts/UI/DiveComputer/molecules/option_list.gd" id="1_d7n23"]
+[ext_resource type="Script" uid="uid://cvalnx44pwigw" path="res://Scripts/UI/Localization/LocalizedLabel.gd" id="3_njy11"]
+[ext_resource type="Texture2D" uid="uid://dj7djrlx2novp" path="res://Images/DiveComputer/selection_indicator_right.png" id="3_q2bf6"]
+[ext_resource type="StyleBox" uid="uid://dmooatxe02kvn" path="res://Images/DiveComputer/selectedLine.tres" id="3_url1d"]
+[ext_resource type="Script" uid="uid://b7siksgrb0cj3" path="res://Scripts/UI/DiveComputer/Atoms/single_option.gd" id="3_wnu8e"]
+[ext_resource type="PackedScene" uid="uid://cqxsiwhw0tp2o" path="res://Prefabs/UI/DiveComputer/to_boat_confirmation.tscn" id="5_2dpfc"]
+[ext_resource type="PackedScene" uid="uid://uxbxwajus5s4" path="res://Prefabs/UI/DiveComputer/fish_id.tscn" id="8_sgom0"]
+
+[node name="MainOptionList2" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_auxdu")
+script = ExtResource("1_d7n23")
+
+[node name="SingleOptionPanel" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 0
+script = ExtResource("3_wnu8e")
+selected_line = ExtResource("3_url1d")
+option_link = ExtResource("5_2dpfc")
+
+[node name="VSeparator" type="VSeparator" parent="SingleOptionPanel"]
+layout_mode = 2
+theme_override_styles/separator = ExtResource("3_url1d")
+
+[node name="Selector" type="TextureRect" parent="SingleOptionPanel"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+texture = ExtResource("3_q2bf6")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="SingleOptionPanel"]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Return to Dive Boat"
+autowrap_mode = 3
+script = ExtResource("3_njy11")
+stringTablePath = "res://Resources/StringTables/DC.tsv"
+stringID = "to_boat"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="SingleOptionPanel3" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 0
+script = ExtResource("3_wnu8e")
+selected_line = ExtResource("3_url1d")
+option_link = ExtResource("8_sgom0")
+
+[node name="VSeparator" type="VSeparator" parent="SingleOptionPanel3"]
+layout_mode = 2
+theme_override_styles/separator = ExtResource("3_url1d")
+
+[node name="Selector" type="TextureRect" parent="SingleOptionPanel3"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+texture = ExtResource("3_q2bf6")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="SingleOptionPanel3"]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Fish ID Scan"
+autowrap_mode = 3
+script = ExtResource("3_njy11")
+stringTablePath = "res://Resources/StringTables/DC.tsv"
+stringID = "fish_id_scan"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"

@@ -1,0 +1,21 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://cdo60vktyh213"]
+
+[ext_resource type="Shader" uid="uid://boadg612bkipq" path="res://Materials/Shaders/fish_display.gdshader" id="1_0u783"]
+[ext_resource type="Texture2D" uid="uid://bb0u7ethf3bpj" path="res://Meshes/Fish/Destin/Mangrove_snapper/Mangrove_Snapper_Image_0.jpg" id="2_kku5p"]
+[ext_resource type="Texture2D" uid="uid://bp88ux0wh537c" path="res://Meshes/Fish/Destin/Mangrove_snapper/Mangrove_Snapper_Image_2.jpg" id="3_m2s1v"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_0u783")
+shader_parameter/albedo_tex = ExtResource("2_kku5p")
+shader_parameter/normal_tex = ExtResource("3_m2s1v")
+shader_parameter/hologram_color = Color(0.59, 0.8975, 1, 1)
+shader_parameter/alpha = 0.8
+shader_parameter/scanline_density = 800.0
+shader_parameter/scanline_strength = 0.2
+shader_parameter/flicker_strength = 0.1
+shader_parameter/distortion_strength = 0.001
+shader_parameter/fresnel_power = 2.5
+shader_parameter/fresnel_strength = 2.0
+shader_parameter/time_speed = 0.5
+shader_parameter/progress = 1.0

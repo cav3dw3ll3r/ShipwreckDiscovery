@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://dtxsc0r0funsv"]
+
+[ext_resource type="Shader" uid="uid://bfgg4tdv0hgt4" path="res://Materials/AnimatedFish/z_wave.gdshader" id="1_3w6ty"]
+[ext_resource type="Texture2D" uid="uid://cxrk778nyrfya" path="res://Meshes/Fish/Destin/squirrelfish/Squirrelfish2_Image_0.jpg" id="2_3w6ty"]
+[ext_resource type="Texture2D" uid="uid://cw608v8w6wjji" path="res://Meshes/Fish/Destin/squirrelfish/Squirrelfish2_Image_2.jpg" id="3_yh5rk"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_3w6ty")
+shader_parameter/albedo_tex = ExtResource("2_3w6ty")
+shader_parameter/normal_tex = ExtResource("3_yh5rk")
+shader_parameter/wave_amplitude = 0.1770000084075
+shader_parameter/wave_frequency = 5.43900025509262
+shader_parameter/wave_speed = 3.0000001392401203
+shader_parameter/tail_start = -0.18599996133499996

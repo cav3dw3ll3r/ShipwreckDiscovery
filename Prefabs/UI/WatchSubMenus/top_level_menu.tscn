@@ -1,0 +1,208 @@
+[gd_scene load_steps=7 format=3 uid="uid://byl8j4fh3nv5n"]
+
+[ext_resource type="Texture2D" uid="uid://xn20c7ne7elw" path="res://Images/CustomUI/MenuBtnsHolder.png" id="1_i6b1d"]
+[ext_resource type="Script" uid="uid://bcnvj2bm8x5b5" path="res://Scripts/UI/Watch/Watch_Top_Level.gd" id="1_n20c6"]
+[ext_resource type="StyleBox" uid="uid://cnicbe7rvg6g" path="res://Prefabs/UI/WatchSubMenus/styleboxempty.tres" id="3_d3rdi"]
+[ext_resource type="Texture2D" uid="uid://cycpnn1edsisi" path="res://Images/CustomUI/HomeIcon.png" id="3_ynw70"]
+[ext_resource type="Texture2D" uid="uid://cuufbx3gcuwpm" path="res://Images/CustomUI/ScanIcon.png" id="5_1pa2n"]
+[ext_resource type="Texture2D" uid="uid://bjymab0hqe54r" path="res://Images/CustomUI/Lock.png" id="7_0unnj"]
+
+[node name="TopLevelMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n20c6")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -256.0
+offset_right = 256.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_i6b1d")
+
+[node name="Home" type="Button" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/icon_focus_color = Color(0.760784, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(0.87451, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0.713726, 1, 1, 1)
+theme_override_styles/normal = ExtResource("3_d3rdi")
+theme_override_styles/normal_mirrored = ExtResource("3_d3rdi")
+theme_override_styles/pressed = ExtResource("3_d3rdi")
+theme_override_styles/pressed_mirrored = ExtResource("3_d3rdi")
+theme_override_styles/hover = ExtResource("3_d3rdi")
+theme_override_styles/hover_mirrored = ExtResource("3_d3rdi")
+theme_override_styles/hover_pressed = ExtResource("3_d3rdi")
+theme_override_styles/hover_pressed_mirrored = ExtResource("3_d3rdi")
+theme_override_styles/disabled = ExtResource("3_d3rdi")
+theme_override_styles/disabled_mirrored = ExtResource("3_d3rdi")
+theme_override_styles/focus = ExtResource("3_d3rdi")
+icon = ExtResource("3_ynw70")
+
+[node name="Scanner" type="Button" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -29.0
+offset_top = -140.0
+offset_right = 35.0
+offset_bottom = -76.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/icon_focus_color = Color(0.760784, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(0.87451, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0.713726, 1, 1, 1)
+theme_override_styles/normal = ExtResource("3_d3rdi")
+theme_override_styles/normal_mirrored = ExtResource("3_d3rdi")
+theme_override_styles/pressed = ExtResource("3_d3rdi")
+theme_override_styles/pressed_mirrored = ExtResource("3_d3rdi")
+theme_override_styles/hover = ExtResource("3_d3rdi")
+theme_override_styles/hover_mirrored = ExtResource("3_d3rdi")
+theme_override_styles/hover_pressed = ExtResource("3_d3rdi")
+theme_override_styles/hover_pressed_mirrored = ExtResource("3_d3rdi")
+theme_override_styles/disabled = ExtResource("3_d3rdi")
+theme_override_styles/disabled_mirrored = ExtResource("3_d3rdi")
+theme_override_styles/focus = ExtResource("3_d3rdi")
+icon = ExtResource("5_1pa2n")
+
+[node name="PlayerInfo" type="Button" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 36.0
+offset_top = -103.0
+offset_right = 171.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/icon_focus_color = Color(0.760784, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(0.87451, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0.713726, 1, 1, 1)
+theme_override_styles/normal = ExtResource("3_d3rdi")
+theme_override_styles/normal_mirrored = ExtResource("3_d3rdi")
+theme_override_styles/pressed = ExtResource("3_d3rdi")
+theme_override_styles/pressed_mirrored = ExtResource("3_d3rdi")
+theme_override_styles/hover = ExtResource("3_d3rdi")
+theme_override_styles/hover_mirrored = ExtResource("3_d3rdi")
+theme_override_styles/hover_pressed = ExtResource("3_d3rdi")
+theme_override_styles/hover_pressed_mirrored = ExtResource("3_d3rdi")
+theme_override_styles/disabled = ExtResource("3_d3rdi")
+theme_override_styles/disabled_mirrored = ExtResource("3_d3rdi")
+theme_override_styles/focus = ExtResource("3_d3rdi")
+icon = ExtResource("7_0unnj")
+
+[node name="Pockets" type="Button" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -6.0
+offset_top = 18.0
+offset_right = 129.0
+offset_bottom = 153.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/icon_focus_color = Color(0.760784, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(0.87451, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0.713726, 1, 1, 1)
+theme_override_styles/normal = ExtResource("3_d3rdi")
+theme_override_styles/normal_mirrored = ExtResource("3_d3rdi")
+theme_override_styles/pressed = ExtResource("3_d3rdi")
+theme_override_styles/pressed_mirrored = ExtResource("3_d3rdi")
+theme_override_styles/hover = ExtResource("3_d3rdi")
+theme_override_styles/hover_mirrored = ExtResource("3_d3rdi")
+theme_override_styles/hover_pressed = ExtResource("3_d3rdi")
+theme_override_styles/hover_pressed_mirrored = ExtResource("3_d3rdi")
+theme_override_styles/disabled = ExtResource("3_d3rdi")
+theme_override_styles/disabled_mirrored = ExtResource("3_d3rdi")
+theme_override_styles/focus = ExtResource("3_d3rdi")
+icon = ExtResource("7_0unnj")
+
+[node name="Props" type="Button" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = 16.0
+offset_right = 7.0
+offset_bottom = 151.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/icon_focus_color = Color(0.760784, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(0.87451, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0.713726, 1, 1, 1)
+theme_override_styles/normal = ExtResource("3_d3rdi")
+theme_override_styles/normal_mirrored = ExtResource("3_d3rdi")
+theme_override_styles/pressed = ExtResource("3_d3rdi")
+theme_override_styles/pressed_mirrored = ExtResource("3_d3rdi")
+theme_override_styles/hover = ExtResource("3_d3rdi")
+theme_override_styles/hover_mirrored = ExtResource("3_d3rdi")
+theme_override_styles/hover_pressed = ExtResource("3_d3rdi")
+theme_override_styles/hover_pressed_mirrored = ExtResource("3_d3rdi")
+theme_override_styles/disabled = ExtResource("3_d3rdi")
+theme_override_styles/disabled_mirrored = ExtResource("3_d3rdi")
+theme_override_styles/focus = ExtResource("3_d3rdi")
+icon = ExtResource("7_0unnj")
+
+[node name="DiveCtrl" type="Button" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -163.0
+offset_top = -105.0
+offset_right = -28.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/icon_focus_color = Color(0.760784, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(0.87451, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(0.713726, 1, 1, 1)
+theme_override_styles/normal = ExtResource("3_d3rdi")
+theme_override_styles/normal_mirrored = ExtResource("3_d3rdi")
+theme_override_styles/pressed = ExtResource("3_d3rdi")
+theme_override_styles/pressed_mirrored = ExtResource("3_d3rdi")
+theme_override_styles/hover = ExtResource("3_d3rdi")
+theme_override_styles/hover_mirrored = ExtResource("3_d3rdi")
+theme_override_styles/hover_pressed = ExtResource("3_d3rdi")
+theme_override_styles/hover_pressed_mirrored = ExtResource("3_d3rdi")
+theme_override_styles/disabled = ExtResource("3_d3rdi")
+theme_override_styles/disabled_mirrored = ExtResource("3_d3rdi")
+theme_override_styles/focus = ExtResource("3_d3rdi")
+icon = ExtResource("7_0unnj")

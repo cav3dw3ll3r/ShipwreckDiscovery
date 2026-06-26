@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://d4bvxffpll8jk"]
+
+[ext_resource type="Script" uid="uid://gpa5nrosmjkl" path="res://Scripts/party_light.gd" id="1_dl4hj"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_dl4hj"]
+size = Vector3(0.03, 0.1, 0.03)
+
+[node name="CubeFish" type="MeshInstance3D"]
+mesh = SubResource("BoxMesh_dl4hj")
+script = ExtResource("1_dl4hj")

@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://cmqxqgk7gjtey"]
+
+[ext_resource type="Texture2D" uid="uid://cjyn6o0uukq0x" path="res://Materials/Mazes/Stonewood_Blue/4K_stonewood_blue___polished___quartzite_diffuse.png" id="1_wuhft"]
+[ext_resource type="Texture2D" uid="uid://dftur03uwjmud" path="res://Materials/Mazes/Stonewood_Blue/4K_stonewood_blue___polished___quartzite_normal.png" id="2_j5f6f"]
+
+[resource]
+albedo_texture = ExtResource("1_wuhft")
+normal_enabled = true
+normal_texture = ExtResource("2_j5f6f")
+uv1_scale = Vector3(-0.705, -0.705, -0.705)
+uv1_triplanar_sharpness = 0.267943

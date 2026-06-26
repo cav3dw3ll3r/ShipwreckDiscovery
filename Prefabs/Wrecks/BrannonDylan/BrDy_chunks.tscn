@@ -1,0 +1,71 @@
+[gd_scene load_steps=13 format=3 uid="uid://bfxscbng5e4y1"]
+
+[ext_resource type="Script" uid="uid://b2ftslgg1friq" path="res://Scripts/Environment/WreckChunkClimbable.gd" id="1_yoj7p"]
+[ext_resource type="Resource" uid="uid://cnrbe0nv3lq5t" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/BrannonDylan/BrannonDylan_0_0_0.tres" id="2_xepkk"]
+[ext_resource type="Resource" uid="uid://coyxpm8odhji2" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/BrannonDylan/BrannonDylan_0_1_0.tres" id="3_6gd3v"]
+[ext_resource type="Resource" uid="uid://d38po2v8c4b84" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/BrannonDylan/BrannonDylan_0_2_0.tres" id="4_7yakj"]
+[ext_resource type="Resource" uid="uid://br1ys8j50l22d" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/BrannonDylan/BrannonDylan_0_3_0.tres" id="5_m0q4j"]
+[ext_resource type="Resource" uid="uid://c0mykh2ka2prd" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/BrannonDylan/BrannonDylan_1_0_0.tres" id="6_hmp14"]
+[ext_resource type="Resource" uid="uid://syigk0tg2pgn" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/BrannonDylan/BrannonDylan_1_1_0.tres" id="7_6p7e5"]
+[ext_resource type="Resource" uid="uid://dd47i7jrkrr7n" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/BrannonDylan/BrannonDylan_1_2_0.tres" id="8_gloxq"]
+[ext_resource type="Resource" uid="uid://dvwmgrxnns3le" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/BrannonDylan/BrannonDylan_1_3_0.tres" id="9_82w7l"]
+[ext_resource type="Resource" uid="uid://bgliej7s4nos8" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/BrannonDylan/BrannonDylan_2_3_0.tres" id="10_a68gj"]
+[ext_resource type="Resource" uid="uid://c4uiirwsphael" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/BrannonDylan/BrannonDylan_2_4_0.tres" id="11_27dck"]
+[ext_resource type="Resource" uid="uid://e4y1qsjdj17h" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/BrannonDylan/BrannonDylan_3_3_0.tres" id="12_a27f0"]
+
+[node name="BrannonDylanAssembled" type="Node3D"]
+
+[node name="Chunk_0_0_0" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.05126, 10.514789, 37.086666)
+script = ExtResource("1_yoj7p")
+spotlight_target = ExtResource("2_xepkk")
+
+[node name="Chunk_0_1_0" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.05126, 10.514789, 12.086666)
+script = ExtResource("1_yoj7p")
+spotlight_target = ExtResource("3_6gd3v")
+
+[node name="Chunk_0_2_0" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.05126, 10.514789, -12.913334)
+script = ExtResource("1_yoj7p")
+spotlight_target = ExtResource("4_7yakj")
+
+[node name="Chunk_0_3_0" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.05126, 10.514789, -37.913334)
+script = ExtResource("1_yoj7p")
+spotlight_target = ExtResource("5_m0q4j")
+
+[node name="Chunk_1_0_0" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.94874, 10.514789, 37.086666)
+script = ExtResource("1_yoj7p")
+spotlight_target = ExtResource("6_hmp14")
+
+[node name="Chunk_1_1_0" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.94874, 10.514789, 12.086666)
+script = ExtResource("1_yoj7p")
+spotlight_target = ExtResource("7_6p7e5")
+
+[node name="Chunk_1_2_0" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.94874, 10.514789, -12.913334)
+script = ExtResource("1_yoj7p")
+spotlight_target = ExtResource("8_gloxq")
+
+[node name="Chunk_1_3_0" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.94874, 10.514789, -37.913334)
+script = ExtResource("1_yoj7p")
+spotlight_target = ExtResource("9_82w7l")
+
+[node name="Chunk_2_3_0" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.94874, 10.514789, -37.913334)
+script = ExtResource("1_yoj7p")
+spotlight_target = ExtResource("10_a68gj")
+
+[node name="Chunk_2_4_0" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.94874, 10.514789, -62.913334)
+script = ExtResource("1_yoj7p")
+spotlight_target = ExtResource("11_27dck")
+
+[node name="Chunk_3_3_0" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61.94874, 10.514789, -37.913334)
+script = ExtResource("1_yoj7p")
+spotlight_target = ExtResource("12_a27f0")

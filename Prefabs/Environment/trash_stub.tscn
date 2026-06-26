@@ -1,0 +1,23 @@
+[gd_scene load_steps=7 format=3 uid="uid://cdympe0vyggb5"]
+
+[ext_resource type="ArrayMesh" uid="uid://cqn2spgyfcjrx" path="res://Meshes/trash/blank_can.res" id="1_g3v7j"]
+[ext_resource type="Script" uid="uid://dw0prb57vddw2" path="res://Scripts/Environment/trash_controller.gd" id="1_trash"]
+[ext_resource type="Resource" uid="uid://1rtj50jbuk4o" path="res://Resources/Scannable/Spotlight_Targets/trash_spotlight_target.tres" id="2_spotlight"]
+[ext_resource type="PackedScene" path="res://Prefabs/Environment/dead_trash.tscn" id="3_deadtrash"]
+[ext_resource type="Material" uid="uid://cmi5x4jducyff" path="res://Materials/trash_can_crumple_material.tres" id="4_crumple"]
+
+[sub_resource type="MultiMesh" id="MultiMesh_trash"]
+transform_format = 1
+mesh = ExtResource("1_g3v7j")
+
+[node name="Trash" type="MultiMeshInstance3D"]
+multimesh = SubResource("MultiMesh_trash")
+script = ExtResource("1_trash")
+kill_prefab = ExtResource("3_deadtrash")
+trash_size = 1.0
+spotlight_target = ExtResource("2_spotlight")
+shared_material = ExtResource("4_crumple")
+scale_min = 0.05
+scale_max = 0.05
+is_targetable = true
+use_dynamic_placement = true

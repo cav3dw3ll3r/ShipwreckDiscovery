@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=3 uid="uid://yrsw58stxohu"]
+
+[ext_resource type="Theme" uid="uid://c3usqgyghssbh" path="res://Resources/Stylesheets/DiveComputer.tres" id="1_xk7f7"]
+[ext_resource type="Script" uid="uid://dsj2pbj7mrn7w" path="res://Scripts/UI/DiveComputer/molecules/fish_id_pane.gd" id="2_ranlh"]
+[ext_resource type="Script" uid="uid://b7siksgrb0cj3" path="res://Scripts/UI/DiveComputer/Atoms/single_option.gd" id="4_p6pim"]
+[ext_resource type="StyleBox" uid="uid://dmooatxe02kvn" path="res://Images/DiveComputer/selectedLine.tres" id="5_da5h6"]
+[ext_resource type="Texture2D" uid="uid://dj7djrlx2novp" path="res://Images/DiveComputer/selection_indicator_right.png" id="6_4g5jq"]
+[ext_resource type="Script" uid="uid://cvalnx44pwigw" path="res://Scripts/UI/Localization/LocalizedLabel.gd" id="7_e7nwo"]
+
+[node name="DisplayPane" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_xk7f7")
+alignment = 1
+script = ExtResource("2_ranlh")
+hologram_spawn_distance = null
+
+[node name="LocalizedLabel" type="Label" parent="."]
+layout_mode = 2
+script = ExtResource("7_e7nwo")
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="HSeparator" type="HSeparator" parent="."]
+layout_mode = 2
+
+[node name="ReturnPanel" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 0
+script = ExtResource("4_p6pim")
+selected_line = ExtResource("5_da5h6")
+return_to_previous = true
+
+[node name="VSeparator" type="VSeparator" parent="ReturnPanel"]
+layout_mode = 2
+theme_override_styles/separator = ExtResource("5_da5h6")
+
+[node name="Selector" type="TextureRect" parent="ReturnPanel"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+texture = ExtResource("6_4g5jq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="ReturnPanel"]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Back"
+autowrap_mode = 3
+script = ExtResource("7_e7nwo")
+stringTablePath = "res://Resources/StringTables/DC.tsv"
+stringID = "return"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"

@@ -1,0 +1,43 @@
+[gd_scene load_steps=9 format=3 uid="uid://cajawh3n2sghw"]
+
+[ext_resource type="Script" uid="uid://cowu2t2y2xuam" path="res://Scripts/Equipment/Equipment_Holder.gd" id="1_fwger"]
+[ext_resource type="PackedScene" uid="uid://gg5m2xjc10vj" path="res://Prefabs/Equipment/lionator_revised.tscn" id="2_6eo41"]
+[ext_resource type="PackedScene" path="res://Prefabs/Equipment/amateur_lionator.tscn" id="2_amateur"]
+[ext_resource type="Material" uid="uid://c6q46m23t7qs8" path="res://Materials/Fish_Holograms/lionfish_hologram_material.tres" id="3_d2plx"]
+[ext_resource type="PackedScene" uid="uid://b037xaaerbqgb" path="res://Prefabs/spear_visual.tscn" id="4_uidy2"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_3cxnb"]
+material = ExtResource("3_d2plx")
+top_radius = 0.02
+bottom_radius = 0.02
+height = 0.4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3cxnb"]
+albedo_color = Color(1, 0.55574566, 0.32832417, 1)
+roughness = 0.1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_8yqyv"]
+material = SubResource("StandardMaterial3D_3cxnb")
+top_radius = 0.02
+bottom_radius = 0.02
+height = 0.05
+
+[node name="SpearHolder" type="Node3D" node_paths=PackedStringArray("invisible_while_equipped")]
+script = ExtResource("1_fwger")
+amateur_equipment_scene = ExtResource("2_amateur")
+professional_equipment_scene = ExtResource("2_6eo41")
+binding = "by_button"
+off_hand = false
+binding_off_hand = false
+invisible_while_equipped = [NodePath("Tip")]
+
+[node name="Base" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1978941, 0.96645796, 0)
+mesh = SubResource("CylinderMesh_3cxnb")
+
+[node name="Metal_Spear" parent="." instance=ExtResource("4_uidy2")]
+transform = Transform3D(0.2304805, 0, 0, 0, 0.5287408, 0, 0, 0, 0.2304805, 0.19782674, 0.8448297, 0)
+
+[node name="Tip" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19834888, 1.6699319, 0)
+mesh = SubResource("CylinderMesh_8yqyv")

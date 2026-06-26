@@ -1,0 +1,35 @@
+[gd_resource type="ShaderMaterial" load_steps=7 format=3 uid="uid://ewukn6cjcorb"]
+
+[ext_resource type="Shader" uid="uid://cp3bm6vc8ukhq" path="res://Materials/Shaders/terrain_plane.gdshader" id="1_knddi"]
+[ext_resource type="Texture2D" uid="uid://cupl7td7615b0" path="res://Images/caust01.png" id="2_8j6nt"]
+[ext_resource type="Texture2D" uid="uid://c6nttppa377k0" path="res://Images/aerial_beach_01_diff_4k.jpg" id="3_8j6nt"]
+[ext_resource type="Texture2D" uid="uid://co02cpdymacx3" path="res://Images/aerial_beach_01_nor_gl_4k.jpg" id="4_a3wju"]
+
+[sub_resource type="Gradient" id="Gradient_cckl6"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_g1l50"]
+gradient = SubResource("Gradient_cckl6")
+width = 32
+height = 32
+fill_to = Vector2(1, 1)
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_knddi")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/texture_albedo = ExtResource("3_8j6nt")
+shader_parameter/texture_normal = ExtResource("4_a3wju")
+shader_parameter/tile_scale = 0.1
+shader_parameter/tiling_breakup_noise = SubResource("GradientTexture2D_g1l50")
+shader_parameter/breakup_coord_scale = 0.08
+shader_parameter/breakup_uv_strength = 0.12
+shader_parameter/breakup_tint_strength = 0.1
+shader_parameter/caustic_texture = ExtResource("2_8j6nt")
+shader_parameter/caustic_scale = 0.1
+shader_parameter/caustic_speed = Vector2(0.02, 0.02)
+shader_parameter/caustic_strength = 0.1
+shader_parameter/caustic_tint = Color(0.8, 0.9, 1, 1)
+shader_parameter/shadow_strength = 0.6
+shader_parameter/shadow_color = Color(0.05, 0.05, 0.1, 1)
+shader_parameter/caustic_glow_strength = 0.15
+shader_parameter/caustic_glow_softness = 0.8

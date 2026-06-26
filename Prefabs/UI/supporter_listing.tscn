@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://bd02k6pkj4jsw"]
+
+[ext_resource type="Script" uid="uid://crliug7dwykjm" path="res://Scripts/UI/SupporterListing.gd" id="1_vj1vt"]
+[ext_resource type="Texture2D" uid="uid://cefdcwy3qoiuy" path="res://Images/Stickers/L-MSOdyssey.png" id="2_v6btu"]
+
+[node name="SupporterListing" type="Panel"]
+custom_minimum_size = Vector2(0, 180)
+size_flags_horizontal = 3
+script = ExtResource("1_vj1vt")
+
+[node name="HBoxContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.999
+anchor_bottom = 1.0
+offset_right = 0.12793
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("2_v6btu")
+expand_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Supporter Business Name"
+fit_content = true
+
+[node name="Label" type="Label" parent="HBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32."
+autowrap_mode = 2
+clip_text = true

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="TargetDepthBehavior" load_steps=2 format=3 uid="uid://dr2t4lno4dvgg"]
+
+[ext_resource type="Script" uid="uid://bllpj5blu01na" path="res://Scripts/Fish/Behaviors/depth_tracking_behavior.gd" id="1_io7ge"]
+
+[resource]
+script = ExtResource("1_io7ge")
+target_depth_min = 4.0
+target_depth_max = 5.0
+blend_factor = 1.0
+metadata/_custom_type_script = "uid://bllpj5blu01na"

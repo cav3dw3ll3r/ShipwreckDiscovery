@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://ci4x22qcit1og"]
+
+[ext_resource type="Texture2D" uid="uid://cppww2kss5ynw" path="res://Resources/Stylesheets/UI_Components/Window/Window004_Cyan.png" id="1_i7g78"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xrfcw"]
+texture = ExtResource("1_i7g78")
+
+[node name="StatsWindow" type="PanelContainer"]
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_xrfcw")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Total Dives: "
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Max Depth Reached: "
+
+[node name="Label3" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Simulation Failures: "
+
+[node name="Label4" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Coins Collected: "
+
+[node name="Label5" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Points of Interest Found: "
+
+[node name="Label6" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Creatures Scanned: "

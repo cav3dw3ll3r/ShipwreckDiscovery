@@ -1,0 +1,92 @@
+[gd_scene load_steps=8 format=3 uid="uid://bvo1h0fscasv4"]
+
+[ext_resource type="Theme" uid="uid://c3usqgyghssbh" path="res://Resources/Stylesheets/DiveComputer.tres" id="1_ar205"]
+[ext_resource type="Script" uid="uid://dgpimb23j11r" path="res://Scripts/UI/DiveComputer/molecules/option_list.gd" id="2_mfx5w"]
+[ext_resource type="Script" uid="uid://b7siksgrb0cj3" path="res://Scripts/UI/DiveComputer/Atoms/single_option.gd" id="3_grcy2"]
+[ext_resource type="StyleBox" uid="uid://dmooatxe02kvn" path="res://Images/DiveComputer/selectedLine.tres" id="4_1hkt3"]
+[ext_resource type="Texture2D" uid="uid://dj7djrlx2novp" path="res://Images/DiveComputer/selection_indicator_right.png" id="5_qcy7s"]
+[ext_resource type="Script" uid="uid://cvalnx44pwigw" path="res://Scripts/UI/Localization/LocalizedLabel.gd" id="6_s4jam"]
+[ext_resource type="Script" uid="uid://cg3nro06c0xod" path="res://Scripts/Utility/SimpleActions/exit_game.gd" id="7_exit"]
+
+[node name="MainOptionList" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_ar205")
+alignment = 1
+script = ExtResource("2_mfx5w")
+
+[node name="Label2" type="Label" parent="."]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Save and exit the game entirely?"
+autowrap_mode = 3
+script = ExtResource("6_s4jam")
+stringTablePath = "res://Resources/StringTables/DC.tsv"
+stringID = "exit_confirmation"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="SingleOptionPanel" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 0
+script = ExtResource("3_grcy2")
+selected_line = ExtResource("4_1hkt3")
+return_to_previous = true
+
+[node name="VSeparator" type="VSeparator" parent="SingleOptionPanel"]
+layout_mode = 2
+theme_override_styles/separator = ExtResource("4_1hkt3")
+
+[node name="Selector" type="TextureRect" parent="SingleOptionPanel"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+texture = ExtResource("5_qcy7s")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="SingleOptionPanel"]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "No"
+autowrap_mode = 3
+script = ExtResource("6_s4jam")
+stringTablePath = "res://Resources/StringTables/DC.tsv"
+stringID = "no"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="SingleOptionPanel2" type="HBoxContainer" parent="." node_paths=PackedStringArray("option_action")]
+layout_mode = 2
+theme_override_constants/separation = 0
+script = ExtResource("3_grcy2")
+selected_line = ExtResource("4_1hkt3")
+option_action = NodePath("SimpleAction")
+
+[node name="VSeparator" type="VSeparator" parent="SingleOptionPanel2"]
+layout_mode = 2
+theme_override_styles/separator = ExtResource("4_1hkt3")
+
+[node name="Selector" type="TextureRect" parent="SingleOptionPanel2"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+texture = ExtResource("5_qcy7s")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="SingleOptionPanel2"]
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Yes"
+autowrap_mode = 3
+script = ExtResource("6_s4jam")
+stringTablePath = "res://Resources/StringTables/DC.tsv"
+stringID = "yes"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="SimpleAction" type="Node" parent="SingleOptionPanel2"]
+script = ExtResource("7_exit")
+metadata/_custom_type_script = "uid://cg3nro06c0xod"

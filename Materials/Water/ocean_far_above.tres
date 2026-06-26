@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://btdioea7ywh6g"]
+
+[ext_resource type="Shader" uid="uid://c35jf3aqonebu" path="res://Materials/Shaders/ocean_far_above.gdshader" id="1_0iv2t"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_0iv2t")
+shader_parameter/surface_color = Color(0.3, 0.6, 0.8, 1)
+shader_parameter/depth_fog_color = Color(0.05, 0.1, 0.2, 1)
+shader_parameter/fresnel_power = 4.0
+shader_parameter/surface_opacity = 0.5

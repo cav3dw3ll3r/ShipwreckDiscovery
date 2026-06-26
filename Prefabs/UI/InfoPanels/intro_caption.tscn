@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://byweqlfkjnl8e"]
+
+[ext_resource type="Script" uid="uid://c1hsk2w7avvvk" path="res://Scripts/UI/Localization/LocalizedLabel3D.gd" id="2_label"]
+
+[node name="IntroCaption" type="Node3D"]
+
+[node name="LocalizedLabel" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.01)
+pixel_size = 0.0015
+text = "There's nothing like the drop"
+font_size = 24
+outline_size = 8
+autowrap_mode = 3
+width = 640.0
+script = ExtResource("2_label")
+stringTablePath = "res://Resources/StringTables/IntroStrings.tsv"
+stringID = "intro_caption"

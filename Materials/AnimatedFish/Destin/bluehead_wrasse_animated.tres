@@ -1,0 +1,19 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://dxmlyoieprgt6"]
+
+[ext_resource type="Shader" uid="uid://bsh2xv8vlb8q" path="res://Materials/AnimatedFish/z_wave_tail_pinch.gdshader" id="1_a84bi"]
+[ext_resource type="Texture2D" uid="uid://b3f2hn313hcbc" path="res://Meshes/Fish/Destin/Bluehead_Wrasse/Bluehead_Wrasse_Image_0.jpg" id="2_a84bi"]
+[ext_resource type="Texture2D" uid="uid://cax6513uqmq2u" path="res://Meshes/Fish/Destin/Bluehead_Wrasse/Bluehead_Wrasse_Image_2.jpg" id="3_y163r"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_a84bi")
+shader_parameter/albedo_tex = ExtResource("2_a84bi")
+shader_parameter/normal_tex = ExtResource("3_y163r")
+shader_parameter/wave_amplitude = 0.113
+shader_parameter/wave_frequency = 1.905
+shader_parameter/wave_speed = 9.485
+shader_parameter/tail_start = -0.224
+shader_parameter/pinch_strength = 1.0
+shader_parameter/pinch_falloff = 0.26
+shader_parameter/pinch_start = 0.00100005
+shader_parameter/pinch_center_y = 0.0700001

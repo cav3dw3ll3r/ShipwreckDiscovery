@@ -1,0 +1,122 @@
+[gd_scene load_steps=10 format=3 uid="uid://dskf1i7edagik"]
+
+[ext_resource type="Theme" uid="uid://c3usqgyghssbh" path="res://Resources/Stylesheets/DiveComputer.tres" id="1_oyfsg"]
+[ext_resource type="Script" uid="uid://cw1q84qp6ax2k" path="res://Scripts/UI/DiveComputer/DiveComputerMenuController.gd" id="2_dcmenu"]
+[ext_resource type="PackedScene" uid="uid://rbhnpufkbdln" path="res://Prefabs/UI/DiveComputer/main_option_list.tscn" id="3_oyfsg"]
+[ext_resource type="Texture2D" uid="uid://bry21diqwpuq6" path="res://Images/DiveComputer/Heart.png" id="4_1v5jc"]
+[ext_resource type="Texture2D" uid="uid://701xdsxr7d7p" path="res://Images/DiveComputer/Air_Bubble.png" id="4_itfwc"]
+[ext_resource type="Texture2D" uid="uid://ctn5dbgcfwcrb" path="res://Images/DiveComputer/airgradient.png" id="5_5l2xh"]
+[ext_resource type="Texture2D" uid="uid://bhpy1q15a701o" path="res://Images/Clock.png" id="9_4reg8"]
+[ext_resource type="Texture2D" uid="uid://usejv6e2pdyf" path="res://Images/reefcoin.png" id="10_05ghm"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aqemp"]
+texture = ExtResource("5_5l2xh")
+texture_margin_left = 2.39392
+texture_margin_top = 2.39392
+texture_margin_right = 2.39392
+texture_margin_bottom = 2.1545281
+region_rect = Rect2(0, 0, 64, 64)
+
+[node name="DCMenu" type="MarginContainer"]
+custom_minimum_size = Vector2(512, 512)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -256.0
+offset_right = 256.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_oyfsg")
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 65
+theme_override_constants/margin_right = 130
+theme_override_constants/margin_bottom = 65
+script = ExtResource("2_dcmenu")
+base_content_pane = ExtResource("3_oyfsg")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Header" type="HBoxContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="VBoxContainer/Header"]
+layout_mode = 2
+texture = ExtResource("4_itfwc")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="AirBar" type="ProgressBar" parent="VBoxContainer/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_styles/fill = SubResource("StyleBoxTexture_aqemp")
+max_value = 1.0
+show_percentage = false
+
+[node name="VSeparator" type="VSeparator" parent="VBoxContainer/Header"]
+layout_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="VBoxContainer/Header"]
+layout_mode = 2
+texture = ExtResource("4_1v5jc")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="HPBar" type="ProgressBar" parent="VBoxContainer/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+max_value = 1.0
+show_percentage = false
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Header"]
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Header2" type="HBoxContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+
+[node name="TextureRect6" type="TextureRect" parent="VBoxContainer/Header2"]
+layout_mode = 2
+texture = ExtResource("9_4reg8")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Dive_Time" type="Label" parent="VBoxContainer/Header2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "00:00"
+horizontal_alignment = 1
+
+[node name="VSeparator3" type="VSeparator" parent="VBoxContainer/Header2"]
+layout_mode = 2
+
+[node name="TextureRect7" type="TextureRect" parent="VBoxContainer/Header2"]
+layout_mode = 2
+texture = ExtResource("10_05ghm")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Reefcoin" type="Label" parent="VBoxContainer/Header2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "147"
+horizontal_alignment = 1
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="ContentPane" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3

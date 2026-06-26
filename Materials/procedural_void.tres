@@ -1,0 +1,52 @@
+[gd_resource type="ShaderMaterial" load_steps=11 format=3 uid="uid://bpd3eg7qvhtup"]
+
+[ext_resource type="Shader" uid="uid://b67jncrsvpnix" path="res://Materials/Shaders/cloud_sky.gdshader" id="1_avlqf"]
+[ext_resource type="Texture2D" uid="uid://dk1yqhhk1ytt" path="res://Images/RealSun.png" id="2_epvsq"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_pjihf"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_h6whx"]
+noise = SubResource("FastNoiseLite_pjihf")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_i5fe1"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_uiodq"]
+seamless = true
+noise = SubResource("FastNoiseLite_i5fe1")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_s44hp"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_s8gcw"]
+seamless = true
+noise = SubResource("FastNoiseLite_s44hp")
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_34e6i"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_1q06u"]
+seamless = true
+noise = SubResource("FastNoiseLite_34e6i")
+
+[resource]
+shader = ExtResource("1_avlqf")
+shader_parameter/cloud_shape_sampler = SubResource("NoiseTexture2D_s8gcw")
+shader_parameter/cloud_noise_sampler = SubResource("NoiseTexture2D_uiodq")
+shader_parameter/cloud_curves = SubResource("NoiseTexture2D_h6whx")
+shader_parameter/clouds_samples = 8
+shader_parameter/shadow_sample = 1
+shader_parameter/clouds_density = 0.6
+shader_parameter/clouds_scale = 1.0
+shader_parameter/clouds_smoothness = 0.035
+shader_parameter/clouds_light_color = Color(0.204688, 0.483837, 0.505786, 1)
+shader_parameter/clouds_shadow_intensity = 1.0
+shader_parameter/high_clouds_sampler = SubResource("NoiseTexture2D_1q06u")
+shader_parameter/high_clouds_density = 0.2
+shader_parameter/top_color = Color(0, 0, 0, 1)
+shader_parameter/bottom_color = Color(0, 0, 0, 1)
+shader_parameter/sun_scatter = Color(0.0345238, 0.196968, 0.219759, 1)
+shader_parameter/astro_tint = Color(0.940624, 0.221443, 0.53164, 1)
+shader_parameter/astro_sampler = ExtResource("2_epvsq")
+shader_parameter/astro_scale = 10.0
+shader_parameter/astro_intensity = 0.5
+shader_parameter/stars_intensity = 0.1
+shader_parameter/shooting_stars_intensity = 0.0
+shader_parameter/shooting_star_tint = Color(0, 0, 0, 1)

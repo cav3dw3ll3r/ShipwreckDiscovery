@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bx70s60r310dh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vpwj0"]
+albedo_color = Color(0.900693, 0.357748, 0.774484, 0.996078)
+metallic = 0.21
+metallic_specular = 0.87
+roughness = 0.0
+rim_enabled = true
+rim = 0.24
+rim_tint = 0.14
+
+[sub_resource type="SphereMesh" id="SphereMesh_pmu2h"]
+material = SubResource("StandardMaterial3D_vpwj0")
+radius = 0.05
+height = 0.1
+
+[node name="GrabHand" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_pmu2h")

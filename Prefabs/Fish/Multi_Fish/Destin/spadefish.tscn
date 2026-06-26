@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=3 uid="uid://cn4c33sf6qs48"]
+
+[ext_resource type="ArrayMesh" uid="uid://bieyxm72vw2ua" path="res://Meshes/Fish/Destin/spadefish/spadefish.res" id="1_j7ur0"]
+[ext_resource type="Script" uid="uid://cqe14y6osewhi" path="res://Scripts/Environment/Aquarium/multi_fish_controller.gd" id="2_lon53"]
+[ext_resource type="Resource" uid="uid://b3sqkx6e7yyx5" path="res://Resources/Scannable/Spotlight_Targets/spadefish_spotlight_target.tres" id="3_j7ur0"]
+[ext_resource type="ArrayMesh" uid="uid://7dv85yhclwqf" path="res://Meshes/Fish/Destin_Optimized/Spadefish/spadefish_meta.res" id="3_lon53"]
+[ext_resource type="Material" uid="uid://ohuh5rda248v" path="res://Materials/AnimatedFish/Destin/spadefish_animated.tres" id="4_l711f"]
+
+[sub_resource type="MultiMesh" id="MultiMesh_lon53"]
+transform_format = 1
+mesh = ExtResource("1_j7ur0")
+
+[node name="Spadefish" type="MultiMeshInstance3D"]
+multimesh = SubResource("MultiMesh_lon53")
+script = ExtResource("2_lon53")
+android_mesh = ExtResource("3_lon53")
+shared_material = ExtResource("4_l711f")
+spotlight_target = ExtResource("3_j7ur0")
+fish_count = 128
+swim_radius = 20.0
+swim_speed = 1.8
+turn_speed = 1.0
+yaw_offset = 0.0
+avoid_object_distance = 3.0
+ceiling = 8.0
+neighbor_radius = 2.5
+separation_radius = 5.0
+alignment_weight = 0.9
+cohesion_weight = 0.9
+flee_distance = 1.5

@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://mwus2kinomgy"]
+
+[ext_resource type="Texture2D" uid="uid://4n83yugge2jr" path="res://Images/MeshTextures/BoatMaterials/Metal2/Metal043A_2K-JPG_NormalDX.jpg" id="2_luftw"]
+[ext_resource type="Texture2D" uid="uid://dtpqcp2m8mr7t" path="res://Images/MeshTextures/BoatMaterials/Metal2/Metal043A_2K-JPG_Roughness.jpg" id="3_rdk2w"]
+
+[resource]
+albedo_color = Color(0, 0, 0, 1)
+metallic = 0.62
+metallic_specular = 0.28
+roughness = 0.59
+roughness_texture = ExtResource("3_rdk2w")
+normal_enabled = true
+normal_texture = ExtResource("2_luftw")
+uv1_scale = Vector3(9.65, 9.65, 9.65)
+uv1_offset = Vector3(0.29, 0, 0)
+uv1_triplanar = true
+uv1_triplanar_sharpness = 0.148651
+uv2_scale = Vector3(0.995, 0.995, 0.995)

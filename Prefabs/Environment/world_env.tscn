@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwfsrrn1va0ef"]
+
+[ext_resource type="Environment" uid="uid://cp2pursqrpqwf" path="res://Resources/AboveWaterEnvironment.tres" id="1_nv2ed"]
+
+[node name="WorldEnv" type="WorldEnvironment"]
+environment = ExtResource("1_nv2ed")

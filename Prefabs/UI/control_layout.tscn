@@ -1,0 +1,200 @@
+[gd_scene load_steps=3 format=3 uid="uid://ch0okapvu1i1h"]
+
+[ext_resource type="Texture2D" uid="uid://cvb7odx8b1x5o" path="res://Images/CustomUI/Ctrls.png" id="1_lgumf"]
+[ext_resource type="Script" uid="uid://cvalnx44pwigw" path="res://Scripts/UI/Localization/LocalizedLabel.gd" id="2_7ebsy"]
+
+[node name="TextureRect" type="TextureRect"]
+anchors_preset = -1
+anchor_right = 0.44400004
+anchor_bottom = 0.55600005
+offset_right = 0.5119629
+offset_bottom = -0.2880249
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_lgumf")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ControlLayout" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 26.0
+offset_right = -397.0
+offset_bottom = -285.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.7529412, 1, 0.4392157, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+text = "Horizontal Movement"
+autowrap_mode = 2
+script = ExtResource("2_7ebsy")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "horizontal_movement"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="ControlLayout2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.46600002
+anchor_top = 0.12200001
+anchor_right = 0.52000004
+anchor_bottom = 0.37100002
+offset_left = -12.5920105
+offset_top = -19.920006
+offset_right = 20.0
+offset_bottom = -60.560013
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.7529412, 1, 0.4392157, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+text = "Button Press"
+autowrap_mode = 2
+script = ExtResource("2_7ebsy")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "button_press"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="ControlLayout3" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.053000003
+anchor_right = 0.89100003
+anchor_bottom = 0.555
+offset_left = 145.0
+offset_top = -0.080005646
+offset_right = -0.13201904
+offset_bottom = -131.8
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.7529412, 1, 0.4392157, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+text = "Pole Spear"
+autowrap_mode = 2
+script = ExtResource("2_7ebsy")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "pole_spear"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="ControlLayout4" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.256
+anchor_right = 0.915
+anchor_bottom = 0.5
+offset_left = 146.0
+offset_top = -0.16000366
+offset_right = 0.120025635
+offset_bottom = -65.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.7529412, 1, 0.4392157, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+text = "Turning"
+autowrap_mode = 2
+script = ExtResource("2_7ebsy")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "turning"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="ControlLayout5" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.314
+anchor_right = 0.93900007
+anchor_bottom = 0.453
+offset_left = 139.0
+offset_top = 0.9599991
+offset_right = 0.09194946
+offset_bottom = -0.08000183
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.7529412, 1, 0.4392157, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+text = "Vertical Movement"
+autowrap_mode = 2
+script = ExtResource("2_7ebsy")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "vertical_movement"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="ControlLayout8" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.314
+anchor_right = 0.97400004
+anchor_bottom = 0.544
+offset_left = 157.0
+offset_top = 59.96
+offset_right = 14.311981
+offset_bottom = 0.1599884
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.7529412, 1, 0.4392157, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+text = "Speed Swim"
+autowrap_mode = 2
+script = ExtResource("2_7ebsy")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "speed_swim"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="ControlLayout6" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.453
+anchor_top = 0.36400002
+anchor_right = 0.52900004
+anchor_bottom = 0.536
+offset_left = 0.06399536
+offset_top = 38.95999
+offset_right = 0.15197754
+offset_bottom = 0.039993286
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.7529412, 1, 0.4392157, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+text = "Grip"
+autowrap_mode = 2
+script = ExtResource("2_7ebsy")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "grip"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="ControlLayout7" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.18
+anchor_top = 0.46400002
+anchor_right = 0.18
+anchor_bottom = 0.46400002
+offset_left = -63.160004
+offset_top = -16.040009
+offset_right = 19.840012
+offset_bottom = 32.95999
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.7529412, 1, 0.4392157, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+text = "Sea Scooter"
+autowrap_mode = 2
+script = ExtResource("2_7ebsy")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "sea_scooter"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"

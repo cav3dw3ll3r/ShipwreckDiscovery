@@ -1,0 +1,146 @@
+[gd_scene load_steps=28 format=3 uid="uid://bptxhb0gus5k5"]
+
+[ext_resource type="PackedScene" uid="uid://cxuie4ymaab7s" path="res://Prefabs/Wrecks/WreckParts/instant_dive.tscn" id="1_tonji"]
+[ext_resource type="PackedScene" uid="uid://7kqmfcqwy6cp" path="res://Prefabs/Wrecks/WreckParts/interior.tscn" id="2_eu3mq"]
+[ext_resource type="PackedScene" uid="uid://b78qg80c85nd5" path="res://Prefabs/Wrecks/WreckParts/spanchor.tscn" id="3_b3cwj"]
+[ext_resource type="PackedScene" uid="uid://bktqfmy6tecic" path="res://Prefabs/Wrecks/MonicaLee/monica_lee_wreck.tscn" id="4_wxyvj"]
+[ext_resource type="PackedScene" uid="uid://tjkgdu1qq5ey" path="res://Meshes/wrecks/Blender_Dump/Monica Lee Low Poly.glb" id="6_axodh"]
+[ext_resource type="PackedScene" uid="uid://ccumos5tmn61q" path="res://Prefabs/Wrecks/MonicaLee/MonicaLee_chunks.tscn" id="9_6sfyq"]
+[ext_resource type="Script" uid="uid://b2ftslgg1friq" path="res://Scripts/Environment/WreckChunkClimbable.gd" id="10_wltil"]
+[ext_resource type="Resource" uid="uid://ba7j88vnanjpn" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/MonicaLee/MonicaLee_2_1_0.tres" id="11_3sc48"]
+[ext_resource type="Resource" uid="uid://bgrus0oaw61gq" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/MonicaLee/MonicaLee_2_1_1.tres" id="12_fv8p7"]
+[ext_resource type="Resource" uid="uid://deflo3ofnl8f4" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/MonicaLee/MonicaLee_2_2_0.tres" id="13_af82c"]
+[ext_resource type="Resource" uid="uid://2oh02jd1do5t" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/MonicaLee/MonicaLee_2_2_1.tres" id="14_dwdir"]
+[ext_resource type="Resource" uid="uid://fv702catcclh" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/MonicaLee/MonicaLee_2_3_0.tres" id="15_wm0d2"]
+[ext_resource type="Resource" uid="uid://biab4r785ysqr" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/MonicaLee/MonicaLee_2_3_1.tres" id="16_vrfcc"]
+[ext_resource type="Resource" uid="uid://ispxwogr0hws" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/MonicaLee/MonicaLee_2_3_2.tres" id="17_xube5"]
+[ext_resource type="Resource" uid="uid://cpp3kckf3fxgo" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/MonicaLee/MonicaLee_2_4_0.tres" id="18_4f8uy"]
+[ext_resource type="Resource" uid="uid://dk4qehohb6hxc" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/MonicaLee/MonicaLee_2_4_1.tres" id="19_57f8a"]
+[ext_resource type="Resource" uid="uid://s21ujwe3y77h" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/MonicaLee/MonicaLee_2_5_0.tres" id="20_loauv"]
+[ext_resource type="Resource" uid="uid://djdrkd5ywligu" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/MonicaLee/MonicaLee_2_5_1.tres" id="21_erhyq"]
+[ext_resource type="Resource" uid="uid://dbcpog18irmmu" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/MonicaLee/MonicaLee_3_1_0.tres" id="22_u8wpg"]
+[ext_resource type="Resource" uid="uid://tjtp7w1c8ohr" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/MonicaLee/MonicaLee_3_1_1.tres" id="23_ndwdw"]
+[ext_resource type="Resource" uid="uid://b5k33s2nc3nnk" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/MonicaLee/MonicaLee_3_2_0.tres" id="24_u1oub"]
+[ext_resource type="Resource" uid="uid://besuac3mwdkro" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/MonicaLee/MonicaLee_3_2_1.tres" id="25_51myq"]
+[ext_resource type="Resource" uid="uid://c5va28e2kyvdx" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/MonicaLee/MonicaLee_3_3_0.tres" id="26_25t30"]
+[ext_resource type="Resource" uid="uid://dkln3y6tb14jt" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/MonicaLee/MonicaLee_3_3_1.tres" id="27_m2tn8"]
+[ext_resource type="Resource" uid="uid://bw6toelkifndv" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/MonicaLee/MonicaLee_3_4_0.tres" id="28_51sjp"]
+[ext_resource type="Resource" uid="uid://dsqgehswkvqbb" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/MonicaLee/MonicaLee_3_4_1.tres" id="29_c8yjw"]
+[ext_resource type="Resource" uid="uid://lmt24kyy3amd" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/MonicaLee/MonicaLee_3_5_0.tres" id="30_l3w4c"]
+
+[node name="MonicaLeeAssembled" type="Node3D"]
+
+[node name="InstantDive" parent="." instance=ExtResource("1_tonji")]
+transform = Transform3D(0.9702957, 0, -0.2419219, 0, 1, 0, 0.2419219, 0, 0.9702957, 1.2875937, 5.621567, -6.648064)
+
+[node name="Interior" parent="." instance=ExtResource("2_eu3mq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.16457832, 2.670614, -3.167183)
+
+[node name="Spanchor" parent="." instance=ExtResource("3_b3cwj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0071897507, 2.9716256, 0.31444836)
+
+[node name="MonicaLee_Wreck" parent="." instance=ExtResource("4_wxyvj")]
+
+[node name="Monica Lee Low Poly3" parent="MonicaLee_Wreck" instance=ExtResource("6_axodh")]
+
+[node name="MonicaLeeAssembled" parent="." instance=ExtResource("9_6sfyq")]
+
+[node name="Chunk_2_1_2" type="Node3D" parent="MonicaLeeAssembled"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.33546066, -0.45558596, 6.289628)
+script = ExtResource("10_wltil")
+spotlight_target = ExtResource("11_3sc48")
+
+[node name="Chunk_2_1_3" type="Node3D" parent="MonicaLeeAssembled"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.33546066, 3.544414, 6.289628)
+script = ExtResource("10_wltil")
+spotlight_target = ExtResource("12_fv8p7")
+
+[node name="Chunk_2_2_2" type="Node3D" parent="MonicaLeeAssembled"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.33546066, -0.45558596, 2.289628)
+script = ExtResource("10_wltil")
+spotlight_target = ExtResource("13_af82c")
+
+[node name="Chunk_2_2_3" type="Node3D" parent="MonicaLeeAssembled"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.33546066, 3.544414, 2.289628)
+script = ExtResource("10_wltil")
+spotlight_target = ExtResource("14_dwdir")
+
+[node name="Chunk_2_3_3" type="Node3D" parent="MonicaLeeAssembled"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.33546066, -0.45558596, -1.710372)
+script = ExtResource("10_wltil")
+spotlight_target = ExtResource("15_wm0d2")
+
+[node name="Chunk_2_3_4" type="Node3D" parent="MonicaLeeAssembled"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.33546066, 3.544414, -1.710372)
+script = ExtResource("10_wltil")
+spotlight_target = ExtResource("16_vrfcc")
+
+[node name="Chunk_2_3_5" type="Node3D" parent="MonicaLeeAssembled"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.33546066, 7.544414, -1.710372)
+script = ExtResource("10_wltil")
+spotlight_target = ExtResource("17_xube5")
+
+[node name="Chunk_2_4_2" type="Node3D" parent="MonicaLeeAssembled"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.33546066, -0.45558596, -5.710372)
+script = ExtResource("10_wltil")
+spotlight_target = ExtResource("18_4f8uy")
+
+[node name="Chunk_2_4_3" type="Node3D" parent="MonicaLeeAssembled"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.33546066, 3.544414, -5.710372)
+script = ExtResource("10_wltil")
+spotlight_target = ExtResource("19_57f8a")
+
+[node name="Chunk_2_5_2" type="Node3D" parent="MonicaLeeAssembled"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.33546066, -0.45558596, -9.710372)
+script = ExtResource("10_wltil")
+spotlight_target = ExtResource("20_loauv")
+
+[node name="Chunk_2_5_3" type="Node3D" parent="MonicaLeeAssembled"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.33546066, 3.544414, -9.710372)
+script = ExtResource("10_wltil")
+spotlight_target = ExtResource("21_erhyq")
+
+[node name="Chunk_3_1_2" type="Node3D" parent="MonicaLeeAssembled"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6645393, -0.45558596, 6.289628)
+script = ExtResource("10_wltil")
+spotlight_target = ExtResource("22_u8wpg")
+
+[node name="Chunk_3_1_3" type="Node3D" parent="MonicaLeeAssembled"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6645393, 3.544414, 6.289628)
+script = ExtResource("10_wltil")
+spotlight_target = ExtResource("23_ndwdw")
+
+[node name="Chunk_3_2_2" type="Node3D" parent="MonicaLeeAssembled"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6645393, -0.45558596, 2.289628)
+script = ExtResource("10_wltil")
+spotlight_target = ExtResource("24_u1oub")
+
+[node name="Chunk_3_2_3" type="Node3D" parent="MonicaLeeAssembled"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6645393, 3.544414, 2.289628)
+script = ExtResource("10_wltil")
+spotlight_target = ExtResource("25_51myq")
+
+[node name="Chunk_3_3_2" type="Node3D" parent="MonicaLeeAssembled"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6645393, -0.45558596, -1.710372)
+script = ExtResource("10_wltil")
+spotlight_target = ExtResource("26_25t30")
+
+[node name="Chunk_3_3_3" type="Node3D" parent="MonicaLeeAssembled"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6645393, 3.544414, -1.710372)
+script = ExtResource("10_wltil")
+spotlight_target = ExtResource("27_m2tn8")
+
+[node name="Chunk_3_4_2" type="Node3D" parent="MonicaLeeAssembled"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6645393, -0.45558596, -5.710372)
+script = ExtResource("10_wltil")
+spotlight_target = ExtResource("28_51sjp")
+
+[node name="Chunk_3_4_3" type="Node3D" parent="MonicaLeeAssembled"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6645393, 3.544414, -5.710372)
+script = ExtResource("10_wltil")
+spotlight_target = ExtResource("29_c8yjw")
+
+[node name="Chunk_3_5_1" type="Node3D" parent="MonicaLeeAssembled"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6645393, -0.45558596, -9.710372)
+script = ExtResource("10_wltil")
+spotlight_target = ExtResource("30_l3w4c")

@@ -1,0 +1,33 @@
+[gd_scene load_steps=8 format=3 uid="uid://cuya43gy77v3h"]
+
+[ext_resource type="Script" uid="uid://e3dw0tnq2dci" path="res://Scripts/Environment/Aquarium/MultiFishLODController.gd" id="1_xgpne"]
+[ext_resource type="Resource" uid="uid://c3qc7pmwmksff" path="res://Resources/Scannable/Spotlight_Targets/squirrelfish_spotlight_target.tres" id="2_lk470"]
+[ext_resource type="ArrayMesh" uid="uid://cvlqojhdstc2k" path="res://Meshes/Fish/Destin/squirrelfish/squirrelfish_meta.res" id="3_xgpne"]
+[ext_resource type="ArrayMesh" uid="uid://c7xo5i71do7i7" path="res://Meshes/Fish/Destin_Optimized/Squirrelfish/squirrelfish_flat.res" id="4_xgpne"]
+[ext_resource type="Material" uid="uid://dtxsc0r0funsv" path="res://Materials/AnimatedFish/Destin/squirrelfish_animated.tres" id="5_xgpne"]
+
+[sub_resource type="MultiMesh" id="MultiMesh_lk470"]
+transform_format = 1
+mesh = ExtResource("3_xgpne")
+
+[sub_resource type="MultiMesh" id="MultiMesh_drqb2"]
+transform_format = 1
+mesh = ExtResource("4_xgpne")
+
+[node name="MultiSquirrelfishLod" type="Node3D" node_paths=PackedStringArray("near_multimesh_node", "far_multimesh_node")]
+script = ExtResource("1_xgpne")
+near_multimesh_node = NodePath("Near")
+far_multimesh_node = NodePath("Far")
+near_mesh_material = ExtResource("5_xgpne")
+spotlight_target = ExtResource("2_lk470")
+fish_count = 64
+swim_radius = 25.0
+yaw_offset = 0.0
+bottom = 1.0
+ceiling = 15.0
+
+[node name="Near" type="MultiMeshInstance3D" parent="."]
+multimesh = SubResource("MultiMesh_lk470")
+
+[node name="Far" type="MultiMeshInstance3D" parent="."]
+multimesh = SubResource("MultiMesh_drqb2")

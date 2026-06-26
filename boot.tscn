@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c76gomhdm37gg"]
+
+[ext_resource type="Script" uid="uid://km3j3cfu4kvo" path="res://boot.gd" id="1_hjvc4"]
+[ext_resource type="PackedScene" uid="uid://clc5dre31iskm" path="res://addons/godot-xr-tools/xr/start_xr.tscn" id="2_n76rq"]
+
+[node name="Boot" type="Node"]
+script = ExtResource("1_hjvc4")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+
+[node name="StartXR" parent="." instance=ExtResource("2_n76rq")]
+
+[connection signal="timeout" from="Timer" to="." method="request_permissions"]

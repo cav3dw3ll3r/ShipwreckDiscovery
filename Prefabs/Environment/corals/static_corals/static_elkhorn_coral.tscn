@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bguc7t1y7hmnf"]
+
+[ext_resource type="Script" uid="uid://bltlbjlgxnros" path="res://Scripts/Environment/CoralSim/static_coral.gd" id="1_ytgfn"]
+
+[node name="StaticBrainCoral" type="Node3D" groups=["static_coral"]]
+script = ExtResource("1_ytgfn")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]

@@ -1,0 +1,48 @@
+[gd_scene load_steps=10 format=3 uid="uid://pwceubfw00q3"]
+
+[ext_resource type="Script" uid="uid://c8m4k2p7xqwn1" path="res://Scripts/UI/Cinematic/ComicPanel.gd" id="1_comic_panel"]
+[ext_resource type="Shader" uid="uid://degycdphkh1t7" path="res://Materials/Shaders/comic_panel.gdshader" id="2_shader"]
+[ext_resource type="Texture2D" uid="uid://gwx1mmo63wek" path="res://Images/Cinematic/Intro1.png" id="3_albedo"]
+[ext_resource type="Texture2D" uid="uid://cuqh2v8ak3afe" path="res://Images/Cloudz.png" id="4_noise"]
+[ext_resource type="Script" uid="uid://c1hsk2w7avvvk" path="res://Scripts/UI/Localization/LocalizedLabel3D.gd" id="5_label"]
+[ext_resource type="FontFile" uid="uid://be3ieb608t8ax" path="res://Resources/Stylesheets/good timing bd.otf" id="6_7j3i2"]
+[ext_resource type="AudioStream" uid="uid://jyan3mbr33yu" path="res://Audio/Gittings Intro.mp3" id="6_audio"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_panel"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_panel"]
+render_priority = -5
+shader = ExtResource("2_shader")
+shader_parameter/texture_albedo = ExtResource("3_albedo")
+shader_parameter/noise_texture = ExtResource("4_noise")
+shader_parameter/progress = 0.0
+shader_parameter/edge_softness = 0.00999999977648
+shader_parameter/noise_scale = Vector2(5, 5)
+shader_parameter/noise_erosion = 0.6
+shader_parameter/rect_border_margin = 0.010000000475
+shader_parameter/rect_border_feather = 0.00999999977648
+shader_parameter/border_noise_influence = 0.1
+shader_parameter/ambient_highlight = Color(0.043222196, 0.16443488, 0.254227, 1)
+shader_parameter/ambient_shadow = Color(0.010787612, 0.049054876, 0.12859333, 1)
+
+[node name="ComicPanel" type="MeshInstance3D"]
+transform = Transform3D(3.523296, 0, 0, 0, 2.067086, 0, 0, 0, 1, 0, 0.1, -1.915)
+mesh = SubResource("QuadMesh_panel")
+surface_material_override/0 = SubResource("ShaderMaterial_panel")
+script = ExtResource("1_comic_panel")
+panel_audio = ExtResource("6_audio")
+
+[node name="LocalizedLabel" type="Label3D" parent="."]
+transform = Transform3D(0.28382513, 0, 0, 0, 0.4837728, 0, 0, 0, 1, 0, -0.4, 0.543)
+pixel_size = 0.0015
+font = ExtResource("6_7j3i2")
+font_size = 36
+outline_size = 8
+vertical_alignment = 0
+autowrap_mode = 3
+width = 640.0
+script = ExtResource("5_label")
+
+[node name="PanelAudio" type="AudioStreamPlayer3D" parent="."]
+volume_db = 10.0
+bus = &"Voice"

@@ -1,0 +1,89 @@
+[gd_scene load_steps=16 format=3 uid="uid://vimdnxpr2d74"]
+
+[ext_resource type="Script" uid="uid://b2ftslgg1friq" path="res://Scripts/Environment/WreckChunkClimbable.gd" id="1_usu6i"]
+[ext_resource type="Resource" uid="uid://0b1h8ptf6p74" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/Atlantis/Atlantis_0_0_0.tres" id="2_3hfqk"]
+[ext_resource type="Resource" uid="uid://cnmmljee7og1j" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/Atlantis/Atlantis_0_1_0.tres" id="3_krtyu"]
+[ext_resource type="Resource" uid="uid://hjttcws1ckut" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/Atlantis/Atlantis_1_0_0.tres" id="3_y6pby"]
+[ext_resource type="Resource" uid="uid://ch30tfbpyrd8q" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/Atlantis/Atlantis_2_0_0.tres" id="4_24g0s"]
+[ext_resource type="Resource" uid="uid://7t4bbq37owkv" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/Atlantis/Atlantis_1_0_1.tres" id="5_1kbo1"]
+[ext_resource type="Resource" uid="uid://ds50kynuj7iqv" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/Atlantis/Atlantis_1_1_0.tres" id="6_p4dtk"]
+[ext_resource type="Resource" uid="uid://bwvxug0uq1gdn" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/Atlantis/Atlantis_1_1_1.tres" id="7_ycnr8"]
+[ext_resource type="Resource" uid="uid://0slkrawq14du" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/Atlantis/Atlantis_2_1_0.tres" id="9_6227p"]
+[ext_resource type="Resource" uid="uid://05m82cpo6iek" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/Atlantis/Atlantis_3_0_0.tres" id="10_fv55b"]
+[ext_resource type="Resource" uid="uid://difboxvj73sxi" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/Atlantis/Atlantis_3_1_0.tres" id="11_7xd3e"]
+[ext_resource type="Resource" uid="uid://vp8hy1c5bbxd" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/Atlantis/Atlantis_4_0_0.tres" id="12_3501j"]
+[ext_resource type="Resource" uid="uid://c2ia5cip7medr" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/Atlantis/Atlantis_4_1_0.tres" id="13_52mq8"]
+[ext_resource type="Resource" uid="uid://88d5qrtcfqx0" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/Atlantis/Atlantis_5_0_0.tres" id="14_ia2l5"]
+[ext_resource type="Resource" uid="uid://cehe5a425tmji" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/Atlantis/Atlantis_5_1_0.tres" id="15_0cw2w"]
+
+[node name="AtlantisAssembled" type="Node3D"]
+
+[node name="Chunk_0_0_0" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.827705, 2.464296, 4.2175293)
+script = ExtResource("1_usu6i")
+spotlight_target = ExtResource("2_3hfqk")
+
+[node name="Chunk_0_1_0" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.827705, 2.464296, -3.7824707)
+script = ExtResource("1_usu6i")
+spotlight_target = ExtResource("3_krtyu")
+
+[node name="Chunk_1_0_0" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.827705, 2.464296, 4.2175293)
+script = ExtResource("1_usu6i")
+spotlight_target = ExtResource("3_y6pby")
+
+[node name="Chunk_1_0_1" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.827705, 10.464296, 4.2175293)
+script = ExtResource("1_usu6i")
+spotlight_target = ExtResource("5_1kbo1")
+
+[node name="Chunk_1_1_0" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.827705, 2.464296, -3.7824707)
+script = ExtResource("1_usu6i")
+spotlight_target = ExtResource("6_p4dtk")
+
+[node name="Chunk_1_1_1" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.827705, 10.464296, -3.7824707)
+script = ExtResource("1_usu6i")
+spotlight_target = ExtResource("7_ycnr8")
+
+[node name="Chunk_2_0_0" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8277054, 2.464296, 4.2175293)
+script = ExtResource("1_usu6i")
+spotlight_target = ExtResource("4_24g0s")
+
+[node name="Chunk_2_1_0" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8277054, 2.464296, -3.7824707)
+script = ExtResource("1_usu6i")
+spotlight_target = ExtResource("9_6227p")
+
+[node name="Chunk_3_0_0" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.1722946, 2.464296, 4.2175293)
+script = ExtResource("1_usu6i")
+spotlight_target = ExtResource("10_fv55b")
+
+[node name="Chunk_3_1_0" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.1722946, 2.464296, -3.7824707)
+script = ExtResource("1_usu6i")
+spotlight_target = ExtResource("11_7xd3e")
+
+[node name="Chunk_4_0_0" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.172295, 2.464296, 4.2175293)
+script = ExtResource("1_usu6i")
+spotlight_target = ExtResource("12_3501j")
+
+[node name="Chunk_4_1_0" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.172295, 2.464296, -3.7824707)
+script = ExtResource("1_usu6i")
+spotlight_target = ExtResource("13_52mq8")
+
+[node name="Chunk_5_0_0" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.172295, 2.464296, 4.2175293)
+script = ExtResource("1_usu6i")
+spotlight_target = ExtResource("14_ia2l5")
+
+[node name="Chunk_5_1_0" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.172295, 2.464296, -3.7824707)
+script = ExtResource("1_usu6i")
+spotlight_target = ExtResource("15_0cw2w")

@@ -1,0 +1,59 @@
+[gd_scene load_steps=11 format=3 uid="uid://coikni2a6lomo"]
+
+[ext_resource type="Script" uid="uid://b2ftslgg1friq" path="res://Scripts/Environment/WreckChunkClimbable.gd" id="1_xej78"]
+[ext_resource type="Resource" uid="uid://bira733k3ikf3" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/BigDawg_0_0_0.tres" id="2_f7brl"]
+[ext_resource type="Resource" uid="uid://cr54sebgast1h" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/BigDawg_0_1_0.tres" id="3_oltcr"]
+[ext_resource type="Resource" uid="uid://7884alowkc6i" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/BigDawg_0_2_0.tres" id="4_mr2wt"]
+[ext_resource type="Resource" uid="uid://bfo6rqlqqymui" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/BigDawg_0_3_0.tres" id="5_7cpxg"]
+[ext_resource type="Resource" uid="uid://bwcg7o32yn7io" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/BigDawg_1_0_0.tres" id="6_0m6v3"]
+[ext_resource type="Resource" uid="uid://crcy8fgry0nge" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/BigDawg_1_1_0.tres" id="7_joe87"]
+[ext_resource type="Resource" uid="uid://yw015dd63vp2" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/BigDawg_1_2_0.tres" id="8_fasu5"]
+[ext_resource type="Resource" uid="uid://c6dy4yiqh52ru" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/BigDawg_1_2_1.tres" id="9_eialf"]
+[ext_resource type="Resource" uid="uid://bvqtw4r3atgqw" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/BigDawg_1_3_0.tres" id="10_1he5p"]
+
+[node name="BigDawgAssembled" type="Node3D"]
+
+[node name="Chunk_0_0_0" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1785088, -2.0926723, 17.588123)
+script = ExtResource("1_xej78")
+spotlight_target = ExtResource("2_f7brl")
+
+[node name="Chunk_0_1_0" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1785088, -2.0926723, 5.5881233)
+script = ExtResource("1_xej78")
+spotlight_target = ExtResource("3_oltcr")
+
+[node name="Chunk_0_2_0" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1785088, -2.0926723, -6.4118767)
+script = ExtResource("1_xej78")
+spotlight_target = ExtResource("4_mr2wt")
+
+[node name="Chunk_0_3_0" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1785088, -2.0926723, -18.411877)
+script = ExtResource("1_xej78")
+spotlight_target = ExtResource("5_7cpxg")
+
+[node name="Chunk_1_0_0" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.8214912, -2.0926723, 17.588123)
+script = ExtResource("1_xej78")
+spotlight_target = ExtResource("6_0m6v3")
+
+[node name="Chunk_1_1_0" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.8214912, -2.0926723, 5.5881233)
+script = ExtResource("1_xej78")
+spotlight_target = ExtResource("7_joe87")
+
+[node name="Chunk_1_2_0" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.8214912, -2.0926723, -6.4118767)
+script = ExtResource("1_xej78")
+spotlight_target = ExtResource("8_fasu5")
+
+[node name="Chunk_1_2_1" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.8214912, 9.907328, -6.4118767)
+script = ExtResource("1_xej78")
+spotlight_target = ExtResource("9_eialf")
+
+[node name="Chunk_1_3_0" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.8214912, -2.0926723, -18.411877)
+script = ExtResource("1_xej78")
+spotlight_target = ExtResource("10_1he5p")

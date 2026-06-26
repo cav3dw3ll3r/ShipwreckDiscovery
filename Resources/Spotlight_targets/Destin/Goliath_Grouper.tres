@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Spotlight_Target" load_steps=2 format=3 uid="uid://caac0exa4m4yb"]
+
+[ext_resource type="Script" uid="uid://chqco8e3en53v" path="res://Scripts/Environment/spotlight_target.gd" id="1_yob10"]
+
+[resource]
+script = ExtResource("1_yob10")
+metadata/_custom_type_script = "uid://chqco8e3en53v"

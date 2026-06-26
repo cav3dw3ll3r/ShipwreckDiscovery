@@ -1,0 +1,165 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=28 format=3 uid="uid://dtd5wos00tbq4"]
+
+[ext_resource type="Script" uid="uid://bv3ae25s64aui" path="res://Scripts/LevelData.gd" id="1_5k0eq"]
+[ext_resource type="Script" uid="uid://ch2b5lo3gpgif" path="res://Scripts/Environment/CoralSim/coral_data.gd" id="1_sidb5"]
+[ext_resource type="Script" uid="uid://cdid0n7vhhcq" path="res://Scripts/Environment/CoralSim/coral_stage_data.gd" id="2_e4jlc"]
+
+[sub_resource type="Resource" id="Resource_khsiq"]
+script = ExtResource("2_e4jlc")
+local_position = Vector3(0.019011408, 0.15740573, -0.05356759)
+scale_seed = 0.2
+
+[sub_resource type="Resource" id="Resource_3yr1e"]
+script = ExtResource("2_e4jlc")
+local_position = Vector3(0, 0.3815822, 0.026563717)
+scale_seed = 0.5
+
+[sub_resource type="Resource" id="Resource_cpcxk"]
+script = ExtResource("2_e4jlc")
+local_position = Vector3(0, 0.65479434, 0)
+scale_seed = 0.8
+
+[sub_resource type="Resource" id="Resource_jlloh"]
+script = ExtResource("1_sidb5")
+global_position = Vector3(-3.6147885, -47.25739, -3.3982353)
+baby_stage = SubResource("Resource_khsiq")
+growing_stage = SubResource("Resource_3yr1e")
+pristine_stage = SubResource("Resource_cpcxk")
+biomass = 100.0
+resilience = 1.0
+type = 1
+
+[sub_resource type="Resource" id="Resource_o6rji"]
+script = ExtResource("2_e4jlc")
+local_position = Vector3(0.019011408, 0.15740573, -0.05356759)
+scale_seed = 0.2
+
+[sub_resource type="Resource" id="Resource_im6yc"]
+script = ExtResource("2_e4jlc")
+local_position = Vector3(0, 0.3815822, 0.026563717)
+scale_seed = 0.5
+
+[sub_resource type="Resource" id="Resource_rjgp3"]
+script = ExtResource("2_e4jlc")
+local_position = Vector3(0, 0.65479434, 0)
+scale_seed = 0.8
+
+[sub_resource type="Resource" id="Resource_2c340"]
+script = ExtResource("1_sidb5")
+global_position = Vector3(-1.4446055, -47.25739, -3.0255451)
+baby_stage = SubResource("Resource_o6rji")
+growing_stage = SubResource("Resource_im6yc")
+pristine_stage = SubResource("Resource_rjgp3")
+biomass = 100.0
+resilience = 1.0
+type = 1
+
+[sub_resource type="Resource" id="Resource_hvfcw"]
+script = ExtResource("2_e4jlc")
+local_position = Vector3(0.019011408, 0.15740573, -0.05356759)
+scale_seed = 0.2
+
+[sub_resource type="Resource" id="Resource_8s7es"]
+script = ExtResource("2_e4jlc")
+local_position = Vector3(0, 0.3815822, 0.026563717)
+scale_seed = 0.5
+
+[sub_resource type="Resource" id="Resource_5ytlj"]
+script = ExtResource("2_e4jlc")
+local_position = Vector3(0, 0.65479434, 0)
+scale_seed = 0.8
+
+[sub_resource type="Resource" id="Resource_ceh1f"]
+script = ExtResource("1_sidb5")
+global_position = Vector3(-1.8765845, -47.25739, -5.622281)
+baby_stage = SubResource("Resource_hvfcw")
+growing_stage = SubResource("Resource_8s7es")
+pristine_stage = SubResource("Resource_5ytlj")
+biomass = 100.0
+resilience = 1.0
+type = 1
+
+[sub_resource type="Resource" id="Resource_d5yer"]
+script = ExtResource("2_e4jlc")
+local_position = Vector3(0.019011408, 0.15740573, -0.05356759)
+scale_seed = 0.2
+
+[sub_resource type="Resource" id="Resource_l7po6"]
+script = ExtResource("2_e4jlc")
+local_position = Vector3(0, 0.3815822, 0.026563717)
+scale_seed = 0.5
+
+[sub_resource type="Resource" id="Resource_rdlee"]
+script = ExtResource("2_e4jlc")
+local_position = Vector3(0, 0.65479434, 0)
+scale_seed = 0.8
+
+[sub_resource type="Resource" id="Resource_kqudt"]
+script = ExtResource("1_sidb5")
+global_position = Vector3(2.472172, -47.25739, -8.464019)
+baby_stage = SubResource("Resource_d5yer")
+growing_stage = SubResource("Resource_l7po6")
+pristine_stage = SubResource("Resource_rdlee")
+biomass = 100.0
+resilience = 1.0
+type = 1
+
+[sub_resource type="Resource" id="Resource_4ga0v"]
+script = ExtResource("2_e4jlc")
+local_position = Vector3(0.019011408, 0.15740573, -0.05356759)
+scale_seed = 0.2
+
+[sub_resource type="Resource" id="Resource_8cxxf"]
+script = ExtResource("2_e4jlc")
+local_position = Vector3(0, 0.3815822, 0.026563717)
+scale_seed = 0.5
+
+[sub_resource type="Resource" id="Resource_l4edm"]
+script = ExtResource("2_e4jlc")
+local_position = Vector3(0, 0.65479434, 0)
+scale_seed = 0.8
+
+[sub_resource type="Resource" id="Resource_a2euv"]
+script = ExtResource("1_sidb5")
+global_position = Vector3(-0.7111558, -47.25739, -8.638234)
+baby_stage = SubResource("Resource_4ga0v")
+growing_stage = SubResource("Resource_8cxxf")
+pristine_stage = SubResource("Resource_l4edm")
+biomass = 100.0
+resilience = 1.0
+type = 1
+
+[sub_resource type="Resource" id="Resource_2caal"]
+script = ExtResource("2_e4jlc")
+local_position = Vector3(0.019011408, 0.15740573, -0.05356759)
+scale_seed = 0.2
+
+[sub_resource type="Resource" id="Resource_pum44"]
+script = ExtResource("2_e4jlc")
+local_position = Vector3(0, 0.3815822, 0.026563717)
+scale_seed = 0.5
+
+[sub_resource type="Resource" id="Resource_0hrqk"]
+script = ExtResource("2_e4jlc")
+local_position = Vector3(0, 0.65479434, 0)
+scale_seed = 0.8
+
+[sub_resource type="Resource" id="Resource_nmp2k"]
+script = ExtResource("1_sidb5")
+global_position = Vector3(0.7491716, -47.25739, -2.452462)
+baby_stage = SubResource("Resource_2caal")
+growing_stage = SubResource("Resource_pum44")
+pristine_stage = SubResource("Resource_0hrqk")
+biomass = 100.0
+resilience = 1.0
+type = 1
+
+[resource]
+script = ExtResource("1_5k0eq")
+scene_path = "res://Scenes/Optimized_Levels/miss_joann.tscn"
+nameID = "MissJoanneName"
+groupID = "DestinGroup"
+descriptionID = "MissJoannDescription"
+stringTable = "res://Resources/StringTables/CoreLevelStrings.tsv"
+initial_fish_biomass = 600.0
+initial_corals = Array[ExtResource("1_sidb5")]([SubResource("Resource_jlloh"), SubResource("Resource_2c340"), SubResource("Resource_ceh1f"), SubResource("Resource_kqudt"), SubResource("Resource_a2euv"), SubResource("Resource_nmp2k")])

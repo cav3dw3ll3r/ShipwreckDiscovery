@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://otw20khbl1g2"]
+
+[ext_resource type="Script" uid="uid://bvbqsj3fnp45g" path="res://Scripts/UI/Watch/menu_cursor.gd" id="1_3bub2"]
+[ext_resource type="Texture2D" uid="uid://26negf5btbrh" path="res://Images/SimpleCursor.png" id="2_8wetk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1a3dt"]
+render_priority = 10
+transparency = 2
+alpha_scissor_threshold = 0.2
+alpha_antialiasing_mode = 0
+blend_mode = 1
+albedo_texture = ExtResource("2_8wetk")
+
+[sub_resource type="QuadMesh" id="QuadMesh_wwr2c"]
+material = SubResource("StandardMaterial3D_1a3dt")
+size = Vector2(0.003, 0.002)
+
+[node name="MenuCursor" type="Node3D"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+script = ExtResource("1_3bub2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.001)
+mesh = SubResource("QuadMesh_wwr2c")

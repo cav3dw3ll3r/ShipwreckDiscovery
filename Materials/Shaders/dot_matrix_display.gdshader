@@ -1,0 +1,82 @@
+shader_type spatial;
+render_mode blend_mix, unshaded, depth_draw_always, cull_disabled;
+
+const int GRID = 8;
+
+uniform uint mask_upper = 0u;
+uniform uint mask_lower = 0u;
+
+uniform vec3 dot_color : source_color = vec3(1.0);
+uniform vec3 bg_color : source_color = vec3(0.12, 0.12, 0.14);
+uniform float dot_radius : hint_range(0.1, 0.5) = 0.38;
+uniform float glow_strength : hint_range(0.0, 2.0) = 0.55;
+uniform float glow_spread : hint_range(0.1, 1.5) = 0.65;
+uniform float brightness : hint_range(0.0, 2.0) = 1.0;
+uniform float panel_vignette : hint_range(0.0, 1.0) = 0.35;
+
+bool dot_is_on(int cell_index) {
+	uint bit = uint(cell_index & 31);
+	if (cell_index < 32) {
+		return (mask_upper & (1u << bit)) != 0u;
+	}
+	return (mask_lower & (1u << bit)) != 0u;
+}
+
+float dot_core(float dist, bool on) {
+	if (!on) {
+		return 0.0;
+	}
+	float edge = dot_radius;
+	return 1.0 - smoothstep(edge - 0.04, edge, dist);
+}
+
+float neighbor_glow(vec2 uv, ivec2 origin_cell) {
+	float glow = 0.0;
+	float spread_sq = glow_spread * glow_spread;
+
+	for (int dy = -2; dy <= 2; dy++) {
+		for (int dx = -2; dx <= 2; dx++) {
+			ivec2 cell = origin_cell + ivec2(dx, dy);
+			if (cell.x < 0 || cell.x >= GRID || cell.y < 0 || cell.y >= GRID) {
+				continue;
+			}
+
+			int cell_index = cell.y * GRID + cell.x;
+			if (!dot_is_on(cell_index)) {
+				continue;
+			}
+
+			vec2 cell_center = (vec2(cell) + 0.5) / float(GRID);
+			float dist = length((uv - cell_center) * float(GRID));
+			glow += exp(-(dist * dist) / (2.0 * spread_sq));
+		}
+	}
+
+	return glow;
+}
+
+void fragment() {
+	vec2 grid_uv = UV * float(GRID);
+	ivec2 cell = ivec2(clamp(floor(grid_uv), vec2(0.0), vec2(float(GRID - 1))));
+
+	vec2 cell_center = (vec2(cell) + 0.5) / float(GRID);
+	float dist = length((UV - cell_center) * float(GRID));
+
+	int cell_index = cell.y * GRID + cell.x;
+	bool on = dot_is_on(cell_index);
+
+	float core = dot_core(dist, on);
+	float glow = neighbor_glow(UV, cell) * glow_strength;
+
+	vec3 color = bg_color;
+	color = mix(color, dot_color, core);
+	color += dot_color * glow * (1.0 - core * 0.35);
+
+	vec2 edge_dist = min(UV, vec2(1.0) - UV);
+	float vignette = smoothstep(0.0, 0.12, min(edge_dist.x, edge_dist.y));
+	color *= mix(1.0 - panel_vignette, 1.0, vignette);
+	color *= brightness;
+
+	ALBEDO = color;
+	EMISSION = color * (core + glow * 0.5);
+}

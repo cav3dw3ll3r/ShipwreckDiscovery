@@ -1,0 +1,147 @@
+[gd_resource type="Resource" script_class="Spotlight_Target" load_steps=19 format=4 uid="uid://lmt24kyy3amd"]
+
+[ext_resource type="Material" uid="uid://b2hhif50b3uv1" path="res://Materials/Wrecks/MonicaLee_chunks.tres" id="1_aaoai"]
+[ext_resource type="Texture2D" uid="uid://dl1tngcdun2b8" path="res://Meshes/wrecks/Blender_Dump/Monica Lee Low Poly_FAR_ML_Color.png" id="2_i68ha"]
+[ext_resource type="Texture2D" uid="uid://cpaflqehg4p5w" path="res://Meshes/wrecks/Blender_Dump/Monica Lee Low Poly_FAR_ML_Normal.png" id="3_c121x"]
+[ext_resource type="Texture2D" uid="uid://sewqyh06c0uo" path="res://Meshes/wrecks/Blender_Dump/Monica Lee Low Poly_MID_ML_Color.png" id="4_w2pa2"]
+[ext_resource type="Texture2D" uid="uid://de0hxvbrd1f1j" path="res://Meshes/wrecks/Blender_Dump/Monica Lee Low Poly_MID_ML_Normal.png" id="5_8fvj5"]
+[ext_resource type="Texture2D" uid="uid://d382joc3h5p22" path="res://Meshes/wrecks/Blender_Dump/Monica Lee Low Poly_NEAR_ML_Color.png" id="6_5enyo"]
+[ext_resource type="Texture2D" uid="uid://bq53w8y1pvcoy" path="res://Meshes/wrecks/Blender_Dump/Monica Lee Low Poly_NEAR_ML_Normal.png" id="7_ewr1o"]
+[ext_resource type="Script" uid="uid://chqco8e3en53v" path="res://Scripts/Environment/spotlight_target.gd" id="8_k7ifs"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g2l5u"]
+resource_name = "MLBaked"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("2_i68ha")
+metallic = 1.0
+normal_enabled = true
+normal_texture = ExtResource("3_c121x")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_85f0d"]
+_surfaces = [{
+"aabb": AABB(-2, 1.5407538, 1.912009, 0.051100016, 0.010809183, 0.087991),
+"format": 34896613377,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAwAAAAQABAAAAAUA"),
+"name": "MLBaked",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray("ZAUL5IHvAABziRjTDHAAAP//AADimAAAAAD//wAAAAAAADG0//8AAIsLWLz//wAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ii4m4"]
+resource_name = "Monica Lee Low Poly_FAR_Cube_215"
+_surfaces = [{
+"aabb": AABB(-2, 1.5407538, 1.912009, 0.051100016, 0.010809183, 0.087991),
+"attribute_data": PackedByteArray("/////04r8WT/////myuDZP/////XK6xk/////1krGWT/////SysAZf////9RKwBl"),
+"format": 34896613407,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAwAAAAQABAAAAAUA"),
+"material": SubResource("StandardMaterial3D_g2l5u"),
+"name": "MLBaked",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray("ZAUL5IHvzMJziRjTDHCesf//AADimOi/AAD//wAAALQAADG0//9xv4sLWLz//92/bf0+fkPgymyB2QJqwe5Qclf8AXb6+rp2")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_85f0d")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5wkbp"]
+resource_name = "MLBaked"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("4_w2pa2")
+metallic = 1.0
+normal_enabled = true
+normal_texture = ExtResource("5_8fvj5")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_78hrd"]
+_surfaces = [{
+"aabb": AABB(-2, 1.5407538, 1.912009, 0.051100016, 0.010809183, 0.087991),
+"format": 34896613377,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAwAAAAQABAAAAAUA"),
+"name": "MLBaked",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray("ZAUL5IHvAABziRjTDHAAAP//AADimAAAAAD//wAAAAAAADG0//8AAIsLWLz//wAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_4b4ss"]
+resource_name = "Monica Lee Low Poly_MID_Cube_214"
+_surfaces = [{
+"aabb": AABB(-2, 1.5407538, 1.912009, 0.051100016, 0.010809183, 0.087991),
+"attribute_data": PackedByteArray("/////04r8WT/////myuDZP/////XK6xk/////1krGWT/////SysAZf////9RKwBl"),
+"format": 34896613407,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAwAAAAQABAAAAAUA"),
+"material": SubResource("StandardMaterial3D_5wkbp"),
+"name": "MLBaked",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray("ZAUL5IHvzMJziRjTDHCesf//AADimOi/AAD//wAAALQAADG0//9xv4sLWLz//92/bf0+fkPgymyB2QJqwe5Qclf8AXb6+rp2")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_78hrd")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7f5tf"]
+resource_name = "MLBaked"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("6_5enyo")
+metallic = 1.0
+normal_enabled = true
+normal_texture = ExtResource("7_ewr1o")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_uboaw"]
+_surfaces = [{
+"aabb": AABB(-2, 1.5407538, 1.912009, 0.051100016, 0.010809183, 0.087991),
+"format": 34896613377,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAwAAAAQABAAAAAUA"),
+"name": "MLBaked",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray("ZAUL5IHvAABziRjTDHAAAP//AADimAAAAAD//wAAAAAAADG0//8AAIsLWLz//wAA")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_benqs"]
+resource_name = "Monica Lee Low Poly_NEAR_Cube_212"
+_surfaces = [{
+"aabb": AABB(-2, 1.5407538, 1.912009, 0.051100016, 0.010809183, 0.087991),
+"attribute_data": PackedByteArray("/////04r8WT/////myuDZP/////XK6xk/////1krGWT/////SysAZf////9RKwBl"),
+"format": 34896613407,
+"index_count": 12,
+"index_data": PackedByteArray("AAABAAIAAAADAAEAAwAAAAQABAAAAAUA"),
+"material": SubResource("StandardMaterial3D_7f5tf"),
+"name": "MLBaked",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 6,
+"vertex_data": PackedByteArray("ZAUL5IHvzMJziRjTDHCesf//AADimOi/AAD//wAAALQAADG0//9xv4sLWLz//92/bf0+fkPgymyB2QJqwe5Qclf8AXb6+rp2")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_uboaw")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_sbq1b"]
+data = PackedVector3Array(-1.9989235, 1.5503829, 1.9943314, -1.972563, 1.5496671, 1.9505224, -1.9489, 1.5407538, 1.9645581, -2, 1.5483623, 2, -1.9989235, 1.5503829, 1.9943314, -1.9976956, 1.5487065, 2, -1.9989235, 1.5503829, 1.9943314, -2, 1.551563, 1.912009, -1.972563, 1.5496671, 1.9505224, -2, 1.551563, 1.912009, -1.9989235, 1.5503829, 1.9943314, -2, 1.5483623, 2)
+
+[resource]
+script = ExtResource("8_k7ifs")
+near_mesh = SubResource("ArrayMesh_benqs")
+mid_mesh = SubResource("ArrayMesh_4b4ss")
+far_mesh = SubResource("ArrayMesh_ii4m4")
+near_material = ExtResource("1_aaoai")
+mid_material = ExtResource("1_aaoai")
+far_material = ExtResource("1_aaoai")
+shared_material = SubResource("StandardMaterial3D_7f5tf")
+shape = SubResource("ConcavePolygonShape3D_sbq1b")

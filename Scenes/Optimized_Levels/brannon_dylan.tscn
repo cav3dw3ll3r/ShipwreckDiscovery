@@ -1,0 +1,148 @@
+[gd_scene load_steps=21 format=3 uid="uid://cgcembhbomibj"]
+
+[ext_resource type="PackedScene" uid="uid://c6f3dad8if5ah" path="res://Scenes/Optimized_Base.tscn" id="1_x5whp"]
+[ext_resource type="Material" uid="uid://b4sv6oiixi1bf" path="res://Materials/WeatherLiteSky.tres" id="2_g7f6j"]
+[ext_resource type="Script" uid="uid://bhtl3fsoxkt6i" path="res://addons/zylann.hterrain/hterrain.gd" id="4_v40i3"]
+[ext_resource type="Resource" uid="uid://cbnsw0dq2ag31" path="res://Data/BrannonDylan/data.hterrain" id="5_0a3yr"]
+[ext_resource type="Script" uid="uid://dhbqdkeqi4js5" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="6_ngbeo"]
+[ext_resource type="Texture2D" uid="uid://d3eev8ee5js34" path="res://Images/MeshTextures/SampleLevel_slot0_albedo_bump.png" id="7_f6h7s"]
+[ext_resource type="Texture2D" uid="uid://dhsosa2w6bj37" path="res://Images/MeshTextures/SampleLevel_slot1_albedo_bump.png" id="8_7laf2"]
+[ext_resource type="Texture2D" uid="uid://bji88yn5efr5u" path="res://Images/MeshTextures/SampleLevel_slot2_albedo_bump.png" id="9_nocga"]
+[ext_resource type="Texture2D" uid="uid://cwrnjugec7eft" path="res://Images/MeshTextures/SampleLevel_slot3_albedo_bump.png" id="10_p7wu7"]
+[ext_resource type="Texture2D" uid="uid://dfvxkia3rbmjb" path="res://Images/MeshTextures/SampleLevel_slot0_normal_roughness.png" id="11_fux8i"]
+[ext_resource type="Texture2D" uid="uid://di36dydi7ct2y" path="res://Images/MeshTextures/SampleLevel_slot1_normal_roughness.png" id="12_jlb7t"]
+[ext_resource type="Texture2D" uid="uid://b1o6sjmgopbd6" path="res://Images/MeshTextures/SampleLevel_slot2_normal_roughness.png" id="13_ej4qr"]
+[ext_resource type="Texture2D" uid="uid://cdmbbfrqr22bg" path="res://Images/MeshTextures/SampleLevel_slot3_normal_roughness.png" id="14_7hjk3"]
+[ext_resource type="PackedScene" uid="uid://bthr0lcbcm7rq" path="res://Prefabs/Wrecks/BrannonDylan/BrannonDylan_in_game.tscn" id="14_v40i3"]
+[ext_resource type="PackedScene" uid="uid://dym04x4644j7" path="res://Meshes/Fish/Destin/Lionfish/lionfish_proxy.tscn" id="17_0a3yr"]
+[ext_resource type="PackedScene" uid="uid://bm6hkvns2oiay" path="res://Meshes/Fish/Destin/Goliath_Grouper/goliath_grouper_proxy.tscn" id="17_ngbeo"]
+[ext_resource type="PackedScene" uid="uid://cq2gjgu0bv1l2" path="res://Prefabs/Fish/Multi_Fish/Destin/french_angelfish.tscn" id="17_v40i3"]
+
+[sub_resource type="Sky" id="Sky_cnap7"]
+sky_material = ExtResource("2_g7f6j")
+
+[sub_resource type="Environment" id="Environment_1f4m6"]
+resource_local_to_scene = true
+background_mode = 2
+background_color = Color(0.10766078, 0.69426095, 0.8591009, 1)
+sky = SubResource("Sky_cnap7")
+ambient_light_source = 2
+ambient_light_color = Color(0.556953, 0.556953, 0.556953, 1)
+reflected_light_source = 1
+
+[sub_resource type="Resource" id="Resource_5dat1"]
+script = ExtResource("6_ngbeo")
+mode = 0
+textures = [[ExtResource("7_f6h7s"), ExtResource("8_7laf2"), ExtResource("9_nocga"), ExtResource("10_p7wu7")], [ExtResource("11_fux8i"), ExtResource("12_jlb7t"), ExtResource("13_ej4qr"), ExtResource("14_7hjk3")]]
+
+[node name="BrannonDylan" instance=ExtResource("1_x5whp")]
+
+[node name="WorldEnvironment" parent="Environment" index="0"]
+environment = SubResource("Environment_1f4m6")
+
+[node name="SeaFloor" parent="Environment" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -69.648, 0)
+
+[node name="HTerrain" type="Node3D" parent="Environment/SeaFloor" index="0"]
+script = ExtResource("4_v40i3")
+map_scale = Vector3(5, 1, 5)
+centered = true
+_terrain_data = ExtResource("5_0a3yr")
+chunk_size = 16
+collision_enabled = true
+collision_layer = 1
+collision_mask = 1
+shader_type = "Classic4Lite"
+custom_shader = null
+custom_globalmap_shader = null
+texture_set = SubResource("Resource_5dat1")
+render_layers = 1
+cast_shadow = 1
+shader_params/u_ground_uv_scale = 18.0
+shader_params/u_depth_blending = true
+shader_params/u_triplanar = true
+shader_params/u_tile_reduction = Vector4(1, 1, 1, 1)
+
+[node name="BrannonDylanAssembled2" parent="Environment/SeaFloor" index="1" instance=ExtResource("14_v40i3")]
+transform = Transform3D(-0.48706502, 0, 0.11299412, 0, 0.5, 0, -0.11299412, 0, -0.48706502, 0, 19.915, 0)
+
+[node name="Goliath_grouper" parent="Aquarium" index="4"]
+scale_min = 0.4
+scale_max = 0.7
+
+[node name="Goliath_Grouper_Proxy" parent="Aquarium/Goliath_grouper" index="0" instance=ExtResource("17_ngbeo")]
+transform = Transform3D(-0.7776729, 0, 0.62866914, 0, 1, 0, -0.62866914, 0, -0.7776729, -2.2214797, -43.78709, -1.7958395)
+
+[node name="Goliath_Grouper_Proxy2" parent="Aquarium/Goliath_grouper" index="1" instance=ExtResource("17_ngbeo")]
+transform = Transform3D(-0.7776729, 0, 0.62866914, 0, 1, 0, -0.62866914, 0, -0.7776729, -1.0310019, -44.496197, -0.83345985)
+
+[node name="LionfishProxy" parent="Aquarium/Lionfish" index="0" instance=ExtResource("17_0a3yr")]
+transform = Transform3D(-0.767771, 0, -0.6407243, 0, 1, 0, 0.6407243, 0, -0.767771, -9.778818, -44.38308, 15.785168)
+
+[node name="@Marker3D@221282" parent="Aquarium/Lionfish" index="1" instance=ExtResource("17_0a3yr")]
+transform = Transform3D(-0.97450584, 0, 0.2243621, 0, 1, 0, -0.2243621, 0, -0.97450584, -0.4271618, -45.485306, 4.8848906)
+
+[node name="@Marker3D@221283" parent="Aquarium/Lionfish" index="2" instance=ExtResource("17_0a3yr")]
+transform = Transform3D(-0.45385876, 0, -0.89107364, 0, 1, 0, 0.89107364, 0, -0.45385876, -0.14754213, -45.849007, 0.7695384)
+
+[node name="@Marker3D@221284" parent="Aquarium/Lionfish" index="3" instance=ExtResource("17_0a3yr")]
+transform = Transform3D(-0.9947638, 0, 0.10220089, 0, 1, 0, -0.10220089, 0, -0.9947638, 5.562346, -45.54622, -1.5196475)
+
+[node name="@Marker3D@221285" parent="Aquarium/Lionfish" index="4" instance=ExtResource("17_0a3yr")]
+transform = Transform3D(0.24720271, 0, -0.9689638, 0, 1, 0, 0.9689638, 0, 0.24720271, -5.5151324, -45.626488, 4.272293)
+
+[node name="@Marker3D@221286" parent="Aquarium/Lionfish" index="5" instance=ExtResource("17_0a3yr")]
+transform = Transform3D(-0.98136604, 0, 0.19214754, 0, 1, 0, -0.19214754, 0, -0.98136604, -4.2227955, -46.981186, 2.8393826)
+
+[node name="@Marker3D@221287" parent="Aquarium/Lionfish" index="6" instance=ExtResource("17_0a3yr")]
+transform = Transform3D(-0.60639256, 0, -0.7951654, 0, 1, 0, 0.7951654, 0, -0.60639256, 4.759249, -45.7865, -3.7745147)
+
+[node name="@Marker3D@221288" parent="Aquarium/Lionfish" index="7" instance=ExtResource("17_0a3yr")]
+transform = Transform3D(0.94969594, 0, 0.31317353, 0, 1, 0, -0.31317353, 0, 0.94969594, -16.6278, -47.57631, 11.424862)
+
+[node name="@Marker3D@221289" parent="Aquarium/Lionfish" index="8" instance=ExtResource("17_0a3yr")]
+transform = Transform3D(-0.155964, 0, 0.98776275, 0, 1, 0, -0.98776275, 0, -0.155964, -13.087103, -46.456512, 12.996613)
+
+[node name="@Marker3D@221290" parent="Aquarium/Lionfish" index="9" instance=ExtResource("17_0a3yr")]
+transform = Transform3D(-0.6140292, 0, 0.7892833, 0, 1, 0, -0.7892833, 0, -0.6140292, 6.8870234, -45.589127, -3.1719031)
+
+[node name="@Marker3D@221291" parent="Aquarium/Lionfish" index="10" instance=ExtResource("17_0a3yr")]
+transform = Transform3D(-0.8823391, 0, -0.4706141, 0, 1, 0, 0.4706141, 0, -0.8823391, 0.07850528, -44.596764, 6.027952)
+
+[node name="@Marker3D@221292" parent="Aquarium/Lionfish" index="11" instance=ExtResource("17_0a3yr")]
+transform = Transform3D(-0.86856765, 0, 0.49557063, 0, 1, 0, -0.49557063, 0, -0.86856765, -17.88742, -47.213837, 11.525194)
+
+[node name="@Marker3D@221293" parent="Aquarium/Lionfish" index="12" instance=ExtResource("17_0a3yr")]
+transform = Transform3D(0.75022507, 0, -0.6611825, 0, 1, 0, 0.6611825, 0, 0.75022507, -6.726491, -46.115852, 15.001647)
+
+[node name="@Marker3D@221294" parent="Aquarium/Lionfish" index="13" instance=ExtResource("17_0a3yr")]
+transform = Transform3D(-0.39771226, 0, 0.9175102, 0, 1, 0, -0.9175102, 0, -0.39771226, 0.8363381, -46.86732, -1.4734123)
+
+[node name="@Marker3D@221295" parent="Aquarium/Lionfish" index="14" instance=ExtResource("17_0a3yr")]
+transform = Transform3D(-0.6019996, 0, -0.7984964, 0, 1, 0, 0.7984964, 0, -0.6019996, 0.9539473, -45.272186, 5.049343)
+
+[node name="@Marker3D@221296" parent="Aquarium/Lionfish" index="15" instance=ExtResource("17_0a3yr")]
+transform = Transform3D(-0.77086437, 0, -0.6369993, 0, 1, 0, 0.6369993, 0, -0.77086437, 1.6834394, -45.601772, 1.1646653)
+
+[node name="@Marker3D@221297" parent="Aquarium/Lionfish" index="16" instance=ExtResource("17_0a3yr")]
+transform = Transform3D(0.91190135, 0, 0.41040945, 0, 1, 0, -0.41040945, 0, 0.91190135, -1.7427783, -46.121758, -3.086426)
+
+[node name="@Marker3D@221298" parent="Aquarium/Lionfish" index="17" instance=ExtResource("17_0a3yr")]
+transform = Transform3D(0.8188454, 0, 0.5740141, 0, 1, 0, -0.5740141, 0, 0.8188454, -8.887795, -47.844376, 9.133901)
+
+[node name="@Marker3D@221299" parent="Aquarium/Lionfish" index="18" instance=ExtResource("17_0a3yr")]
+transform = Transform3D(-0.3316019, 0, -0.9434194, 0, 1, 0, 0.9434194, 0, -0.3316019, -10.545165, -47.445595, 13.469467)
+
+[node name="@Marker3D@221300" parent="Aquarium/Lionfish" index="19" instance=ExtResource("17_0a3yr")]
+transform = Transform3D(-0.9229305, 0, -0.3849667, 0, 1, 0, 0.3849667, 0, -0.9229305, 3.05926, -47.736687, 2.8456461)
+
+[node name="@Marker3D@221301" parent="Aquarium/Lionfish" index="20" instance=ExtResource("17_0a3yr")]
+transform = Transform3D(-0.5395419, 0, 0.84195876, 0, 1, 0, -0.84195876, 0, -0.5395419, -7.190359, -47.27517, 13.98662)
+
+[node name="@Marker3D@221302" parent="Aquarium/Lionfish" index="21" instance=ExtResource("17_0a3yr")]
+transform = Transform3D(0.2132033, 0, -0.97700787, 0, 1, 0, 0.97700787, 0, 0.2132033, -7.347334, -47.251305, 14.032344)
+
+[node name="@Marker3D@221303" parent="Aquarium/Lionfish" index="22" instance=ExtResource("17_0a3yr")]
+transform = Transform3D(-0.99977314, 0, -0.021299094, 0, 1, 0, 0.021299094, 0, -0.99977314, -7.205344, -46.928574, 6.090931)
+
+[node name="French_Angelfish" parent="Aquarium" index="6" instance=ExtResource("17_v40i3")]

@@ -1,0 +1,165 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Shipwreck Discovery"
+config/version="1.0.45"
+run/main_scene="uid://c76gomhdm37gg"
+run/print_header=false
+config/features=PackedStringArray("4.5", "Mobile")
+boot_splash/bg_color=Color(0.0244178, 0.0986949, 0.13241, 1)
+boot_splash/image="uid://bc4rgs4dbacog"
+config/icon="res://Images/ShipwreckDiscoveryLogo.png"
+
+[autoload]
+
+SaveLoad="*res://SaveLoad.tscn"
+SessionManager="*res://Scripts/Environment/CoralSim/session_manager.gd"
+XRToolsUserSettings="*res://addons/godot-xr-tools/user_settings/user_settings.gd"
+XRToolsRumbleManager="*res://addons/godot-xr-tools/rumble/rumble_manager.gd"
+XrSimulator="*res://addons/xr-simulator/XRSimulator.tscn"
+SignalBus="*res://Scripts/Core/SignalBus.gd"
+
+[debug]
+
+settings/stdout/verbose_stdout=true
+
+[debug_draw_3d]
+
+settings/addon_root_folder="res://addons/debug_draw_3d"
+
+[display]
+
+window/frame_pacing/android/enable_frame_pacing=false
+window/vsync/vsync_mode=0
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/asset_manifest_checker/plugin.cfg", "res://addons/godot-xr-tools/plugin.cfg", "res://addons/zylann.hterrain/plugin.cfg")
+
+[file_customization]
+
+folder_colors={
+"res://Scripts/": "gray",
+"res://Scripts/Core/": "red",
+"res://Scripts/EditorScripts/": "purple",
+"res://Scripts/Environment/": "yellow",
+"res://Scripts/Fish/": "green",
+"res://Scripts/Player/": "teal",
+"res://Scripts/UI/": "gray"
+}
+
+[internationalization]
+
+locale/locale_filter_mode=0
+
+[layer_names]
+
+3d_physics/layer_1="Static World"
+3d_physics/layer_2="Dynamic World"
+3d_physics/layer_3="Pickable Objects"
+3d_physics/layer_4="Wall Walking"
+3d_physics/layer_5="Grappling Target"
+3d_physics/layer_6="Damage Events"
+3d_physics/layer_7="Scannables"
+3d_physics/layer_8="AI Blocking"
+3d_physics/layer_9="ZookeeperCapture"
+3d_physics/layer_10="Fingertip"
+3d_physics/layer_16="Wrecks"
+3d_physics/layer_17="Held Objects"
+3d_physics/layer_18="Player Hands"
+3d_physics/layer_19="Grab Handles"
+3d_physics/layer_20="Player Body"
+3d_physics/layer_21="Pointable Objects"
+3d_physics/layer_22="Hand Pose Areas"
+3d_physics/layer_23="UI Objects"
+
+[physics]
+
+common/physics_interpolation=true
+
+[rendering]
+
+occlusion_culling/bvh_build_quality=0
+renderer/rendering_method="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
+lights_and_shadows/directional_shadow/size.mobile=512
+lights_and_shadows/directional_shadow/soft_shadow_filter_quality=0
+reflections/sky_reflections/texture_array_reflections=false
+reflections/specular_occlusion/enabled=false
+global_illumination/gi/use_half_resolution=true
+shading/overrides/force_lambert_over_burley=true
+camera/depth_of_field/depth_of_field_bokeh_shape=0
+environment/ssao/quality=0
+environment/ssao/blur_passes=1
+environment/ssil/quality=0
+environment/ssil/blur_passes=1
+anti_aliasing/screen_space_roughness_limiter/enabled=false
+scaling_3d/fsr_sharpness=2.0
+occlusion_culling/occlusion_rays_per_thread=256
+environment/glow/upscale_mode=0
+environment/screen_space_reflection/roughness_quality=0
+environment/subsurface_scattering/subsurface_scattering_quality=0
+lightmapping/lightmap_gi/use_bicubic_filter=false
+environment/volumetric_fog/use_filter=0
+occlusion_culling/use_occlusion_culling=true
+vrs/mode=2
+
+[shader_globals]
+
+META_ENVIRONMENT_DEPTH_AVAILABLE={
+"type": "bool",
+"value": false
+}
+META_ENVIRONMENT_DEPTH_TEXTURE={
+"type": "sampler2DArray",
+"value": ""
+}
+META_ENVIRONMENT_DEPTH_PROJECTION_VIEW_LEFT={
+"type": "mat4",
+"value": Projection(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+}
+META_ENVIRONMENT_DEPTH_PROJECTION_VIEW_RIGHT={
+"type": "mat4",
+"value": Projection(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+}
+META_ENVIRONMENT_DEPTH_INV_PROJECTION_VIEW_LEFT={
+"type": "mat4",
+"value": Projection(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+}
+META_ENVIRONMENT_DEPTH_INV_PROJECTION_VIEW_RIGHT={
+"type": "mat4",
+"value": Projection(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+}
+META_ENVIRONMENT_DEPTH_FROM_CAMERA_PROJECTION_LEFT={
+"type": "mat4",
+"value": Projection(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+}
+META_ENVIRONMENT_DEPTH_FROM_CAMERA_PROJECTION_RIGHT={
+"type": "mat4",
+"value": Projection(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+}
+META_ENVIRONMENT_DEPTH_TO_CAMERA_PROJECTION_LEFT={
+"type": "mat4",
+"value": Projection(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+}
+META_ENVIRONMENT_DEPTH_TO_CAMERA_PROJECTION_RIGHT={
+"type": "mat4",
+"value": Projection(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
+}
+
+[xr]
+
+openxr/enabled=true
+openxr/foveation_level=3
+openxr/submit_depth_buffer=true
+shaders/enabled=true
+openxr/extensions/meta/color_space/starting_color_space=3

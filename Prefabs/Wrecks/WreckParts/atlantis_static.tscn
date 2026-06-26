@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://croqd4ckj6u72"]
+
+[ext_resource type="Script" uid="uid://dtfsjc31el3qb" path="res://Scripts/Utility/ready_set_die.gd" id="1_5mnip"]
+[ext_resource type="PackedScene" uid="uid://4aim2phv8d6e" path="res://Meshes/wrecks/Blender_Dump/Atlantis_Baked.glb" id="2_5mnip"]
+
+[node name="Static" type="Node3D"]
+script = ExtResource("1_5mnip")
+wait_for_dynamic_placement = true
+
+[node name="Atlantis_Baked2" parent="." instance=ExtResource("2_5mnip")]

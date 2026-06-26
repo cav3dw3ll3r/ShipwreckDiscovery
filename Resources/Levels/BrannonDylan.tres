@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=3 format=3 uid="uid://bgfyxaqdcwdvk"]
+
+[ext_resource type="Script" uid="uid://bv3ae25s64aui" path="res://Scripts/LevelData.gd" id="1_djsd7"]
+[ext_resource type="Script" uid="uid://ch2b5lo3gpgif" path="res://Scripts/Environment/CoralSim/coral_data.gd" id="1_nctlv"]
+
+[resource]
+script = ExtResource("1_djsd7")
+scene_path = "res://Scenes/Optimized_Levels/brannon_dylan.tscn"
+nameID = "BrannonDylanName"
+groupID = "DestinGroup"
+descriptionID = "BrannonDylanDescription"
+stringTable = "res://Resources/StringTables/CoreLevelStrings.tsv"

@@ -1,0 +1,76 @@
+[gd_scene load_steps=6 format=3 uid="uid://p7b5mdfonxbo"]
+
+[ext_resource type="Script" uid="uid://cvalnx44pwigw" path="res://Scripts/UI/Localization/LocalizedLabel.gd" id="1_cuoid"]
+[ext_resource type="Script" uid="uid://cf1fahj2m5cyi" path="res://Scripts/player_menu_control.gd" id="1_i88fd"]
+[ext_resource type="Script" uid="uid://bih8icx0fn3lh" path="res://Scripts/UI/Localization/LocalizedButtonText.gd" id="2_vfgik"]
+[ext_resource type="Script" uid="uid://bg67uljaykta1" path="res://Scripts/UI/wide_scroll_bar.gd" id="4_w1ivp"]
+[ext_resource type="AudioStream" uid="uid://cmpjy53o0rl23" path="res://Audio/zipper-sound-effect-336780.mp3" id="5_w1ivp"]
+
+[node name="PlayerMenu" type="VBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i88fd")
+
+[node name="LocalizedLabel" type="Label" parent="."]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Player Menu"
+script = ExtResource("1_cuoid")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "PlayerMenuHeader"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="LocalizedButton3" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Sandbox"
+script = ExtResource("2_vfgik")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "SandboxMenu"
+metadata/_custom_type_script = "uid://bih8icx0fn3lh"
+
+[node name="LocalizedButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Gloves"
+script = ExtResource("2_vfgik")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "Gloves"
+metadata/_custom_type_script = "uid://bih8icx0fn3lh"
+
+[node name="LocalizedButton2" type="Button" parent="HBoxContainer"]
+visible = false
+layout_mode = 2
+text = "Powers"
+script = ExtResource("2_vfgik")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "Powers"
+metadata/_custom_type_script = "uid://bih8icx0fn3lh"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+vertical_scroll_mode = 2
+script = ExtResource("4_w1ivp")
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("5_w1ivp")
+attenuation_model = 3
+bus = &"SFX"

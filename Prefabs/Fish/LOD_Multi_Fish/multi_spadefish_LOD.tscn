@@ -1,0 +1,32 @@
+[gd_scene load_steps=8 format=3 uid="uid://bugis0xkl4fc5"]
+
+[ext_resource type="Script" uid="uid://e3dw0tnq2dci" path="res://Scripts/Environment/Aquarium/MultiFishLODController.gd" id="1_xy4a3"]
+[ext_resource type="Resource" uid="uid://b3sqkx6e7yyx5" path="res://Resources/Scannable/Spotlight_Targets/spadefish_spotlight_target.tres" id="2_idtal"]
+[ext_resource type="ArrayMesh" uid="uid://7dv85yhclwqf" path="res://Meshes/Fish/Destin_Optimized/Spadefish/spadefish_meta.res" id="3_w6ts0"]
+[ext_resource type="ArrayMesh" uid="uid://cqs4t55eucqu1" path="res://Meshes/Fish/Destin_Optimized/Spadefish/spadefish_flat.res" id="4_och6p"]
+[ext_resource type="Material" uid="uid://ohuh5rda248v" path="res://Materials/AnimatedFish/Destin/spadefish_animated.tres" id="5_xy4a3"]
+
+[sub_resource type="MultiMesh" id="MultiMesh_och6p"]
+mesh = ExtResource("3_w6ts0")
+
+[sub_resource type="MultiMesh" id="MultiMesh_i1fu7"]
+transform_format = 1
+mesh = ExtResource("4_och6p")
+
+[node name="MultiSpadefishLod" type="Node3D" node_paths=PackedStringArray("near_multimesh_node", "far_multimesh_node")]
+script = ExtResource("1_xy4a3")
+near_multimesh_node = NodePath("Near")
+far_multimesh_node = NodePath("Far")
+near_mesh_material = ExtResource("5_xy4a3")
+spotlight_target = ExtResource("2_idtal")
+fish_count = 64
+swim_radius = 25.0
+yaw_offset = 0.0
+bottom = 1.0
+ceiling = 15.0
+
+[node name="Near" type="MultiMeshInstance3D" parent="."]
+multimesh = SubResource("MultiMesh_och6p")
+
+[node name="Far" type="MultiMeshInstance3D" parent="."]
+multimesh = SubResource("MultiMesh_i1fu7")

@@ -1,0 +1,79 @@
+[gd_scene load_steps=7 format=3 uid="uid://baxd4q6i4724e"]
+
+[ext_resource type="Theme" uid="uid://dyls1fq20ga2d" path="res://Resources/Stylesheets/ShipwreckDiscovery.theme" id="1_uxjg3"]
+[ext_resource type="Script" uid="uid://l4le74yvoyh8" path="res://Scripts/UI/dive_log.gd" id="2_f3nop"]
+[ext_resource type="Script" uid="uid://cewgjdc8qxw0p" path="res://Prefabs/UI/button.gd" id="3_6s5kj"]
+[ext_resource type="Script" uid="uid://bih8icx0fn3lh" path="res://Scripts/UI/Localization/LocalizedButtonText.gd" id="4_fp2dg"]
+[ext_resource type="PackedScene" uid="uid://ci4x22qcit1og" path="res://Prefabs/UI/stats_window.tscn" id="5_vdqas"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6s5kj"]
+
+[node name="DiveLog" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_uxjg3")
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+script = ExtResource("2_f3nop")
+
+[node name="ProducedBy" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Container" type="PanelContainer" parent="ProducedBy"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_6s5kj")
+
+[node name="MarginContainer" type="MarginContainer" parent="ProducedBy/Container"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="HBoxContainer" parent="ProducedBy/Container/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="StatsButton" type="Button" parent="ProducedBy/Container/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(300, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Statistics"
+script = ExtResource("3_6s5kj")
+stringTablePath = "uid://l08hsw8wi6up"
+stringID = "StatsButton"
+
+[node name="WrecksButton" type="Button" parent="ProducedBy/Container/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(300, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Wreck Data"
+script = ExtResource("4_fp2dg")
+stringTablePath = "uid://l08hsw8wi6up"
+stringID = "WrecksButton"
+
+[node name="CreaturesButton" type="Button" parent="ProducedBy/Container/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(300, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Creatures"
+script = ExtResource("4_fp2dg")
+stringTablePath = "uid://l08hsw8wi6up"
+stringID = "CreaturesButton"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ProducedBy"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="StatsWindow" parent="ProducedBy/ScrollContainer" instance=ExtResource("5_vdqas")]
+layout_mode = 2

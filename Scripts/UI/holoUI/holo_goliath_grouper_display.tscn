@@ -1,0 +1,179 @@
+[gd_scene load_steps=5 format=3 uid="uid://djfc5ktuj4f1b"]
+
+[ext_resource type="Theme" uid="uid://dyls1fq20ga2d" path="res://Resources/Stylesheets/ShipwreckDiscovery.theme" id="1_px8a5"]
+[ext_resource type="Script" uid="uid://cvalnx44pwigw" path="res://Scripts/UI/Localization/LocalizedLabel.gd" id="2_qeq8e"]
+[ext_resource type="Texture2D" uid="uid://cvl6lf65mghai" path="res://Resources/Stylesheets/UI_Components/Window/Window001_WhiteTitleLine1.png" id="3_2fego"]
+[ext_resource type="Texture2D" uid="uid://bx6dgun8cca8q" path="res://Resources/Stylesheets/UI_Components/Window/Window001_WhiteTitleLine2.png" id="4_1rxrm"]
+
+[node name="HoloGoliathDisplay" type="Control"]
+layout_mode = 3
+anchor_right = 0.702
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = -2.0
+offset_right = 6.29596
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.716011, 0.716011)
+theme = ExtResource("1_px8a5")
+
+[node name="Namebox" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 342.0
+offset_right = 712.0
+offset_bottom = 62.0
+
+[node name="Name" type="Label" parent="Namebox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+text = "Goliath Grouper"
+horizontal_alignment = 1
+script = ExtResource("2_qeq8e")
+stringTablePath = "res://Resources/StringTables/Fish_Scan_Strings.tsv"
+stringID = "goliath_grouper_name"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="ColorRect" type="ColorRect" parent="Namebox"]
+custom_minimum_size = Vector2(0, 3)
+layout_mode = 2
+
+[node name="Scale" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 5.58651
+offset_top = 490.216
+offset_right = 159.587
+offset_bottom = 520.216
+texture = ExtResource("3_2fego")
+
+[node name="TextureRect2" type="TextureRect" parent="Scale"]
+layout_mode = 0
+offset_left = 964.0
+offset_right = 1118.0
+offset_bottom = 30.0
+texture = ExtResource("4_1rxrm")
+
+[node name="Length" type="HBoxContainer" parent="Scale"]
+layout_mode = 0
+offset_left = 462.2834
+offset_top = 2.7932005
+offset_right = 680.2834
+offset_bottom = 42.7932
+
+[node name="Min" type="Label" parent="Scale/Length"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "2"
+
+[node name="Dash" type="Label" parent="Scale/Length"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = " - "
+
+[node name="Max" type="Label" parent="Scale/Length"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "8"
+
+[node name="Units" type="Label" parent="Scale/Length"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "feet"
+script = ExtResource("2_qeq8e")
+stringTablePath = "res://Resources/StringTables/Fish_Scan_Strings.tsv"
+stringID = "units_feet"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="SizeLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 465.07666
+offset_top = 465.07666
+offset_right = 607.07666
+offset_bottom = 499.07666
+theme_override_font_sizes/font_size = 24
+text = "Size Range"
+horizontal_alignment = 1
+script = ExtResource("2_qeq8e")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "Size"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="Factoid" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 39.105545
+offset_top = 565.6338
+offset_right = 1128.109
+offset_bottom = 714.6338
+
+[node name="Vertical_Line" type="ColorRect" parent="Factoid"]
+custom_minimum_size = Vector2(3, 0)
+layout_mode = 2
+
+[node name="Found" type="VBoxContainer" parent="Factoid"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="LocalizedLabel" type="Label" parent="Factoid/Found"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Found"
+script = ExtResource("2_qeq8e")
+stringTablePath = "res://Resources/StringTables/Fish_Scan_Strings.tsv"
+stringID = "found_label"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="ColorRect" type="ColorRect" parent="Factoid/Found"]
+custom_minimum_size = Vector2(0, 3)
+layout_mode = 2
+
+[node name="LocalizedLabel2" type="Label" parent="Factoid/Found"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Florida, Gulf of Mexico, Bahamas, Caribbean, Central & South America"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+script = ExtResource("2_qeq8e")
+stringTablePath = "res://Resources/StringTables/Fish_Scan_Strings.tsv"
+stringID = "goliath_grouper_found"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="Factoid2" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 83.79759
+offset_top = 710.88293
+offset_right = 1051.801
+offset_bottom = 807.88293
+
+[node name="Vertical_Line" type="ColorRect" parent="Factoid2"]
+custom_minimum_size = Vector2(3, 0)
+layout_mode = 2
+
+[node name="Found" type="VBoxContainer" parent="Factoid2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="LocalizedLabel" type="Label" parent="Factoid2/Found"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Feeds on"
+script = ExtResource("2_qeq8e")
+stringTablePath = "res://Resources/StringTables/Fish_Scan_Strings.tsv"
+stringID = "feed_on_label"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="ColorRect" type="ColorRect" parent="Factoid2/Found"]
+custom_minimum_size = Vector2(0, 3)
+layout_mode = 2
+
+[node name="LocalizedLabel2" type="Label" parent="Factoid2/Found"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Fish, Crustaceans, Mollusks, Urchins"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+script = ExtResource("2_qeq8e")
+stringTablePath = "res://Resources/StringTables/Fish_Scan_Strings.tsv"
+stringID = "goliath_grouper_feeds"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"

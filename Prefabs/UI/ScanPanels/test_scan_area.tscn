@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b3n2svslb12lk"]
+
+[node name="TestScanArea" type="Label"]
+theme_override_font_sizes/font_size = 50
+text = "You've scanned a thing! 
+If you haven't scanned this thing
+before, you should gain research
+credits equal to its value."

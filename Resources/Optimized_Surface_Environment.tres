@@ -1,0 +1,16 @@
+[gd_resource type="Environment" load_steps=3 format=3 uid="uid://bjc78xv3jdox5"]
+
+[ext_resource type="Material" uid="uid://b4sv6oiixi1bf" path="res://Materials/WeatherLiteSky.tres" id="1_g6l0k"]
+
+[sub_resource type="Sky" id="Sky_cnap7"]
+sky_material = ExtResource("1_g6l0k")
+radiance_size = 2
+
+[resource]
+resource_local_to_scene = true
+background_mode = 2
+background_color = Color(0.10766078, 0.69426095, 0.8591009, 1)
+sky = SubResource("Sky_cnap7")
+ambient_light_source = 2
+ambient_light_color = Color(0.556953, 0.556953, 0.556953, 1)
+reflected_light_source = 1

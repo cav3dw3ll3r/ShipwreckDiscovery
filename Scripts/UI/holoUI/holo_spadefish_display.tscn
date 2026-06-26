@@ -1,0 +1,178 @@
+[gd_scene load_steps=5 format=3 uid="uid://iew46qohwk65"]
+
+[ext_resource type="Texture2D" uid="uid://cvl6lf65mghai" path="res://Resources/Stylesheets/UI_Components/Window/Window001_WhiteTitleLine1.png" id="1_jwlox"]
+[ext_resource type="Theme" uid="uid://dyls1fq20ga2d" path="res://Resources/Stylesheets/ShipwreckDiscovery.theme" id="1_kyuyt"]
+[ext_resource type="Texture2D" uid="uid://bx6dgun8cca8q" path="res://Resources/Stylesheets/UI_Components/Window/Window001_WhiteTitleLine2.png" id="2_kyuyt"]
+[ext_resource type="Script" uid="uid://cvalnx44pwigw" path="res://Scripts/UI/Localization/LocalizedLabel.gd" id="3_qklae"]
+
+[node name="HoloBarracudeDisplay" type="Control"]
+layout_mode = 3
+anchor_right = 0.702
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = -2.0
+offset_right = 6.29596
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_kyuyt")
+
+[node name="Namebox" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 216.0
+offset_right = 873.0
+offset_bottom = 62.0
+
+[node name="Name" type="Label" parent="Namebox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+text = "Spadefish"
+horizontal_alignment = 1
+script = ExtResource("3_qklae")
+stringTablePath = "res://Resources/StringTables/Fish_Scan_Strings.tsv"
+stringID = "spadefish_name"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="ColorRect" type="ColorRect" parent="Namebox"]
+custom_minimum_size = Vector2(0, 3)
+layout_mode = 2
+
+[node name="Scale" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 441.0
+offset_top = 671.0
+offset_right = 595.0
+offset_bottom = 701.0
+texture = ExtResource("1_jwlox")
+
+[node name="TextureRect2" type="TextureRect" parent="Scale"]
+layout_mode = 0
+offset_left = 376.0
+offset_right = 530.0
+offset_bottom = 30.0
+texture = ExtResource("2_kyuyt")
+
+[node name="Length" type="HBoxContainer" parent="Scale"]
+layout_mode = 0
+offset_left = 153.0
+offset_top = 31.0
+offset_right = 371.0
+offset_bottom = 71.0
+
+[node name="Min" type="Label" parent="Scale/Length"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "12"
+
+[node name="Dash" type="Label" parent="Scale/Length"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = " - "
+
+[node name="Max" type="Label" parent="Scale/Length"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "20"
+
+[node name="Units" type="Label" parent="Scale/Length"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "inches"
+script = ExtResource("3_qklae")
+stringTablePath = "res://Resources/StringTables/Fish_Scan_Strings.tsv"
+stringID = "units_inches"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="SizeLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 625.0
+offset_top = 676.0
+offset_right = 767.0
+offset_bottom = 710.0
+theme_override_font_sizes/font_size = 24
+text = "Size Range"
+horizontal_alignment = 1
+script = ExtResource("3_qklae")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "Size"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="Factoid" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = -3.0
+offset_top = 156.0
+offset_right = 329.0
+offset_bottom = 513.0
+
+[node name="Vertical_Line" type="ColorRect" parent="Factoid"]
+custom_minimum_size = Vector2(3, 0)
+layout_mode = 2
+
+[node name="Found" type="VBoxContainer" parent="Factoid"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="LocalizedLabel" type="Label" parent="Factoid/Found"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Found"
+script = ExtResource("3_qklae")
+stringTablePath = "res://Resources/StringTables/Fish_Scan_Strings.tsv"
+stringID = "found_label"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="ColorRect" type="ColorRect" parent="Factoid/Found"]
+custom_minimum_size = Vector2(0, 3)
+layout_mode = 2
+
+[node name="LocalizedLabel2" type="Label" parent="Factoid/Found"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Gulf of Mexico, Florida Panhandle, Caribbean Sea, Western Atlantic Ocean"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+script = ExtResource("3_qklae")
+stringTablePath = "res://Resources/StringTables/Fish_Scan_Strings.tsv"
+stringID = "spadefish_found"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="Factoid2" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 577.0
+offset_right = 349.0
+offset_bottom = 778.0
+
+[node name="Vertical_Line" type="ColorRect" parent="Factoid2"]
+custom_minimum_size = Vector2(3, 0)
+layout_mode = 2
+
+[node name="Found" type="VBoxContainer" parent="Factoid2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="LocalizedLabel" type="Label" parent="Factoid2/Found"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Feeds on"
+script = ExtResource("3_qklae")
+stringTablePath = "res://Resources/StringTables/Fish_Scan_Strings.tsv"
+stringID = "feed_on_label"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"
+
+[node name="ColorRect" type="ColorRect" parent="Factoid2/Found"]
+custom_minimum_size = Vector2(0, 3)
+layout_mode = 2
+
+[node name="LocalizedLabel2" type="Label" parent="Factoid2/Found"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Plankton and Small Invertebrates"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+script = ExtResource("3_qklae")
+stringTablePath = "res://Resources/StringTables/Fish_Scan_Strings.tsv"
+stringID = "plankton_small_inv"
+metadata/_custom_type_script = "uid://cvalnx44pwigw"

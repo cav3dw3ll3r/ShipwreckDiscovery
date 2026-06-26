@@ -1,0 +1,83 @@
+[gd_scene load_steps=15 format=3 uid="uid://dhh1iveqw6018"]
+
+[ext_resource type="Script" uid="uid://b2ftslgg1friq" path="res://Scripts/Environment/WreckChunkClimbable.gd" id="1_1hu7q"]
+[ext_resource type="Resource" uid="uid://b27li8gt2erfj" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/MissJoann/MissJoann_1_2_2.tres" id="3_vavco"]
+[ext_resource type="Resource" uid="uid://c6k5yimtmkexg" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/MissJoann/MissJoann_1_2_3.tres" id="4_m0xf3"]
+[ext_resource type="Resource" uid="uid://dxv88aaka2qjc" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/MissJoann/MissJoann_1_3_2.tres" id="5_ooji3"]
+[ext_resource type="Resource" uid="uid://4v55wa4r8kka" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/MissJoann/MissJoann_1_2_1.tres" id="5_wbray"]
+[ext_resource type="Resource" uid="uid://c7se1yqnc4xvi" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/MissJoann/MissJoann_2_2_2.tres" id="7_1hu7q"]
+[ext_resource type="Resource" uid="uid://cv26pii40qs7i" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/MissJoann/MissJoann_2_2_1.tres" id="7_ekrja"]
+[ext_resource type="Resource" uid="uid://bs32ctv3oum6x" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/MissJoann/MissJoann_2_2_3.tres" id="8_os3tp"]
+[ext_resource type="Resource" uid="uid://nomwvuff7v4f" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/MissJoann/MissJoann_2_3_2.tres" id="9_x43mc"]
+[ext_resource type="Resource" uid="uid://c32mgwebsmsyi" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/MissJoann/MissJoann_3_2_1.tres" id="10_3rn2w"]
+[ext_resource type="Resource" uid="uid://2p5fw68tgd8l" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/MissJoann/MissJoann_3_2_2.tres" id="11_550iu"]
+[ext_resource type="Resource" uid="uid://dn8a2grn48415" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/MissJoann/MissJoann_3_3_2.tres" id="12_rba4s"]
+[ext_resource type="Resource" uid="uid://28lb8epyl5ha" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/MissJoann/MissJoann_4_2_1.tres" id="13_dvquv"]
+[ext_resource type="Resource" uid="uid://dt8cagnrgjgyv" path="res://Resources/Scannable/Spotlight_Targets/Wrecks/MissJoann/MissJoann_4_2_2.tres" id="14_lsk0s"]
+
+[node name="MissJoannAssembled" type="Node3D"]
+
+[node name="Chunk_1_2_1" type="Node3D" parent="."]
+transform = Transform3D(0.99978065, 0, -0.02094242, 0, 1, 0, 0.02094242, 0, 0.99978065, -6.6728554, -3.1963797, 0.06244397)
+script = ExtResource("1_1hu7q")
+spotlight_target = ExtResource("5_wbray")
+
+[node name="Chunk_1_2_2" type="Node3D" parent="."]
+transform = Transform3D(0.99978065, 0, -0.02094242, 0, 1, 0, 0.02094242, 0, 0.99978065, -6.6728554, 3.3036203, 0.06244397)
+script = ExtResource("1_1hu7q")
+spotlight_target = ExtResource("3_vavco")
+
+[node name="Chunk_1_2_3" type="Node3D" parent="."]
+transform = Transform3D(0.99978065, 0, -0.02094242, 0, 1, 0, 0.02094242, 0, 0.99978065, -6.6728554, 9.80362, 0.06244397)
+script = ExtResource("1_1hu7q")
+spotlight_target = ExtResource("4_m0xf3")
+
+[node name="Chunk_1_3_2" type="Node3D" parent="."]
+transform = Transform3D(0.99978065, 0, -0.02094242, 0, 1, 0, 0.02094242, 0, 0.99978065, -6.53673, 3.3036203, -6.4361305)
+script = ExtResource("1_1hu7q")
+spotlight_target = ExtResource("5_ooji3")
+
+[node name="Chunk_2_2_1" type="Node3D" parent="."]
+transform = Transform3D(0.99978065, 0, -0.02094242, 0, 1, 0, 0.02094242, 0, 0.99978065, -0.17428115, -3.1963797, 0.1985697)
+script = ExtResource("1_1hu7q")
+spotlight_target = ExtResource("7_ekrja")
+
+[node name="Chunk_2_2_2" type="Node3D" parent="."]
+transform = Transform3D(0.99978065, 0, -0.02094242, 0, 1, 0, 0.02094242, 0, 0.99978065, -0.17428115, 3.3036203, 0.1985697)
+script = ExtResource("1_1hu7q")
+spotlight_target = ExtResource("7_1hu7q")
+
+[node name="Chunk_2_2_3" type="Node3D" parent="."]
+transform = Transform3D(0.99978065, 0, -0.02094242, 0, 1, 0, 0.02094242, 0, 0.99978065, -0.17428115, 9.80362, 0.1985697)
+script = ExtResource("1_1hu7q")
+spotlight_target = ExtResource("8_os3tp")
+
+[node name="Chunk_2_3_2" type="Node3D" parent="."]
+transform = Transform3D(0.99978065, 0, -0.02094242, 0, 1, 0, 0.02094242, 0, 0.99978065, -0.038155377, 3.3036203, -6.3000045)
+script = ExtResource("1_1hu7q")
+spotlight_target = ExtResource("9_x43mc")
+
+[node name="Chunk_3_2_1" type="Node3D" parent="."]
+transform = Transform3D(0.99978065, 0, -0.02094242, 0, 1, 0, 0.02094242, 0, 0.99978065, 6.324293, -3.1963797, 0.33469546)
+script = ExtResource("1_1hu7q")
+spotlight_target = ExtResource("10_3rn2w")
+
+[node name="Chunk_3_2_2" type="Node3D" parent="."]
+transform = Transform3D(0.99978065, 0, -0.02094242, 0, 1, 0, 0.02094242, 0, 0.99978065, 6.324293, 3.3036203, 0.33469546)
+script = ExtResource("1_1hu7q")
+spotlight_target = ExtResource("11_550iu")
+
+[node name="Chunk_3_3_2" type="Node3D" parent="."]
+transform = Transform3D(0.99978065, 0, -0.02094242, 0, 1, 0, 0.02094242, 0, 0.99978065, 6.4604187, 3.3036203, -6.163879)
+script = ExtResource("1_1hu7q")
+spotlight_target = ExtResource("12_rba4s")
+
+[node name="Chunk_4_2_1" type="Node3D" parent="."]
+transform = Transform3D(0.99978065, 0, -0.02094242, 0, 1, 0, 0.02094242, 0, 0.99978065, 12.822866, -3.1963797, 0.4708212)
+script = ExtResource("1_1hu7q")
+spotlight_target = ExtResource("13_dvquv")
+
+[node name="Chunk_4_2_2" type="Node3D" parent="."]
+transform = Transform3D(0.99978065, 0, -0.02094242, 0, 1, 0, 0.02094242, 0, 0.99978065, 12.822866, 3.3036203, 0.4708212)
+script = ExtResource("1_1hu7q")
+spotlight_target = ExtResource("14_lsk0s")

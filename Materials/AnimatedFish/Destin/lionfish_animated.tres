@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://bn527xsmuxx7l"]
+
+[ext_resource type="Shader" uid="uid://bfgg4tdv0hgt4" path="res://Materials/AnimatedFish/z_wave.gdshader" id="1_4j0xi"]
+[ext_resource type="Texture2D" uid="uid://cimgixsc63s" path="res://Meshes/Fish/Destin/Lionfish/lionfish_Image_0.jpg" id="2_frfj2"]
+[ext_resource type="Texture2D" uid="uid://bjeteligeqdnt" path="res://Meshes/Fish/Destin/Lionfish/lionfish_proxy_Image_2.jpg" id="3_frfj2"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_4j0xi")
+shader_parameter/albedo_tex = ExtResource("2_frfj2")
+shader_parameter/normal_tex = ExtResource("3_frfj2")
+shader_parameter/wave_amplitude = 0.28400001349
+shader_parameter/wave_frequency = 1.87000008556512
+shader_parameter/wave_speed = 1.61700007354762
+shader_parameter/tail_start = -0.417999972355

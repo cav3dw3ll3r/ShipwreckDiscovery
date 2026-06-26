@@ -1,0 +1,143 @@
+[gd_scene load_steps=31 format=3 uid="uid://co3u0oi6m3j7a"]
+
+[ext_resource type="Script" uid="uid://pw1crp1du2ro" path="res://addons/godot-xr-tools/staging/scene_base.gd" id="1_scene_base"]
+[ext_resource type="PackedScene" uid="uid://cqhw276realc" path="res://addons/godot-xr-tools/functions/function_pointer.tscn" id="2_et2pu"]
+[ext_resource type="PackedScene" uid="uid://njws7y17jxqt" path="res://Prefabs/Core/game_settings.tscn" id="2_game_settings"]
+[ext_resource type="Material" uid="uid://cxj5kiqxmog0s" path="res://Materials/simple_target.tres" id="3_2r7bd"]
+[ext_resource type="Shader" uid="uid://duqo2lsg3jvxo" path="res://Materials/Shaders/under_sky.gdshader" id="4_dbx8m"]
+[ext_resource type="Texture2D" uid="uid://gwx1mmo63wek" path="res://Images/Cinematic/Intro1.png" id="5_jw2oo"]
+[ext_resource type="Script" uid="uid://dcbkj0fc80vf5" path="res://Scripts/Core/Launcher.gd" id="6_launcher"]
+[ext_resource type="AudioStream" uid="uid://kpm57petlgvm" path="res://Audio/Intro/SD Intro Slide 2.wav" id="8_vmwaq"]
+[ext_resource type="Texture2D" uid="uid://4ina8o638lcu" path="res://Images/Cinematic/Gemini_Generated_Image_b5vkwhb5vkwhb5vk.png" id="9_bsmil"]
+[ext_resource type="AudioStream" uid="uid://disfd61hmkiuq" path="res://Audio/Intro/SD Intro Slide 3.wav" id="10_dbx8m"]
+[ext_resource type="Script" uid="uid://44nlantbq5ha" path="res://Scripts/Core/IntroPanels.gd" id="11_intro_panels"]
+[ext_resource type="Texture2D" uid="uid://2bb6alktdrf2" path="res://Images/Cinematic/Gemini_Generated_Image_s6z0ors6z0ors6z0.png" id="11_nk5ao"]
+[ext_resource type="AudioStream" uid="uid://cm7fn11nl0p7p" path="res://Audio/Intro/SD Intro Slide 4.wav" id="12_1ou03"]
+[ext_resource type="PackedScene" uid="uid://pwceubfw00q3" path="res://Prefabs/UI/Cinematic/comic_panel.tscn" id="12_comic_panel"]
+[ext_resource type="Texture2D" uid="uid://b12l0oy3jqjpn" path="res://Images/Cinematic/Gemini_Generated_Image_4rossu4rossu4ros.png" id="12_et2pu"]
+[ext_resource type="Texture2D" uid="uid://da2ygri6jhbl6" path="res://Images/Cinematic/Gemini_Generated_Image_czxtlkczxtlkczxt.png" id="13_2r7bd"]
+[ext_resource type="Texture2D" uid="uid://b6cb34370b41w" path="res://Images/Cinematic/Gemini_Generated_Image_7qi7k17qi7k17qi7.png" id="13_panel2_tex"]
+[ext_resource type="AudioStream" uid="uid://w2uil5pw0hdw" path="res://Audio/Intro/SD Intro Slide 5.wav" id="14_ca05t"]
+[ext_resource type="Texture2D" uid="uid://dnyslaqi0ba4t" path="res://Images/Cinematic/Gemini_Generated_Image_y5ckimy5ckimy5ck.png" id="14_panel3_tex"]
+[ext_resource type="Texture2D" uid="uid://c4y8an6u7d0me" path="res://Images/Cinematic/Intro-8-Work.png" id="14_skevf"]
+[ext_resource type="AudioStream" uid="uid://ddvtnvfcgydtb" path="res://Audio/Intro/SD Intro Slide 6.wav" id="16_l06km"]
+[ext_resource type="AudioStream" uid="uid://d3fux2usmb7b6" path="res://Audio/Intro/SD Intro Slide 7.wav" id="18_52y82"]
+[ext_resource type="AudioStream" uid="uid://b2mbck6skpsj" path="res://Audio/Intro/SD Intro Slide 8.wav" id="20_f5xbv"]
+[ext_resource type="AudioStream" uid="uid://kvxfbl2dimdx" path="res://Audio/Intro/SD Intro Slide 9.wav" id="22_a7idc"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1ou03"]
+shader = ExtResource("4_dbx8m")
+shader_parameter/deep_color = Color(0.8134758, 0.90539885, 0.9790693, 1)
+shader_parameter/shallow_color = Color(1, 1, 1, 1)
+shader_parameter/ray_color = Color(0.19818634, 0.69670016, 0.77958596, 1)
+shader_parameter/ray_speed = 0.6
+shader_parameter/ray_density = 4.0
+shader_parameter/ray_brightness = 1.2
+
+[sub_resource type="Sky" id="Sky_vmwaq"]
+sky_material = SubResource("ShaderMaterial_1ou03")
+radiance_size = 1
+
+[sub_resource type="Environment" id="Environment_void"]
+background_mode = 2
+background_color = Color(0.78, 0.78, 0.78, 1)
+sky = SubResource("Sky_vmwaq")
+ambient_light_source = 3
+
+[sub_resource type="Curve" id="Curve_bsmil"]
+_limits = [0.0, 3.14, 0.0, 1.0]
+_data = [Vector2(0.00207039, 0), 0.0, 1.00884, 0, 0, Vector2(1, 3.14), 0.313348, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Animation" id="Animation_5dcil"]
+resource_name = "introcinematic"
+length = 35.0
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_iffca"]
+_data = {
+&"introcinematic": SubResource("Animation_5dcil")
+}
+
+[node name="Intro" type="Node3D"]
+script = ExtResource("1_scene_base")
+
+[node name="XROrigin3D" type="XROrigin3D" parent="."]
+
+[node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D" groups=["Player"]]
+current = true
+
+[node name="XRController3D_left" type="XRController3D" parent="XROrigin3D"]
+tracker = &"left_hand"
+
+[node name="FunctionPointer" parent="XROrigin3D/XRController3D_left" instance=ExtResource("2_et2pu")]
+show_laser = 2
+laser_material = ExtResource("3_2r7bd")
+target_material = ExtResource("3_2r7bd")
+
+[node name="XRController3D_right" type="XRController3D" parent="XROrigin3D"]
+tracker = &"right_hand"
+
+[node name="FunctionPointer" parent="XROrigin3D/XRController3D_right" instance=ExtResource("2_et2pu")]
+show_laser = 2
+laser_material = ExtResource("3_2r7bd")
+target_material = ExtResource("3_2r7bd")
+
+[node name="Environment" type="Node3D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Environment"]
+environment = SubResource("Environment_void")
+
+[node name="GameSettings" parent="." instance=ExtResource("2_game_settings")]
+
+[node name="Launcher" type="Node3D" parent="."]
+script = ExtResource("6_launcher")
+
+[node name="Panels" type="Node3D" parent="."]
+script = ExtResource("11_intro_panels")
+follow_speed = SubResource("Curve_bsmil")
+
+[node name="Panels#Panel1" parent="Panels" instance=ExtResource("12_comic_panel")]
+panel_audio = ExtResource("8_vmwaq")
+panel_texture = ExtResource("5_jw2oo")
+stringID = "intro_panel_1"
+
+[node name="Panels#Panel2" parent="Panels" instance=ExtResource("12_comic_panel")]
+panel_audio = ExtResource("10_dbx8m")
+panel_texture = ExtResource("14_panel3_tex")
+stringID = "intro_panel_2"
+
+[node name="Panels#Panel3" parent="Panels" instance=ExtResource("12_comic_panel")]
+panel_audio = ExtResource("12_1ou03")
+panel_texture = ExtResource("9_bsmil")
+stringID = "intro_panel_3"
+
+[node name="Panels#Panel4" parent="Panels" instance=ExtResource("12_comic_panel")]
+panel_audio = ExtResource("14_ca05t")
+panel_texture = ExtResource("11_nk5ao")
+stringID = "intro_panel_4"
+
+[node name="Panels#Panel5" parent="Panels" instance=ExtResource("12_comic_panel")]
+panel_audio = ExtResource("16_l06km")
+panel_texture = ExtResource("13_panel2_tex")
+stringID = "intro_panel_5"
+
+[node name="Panels#Panel6" parent="Panels" instance=ExtResource("12_comic_panel")]
+panel_audio = ExtResource("18_52y82")
+panel_texture = ExtResource("12_et2pu")
+stringID = "intro_panel_6"
+
+[node name="Panels#Panel7" parent="Panels" instance=ExtResource("12_comic_panel")]
+panel_audio = ExtResource("20_f5xbv")
+panel_texture = ExtResource("13_2r7bd")
+stringID = "intro_panel_7"
+
+[node name="Panels#Panel8" parent="Panels" instance=ExtResource("12_comic_panel")]
+panel_audio = ExtResource("22_a7idc")
+panel_texture = ExtResource("14_skevf")
+stringID = "intro_panel_8"
+
+[node name="IntroCinematic" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_iffca")
+}
+autoplay = "introcinematic"

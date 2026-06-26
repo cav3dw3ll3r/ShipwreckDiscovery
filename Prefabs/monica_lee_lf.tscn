@@ -1,0 +1,77 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1bryufjbx4qa"]
+
+[ext_resource type="PackedScene" uid="uid://dym04x4644j7" path="res://Meshes/Fish/Destin/Lionfish/lionfish_proxy.tscn" id="1_e7npj"]
+[ext_resource type="PackedScene" uid="uid://ddda3m7y3pf6t" path="res://Prefabs/Fish/Multi_Fish/Destin/squirrelfish.tscn" id="2_r1yqe"]
+
+[node name="MonicaLeeLF" type="Node3D"]
+
+[node name="Aquarium_Lionfish#LionfishProxy" parent="." instance=ExtResource("1_e7npj")]
+transform = Transform3D(-0.9343845, 0, 0.35626617, 0, 1, 0, -0.35626617, 0, -0.9343845, 3.224819, -30.212553, 4.1386275)
+
+[node name="Aquarium_Lionfish#_Marker3D_238509" parent="." instance=ExtResource("1_e7npj")]
+transform = Transform3D(0.8299882, 0, -0.557781, 0, 1, 0, 0.557781, 0, 0.8299882, 3.0625432, -29.815178, 3.5142004)
+
+[node name="Aquarium_Lionfish#_Marker3D_238510" parent="." instance=ExtResource("1_e7npj")]
+transform = Transform3D(-0.9903729, 0, 0.13842498, 0, 1, 0, -0.13842498, 0, -0.9903729, 4.5035067, -37.937195, 3.8383567)
+
+[node name="Aquarium_Lionfish#_Marker3D_238511" parent="." instance=ExtResource("1_e7npj")]
+transform = Transform3D(-0.6263517, 0, 0.7795406, 0, 1, 0, -0.7795406, 0, -0.6263517, 2.8952181, -33.534634, 0.65455127)
+
+[node name="Aquarium_Lionfish#_Marker3D_238512" parent="." instance=ExtResource("1_e7npj")]
+transform = Transform3D(-0.98754567, 0, -0.1573327, 0, 1, 0, 0.1573327, 0, -0.98754567, 3.5783668, -30.809164, 6.152342)
+
+[node name="Aquarium_Lionfish#_Marker3D_238513" parent="." instance=ExtResource("1_e7npj")]
+transform = Transform3D(0.9998219, 0, 0.018872015, 0, 1, 0, -0.018872015, 0, 0.9998219, -5.059391, -34.681854, 0.62494165)
+
+[node name="Aquarium#Squirrelfish" parent="." instance=ExtResource("2_r1yqe")]
+
+[node name="Aquarium_Lionfish#_Marker3D_238514" parent="." instance=ExtResource("1_e7npj")]
+transform = Transform3D(0.08906046, 0, -0.9960262, 0, 1, 0, 0.9960262, 0, 0.08906046, -5.940021, -35.796257, 4.884617)
+
+[node name="Aquarium_Lionfish#_Marker3D_238515" parent="." instance=ExtResource("1_e7npj")]
+transform = Transform3D(0.22012277, 0, -0.97547215, 0, 1, 0, 0.97547215, 0, 0.22012277, 2.5213425, -31.562494, 1.2332925)
+
+[node name="Aquarium_Lionfish#_Marker3D_238516" parent="." instance=ExtResource("1_e7npj")]
+transform = Transform3D(0.5830764, 0, 0.81241727, 0, 1, 0, -0.81241727, 0, 0.5830764, 2.2213557, -30.714273, 7.7085543)
+
+[node name="Aquarium_Lionfish#_Marker3D_238517" parent="." instance=ExtResource("1_e7npj")]
+transform = Transform3D(-0.8394759, 0, -0.54339683, 0, 1, 0, 0.54339683, 0, -0.8394759, -1.4134144, -29.873299, 7.3988523)
+
+[node name="Aquarium_Lionfish#_Marker3D_238518" parent="." instance=ExtResource("1_e7npj")]
+transform = Transform3D(0.38949922, 0, 0.92102677, 0, 1, 0, -0.92102677, 0, 0.38949922, -2.6703105, -31.744135, 9.537319)
+
+[node name="Aquarium_Lionfish#_Marker3D_238519" parent="." instance=ExtResource("1_e7npj")]
+transform = Transform3D(-0.46436414, 0, -0.8856444, 0, 1, 0, 0.8856444, 0, -0.46436414, -2.028055, -29.861832, 8.145743)
+
+[node name="Aquarium_Lionfish#_Marker3D_238520" parent="." instance=ExtResource("1_e7npj")]
+transform = Transform3D(0.8002634, 0, 0.59964865, 0, 1, 0, -0.59964865, 0, 0.8002634, 2.499146, -39.3603, 11.4013605)
+
+[node name="Aquarium_Lionfish#_Marker3D_238521" parent="." instance=ExtResource("1_e7npj")]
+transform = Transform3D(-0.80645514, 0, -0.5912953, 0, 1, 0, 0.5912953, 0, -0.80645514, 1.7928716, -30.934921, 8.3251705)
+
+[node name="Aquarium_Lionfish#_Marker3D_238522" parent="." instance=ExtResource("1_e7npj")]
+transform = Transform3D(0.54254997, 0, -0.8400235, 0, 1, 0, 0.8400235, 0, 0.54254997, -3.7205129, -34.383865, -0.5739698)
+
+[node name="Aquarium_Lionfish#_Marker3D_238523" parent="." instance=ExtResource("1_e7npj")]
+transform = Transform3D(-0.27374768, 0, 0.9618015, 0, 1, 0, -0.9618015, 0, -0.27374768, 1.2540573, -31.580605, 9.837765)
+
+[node name="Aquarium_Lionfish#_Marker3D_238524" parent="." instance=ExtResource("1_e7npj")]
+transform = Transform3D(0.039954398, 0, 0.9992015, 0, 1, 0, -0.9992015, 0, 0.039954398, -0.7124977, -30.229654, 6.445495)
+
+[node name="Aquarium_Lionfish#_Marker3D_238525" parent="." instance=ExtResource("1_e7npj")]
+transform = Transform3D(0.54630935, 0, -0.8375835, 0, 1, 0, 0.8375835, 0, 0.54630935, 2.8620305, -33.515938, -0.13195524)
+
+[node name="Aquarium_Lionfish#_Marker3D_238526" parent="." instance=ExtResource("1_e7npj")]
+transform = Transform3D(-0.99184155, 0, -0.12747687, 0, 1, 0, 0.12747687, 0, -0.99184155, 2.1097143, -35.47381, 13.843377)
+
+[node name="Aquarium_Lionfish#_Marker3D_238527" parent="." instance=ExtResource("1_e7npj")]
+transform = Transform3D(-0.8937647, 0, 0.44853616, 0, 1, 0, -0.44853616, 0, -0.8937647, 3.98612, -38.128723, 7.9020176)
+
+[node name="Aquarium_Lionfish#_Marker3D_238528" parent="." instance=ExtResource("1_e7npj")]
+transform = Transform3D(0.9836812, 0, -0.17992038, 0, 1, 0, 0.17992038, 0, 0.9836812, 2.8866382, -30.638256, 7.2026196)
+
+[node name="Aquarium_Lionfish#_Marker3D_238529" parent="." instance=ExtResource("1_e7npj")]
+transform = Transform3D(0.67849207, 0, -0.7346077, 0, 1, 0, 0.7346077, 0, 0.67849207, 1.5977882, -30.540962, 5.473537)
+
+[node name="Aquarium_Lionfish#_Marker3D_238530" parent="." instance=ExtResource("1_e7npj")]
+transform = Transform3D(0.9948657, 0, 0.10120356, 0, 1, 0, -0.10120356, 0, 0.9948657, -5.9148345, -35.79857, 1.3979526)

@@ -1,0 +1,58 @@
+[gd_scene load_steps=4 format=3 uid="uid://5i03mm6sqc3u"]
+
+[ext_resource type="Script" uid="uid://bonh7qocjp0f5" path="res://Scripts/UI/Watch/Dynamic_Scan_Content.gd" id="1_xqpr3"]
+[ext_resource type="Texture2D" uid="uid://cefdcwy3qoiuy" path="res://Images/Stickers/L-MSOdyssey.png" id="2_gw0vx"]
+[ext_resource type="PackedScene" uid="uid://bcp7ova1j33p2" path="res://Prefabs/UI/ScanPanels/reward_section.tscn" id="3_gw0vx"]
+
+[node name="DynamicScanPanel" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xqpr3")
+
+[node name="NoVideoSection" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="WithVideoSection" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="MainLayout" type="VBoxContainer" parent="."]
+layout_mode = 2
+alignment = 1
+
+[node name="Name" type="Label" parent="MainLayout"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Marine Science Odyssey"
+
+[node name="SubHeading" type="Label" parent="MainLayout"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.517647)
+theme_override_font_sizes/font_size = 35
+text = "Partner"
+
+[node name="Details" type="HBoxContainer" parent="MainLayout"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 18
+
+[node name="TextureRect" type="TextureRect" parent="MainLayout/Details"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_gw0vx")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Description1" type="Label" parent="MainLayout/Details"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 30
+text = "Marine Science Odyssey"
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="RewardSection" parent="MainLayout" instance=ExtResource("3_gw0vx")]
+layout_mode = 2

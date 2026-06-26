@@ -1,0 +1,20 @@
+[gd_scene load_steps=6 format=3 uid="uid://bu26mny0wrrf"]
+
+[ext_resource type="Script" uid="uid://x4qq4f6ao46b" path="res://Scripts/Environment/Entity_Spotlight.gd" id="1_ttpek"]
+[ext_resource type="PackedScene" uid="uid://bugis0xkl4fc5" path="res://Prefabs/Fish/LOD_Multi_Fish/multi_spadefish_LOD.tscn" id="4_7i2qo"]
+[ext_resource type="PackedScene" uid="uid://dr42wwb3aq4cn" path="res://Prefabs/Fish/LOD_Multi_Fish/multi_trunkfish_LOD.tscn" id="5_6on8r"]
+[ext_resource type="PackedScene" uid="uid://c38fte4qrk3i4" path="res://Prefabs/Fish/LOD_Multi_Fish/multi_mangrove_snapper_LOD.tscn" id="6_f1snt"]
+[ext_resource type="PackedScene" uid="uid://ccfn24ccr2p14" path="res://Prefabs/Fish/LOD_Multi_Fish/multi_barracuda_LOD.tscn" id="7_rac4t"]
+
+[node name="Aquarium" type="Node3D" groups=["Spotlight"]]
+script = ExtResource("1_ttpek")
+
+[node name="MultiSpadefishLod" parent="." instance=ExtResource("4_7i2qo")]
+fish_count = 256
+
+[node name="MultiTrunkfishLod" parent="." instance=ExtResource("5_6on8r")]
+fish_count = 32
+
+[node name="MultiMangSnapperLod" parent="." instance=ExtResource("6_f1snt")]
+
+[node name="MultiBarracudaLod" parent="." instance=ExtResource("7_rac4t")]

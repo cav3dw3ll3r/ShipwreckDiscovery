@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://ceiqfn5ioeq3j"]
+
+[ext_resource type="Script" uid="uid://bltlbjlgxnros" path="res://Scripts/Environment/CoralSim/static_coral.gd" id="1_u8knj"]
+[ext_resource type="ArrayMesh" uid="uid://c53ccn3r0s3y" path="res://Meshes/Coral/baby_staghorn.res" id="2_ake2e"]
+[ext_resource type="ArrayMesh" uid="uid://vis1hj4x3kvd" path="res://Meshes/Coral/growing_staghorn.res" id="3_x2akq"]
+[ext_resource type="ArrayMesh" uid="uid://bhq1tehmvmy0g" path="res://Meshes/Coral/pristine_staghorn.res" id="4_c720d"]
+
+[node name="StaticStaghornCoral" type="Node3D" groups=["static_coral"]]
+script = ExtResource("1_u8knj")
+coral_type = 1
+starting_biomass = 5.593
+baby_mesh_instance_path = NodePath("MeshInstance3D")
+growing_mesh_instance_path = NodePath("MeshInstance3D2")
+pristine_mesh_instance_path = NodePath("MeshInstance3D3")
+baby_coral_mesh = ExtResource("2_ake2e")
+growing_coral_mesh = ExtResource("3_x2akq")
+pristine_coral_mesh = ExtResource("4_c720d")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0.019011408, 0.15740573, -0.05356759)
+mesh = ExtResource("2_ake2e")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.3815822, 0.026563717)
+visible = false
+mesh = ExtResource("3_x2akq")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0, 0.65479434, 0)
+visible = false
+mesh = ExtResource("4_c720d")

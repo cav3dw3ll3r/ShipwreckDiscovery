@@ -1,0 +1,17 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://cva071226ni43"]
+
+[ext_resource type="Shader" uid="uid://cjxv7hvpc6e6f" path="res://Materials/AnimatedFish/x_wave.gdshader" id="1_f8hv1"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xyp0n"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8uu0g"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_f8hv1")
+shader_parameter/albedo_tex = SubResource("CompressedTexture2D_xyp0n")
+shader_parameter/normal_tex = SubResource("CompressedTexture2D_8uu0g")
+shader_parameter/wave_amplitude = 0.3
+shader_parameter/wave_frequency = 4.0
+shader_parameter/wave_speed = 6.0
+shader_parameter/tail_start = -0.08

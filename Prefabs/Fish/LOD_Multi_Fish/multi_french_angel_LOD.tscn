@@ -1,0 +1,35 @@
+[gd_scene load_steps=8 format=3 uid="uid://dj45bvgwa2h6a"]
+
+[ext_resource type="Script" uid="uid://e3dw0tnq2dci" path="res://Scripts/Environment/Aquarium/MultiFishLODController.gd" id="1_wrqup"]
+[ext_resource type="Resource" uid="uid://cajf0unrnu4ci" path="res://Resources/Scannable/Spotlight_Targets/french_angel_spotlight_target.tres" id="2_qa473"]
+[ext_resource type="ArrayMesh" uid="uid://b1udmisqhg2px" path="res://Meshes/Fish/Destin/French_angel/french_angel_meta.res" id="3_wrqup"]
+[ext_resource type="ArrayMesh" uid="uid://cve75ilehqjyy" path="res://Meshes/Fish/Destin_Optimized/French_Angel/french_angel_flat.res" id="4_wrqup"]
+[ext_resource type="Material" uid="uid://do28m36u8w18y" path="res://Materials/AnimatedFish/Destin/french_angelfish_animated.tres" id="5_wrqup"]
+
+[sub_resource type="MultiMesh" id="MultiMesh_qa473"]
+transform_format = 1
+mesh = ExtResource("3_wrqup")
+
+[sub_resource type="MultiMesh" id="MultiMesh_m76qr"]
+transform_format = 1
+mesh = ExtResource("4_wrqup")
+
+[node name="MultiFRAngelLod" type="Node3D" node_paths=PackedStringArray("near_multimesh_node", "far_multimesh_node")]
+script = ExtResource("1_wrqup")
+near_multimesh_node = NodePath("Near")
+far_multimesh_node = NodePath("Far")
+near_mesh_material = ExtResource("5_wrqup")
+spotlight_target = ExtResource("2_qa473")
+fish_count = 16
+swim_radius = 25.0
+yaw_offset = 0.0
+bottom = 1.0
+ceiling = 15.0
+scale_min = 0.7
+scale_max = 1.0
+
+[node name="Near" type="MultiMeshInstance3D" parent="."]
+multimesh = SubResource("MultiMesh_qa473")
+
+[node name="Far" type="MultiMeshInstance3D" parent="."]
+multimesh = SubResource("MultiMesh_m76qr")

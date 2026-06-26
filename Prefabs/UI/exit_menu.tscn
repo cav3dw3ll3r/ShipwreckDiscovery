@@ -1,0 +1,52 @@
+[gd_scene load_steps=4 format=3 uid="uid://bppxvugob5qkd"]
+
+[ext_resource type="Script" uid="uid://c4ncwefb8x646" path="res://Scripts/UI/ExitMenu.gd" id="1_7jp80"]
+[ext_resource type="Script" uid="uid://bdcmbh7hct7ij" path="res://Scripts/UI/Localization/LocalizedRichText.gd" id="2_cdxtw"]
+[ext_resource type="Script" uid="uid://bih8icx0fn3lh" path="res://Scripts/UI/Localization/LocalizedButtonText.gd" id="3_7royc"]
+
+[node name="ExitMenu" type="MarginContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -287.0
+offset_top = -114.0
+offset_right = 287.0
+offset_bottom = 114.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+script = ExtResource("1_7jp80")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Header" type="RichTextLabel" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 24
+text = "Exit Game?"
+script = ExtResource("2_cdxtw")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "ExitGameHeader"
+bbCode = "[center]{TEXT}[/center]"
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Quit"
+script = ExtResource("3_7royc")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "ExitGameButton"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="onExit"]

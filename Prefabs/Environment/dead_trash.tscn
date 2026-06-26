@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://Scripts/Environment/dead_trash.gd" id="1_script"]
+[ext_resource type="Material" path="res://Materials/dead_trash_material.tres" id="2_material"]
+[ext_resource type="ArrayMesh" uid="uid://cqn2spgyfcjrx" path="res://Meshes/trash/blank_can.res" id="3_can_mesh"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_trash"]
+radius = 0.1
+
+[node name="DeadTrash" type="Node3D" groups=["spear_trophy"]]
+script = ExtResource("1_script")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("3_can_mesh")
+surface_material_override/0 = ExtResource("2_material")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_trash")

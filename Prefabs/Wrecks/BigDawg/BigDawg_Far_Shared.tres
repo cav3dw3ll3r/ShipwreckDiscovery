@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dkgn4m6e5v1eh"]
+
+[ext_resource type="Texture2D" uid="uid://crtl44c4wep3s" path="res://Prefabs/Wrecks/BigDawg/Big_Dawg_Far_Big Dawg_GAME_400k.png" id="1_albedo"]
+[ext_resource type="Texture2D" uid="uid://vpib3eiehwa6" path="res://Prefabs/Wrecks/BigDawg/Big_Dawg_Far_Big Dawg_GAME_400k_normal.png" id="2_normal"]
+
+[resource]
+resource_name = "BigDawg_Far_Shared"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_albedo")
+normal_enabled = true
+normal_texture = ExtResource("2_normal")

@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" load_steps=4 format=3 uid="uid://csxfuuvrn8wgk"]
+
+[ext_resource type="Shader" uid="uid://bfgg4tdv0hgt4" path="res://Materials/AnimatedFish/z_wave.gdshader" id="1_noay0"]
+[ext_resource type="Texture2D" uid="uid://bb0u7ethf3bpj" path="res://Meshes/Fish/Destin/Mangrove_snapper/Mangrove_Snapper_Image_0.jpg" id="2_noay0"]
+[ext_resource type="Texture2D" uid="uid://bp88ux0wh537c" path="res://Meshes/Fish/Destin/Mangrove_snapper/Mangrove_Snapper_Image_2.jpg" id="3_6bac5"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_noay0")
+shader_parameter/albedo_tex = ExtResource("2_noay0")
+shader_parameter/normal_tex = ExtResource("3_6bac5")
+shader_parameter/wave_amplitude = 0.2570000122075
+shader_parameter/wave_frequency = 0.931
+shader_parameter/wave_speed = 3.4250001594276203
+shader_parameter/tail_start = -0.19699996185750002

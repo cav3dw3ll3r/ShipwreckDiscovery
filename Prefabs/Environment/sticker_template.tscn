@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://b52xqk8o4fxqw"]
+
+[ext_resource type="Script" uid="uid://8b8qy18u4txb" path="res://Scripts/Environment/StickerTemplate.gd" id="1_tflga"]
+[ext_resource type="PackedScene" uid="uid://cdgvkg5fut8cl" path="res://Prefabs/Stickers/Destin_Small/lionfish_invitational.tscn" id="2_axbgc"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_qu8hu"]
+size = Vector2(0.247, 0.247)
+
+[node name="StickerTemplate" type="Node3D" groups=["Sticker"]]
+transform = Transform3D(-0.00659728, 0, -0.999978, 0, 1, 0, 0.999978, 0, -0.00659728, 0, 0, 0)
+script = ExtResource("1_tflga")
+
+[node name="LFCInv" parent="." instance=ExtResource("2_axbgc")]
+transform = Transform3D(0.999978, -6.95458e-05, 0.00659687, 4.50145e-10, 0.999944, 0.0105416, -0.00659723, -0.0105414, 0.999923, 0, 0, 0)
+skeleton = NodePath("../../Inside")
+
+[node name="TemplateBounds" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.01)
+mesh = SubResource("QuadMesh_qu8hu")

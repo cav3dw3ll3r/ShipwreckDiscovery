@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://baeqbibl2s3co"]
+
+[ext_resource type="Script" uid="uid://bltlbjlgxnros" path="res://Scripts/Environment/CoralSim/static_coral.gd" id="1_5fcq1"]
+
+[node name="StaticBrainCoral" type="Node3D" groups=["static_coral"]]
+script = ExtResource("1_5fcq1")
+
+[node name="BabyMesh" type="MeshInstance3D" parent="."]
+
+[node name="GrowingMesh" type="MeshInstance3D" parent="."]
+visible = false
+
+[node name="PristineMesh" type="MeshInstance3D" parent="."]
+visible = false

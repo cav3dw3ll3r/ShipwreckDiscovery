@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://dacb7fosycmse"]
+
+[ext_resource type="Theme" uid="uid://dyls1fq20ga2d" path="res://Resources/Stylesheets/ShipwreckDiscovery.theme" id="1_50bkl"]
+[ext_resource type="Script" uid="uid://dqhin0o6hjvac" path="res://Scripts/UI/Watch/scan_details.gd" id="2_d474n"]
+[ext_resource type="Script" uid="uid://bih8icx0fn3lh" path="res://Scripts/UI/Localization/LocalizedButtonText.gd" id="3_ybig7"]
+[ext_resource type="AudioStream" uid="uid://1wq52spiud5v" path="res://Audio/happy-message-ping-351298.mp3" id="4_ybig7"]
+
+[node name="ScannerDetails" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_50bkl")
+script = ExtResource("2_d474n")
+
+[node name="VoicePlayer" type="AudioStreamPlayer3D" parent="."]
+volume_db = 10.0
+bus = &"Voice"
+
+[node name="Back" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.0
+offset_top = -50.0
+offset_right = 125.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 40
+text = "Back"
+script = ExtResource("3_ybig7")
+stringTablePath = "res://Resources/StringTables/MainMenuStrings.tsv"
+stringID = "backBtn"
+metadata/_custom_type_script = "uid://bih8icx0fn3lh"
+
+[node name="Ping" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_ybig7")
+bus = &"SFX"
+
+[connection signal="pressed" from="Back" to="." method="back"]

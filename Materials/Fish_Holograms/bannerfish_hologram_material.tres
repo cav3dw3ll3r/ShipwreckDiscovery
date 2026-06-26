@@ -1,0 +1,16 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://bb3l64u22xyti"]
+
+[ext_resource type="Shader" uid="uid://boadg612bkipq" path="res://Materials/Shaders/fish_display.gdshader" id="1_p46yl"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_p46yl")
+shader_parameter/hologram_color = Color(0.59, 0.8975, 1, 1)
+shader_parameter/alpha = 0.8
+shader_parameter/scanline_density = 800.0
+shader_parameter/scanline_strength = 0.2
+shader_parameter/flicker_strength = 0.1
+shader_parameter/distortion_strength = 0.001
+shader_parameter/fresnel_power = 2.5
+shader_parameter/fresnel_strength = 2.0
+shader_parameter/time_speed = 0.5

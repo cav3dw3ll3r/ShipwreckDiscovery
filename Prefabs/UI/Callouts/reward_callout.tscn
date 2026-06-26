@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://d3rmetx7oyh3v"]
+
+[ext_resource type="FontFile" uid="uid://be3ieb608t8ax" path="res://Resources/Stylesheets/good timing bd.otf" id="1_83gax"]
+[ext_resource type="Script" uid="uid://b2itjbyk53tbj" path="res://Scripts/UI/number_callout.gd" id="1_d1ltc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rhxij"]
+transparency = 1
+metallic_specular = 0.0
+roughness = 0.43
+
+[sub_resource type="TextMesh" id="TextMesh_xogov"]
+material = SubResource("StandardMaterial3D_rhxij")
+text = "+69"
+font = ExtResource("1_83gax")
+depth = 0.02
+
+[node name="RewardCallout" type="MeshInstance3D"]
+transform = Transform3D(-0.01, 0, -8.74228e-10, 0, 0.01, 0, 8.74228e-10, 0, -0.01, 0, 0, 0)
+mesh = SubResource("TextMesh_xogov")
+script = ExtResource("1_d1ltc")

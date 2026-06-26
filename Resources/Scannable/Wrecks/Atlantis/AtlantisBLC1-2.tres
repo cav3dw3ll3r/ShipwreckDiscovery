@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="Scannable" load_steps=3 format=3 uid="uid://bsge40tr8oxnn"]
+
+[ext_resource type="PackedScene" uid="uid://5i03mm6sqc3u" path="res://Prefabs/UI/ScanPanels/dynamic_scan_panel.tscn" id="1_uu4vj"]
+[ext_resource type="Script" uid="uid://dne2dbsbrcl4p" path="res://Resources/Scannable/Scannable.gd" id="2_6g5is"]
+
+[resource]
+script = ExtResource("2_6g5is")
+dataPath = "res://Resources/Scannable/Wrecks/Wreck_Scan_Data.tsv"
+iconDir = "res://Resources/Scannable/Creatures/icons"
+videoDir = "res://Resources/Scannable/Wrecks/videos/"
+scannable_type = 2
+scannable_ID = "AtlantisBLC1-2"
+scan_thresholds = Dictionary[int, int]({
+1: 200
+})
+required_scan_time = 2.5
+scan_prefab = ExtResource("1_uu4vj")
+metadata/_custom_type_script = "uid://dne2dbsbrcl4p"

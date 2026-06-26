@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=3 uid="uid://b1qdx0awotwvd"]
+
+[ext_resource type="Script" uid="uid://c1xxd0if0nlka" path="res://Scripts/PlayerFollowXZ.gd" id="1_eboim"]
+[ext_resource type="Shader" uid="uid://3bhgkgsw07on" path="res://Materials/Shaders/beneath_ocean.gdshader" id="2_eboim"]
+[ext_resource type="Texture2D" uid="uid://vfbupm78hy7t" path="res://Images/NormalMaps/Water_Normal_1.jpg" id="3_xapm4"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_esmx1"]
+render_priority = 0
+shader = ExtResource("2_eboim")
+shader_parameter/deep_color = Color(0.333346, 0.8932154, 0.99999946, 1)
+shader_parameter/horizon_color = Color(0.13608554, 0.30642378, 0.46811724, 1)
+shader_parameter/normal_map = ExtResource("3_xapm4")
+shader_parameter/normal_scale = 3.0
+shader_parameter/normal_churn_speed = 1.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_0ghdq"]
+material = SubResource("ShaderMaterial_esmx1")
+size = Vector2(75, 75)
+
+[node name="Ocean" type="Node3D"]
+script = ExtResource("1_eboim")
+
+[node name="OceanTop_Center" type="MeshInstance3D" parent="." groups=["Waves"]]
+mesh = SubResource("PlaneMesh_0ghdq")
+
+[node name="OceanTop_Center2" type="MeshInstance3D" parent="." groups=["Waves"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75, 0, 0)
+mesh = SubResource("PlaneMesh_0ghdq")
+
+[node name="OceanTop_Center3" type="MeshInstance3D" parent="." groups=["Waves"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75, 0, 0)
+mesh = SubResource("PlaneMesh_0ghdq")
+
+[node name="OceanTop_Center4" type="MeshInstance3D" parent="." groups=["Waves"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 75)
+mesh = SubResource("PlaneMesh_0ghdq")
+
+[node name="OceanTop_Center5" type="MeshInstance3D" parent="." groups=["Waves"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75, 0, 75)
+mesh = SubResource("PlaneMesh_0ghdq")
+
+[node name="OceanTop_Center6" type="MeshInstance3D" parent="." groups=["Waves"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75, 0, 75)
+mesh = SubResource("PlaneMesh_0ghdq")
+
+[node name="OceanTop_Center7" type="MeshInstance3D" parent="." groups=["Waves"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -75)
+mesh = SubResource("PlaneMesh_0ghdq")
+
+[node name="OceanTop_Center8" type="MeshInstance3D" parent="." groups=["Waves"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -75, 0, -75)
+mesh = SubResource("PlaneMesh_0ghdq")
+
+[node name="OceanTop_Center9" type="MeshInstance3D" parent="." groups=["Waves"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75, 0, -75)
+mesh = SubResource("PlaneMesh_0ghdq")

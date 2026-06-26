@@ -1,0 +1,12 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dkgocure5v1eh"]
+
+[ext_resource type="Texture2D" uid="uid://bgrm6iu8co340" path="res://Meshes/wrecks/Optimized/BigDawg/Big_Dawg_Mid_Big Dawg_GAME_400k.png" id="1_albedo"]
+[ext_resource type="Texture2D" uid="uid://inb7tcyrode2" path="res://Meshes/wrecks/Optimized/BigDawg/Big_Dawg_Mid_Big Dawg_GAME_400k_normal.png" id="2_normal"]
+
+[resource]
+resource_name = "BigDawg_Mid_Shared"
+cull_mode = 2
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_albedo")
+normal_enabled = true
+normal_texture = ExtResource("2_normal")

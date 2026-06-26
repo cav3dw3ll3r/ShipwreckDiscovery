@@ -1,0 +1,86 @@
+[gd_scene load_steps=13 format=3 uid="uid://b6orqg3y4iovc"]
+
+[ext_resource type="Script" uid="uid://dxytauji5gqb0" path="res://Scripts/Environment/ScanTarget.gd" id="1_4bfmi"]
+[ext_resource type="Resource" path="res://Resources/Scannable/Community/Zookeeper.tres" id="2_cg7us"]
+[ext_resource type="Material" uid="uid://rns08q618kci" path="res://Materials/UIShaders/scannable_fresh.tres" id="3_y0i4y"]
+[ext_resource type="Material" uid="uid://chcfmxbjxtrdv" path="res://Materials/UIShaders/scannable_stale.tres" id="4_erejv"]
+[ext_resource type="Material" uid="uid://c3ewnjeihcket" path="res://Materials/UIShaders/scannable_complete.tres" id="5_5db8w"]
+[ext_resource type="Script" uid="uid://b40h1s6r2bym0" path="res://Scripts/Billboard.gd" id="6_erejv"]
+[ext_resource type="Theme" uid="uid://dyls1fq20ga2d" path="res://Resources/Stylesheets/ShipwreckDiscovery.theme" id="7_5db8w"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_1t7nq"]
+radius = 0.3
+
+[sub_resource type="SphereMesh" id="SphereMesh_c4raf"]
+radius = 0.3
+height = 0.6
+
+[sub_resource type="QuadMesh" id="QuadMesh_5db8w"]
+size = Vector2(0.5, 0.5)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_erejv"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5db8w"]
+resource_local_to_scene = true
+transparency = 1
+albedo_texture = SubResource("ViewportTexture_erejv")
+
+[node name="ScanTarget" type="Area3D"]
+transform = Transform3D(-1, -7.8054e-15, 1.50996e-07, -2.10059e-14, 1, -8.7423e-08, -1.50996e-07, -8.7423e-08, -1, 0, 0, 0)
+collision_layer = 64
+collision_mask = 0
+script = ExtResource("1_4bfmi")
+scannable = ExtResource("2_cg7us")
+fresh_material = ExtResource("3_y0i4y")
+stale_material = ExtResource("4_erejv")
+complete_material = ExtResource("5_5db8w")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_1t7nq")
+debug_color = Color(0, 0, 0, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+layers = 2
+mesh = SubResource("SphereMesh_c4raf")
+surface_material_override/0 = ExtResource("5_5db8w")
+
+[node name="CompletionDisplay" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.92832e-15, 0.377434, -3.29964e-08)
+layers = 2
+mesh = SubResource("QuadMesh_5db8w")
+surface_material_override/0 = SubResource("StandardMaterial3D_5db8w")
+script = ExtResource("6_erejv")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+transparent_bg = true
+
+[node name="ScanDisplay" type="HBoxContainer" parent="SubViewport"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("7_5db8w")
+alignment = 1
+
+[node name="Scanned" type="Label" parent="SubViewport/ScanDisplay"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 100
+text = "3"
+
+[node name="OutOf" type="Label" parent="SubViewport/ScanDisplay"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 100
+text = "/"
+
+[node name="NextTier" type="Label" parent="SubViewport/ScanDisplay"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 100
+text = "5"
